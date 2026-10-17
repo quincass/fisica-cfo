@@ -98,6 +98,7 @@
       texto();
     });
     texto();
+    quadro(); // primeiro quadro na hora, sem esperar a animação começar
     requestAnimationFrame(passo);
   }
 
