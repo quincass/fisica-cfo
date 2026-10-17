@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aula — Maxwell e as quatro leis</title>
+<link rel="stylesheet" href="../assets/estilo.css">
+<style>
+  @keyframes correr { from { transform: translateX(0); } to { transform: translateX(-200px); } }
+  @media (prefers-reduced-motion: no-preference) {
+    #onda { animation: correr 3.2s linear infinite; }
+  }
+  #onda.pausada { animation-play-state: paused; }
+  .botaoOnda { font-family: var(--sans); font-size: 0.8125rem; color: var(--tinta); background: transparent; border: 1px solid var(--linha); border-radius: 3px; padding: 0.4rem 0.9rem; cursor: pointer; margin-top: 0.5rem; }
+  .botaoOnda:hover { border-color: var(--tinta-fraca); background: var(--papel-caixa); }
+  td.lei { font-weight: 600; white-space: nowrap; }
+</style>
+</head>
+<body>
+
+<nav class="trilha">
+Maxwell · <a href="../reference/00-mapa-das-dinamicas.html">mapa das 18 dinâmicas</a> · grupo 1, conceito puro
+</nav>
+
+<h1>Maxwell e as quatro leis</h1>
+<p class="subtitulo">A última do grupo conceitual: 7 questões, e uma delas você já respondeu sem saber.</p>
+<p class="custo">8 minutos · pré-requisitos: <a href="0003-oersted.html">Oersted</a> e <a href="0005-inducao.html">indução</a></p>
+
+<p>Você já conhece três quartos desta aula. Oersted descobriu que corrente cria
+campo magnético. Faraday descobriu que campo magnético variável cria corrente. E
+no primeiro gate, ao errar uma questão, você reconstruiu sozinho a ideia de que
+não existe polo magnético isolado.</p>
+
+<p>Em 1864, Maxwell juntou tudo isso em quatro equações. Para a sua prova, não
+interessa a matemática delas — interessa <strong>quem cria o quê</strong>.</p>
+
+<h2>1 · A tabela que responde quase todas as 7 questões</h2>
+
+<table>
+<thead><tr><th>Quem</th><th>Cria</th><th>Lei</th></tr></thead>
+<tbody>
+<tr><td>Carga elétrica, parada ou em movimento</td><td>campo elétrico</td><td class="lei">Gauss elétrica</td></tr>
+<tr><td>Nada — não existe carga magnética</td><td>campo magnético</td><td class="lei">Gauss magnética</td></tr>
+<tr><td>Corrente elétrica, ou campo elétrico variável</td><td>campo magnético</td><td class="lei">Ampère</td></tr>
+<tr><td>Campo magnético variável</td><td>campo elétrico</td><td class="lei">Faraday</td></tr>
+</tbody>
+</table>
+
+<p>Leia a segunda linha de novo. Ela é a única das quatro que diz o que
+<em>não</em> existe — e é a sua. Não há fonte de campo magnético análoga à carga
+elétrica, e é por isso que as linhas magnéticas são fechadas, e por isso que
+quebrar um ímã não separa os polos.</p>
+
+<h2>2 · Faraday e Ampère são espelhos</h2>
+
+<p>As duas últimas linhas da tabela são a mesma frase invertida, e é exatamente
+aí que a banca troca os nomes. Guarde pelo espelho, não pela decoreba:</p>
+
+<div class="regra">
+<strong>Faraday:</strong> campo magnético que varia → cria campo elétrico<br>
+<strong>Ampère:</strong> corrente, ou campo elétrico que varia → cria campo magnético
+</div>
+
+<p>Uma dica que resolve a troca na hora da prova: <strong>Faraday termina em
+elétrico</strong>. Ele é o pai da indução, e indução produz corrente — corrente é
+coisa elétrica. Ampère é o outro.</p>
+
+<h2>3 · E então Maxwell percebeu uma coisa</h2>
+
+<p>Se campo magnético variável cria campo elétrico, e campo elétrico variável
+cria campo magnético, então os dois podem se alimentar mutuamente e sair
+viajando pelo espaço sozinhos, sem precisar de fio, de ímã ou de qualquer
+material. Um cria o outro, indefinidamente.</p>
+
+<p>Isso é uma <strong>onda eletromagnética</strong>. E quando Maxwell calculou a
+velocidade dela, deu exatamente a velocidade da luz — o que revelou que a luz
+<em>é</em> uma onda eletromagnética.</p>
+
+<figure>
+<svg viewBox="0 0 560 200" role="img" aria-labelledby="omt omd" style="display:block;width:100%;height:auto;font-family:sans-serif;font-size:12px;fill:#5f5e5a">
+<title id="omt">Onda eletromagnética se propagando</title>
+<desc id="omd">Duas ondas senoidais perpendiculares entre si viajam juntas ao longo de um eixo: o campo elétrico na vertical e o campo magnético no plano perpendicular a ele.</desc>
+<defs><clipPath id="corteOnda"><rect x="40" y="18" width="480" height="140"/></clipPath></defs>
+<line x1="40" y1="100" x2="520" y2="100" stroke="#ddd9cd" stroke-width="1"/>
+<g clip-path="url(#corteOnda)">
+<g id="onda">
+<path id="ondaE" fill="none" stroke="#D85A30" stroke-width="2"/>
+<path id="ondaB" fill="none" stroke="#378ADD" stroke-width="2"/>
+</g>
+</g>
+<text x="46" y="38" fill="#D85A30" font-size="14">campo elétrico</text>
+<text x="46" y="152" fill="#378ADD" font-size="14">campo magnético</text>
+<text x="520" y="118" text-anchor="end">direção de propagação →</text>
+</svg>
+<button type="button" class="botaoOnda" id="pausarOnda">pausar</button>
+<figcaption>O vermelho e o azul estão sempre juntos: crescem juntos, zeram
+juntos. Um sustenta o outro. Pause e repare que, no instante em que o campo
+elétrico é máximo, o magnético também é — eles não se revezam, caminham
+casados. E os dois são perpendiculares à direção em que a onda viaja.</figcaption>
+</figure>
+
+<h2>4 · Os três "não" que a banca cobra</h2>
+
+<p>Esta parte vale tanto quanto a tabela, porque metade das questões testa
+justamente o que <em>não</em> acontece:</p>
+
+<ul>
+<li><strong>Carga parada não cria campo magnético.</strong> Cria campo elétrico, isso sim. Para campo magnético, é preciso movimento.</li>
+<li><strong>Campo magnético constante não cria campo elétrico.</strong> Tem de variar — é a sua dinâmica de indução, de novo.</li>
+<li><strong>Não existe monopolo magnético.</strong> Nenhuma linha magnética nasce ou morre em lugar nenhum.</li>
+</ul>
+
+<p>E o quarto, que é o contrário dos outros e por isso engana:
+<strong>o campo elétrico age sobre cargas estejam elas paradas ou em
+movimento.</strong> Já o campo magnético só age sobre carga em movimento — mas
+isso é assunto da próxima dinâmica.</p>
+
+<div class="caixa armadilha">
+<span class="rotulo">As quatro armadilhas da banca</span>
+<ol>
+<li>"A Lei de Faraday descreve a relação entre o campo magnético e a corrente que o origina." <strong>Falso</strong> — isso é Ampère. Faraday é o inverso.</li>
+<li>"A Lei de Ampère descreve o campo elétrico originando fluxo magnético variável." <strong>Embaralhado</strong> — mistura as duas leis numa frase só, e o candidato apressado aceita porque as palavras são familiares.</li>
+<li>"Um campo elétrico é gerado necessariamente por cargas em movimento." <strong>Falso</strong> — a palavra "necessariamente" derruba: carga parada gera campo elétrico.</li>
+<li>"Cargas elétricas paradas geram campo magnético." <strong>Falso</strong> — paradas, não.</li>
+</ol>
+</div>
+
+<h2>Agora prove que pegou</h2>
+
+<div class="quiz" id="quiz">
+
+<div class="questao" data-certa="1">
+<p class="enunciado">1. A Lei de Faraday afirma que</p>
+<ul class="opcoes">
+<li><button type="button">corrente elétrica cria campo magnético</button></li>
+<li><button type="button">campo magnético variável cria campo elétrico</button></li>
+<li><button type="button">cargas elétricas criam campo elétrico</button></li>
+<li><button type="button">as linhas de campo magnético são fechadas</button></li>
+</ul>
+<p class="resposta" hidden>Repare que as outras três opções não são mentiras: são as outras três leis de Maxwell. A banca faz exatamente isso, e por isso o espelho importa — Faraday termina em elétrico, Ampère termina em magnético.</p>
+</div>
+
+<div class="questao" data-certa="0">
+<p class="enunciado">2. Julgue o item: as equações de Maxwell, combinadas, preveem a existência de ondas eletromagnéticas que se propagam com velocidade igual à da luz.</p>
+<ul class="opcoes">
+<li><button type="button">Certo</button></li>
+<li><button type="button">Errado</button></li>
+</ul>
+<p class="resposta" hidden>Certo. Foi o resultado que revelou que a luz é uma onda eletromagnética — campo elétrico e campo magnético se sustentando mutuamente enquanto viajam.</p>
+</div>
+
+<div class="questao" data-certa="2">
+<p class="enunciado">3. Sobre as fontes dos campos, é correto afirmar que</p>
+<ul class="opcoes">
+<li><button type="button">cargas paradas criam campo magnético</button></li>
+<li><button type="button">só cargas em movimento criam campo elétrico</button></li>
+<li><button type="button">cargas paradas criam campo elétrico</button></li>
+<li><button type="button">cargas paradas não criam campo nenhum</button></li>
+</ul>
+<p class="resposta" hidden>Carga, parada ou não, sempre cria campo elétrico. Para criar campo magnético é que o movimento é obrigatório. As três opções erradas aparecem com frequência num mesmo item de prova, cada uma trocando um pedaço da frase.</p>
+</div>
+
+<div class="questao" data-certa="3">
+<p class="enunciado">4. Segundo a Lei de Ampère, com a contribuição de Maxwell, criam campo magnético</p>
+<ul class="opcoes">
+<li><button type="button">apenas os ímãs permanentes naturais</button></li>
+<li><button type="button">o campo magnético variável no tempo</button></li>
+<li><button type="button">as cargas elétricas em repouso</button></li>
+<li><button type="button">a corrente e o campo elétrico variável</button></li>
+</ul>
+<p class="resposta" hidden>A corrente é a parte que vem de Oersted; o campo elétrico variável foi a contribuição de Maxwell, e é ela que fecha o ciclo e permite a onda existir. A segunda opção é Faraday disfarçada de Ampère.</p>
+</div>
+
+<div class="questao" data-certa="1">
+<p class="enunciado">5. Julgue o item: as linhas de campo magnético originam-se no polo norte e terminam no polo sul, de modo análogo às linhas de campo elétrico, que se originam nas cargas positivas e terminam nas negativas.</p>
+<ul class="opcoes">
+<li><button type="button">Certo</button></li>
+<li><button type="button">Errado</button></li>
+</ul>
+<p class="resposta" hidden>Errado, e a palavra que derruba é "análogo". A analogia é justamente o que não existe: linhas elétricas nascem e morrem em cargas, porque existe carga isolada; linhas magnéticas são fechadas, porque não existe polo isolado. É a sua descoberta do primeiro gate, agora com o nome oficial de Lei de Gauss para o magnetismo.</p>
+</div>
+
+</div>
+
+<p class="placar" id="placar">Nenhuma respondida ainda.</p>
+
+<div class="rodape">
+<h2>Ver em vídeo</h2>
+<ol>
+<li><a href="https://www.youtube.com/watch?v=TlXJ31K-UWQ">41 — Equações de Maxwell</a> — o mais simples e conceitual dos que encontrei. Comece por ele.</li>
+<li><a href="https://www.youtube.com/watch?v=sMpJ3Vn0bfE">As equações de Maxwell explicadas</a> — segunda opinião, mesmo nível.</li>
+</ol>
+<p><strong>E o que evitar:</strong> há muita aula de Maxwell em nível de
+engenharia, com cálculo vetorial, divergente e rotacional. Não é o seu alvo e só
+vai te custar tempo. Se o vídeo abrir com integral de superfície, feche.</p>
+<p style="font-size:0.8125rem">Achados por busca, não assistidos. Se não
+prestarem, me avise que eu procuro outros.</p>
+
+<h2>Onde isso te deixa</h2>
+<p>Cinco dinâmicas de dezoito — e o <strong>grupo conceitual inteiro fechado</strong>.
+São cerca de 48 questões do caderno, 30% do total, sem você ter feito uma única
+conta.</p>
+<p>Daqui em diante muda o tipo de trabalho. O próximo grupo é leitura de figura e
+decisão de sentido, onde o seu perfil visual joga a favor. E antes do grupo de
+cálculo vem o Bloco 0: potência de 10 e notação científica, que é o seu gargalo
+real — não a física.</p>
+<p><a href="../reference/00-mapa-das-dinamicas.html">Mapa</a> · <a href="../reference/03-inducao.html">Ficha 03</a></p>
+</div>
+
+<script>
+(function () {
+  var ondaE = document.getElementById('ondaE');
+  var ondaB = document.getElementById('ondaB');
+  var grupo = document.getElementById('onda');
+  var botao = document.getElementById('pausarOnda');
+  if (!ondaE) return;
+
+  var EIXO = 100, COMPRIMENTO = 200, FIM = 760;
+
+  function construir(amplitude, inclinacao) {
+    var pontos = [];
+    for (var x = 0; x <= FIM; x += 4) {
+      var s = amplitude * Math.sin((2 * Math.PI * x) / COMPRIMENTO);
+      // inclinacao > 0 desenha a onda num plano "para trás e para baixo",
+      // sugerindo a direção perpendicular à do campo elétrico.
+      pontos.push((40 + x + s * inclinacao).toFixed(1) + ' ' + (EIXO - s).toFixed(1));
+    }
+    return 'M ' + pontos.join(' L ');
+  }
+
+  ondaE.setAttribute('d', construir(52, 0));
+  ondaB.setAttribute('d', construir(-26, 1.5));
+
+  botao.addEventListener('click', function () {
+    var pausada = grupo.classList.toggle('pausada');
+    botao.textContent = pausada ? 'continuar' : 'pausar';
+  });
+})();
+
+(function () {
+  var total = 0, certas = 0;
+  var questoes = document.querySelectorAll('#quiz .questao');
+  var placar = document.getElementById('placar');
+
+  questoes.forEach(function (questao) {
+    var certa = parseInt(questao.dataset.certa, 10);
+    var botoes = questao.querySelectorAll('.opcoes button');
+    var resposta = questao.querySelector('.resposta');
+
+    botoes.forEach(function (botao, indice) {
+      botao.addEventListener('click', function () {
+        if (questao.dataset.respondida) return;
+        questao.dataset.respondida = 'sim';
+        botoes[certa].classList.add('certa');
+        if (indice !== certa) botao.classList.add('errada');
+        botoes.forEach(function (b) { b.disabled = true; });
+        resposta.hidden = false;
+        total++;
+        if (indice === certa) certas++;
+        atualizar();
+      });
+    });
+  });
+
+  function atualizar() {
+    var falta = questoes.length - total;
+    var texto = certas + ' de ' + total + ' até agora.';
+    if (falta > 0) { placar.textContent = texto + ' Faltam ' + falta + '.'; return; }
+    if (certas === questoes.length) {
+      placar.textContent = 'Cinco de cinco — fluência. O gate fecha o grupo conceitual inteiro e vai misturar as cinco dinâmicas.';
+    } else if (certas >= 3) {
+      placar.textContent = texto + ' Me diga qual confundiu — se foi troca entre Faraday e Ampère, tem um jeito melhor de fixar o espelho.';
+    } else {
+      placar.textContent = texto + ' Volte só à tabela da seção 1. Ela responde quase tudo sozinha.';
+    }
+  }
+})();
+</script>
+
+</body>
+</html>

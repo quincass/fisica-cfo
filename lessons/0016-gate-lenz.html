@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gate — Lei de Lenz</title>
+<link rel="stylesheet" href="../assets/estilo.css">
+<style>
+.ponte { border-left: 3px solid var(--tinta-tenue); }
+.ponte .rotulo { color: var(--tinta-tenue); }
+</style>
+</head>
+<body>
+
+<nav class="trilha">Gate · dinâmica 8 de 18 · dez questões embaralhadas</nav>
+
+<h1>Gate — Lei de Lenz</h1>
+<p class="subtitulo">Lenz vem misturado com indução e com força sobre fio. São
+cenas parecidas com perguntas diferentes, e a prova não avisa qual é qual.</p>
+<p class="custo">Dez questões. Sem consultar a aula. A questão 10 é de assunto
+novo e está marcada — ela não conta no placar.</p>
+
+<div class="caixa gatilho">
+<span class="rotulo">Como este gate é medido</span>
+<p>Passar é <strong>8 das 9</strong> que contam. A décima mede fronteira, não
+conhecimento: errar nela é informação para mim, não falha sua. Foi a regra que
+nasceu do seu gate anterior.</p>
+</div>
+
+<div class="quiz" id="quiz"
+     data-fim=" — Grupo 2 quase fechado. Falta só gráficos, e a questão 10 já te mostrou como ele é."
+     data-parcial=" — me diga quais você errou e em qual dos três passos travou. Lembre que a 10 não conta.">
+
+<div class="questao" data-certa="2">
+  <p><strong>1.</strong> Uma espira é puxada com velocidade constante e atravessa
+  uma região quadrada de campo magnético uniforme, entrando por um lado e saindo
+  pelo outro. Em que momentos há corrente induzida?</p>
+  <ul class="opcoes">
+    <li><button type="button">Durante todo o percurso, pois há movimento</button></li>
+    <li><button type="button">Somente enquanto ela está inteiramente dentro</button></li>
+    <li><button type="button">Somente durante a entrada e durante a saída</button></li>
+    <li><button type="button">Em momento algum, pois o campo é uniforme</button></li></ul>
+  <div class="resposta" hidden><p><strong>Entrada e saída.</strong> Inteiramente
+  dentro, o fluxo trava no máximo e não varia — movimento não é pergunta,
+  variação é. A alternativa A é o erro que te pegou no gate de indução.</p></div>
+</div>
+
+<div class="questao" data-certa="0">
+  <p><strong>2.</strong> O polo <strong>norte</strong> de um ímã é
+  <strong>afastado</strong> de uma espira. O que a face da espira voltada para o
+  ímã se torna, e o que ela faz com ele?</p>
+  <ul class="opcoes">
+    <li><button type="button">Torna-se sul e atrai o ímã que se afasta</button></li>
+    <li><button type="button">Torna-se norte e repele o ímã que se afasta</button></li>
+    <li><button type="button">Torna-se norte e atrai o ímã que se afasta</button></li>
+    <li><button type="button">Torna-se sul e repele o ímã que se afasta</button></li></ul>
+  <div class="resposta" hidden><p><strong>Sul, e atrai.</strong> Saiu, atrai — a
+  espira tenta segurar o fluxo que está indo embora, e para puxar um norte ela
+  precisa mostrar um sul. Quem decorou "a espira sempre repele" erra esta.</p></div>
+</div>
+
+<div class="questao" data-certa="3">
+  <p><strong>3.</strong> Um observador olha de frente para uma espira. O campo
+  magnético <strong>entra</strong> na espira, afastando-se dele, e sua intensidade
+  está <strong>aumentando</strong>. Para esse observador, a corrente induzida na
+  espira corre no sentido:</p>
+  <ul class="opcoes">
+    <li><button type="button">Horário, acompanhando o campo que cresce</button></li>
+    <li><button type="button">Horário, pois o campo entra na espira</button></li>
+    <li><button type="button">Nulo, pois a espira está parada</button></li>
+    <li><button type="button">Anti-horário, opondo-se ao campo que cresce</button></li></ul>
+  <div class="resposta" hidden><p><strong>Anti-horário.</strong> O fluxo que
+  entra está crescendo, então a espira cria campo <em>saindo</em> para compensar:
+  a face voltada para o observador vira norte, e norte visto de frente é corrente
+  anti-horária. A alternativa C é o excesso de correção — espira parada induz sim,
+  se o campo varia.</p></div>
+</div>
+
+<div class="questao" data-certa="1">
+  <p><strong>4.</strong> Um ímã e uma espira são transportados lado a lado, na
+  mesma velocidade, dentro de um vagão em movimento. O que ocorre na espira
+  durante a viagem?</p>
+  <ul class="opcoes">
+    <li><button type="button">Corrente induzida, pois ambos se movem</button></li>
+    <li><button type="button">Nada, pois não há movimento relativo</button></li>
+    <li><button type="button">Corrente apenas ao acelerar o vagão</button></li>
+    <li><button type="button">Nada, pois ímã não induz corrente</button></li></ul>
+  <div class="resposta" hidden><p><strong>Nada.</strong> Do ponto de vista da
+  espira, o ímã está parado ao lado. O que conta é o movimento <em>relativo</em>.
+  A alternativa D é falsa pelo motivo errado: ímã induz sim, desde que haja
+  variação.</p></div>
+</div>
+
+<div class="questao" data-certa="2">
+  <p><strong>5.</strong> Um anel metálico é colocado em volta do núcleo de um
+  eletroímã. No instante em que a chave é fechada e a corrente começa a crescer,
+  o anel <strong>salta para cima</strong>. Qual é a explicação?</p>
+  <ul class="opcoes">
+    <li><button type="button">O núcleo esquenta e empurra o anel por dilatação</button></li>
+    <li><button type="button">O anel é atraído e sobe pelo campo do eletroímã</button></li>
+    <li><button type="button">A corrente induzida no anel se opõe à variação</button></li>
+    <li><button type="button">O anel se imanta e é repelido pelo próprio peso</button></li></ul>
+  <div class="resposta" hidden><p><strong>A corrente induzida se opõe.</strong> O
+  campo crescendo induz corrente no anel; essa corrente cria um campo contrário, e
+  os dois se repelem — o anel é expulso. É a demonstração clássica do anel
+  saltante, e é Lenz puro.</p></div>
+</div>
+
+<div class="questao" data-certa="1">
+  <p><strong>6.</strong> Dois tubos verticais idênticos, um de <strong>PVC</strong>
+  e um de <strong>cobre</strong>, são usados para soltar o mesmo ímã. No cobre o
+  ímã desce visivelmente mais devagar. Por quê?</p>
+  <ul class="opcoes">
+    <li><button type="button">O cobre é magnético e atrai o ímã na descida</button></li>
+    <li><button type="button">No cobre surgem correntes que se opõem à queda</button></li>
+    <li><button type="button">O PVC é mais liso e oferece menos atrito ao ímã</button></li>
+    <li><button type="button">O cobre conduz o campo e anula o peso do ímã</button></li></ul>
+  <div class="resposta" hidden><p><strong>Correntes induzidas no cobre.</strong>
+  O ímã caindo faz o fluxo variar em cada anel de cobre; as correntes se opõem à
+  variação, ou seja, à queda. A energia potencial vira calor no tubo em vez de
+  velocidade. O PVC não conduz, então nada se induz. Note que cobre
+  <em>não</em> é atraído por ímã — a alternativa A inventa isso.</p></div>
+</div>
+
+<div class="questao" data-certa="3">
+  <p><strong>7.</strong> Numa usina hidrelétrica, em um horário de consumo muito
+  alto, o que acontece com o esforço necessário para manter os geradores girando
+  na mesma rotação?</p>
+  <ul class="opcoes">
+    <li><button type="button">Diminui, pois a corrente ajuda o giro</button></li>
+    <li><button type="button">Não muda: a rotação é sempre a mesma</button></li>
+    <li><button type="button">Diminui, pois o campo dos ímãs enfraquece</button></li>
+    <li><button type="button">Aumenta: a corrente induzida se opõe ao giro</button></li></ul>
+  <div class="resposta" hidden><p><strong>Aumenta.</strong> É a manivela pesada,
+  em escala de usina: mais consumo significa mais energia elétrica por segundo, e
+  essa energia vem da água que gira a turbina. Lenz é a conservação de energia em
+  forma de lei.</p></div>
+</div>
+
+<div class="questao" data-certa="0">
+  <p><strong>8.</strong> Em qual destes aparelhos a <strong>corrente é a causa</strong>
+  e o efeito magnético é a consequência?</p>
+  <ul class="opcoes">
+    <li><button type="button">Guindaste eletroímã de ferro-velho</button></li>
+    <li><button type="button">Etiqueta RFID de controle de acesso</button></li>
+    <li><button type="button">Carregador de celular sem fio</button></li>
+    <li><button type="button">Microfone dinâmico de bobina móvel</button></li></ul>
+  <div class="resposta" hidden><p><strong>O guindaste.</strong> Nele a corrente
+  entra e o campo aparece — eletroímã. Nos outros três o campo que varia é a causa
+  e a corrente é o efeito: é indução. A pergunta que separa os dois é sempre a
+  mesma: quem veio primeiro?</p></div>
+</div>
+
+<div class="questao" data-certa="2">
+  <p><strong>9.</strong> Um fio horizontal conduz corrente para a
+  <strong>esquerda</strong>, numa região de campo magnético que <strong>entra no
+  papel</strong> (⊗). O fio é empurrado para onde?</p>
+  <ul class="opcoes">
+    <li><button type="button">Para a esquerda, acompanhando a corrente</button></li>
+    <li><button type="button">Para cima, perpendicular ao fio</button></li>
+    <li><button type="button">Para baixo, perpendicular ao fio</button></li>
+    <li><button type="button">A força é nula, pois o campo é uniforme</button></li></ul>
+  <div class="resposta" hidden><p><strong>Para baixo.</strong> Polegar para a
+  esquerda, dedos entrando no papel, a palma empurra para baixo. Está aqui de
+  propósito: a dinâmica de ontem não some porque hoje é outra.</p></div>
+</div>
+
+<div class="caixa ponte">
+<span class="rotulo">Questão 10 · assunto novo · não conta no placar</span>
+<p>Esta é de <strong>gráficos</strong>, a próxima dinâmica. Responda assim mesmo:
+tudo de que você precisa já está na sua mão.</p>
+</div>
+
+<div class="questao" data-certa="1" data-ponte="1">
+  <p><strong>10.</strong> O gráfico mostra o fluxo magnético através de uma espira
+  ao longo do tempo. Em qual trecho a força eletromotriz induzida é
+  <strong>maior</strong>?</p>
+  <figure>
+  <svg viewBox="0 0 440 210" role="img" aria-label="Gráfico de fluxo magnético contra tempo, com quatro trechos">
+    <line x1="45" y1="175" x2="420" y2="175" stroke="#8b8a84" stroke-width="1.5"/>
+    <line x1="45" y1="175" x2="45" y2="20" stroke="#8b8a84" stroke-width="1.5"/>
+    <text x="24" y="26" fill="#5f5e5a" font-size="13">Φ</text>
+    <text x="414" y="196" fill="#5f5e5a" font-size="13">t</text>
+    <polyline points="45,145 140,115 230,115 320,35 400,35" fill="none" stroke="#0f6e56" stroke-width="3"/>
+    <g stroke="#ddd9cd" stroke-width="1" stroke-dasharray="3 3">
+      <line x1="140" y1="175" x2="140" y2="20"/>
+      <line x1="230" y1="175" x2="230" y2="20"/>
+      <line x1="320" y1="175" x2="320" y2="20"/>
+    </g>
+    <text x="92" y="194" text-anchor="middle" fill="#5f5e5a" font-size="13">I</text>
+    <text x="185" y="194" text-anchor="middle" fill="#5f5e5a" font-size="13">II</text>
+    <text x="275" y="194" text-anchor="middle" fill="#5f5e5a" font-size="13">III</text>
+    <text x="360" y="194" text-anchor="middle" fill="#5f5e5a" font-size="13">IV</text>
+  </svg>
+  <figcaption>Quatro trechos: I sobe devagar, II fica constante, III sobe
+  depressa, IV fica constante de novo.</figcaption>
+  </figure>
+  <ul class="opcoes">
+    <li><button type="button">No trecho I, onde o fluxo começa</button></li>
+    <li><button type="button">No trecho III, o mais inclinado</button></li>
+    <li><button type="button">No trecho IV, onde o fluxo é maior</button></li>
+    <li><button type="button">Nos trechos II e IV, de fluxo constante</button></li></ul>
+  <div class="resposta" hidden><p><strong>No trecho III.</strong> Faraday diz que
+  o que importa é a <em>rapidez</em> da variação do fluxo — e num gráfico de Φ
+  contra t, rapidez de variação é <strong>inclinação</strong>. Trecho mais
+  inclinado, fem maior.</p>
+  <p>Daí saem as duas leituras que fecham a dinâmica de gráficos: <strong>reta
+  horizontal significa fem zero</strong> (II e IV: fluxo grande, mas parado — o
+  seu Ponto K de novo), e <strong>fluxo grande não significa fem grande</strong>.
+  A alternativa C é essa confusão, e é a mais marcada em prova.</p></div>
+</div>
+
+<p class="placar" id="placar" hidden></p>
+</div>
+
+<div class="rodape">
+<h2>Depois do gate</h2>
+<p>Passando, Lenz fecha e eu escrevo a <a href="../reference/07-lenz.html"><strong>ficha
+07</strong></a>. Falta então só
+<strong>gráficos</strong> (≈6 questões) para o Grupo 2 inteiro, e aí vem o gate
+de reconhecimento do grupo — tudo embaralhado, sem rótulo.</p>
+<p>Depois dele, <strong>Bloco 0</strong>: potência de 10 e notação científica. Pelo
+<a href="../reference/06-inventario-cbm.html">inventário CBM</a>, é o que
+destrava 15 das 33 questões de bombeiro do caderno.</p>
+<p>
+<a href="0015-lenz.html">Voltar à Aula 15</a> ·
+<a href="../reference/03-inducao.html">Ficha 03 — indução</a> ·
+<a href="../reference/00-mapa-das-dinamicas.html">Mapa</a>
+</p>
+</div>
+
+<script src="../assets/quiz.js"></script>
+
+</body>
+</html>

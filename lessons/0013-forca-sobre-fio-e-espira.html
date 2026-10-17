@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Força sobre fio e espira — a mesma força, agora no fio</title>
+<link rel="stylesheet" href="../assets/estilo.css">
+<link rel="stylesheet" href="../assets/bancada.css">
+<style>
+.aquecimento { border-left: 3px solid var(--tinta-tenue); border-radius: 0; }
+.aquecimento .rotulo { color: var(--tinta-tenue); }
+.aquecimento details { margin: .4rem 0 1rem; }
+.aquecimento summary { cursor: pointer; font-family: var(--sans); font-size: .85rem; color: var(--destaque); }
+</style>
+</head>
+<body>
+
+<nav class="trilha">Aula · dinâmica 7 de 18 · força sobre fio e espira</nav>
+
+<h1>A mesma força, agora no fio</h1>
+<p class="subtitulo">Dez questões do caderno, nenhuma regra nova. Você já sabe
+fazer isto — só ainda não sabe que sabe.</p>
+<p class="custo">Leitura: 9 minutos. Começa com duas perguntas de revisão, tem
+uma bancada no meio e cinco questões no fim.</p>
+
+<div class="caixa aquecimento">
+<span class="rotulo">Antes de ler · revisão de hoje (15/10)</span>
+<p>São os dois pontos que venceram hoje na sua agenda. Responda <strong>em voz
+alta</strong> antes de abrir. Ler a resposta direto não conta como revisão.</p>
+
+<p><strong>Ponto F.</strong> Fio vertical no plano do papel, corrente de baixo
+para cima. Num ponto <em>à direita</em> do fio, para onde aponta o campo
+magnético? Dez segundos.</p>
+<details><summary>Conferir</summary>
+<p><strong>Entrando no papel (⊗).</strong> Polegar direito para cima, abrace o
+fio: os dedos vêm até você, vão para a direita e se afastam. À direita do fio
+eles já estão indo embora — entram. À esquerda, sai (⊙): os dois lados são
+sempre opostos.</p>
+</details>
+
+<p><strong>Ponto K.</strong> Quais são as três perguntas que decidem se há
+corrente induzida — e quais são as duas coisas que <em>não</em> são pergunta?</p>
+<details><summary>Conferir</summary>
+<p>Mudou o <strong>campo</strong>? Mudou a <strong>área</strong>? Ela
+<strong>girou</strong>? Três nãos, corrente zero. Não são pergunta: se a espira
+se move, e se existe campo.</p>
+</details>
+
+<p>Anote as duas notas (0 a 3) para eu atualizar o <code>revisao.md</code>. Nota
+abaixo de 3 reinicia o intervalo.</p>
+</div>
+
+<h2>1 · Por que isto não é uma dinâmica nova</h2>
+
+<p>No seu gate de ontem havia uma questão de força sobre fio que você nunca tinha
+estudado. Você acertou. Não foi sorte, e esta seção explica por quê.</p>
+
+<p>Uma corrente elétrica <strong>é</strong> carga em movimento. Um fio com
+corrente é um tubo cheio de cargas andando todas para o mesmo lado. O campo
+magnético empurra cada uma delas — exatamente com a regra que você aprendeu
+ontem. Como as cargas não podem sair do fio, elas empurram o fio junto.</p>
+
+<div class="caixa regra">
+<span class="rotulo">A tradução inteira da aula</span>
+<p><strong>Onde antes você punha o polegar na velocidade <em>v</em> da carga,
+agora põe na corrente <em>i</em> do fio.</strong></p>
+<p>Mesma mão direita. Mesma palma empurrando. Mesma perpendicularidade. Só muda
+o nome do que o polegar aponta.</p>
+</div>
+
+<div class="caixa gatilho">
+<span class="rotulo">De brinde, você perdeu o passo 5</span>
+<p>Lembra que carga negativa inverte o resultado, e que esse é o passo que todo
+mundo esquece? <strong>No fio ele não existe.</strong> O sentido da corrente já é
+definido por convenção como o sentido em que cargas <em>positivas</em>
+andariam — mesmo que na prática quem ande seja o elétron. Quando a questão diz
+"a corrente vai para a direita", o polegar vai para a direita e a palma dá a
+resposta final. Sem inversão, sem pegadinha de sinal.</p>
+</div>
+
+<h2>2 · A bancada</h2>
+
+<p>Escolha o sentido da corrente e o campo da região. Faça com a sua mão direita
+<em>antes</em> de olhar a seta vermelha.</p>
+
+<div class="bancada">
+  <p class="legenda">Sentido da corrente no fio (i)</p>
+  <div class="botoes" id="g-i">
+    <button class="opc" type="button" data-v="dir" aria-pressed="true">→ para a direita</button>
+    <button class="opc" type="button" data-v="esq" aria-pressed="false">← para a esquerda</button>
+    <button class="opc" type="button" data-v="cima" aria-pressed="false">↑ para cima</button>
+    <button class="opc" type="button" data-v="baixo" aria-pressed="false">↓ para baixo</button>
+    <button class="opc" type="button" data-v="dentro" aria-pressed="false">⊗ entrando no papel</button>
+    <button class="opc" type="button" data-v="zero" aria-pressed="false">chave aberta (i = 0)</button>
+  </div>
+
+  <p class="legenda">Campo magnético da região (B)</p>
+  <div class="botoes" id="g-b">
+    <button class="opc" type="button" data-v="dentro" aria-pressed="true">⊗ entrando no papel</button>
+    <button class="opc" type="button" data-v="fora" aria-pressed="false">⊙ saindo do papel</button>
+  </div>
+
+  <svg id="cena" viewBox="0 0 440 260" role="img" aria-label="Fio com corrente dentro de um campo magnético e a força resultante">
+    <rect x="20" y="20" width="400" height="220" fill="none" stroke="#8b8a84" stroke-width="1" stroke-dasharray="4 4"/>
+    <g id="campo"></g>
+    <g id="fio"></g>
+    <g id="setas"></g>
+  </svg>
+
+  <p class="veredito" id="veredito">—</p>
+</div>
+
+<h2>3 · Os zeros, traduzidos para o fio</h2>
+
+<p>Os três casos de força nula continuam os mesmos — só mudam de roupa. Reconhecer
+a roupa nova é metade do trabalho na prova:</p>
+
+<table>
+<thead><tr><th>Na carga (ontem)</th><th>No fio (hoje)</th></tr></thead>
+<tbody>
+<tr><td>Carga parada</td><td><strong>Fio sem corrente</strong> — chave aberta, circuito interrompido</td></tr>
+<tr><td>v paralela a B</td><td><strong>Fio paralelo ao campo</strong> — deitado ao longo das linhas</td></tr>
+<tr><td>Partícula neutra</td><td><strong>Fio fora da região de campo</strong></td></tr>
+</tbody>
+</table>
+
+<p class="custo">É a mesma forma de erro de sempre: presença não é efeito. Ter
+campo e ter fio não basta — ver os Pontos K, P e R da sua revisão.</p>
+
+<h2>4 · O tamanho da força: três botões</h2>
+
+<p>Esta é a primeira fórmula do seu curso, e por enquanto ela serve só para
+<em>ler</em>, não para calcular. Conta vem depois do Bloco 0.</p>
+
+<div class="caixa regra">
+<span class="rotulo">A fórmula do fio</span>
+<p><strong>F = B · i · L</strong></p>
+<p>Três botões de volume: campo, corrente e comprimento de fio dentro do campo.
+Dobrou qualquer um, dobrou a força. Zerou qualquer um, zerou a força.</p>
+</div>
+
+<p>Repare que ela já responde sozinha duas das três linhas da tabela acima: com
+<em>i</em> = 0 a força é nula, e com <em>L</em> = 0 (fio fora do campo) também.
+A terceira — fio paralelo a B — é a que a fórmula nesta forma simples não mostra,
+porque ela vale para fio <strong>perpendicular</strong> ao campo. O caso com
+ângulo é outra dinâmica, mais adiante.</p>
+
+<h2>5 · Dobre o fio: nasce o motor</h2>
+
+<p>Agora pegue o fio e dobre em retângulo, uma espira, com o campo no plano do
+papel. Olhe os dois lados verticais: a corrente <strong>sobe</strong> num e
+<strong>desce</strong> no outro — ela tem que voltar por algum lugar.</p>
+
+<figure>
+<svg viewBox="0 0 440 230" role="img" aria-label="Espira retangular num campo, com forças opostas nos dois lados verticais">
+  <g fill="#8b8a84" font-size="13" text-anchor="middle">
+    <text x="70" y="40">⊗</text><text x="150" y="40">⊗</text><text x="230" y="40">⊗</text><text x="310" y="40">⊗</text><text x="380" y="40">⊗</text>
+    <text x="70" y="115">⊗</text><text x="380" y="115">⊗</text>
+    <text x="70" y="190">⊗</text><text x="150" y="190">⊗</text><text x="230" y="190">⊗</text><text x="310" y="190">⊗</text><text x="380" y="190">⊗</text>
+  </g>
+  <rect x="150" y="60" width="160" height="110" fill="none" stroke="#0f6e56" stroke-width="3"/>
+  <!-- setas de corrente -->
+  <polygon points="150,100 145,114 155,114" fill="#0f6e56"/>
+  <polygon points="310,130 305,116 315,116" fill="#0f6e56"/>
+  <text x="128" y="118" fill="#0f6e56" font-size="14" font-weight="600">i</text>
+  <text x="320" y="118" fill="#0f6e56" font-size="14" font-weight="600">i</text>
+  <!-- forcas -->
+  <line x1="150" y1="115" x2="88" y2="115" stroke="#993c1d" stroke-width="3"/>
+  <polygon points="84,115 96,109 96,121" fill="#993c1d"/>
+  <text x="96" y="100" fill="#993c1d" font-size="14" font-weight="700">F</text>
+  <line x1="310" y1="115" x2="372" y2="115" stroke="#993c1d" stroke-width="3"/>
+  <polygon points="376,115 364,109 364,121" fill="#993c1d"/>
+  <text x="360" y="100" fill="#993c1d" font-size="14" font-weight="700">F</text>
+</svg>
+<figcaption>Correntes opostas nos dois lados, mesmo campo: forças opostas. A
+espira não anda para lado nenhum — ela é puxada para fora dos dois lados ao mesmo
+tempo. Mude o eixo de giro de lugar e esse mesmo par vira rotação.</figcaption>
+</figure>
+
+<div class="caixa regra">
+<span class="rotulo">Por que a espira gira em vez de andar</span>
+<p>As duas forças têm o mesmo tamanho e sentidos opostos: a <strong>resultante é
+zero</strong>, então o centro de massa não se desloca. Mas elas estão aplicadas em
+<strong>pontos diferentes</strong> — e um par assim produz <strong>rotação</strong>.</p>
+<p>Isso é o motor elétrico: corrente entra, espira gira. Nada mais.</p>
+</div>
+
+<p>Falta uma peça, e é a que a prova gosta de perguntar. Depois de meia volta, os
+dois lados trocaram de posição e o par de forças passaria a frear a espira em vez
+de girar. Quem resolve é o <strong>comutador</strong>: um anel partido que inverte
+o sentido da corrente a cada meia volta, de modo que o empurrão sempre vá para o
+mesmo lado. Sem ele o motor balança e para; com ele, gira para sempre.</p>
+
+<div class="caixa armadilha">
+<span class="rotulo">Motor e gerador: não confunda de novo</span>
+<p><strong>Motor</strong> — a corrente é a <em>causa</em> e o giro é o
+<em>efeito</em>. É esta aula.</p>
+<p><strong>Gerador</strong> — o giro é a <em>causa</em> e a corrente é o
+<em>efeito</em>. É indução, Ponto M.</p>
+<p>Mesma espira, mesmo campo, mesmo desenho de prova. O que separa os dois é
+exatamente a pergunta do seu Ponto P: <em>quem veio primeiro?</em></p>
+</div>
+
+<h2>Vídeos</h2>
+<p class="custo">Buscados agora e verificados como existentes — mas eu
+<strong>não os assisti</strong>. Segunda voz sobre o mesmo conteúdo: se algum
+contradisser esta aula, me diga qual e em que ponto.</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=1XAxgiwT-G4">Aula 6 — força magnética em fios condutores</a> — o recorte exato das seções 1 a 4.</li>
+<li><a href="https://www.youtube.com/watch?v=LhzmqyuBIEQ">Força magnética em fio — usa o BiL</a> — a fórmula da seção 4, com outra didática.</li>
+<li><a href="https://www.youtube.com/watch?v=TbyDfTTeGL8">Força magnética sobre o fio retilíneo</a> — mesma matéria dentro de um curso de magnetismo.</li>
+<li><a href="https://www.youtube.com/watch?v=_vmW0FkozHA">O princípio de funcionamento de um motor elétrico (questão resolvida)</a> — a seção 5 em formato de prova.</li>
+<li><a href="https://www.youtube.com/watch?v=ZeIqIkbAAck">Torque produzido por campo magnético</a> — por que o par de forças gira a espira.</li>
+</ul>
+
+<h2>Cinco para fechar</h2>
+<p class="custo">Correção imediata. Mão direita na frente da tela. Isto mede
+fluência, não retenção — o gate vem depois.</p>
+
+<div class="quiz" id="quiz"
+     data-fim=" — e você fez isto com zero regra nova. O gate desta dinâmica vem em seguida."
+     data-parcial=" — me diga quais você errou e em que raciocínio travou, antes do gate.">
+
+<div class="questao" data-certa="1">
+  <p><strong>1.</strong> Um fio horizontal conduz corrente <strong>para a
+  direita</strong>, numa região de campo magnético <strong>entrando no papel</strong>
+  (⊗). Para onde o fio é empurrado?</p>
+  <ul class="opcoes">
+    <li><button type="button">Para a direita, no sentido da corrente</button></li>
+    <li><button type="button">Para cima, perpendicular ao fio</button></li>
+    <li><button type="button">Para baixo, perpendicular ao fio</button></li>
+    <li><button type="button">Para fora do papel, em direção a você</button></li></ul>
+  <div class="resposta" hidden><p><strong>Para cima.</strong> Polegar para a
+  direita, dedos entrando no papel, palma empurra para cima. É literalmente a
+  questão 1 da aula de ontem com "próton" trocado por "corrente". A alternativa A
+  já estava morta: a força nunca aponta ao longo do fio.</p></div>
+</div>
+
+<div class="questao" data-certa="3">
+  <p><strong>2.</strong> Mesma cena da questão 1. O enunciado avisa que quem se
+  desloca de fato dentro do metal são <strong>elétrons</strong>, que portanto andam
+  para a esquerda. O que muda na resposta?</p>
+  <ul class="opcoes">
+    <li><button type="button">A força inverte, porque a carga é negativa</button></li>
+    <li><button type="button">A força some, porque os sentidos se cancelam</button></li>
+    <li><button type="button">A força fica paralela ao fio, e não perpendicular</button></li>
+    <li><button type="button">Nada muda: o polegar segue o sentido da corrente</button></li></ul>
+  <div class="resposta" hidden><p><strong>Nada muda.</strong> O sentido
+  convencional da corrente já incorpora a inversão: ele é definido como o sentido
+  em que cargas positivas andariam. Elétron para a esquerda <em>é</em> corrente
+  para a direita. A alternativa A é o passo 5 aplicado onde ele não existe — a
+  armadilha desta aula.</p></div>
+</div>
+
+<div class="questao" data-certa="2">
+  <p><strong>3.</strong> Um fio retilíneo está deitado <strong>exatamente ao longo
+  das linhas</strong> de um campo magnético uniforme e conduz corrente intensa.
+  Qual é a força magnética sobre ele?</p>
+  <ul class="opcoes">
+    <li><button type="button">Máxima, porque a corrente é intensa</button></li>
+    <li><button type="button">Máxima, e aponta no sentido do campo</button></li>
+    <li><button type="button">Nula, porque a corrente é paralela ao campo</button></li>
+    <li><button type="button">Nula, porque campo uniforme não exerce força</button></li></ul>
+  <div class="resposta" hidden><p><strong>Nula.</strong> É o caso "v paralela a B"
+  vestido de fio: não existe terceira direção perpendicular a duas direções que são
+  a mesma. A alternativa D é falsa pelo motivo errado — campo uniforme exerce força
+  sim, como nas questões 1 e 2.</p></div>
+</div>
+
+<div class="questao" data-certa="0">
+  <p><strong>4.</strong> Numa espira retangular percorrida por corrente, imersa num
+  campo uniforme, as forças nos dois lados opostos têm o mesmo módulo e sentidos
+  contrários. Qual é a consequência?</p>
+  <ul class="opcoes">
+    <li><button type="button">A resultante é nula, mas a espira tende a girar</button></li>
+    <li><button type="button">A espira se desloca no sentido da força maior</button></li>
+    <li><button type="button">Nada acontece, porque tudo se cancela</button></li>
+    <li><button type="button">A espira se deforma, mas permanece parada</button></li></ul>
+  <div class="resposta" hidden><p><strong>Resultante nula, com tendência a
+  girar.</strong> Forças iguais e opostas aplicadas em pontos diferentes não
+  transladam nada — produzem rotação. É o princípio do motor elétrico. A
+  alternativa C é a leitura apressada: "resultante zero" não é "efeito zero".</p></div>
+</div>
+
+<div class="questao" data-certa="2">
+  <p><strong>5.</strong> Num motor elétrico de corrente contínua, qual é a função
+  do comutador (o anel partido)?</p>
+  <ul class="opcoes">
+    <li><button type="button">Aumentar o campo magnético dos ímãs do motor</button></li>
+    <li><button type="button">Gerar a corrente induzida que alimenta a espira</button></li>
+    <li><button type="button">Inverter a corrente a cada meia volta da espira</button></li>
+    <li><button type="button">Impedir que a espira aqueça durante o giro</button></li></ul>
+  <div class="resposta" hidden><p><strong>Inverter a corrente a cada meia
+  volta.</strong> Sem isso, passada a meia volta o par de forças passaria a frear
+  a espira e ela balançaria até parar. A alternativa B troca motor por gerador — a
+  confusão de causa e efeito do seu Ponto P.</p></div>
+</div>
+
+<p class="placar" id="placar" hidden></p>
+</div>
+
+<div class="rodape">
+<h2>O que vem agora</h2>
+<p>O gate desta dinâmica — figura dada, sentido pedido, misturado com força sobre
+carga, porque são a mesma força e a prova não avisa qual é qual.</p>
+<p>Depois, <strong>Lenz</strong> (≈8 questões) e <strong>gráficos</strong> (≈6)
+fecham o Grupo 2, com gate de reconhecimento do grupo inteiro.</p>
+<p>
+<a href="0011-forca-magnetica-direcao.html">Aula 11 — a mesma força, sobre a carga</a><br>
+<a href="../reference/04-forca-magnetica-carga.html">Ficha 04 — força magnética sobre carga</a><br>
+<a href="../reference/00-mapa-das-dinamicas.html">Voltar ao mapa das 18 dinâmicas</a>
+</p>
+<p class="custo">Travou em qualquer ponto? Me pergunte. Eu sou o professor desta
+aula, não só o autor dela — e a dúvida que você não traz é a questão que você
+perde.</p>
+</div>
+
+<script>
+(function () {
+  var VETORES = {
+    dir:    [1, 0, 0],
+    esq:    [-1, 0, 0],
+    cima:   [0, 1, 0],
+    baixo:  [0, -1, 0],
+    dentro: [0, 0, -1],
+    zero:   [0, 0, 0]
+  };
+  var CAMPOS = { dentro: [0, 0, -1], fora: [0, 0, 1] };
+
+  var estado = { i: 'dir', b: 'dentro' };
+  var CX = 220, CY = 130;
+  var COR_I = '#0f6e56', COR_F = '#993c1d';
+
+  function cruz(a, b) {
+    return [a[1] * b[2] - a[2] * b[1],
+            a[2] * b[0] - a[0] * b[2],
+            a[0] * b[1] - a[1] * b[0]];
+  }
+
+  // Seta a partir do centro. dx/dy em coordenadas de matemática (y para cima);
+  // o SVG tem y para baixo, daí o sinal invertido.
+  function seta(dx, dy, comp, cor, rotulo) {
+    var fx = CX + dx * comp, fy = CY - dy * comp;
+    var ux = dx, uy = -dy, px = -uy, py = ux;
+    var b1x = fx - ux * 12 + px * 6, b1y = fy - uy * 12 + py * 6;
+    var b2x = fx - ux * 12 - px * 6, b2y = fy - uy * 12 - py * 6;
+    var tx = fx + ux * 18 + px * 5, ty = fy + uy * 18 + py * 5;
+    return '<line x1="' + CX + '" y1="' + CY + '" x2="' + fx + '" y2="' + fy +
+      '" stroke="' + cor + '" stroke-width="3"/>' +
+      '<polygon points="' + fx + ',' + fy + ' ' + b1x + ',' + b1y + ' ' +
+      b2x + ',' + b2y + '" fill="' + cor + '"/>' +
+      '<text x="' + tx + '" y="' + ty + '" fill="' + cor +
+      '" font-size="16" font-weight="700" text-anchor="middle">' + rotulo + '</text>';
+  }
+
+  function desenharFio() {
+    var e = estado.i;
+    // Fio visto de ponta: um círculo com o símbolo dentro.
+    if (e === 'dentro') {
+      return '<circle cx="' + CX + '" cy="' + CY + '" r="14" fill="none" stroke="' +
+        COR_I + '" stroke-width="3"/>' +
+        '<text x="' + CX + '" y="' + (CY + 6) + '" text-anchor="middle" fill="' +
+        COR_I + '" font-size="18" font-weight="700">×</text>';
+    }
+    // Fio no plano: reta atravessando a região, com setas de corrente.
+    var vertical = (e === 'cima' || e === 'baixo');
+    var linha = vertical
+      ? '<line x1="' + CX + '" y1="25" x2="' + CX + '" y2="235" stroke="' + COR_I + '" stroke-width="4"/>'
+      : '<line x1="25" y1="' + CY + '" x2="415" y2="' + CY + '" stroke="' + COR_I + '" stroke-width="4"/>';
+    if (e === 'zero') {
+      // Chave aberta: um corte no meio do fio.
+      linha = vertical
+        ? '<line x1="' + CX + '" y1="25" x2="' + CX + '" y2="110" stroke="' + COR_I + '" stroke-width="4"/>'
+        : '<line x1="25" y1="' + CY + '" x2="196" y2="' + CY + '" stroke="' + COR_I + '" stroke-width="4"/>' +
+          '<line x1="244" y1="' + CY + '" x2="415" y2="' + CY + '" stroke="' + COR_I + '" stroke-width="4"/>';
+      return linha + '<text x="' + CX + '" y="' + (CY - 18) + '" text-anchor="middle" fill="' +
+        COR_I + '" font-size="13" font-weight="600">i = 0</text>';
+    }
+    // Pontas de seta ao longo do fio indicando o sentido.
+    var pontas = '';
+    var v = VETORES[e];
+    for (var k = -1; k <= 1; k++) {
+      var bx = CX + (vertical ? 0 : k * 110), by = CY + (vertical ? k * 60 : 0);
+      var fx = bx + v[0] * 11, fy = by - v[1] * 11;
+      var ux = v[0], uy = -v[1], px = -uy, py = ux;
+      pontas += '<polygon points="' + fx + ',' + fy + ' ' +
+        (fx - ux * 13 + px * 7) + ',' + (fy - uy * 13 + py * 7) + ' ' +
+        (fx - ux * 13 - px * 7) + ',' + (fy - uy * 13 - py * 7) + '" fill="' + COR_I + '"/>';
+    }
+    var rot = vertical
+      ? '<text x="' + (CX + 16) + '" y="40" fill="' + COR_I + '" font-size="15" font-weight="700">i</text>'
+      : '<text x="40" y="' + (CY - 14) + '" fill="' + COR_I + '" font-size="15" font-weight="700">i</text>';
+    return linha + pontas + rot;
+  }
+
+  function pintar() {
+    var i = VETORES[estado.i], b = CAMPOS[estado.b];
+    var simbolo = estado.b === 'dentro' ? '⊗' : '⊙';
+
+    var marcas = '';
+    for (var ly = 50; ly <= 215; ly += 55) {
+      for (var lx = 45; lx <= 405; lx += 60) {
+        if (Math.abs(lx - CX) > 40 || Math.abs(ly - CY) > 34) {
+          marcas += '<text x="' + lx + '" y="' + ly + '" fill="#8b8a84" ' +
+            'font-size="15" text-anchor="middle">' + simbolo + '</text>';
+        }
+      }
+    }
+    document.getElementById('campo').innerHTML = marcas;
+    document.getElementById('fio').innerHTML = desenharFio();
+
+    var f = cruz(i, b);
+    var nula = (f[0] === 0 && f[1] === 0 && f[2] === 0);
+    var desenho = '', texto = '';
+
+    if (nula) {
+      if (estado.i === 'zero') {
+        texto = '<strong>F = 0.</strong> Sem corrente não há carga em movimento, ' +
+          'e sem carga em movimento o campo não tem o que empurrar. É a "carga ' +
+          'parada" de ontem, vestida de chave aberta.';
+      } else {
+        texto = '<strong>F = 0.</strong> O fio está paralelo ao campo: os dois ' +
+          'apontam na mesma direção, e não existe terceira direção perpendicular ' +
+          'a uma direção só. Corrente intensa não muda nada disso.';
+      }
+    } else {
+      desenho += seta(f[0], f[1], 76, COR_F, 'F');
+      var nome = f[1] > 0 ? 'para cima' : (f[1] < 0 ? 'para baixo' :
+                (f[0] > 0 ? 'para a direita' : 'para a esquerda'));
+      texto = '<strong>O fio é empurrado ' + nome + '.</strong> Polegar na ' +
+        'corrente, dedos no campo, a palma dá a resposta — e aqui ela é final, ' +
+        'porque corrente não tem sinal para inverter.';
+    }
+
+    document.getElementById('setas').innerHTML = desenho;
+    var vd = document.getElementById('veredito');
+    vd.innerHTML = texto;
+    vd.className = 'veredito' + (nula ? ' nulo' : '');
+  }
+
+  function grupo(id, campo) {
+    var cx = document.getElementById(id);
+    cx.addEventListener('click', function (ev) {
+      var bt = ev.target.closest('button.opc');
+      if (!bt) return;
+      Array.prototype.forEach.call(cx.querySelectorAll('button.opc'), function (o) {
+        o.setAttribute('aria-pressed', o === bt ? 'true' : 'false');
+      });
+      estado[campo] = bt.dataset.v;
+      pintar();
+    });
+  }
+
+  grupo('g-i', 'i');
+  grupo('g-b', 'b');
+  pintar();
+})();
+</script>
+<script src="../assets/quiz.js"></script>
+
+</body>
+</html>

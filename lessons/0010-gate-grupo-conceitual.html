@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gate final — grupo conceitual</title>
+<link rel="stylesheet" href="../assets/estilo.css">
+<style>
+  .altitude { font-family: var(--sans); font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--tinta-tenue); margin: 2.5rem 0 0; }
+  .corrigir { font-family: var(--sans); font-size: 0.9375rem; font-weight: 600; color: var(--papel); background: var(--destaque); border: none; border-radius: 3px; padding: 0.75rem 1.5rem; cursor: pointer; margin-top: 1.5rem; }
+  .corrigir:disabled { background: var(--tinta-tenue); cursor: not-allowed; }
+  .aviso { font-family: var(--sans); font-size: 0.875rem; color: var(--alerta); margin-top: 0.75rem; }
+  .aviso[hidden] { display: none; }
+  .opcoes button.marcada { border-color: var(--tinta-fraca); background: var(--papel-caixa); font-weight: 600; }
+  .erros { font-family: var(--sans); font-size: 0.8125rem; line-height: 1.55; color: var(--tinta-fraca); margin-top: 0.625rem; padding-left: 0.875rem; border-left: 2px solid var(--linha); }
+  .erros li { margin-bottom: 0.35rem; }
+  .final { font-size: 1.125rem; line-height: 1.5; margin-top: 2rem; padding: 1.5rem; border: 1px solid var(--linha); border-radius: 3px; }
+  .final[hidden] { display: none; }
+  .mapaErro { font-family: var(--sans); font-size: 0.875rem; line-height: 1.6; margin-top: 1rem; }
+</style>
+</head>
+<body>
+
+<nav class="trilha">
+Gate final do grupo 1 · <a href="../reference/00-mapa-das-dinamicas.html">mapa</a>
+</nav>
+
+<h1>Gate final — grupo conceitual</h1>
+<p class="subtitulo">Doze questões misturando as cinco dinâmicas. Passa com onze.</p>
+<p class="custo">O mais difícil até aqui, de propósito · sem consultar nada · gabarito só no fim</p>
+
+<p>Os gates anteriores avisavam qual era o assunto. Este não. As doze questões
+vêm embaralhadas entre ímãs, bússola, Oersted, indução e Maxwell — e algumas
+foram construídas especificamente para você <em>confundir uma dinâmica com
+outra</em>, que é o erro que só aparece quando se sabe várias.</p>
+
+<p>Antes de cada questão, faça a pergunta que a prova vai exigir: <strong>de qual
+dinâmica é esta?</strong> Decidido isso, a resposta costuma ser imediata.</p>
+
+<div class="quiz" id="quiz">
+
+<p class="altitude">Altitude 1 · reconhecimento direto</p>
+
+<div class="questao" data-certa="3" data-dinamica="ímãs">
+<p class="enunciado">1. Limalha de ferro espalhada sobre uma folha de papel, acima de um ímã, organiza-se em curvas bem definidas. Essas curvas revelam</p>
+<ul class="opcoes">
+<li><button type="button">o peso das partículas de ferro</button></li>
+<li><button type="button">a corrente elétrica dentro do ímã</button></li>
+<li><button type="button">a carga elétrica acumulada nele</button></li>
+<li><button type="button">as linhas do campo magnético</button></li>
+</ul>
+<div class="resposta" hidden>
+<p>Cada grão de limalha vira um pequeno ímã induzido e se alinha com o campo local — exatamente como faria uma bússola minúscula. O desenho que aparece é o mapa das linhas.</p>
+<ul class="erros">
+<li><strong>corrente dentro do ímã</strong> e <strong>carga acumulada:</strong> um ímã permanente não tem corrente de pilha nem carga elétrica líquida. Confundir magnetismo com eletricidade é a troca de fundo de todo este grupo.</li>
+</ul>
+</div>
+</div>
+
+<div class="questao" data-certa="1" data-tipo="ce" data-dinamica="Oersted">
+<p class="enunciado">2. Julgue o item: a experiência de Oersted mostrou que um ímã em movimento é capaz de produzir corrente elétrica em um fio.</p>
+<ul class="opcoes">
+<li><button type="button">Certo</button></li>
+<li><button type="button">Errado</button></li>
+</ul>
+<div class="resposta" hidden>
+<p><strong>Errado.</strong> Isso é Faraday, dez anos depois. Oersted foi o caminho inverso: <em>corrente desviando a agulha de uma bússola</em>, ou seja, corrente criando campo magnético. A frase é fisicamente verdadeira e a atribuição é falsa — o formato de item que você já reconheceu duas vezes.</p>
+</div>
+</div>
+
+<div class="questao" data-certa="0" data-dinamica="campo terrestre">
+<p class="enunciado">3. O campo magnético da Terra protege o planeta porque</p>
+<ul class="opcoes">
+<li><button type="button">desvia as partículas carregadas do Sol</button></li>
+<li><button type="button">impede a entrada da luz solar intensa</button></li>
+<li><button type="button">reflete as ondas de rádio do espaço</button></li>
+<li><button type="button">atrai os meteoros em direção aos polos</button></li>
+</ul>
+<div class="resposta" hidden>
+<p>O vento solar é feito de partículas <em>carregadas</em>, e campo magnético age sobre carga em movimento. Desviadas para os polos, elas colidem com a atmosfera e acendem as auroras.</p>
+<ul class="erros">
+<li><strong>impede a luz:</strong> luz não tem carga; o campo magnético não a desvia. Quem filtra radiação é a atmosfera, a camada de ozônio.</li>
+</ul>
+</div>
+</div>
+
+<p class="altitude">Altitude 2 · aplicação e discriminação</p>
+
+<div class="questao" data-certa="2" data-dinamica="indução vs eletroímã">
+<p class="enunciado">4. Uma fechadura elétrica destrava quando se aperta um botão: a corrente na bobina atrai uma trava de ferro. O princípio em jogo é o mesmo de</p>
+<ul class="opcoes">
+<li><button type="button">um fogão de indução doméstico</button></li>
+<li><button type="button">um carregador de celular sem fio</button></li>
+<li><button type="button">um guindaste eletroímã de sucata</button></li>
+<li><button type="button">uma etiqueta RFID sem bateria</button></li>
+</ul>
+<div class="resposta" hidden>
+<p>Fechadura e guindaste são <strong>eletroímãs</strong>: a corrente é a causa, o campo é o efeito, e o campo atrai ferro. Fogão, carregador e RFID são <strong>indução</strong>: ali a corrente é o efeito de um fluxo que varia.</p>
+<p>Esta questão exige duas classificações seguidas — a do dispositivo do enunciado e a de cada alternativa. É o tipo de item que só se erra quando se sabe as duas coisas e não se separou uma da outra.</p>
+</div>
+</div>
+
+<div class="questao" data-certa="3" data-dinamica="Oersted">
+<p class="enunciado">5. Um fio de cobre é enrolado em um prego e ligado a uma pilha. O prego passa a atrair clipes. O fenômeno é explicado por</p>
+<ul class="opcoes">
+<li><button type="button">Faraday, campo variável criando corrente</button></li>
+<li><button type="button">Gauss, as linhas fechadas do campo</button></li>
+<li><button type="button">Lenz, o sentido da corrente induzida</button></li>
+<li><button type="button">Oersted, corrente criando campo magnético</button></li>
+</ul>
+<div class="resposta" hidden>
+<p>Eletroímã, portanto Oersted. A corrente da pilha cria campo magnético em volta das espiras, o ferro do prego concentra esse campo, e o conjunto atrai clipes.</p>
+<ul class="erros">
+<li><strong>Faraday:</strong> exigiria algo variando. A pilha dá corrente constante e o prego atrai do mesmo jeito.</li>
+</ul>
+</div>
+</div>
+
+<div class="questao" data-certa="0" data-dinamica="indução">
+<p class="enunciado">6. Uma espira está parada. Um ímã que estava ao lado dela é bruscamente retirado da região. <strong>Durante a retirada</strong>, na espira</p>
+<ul class="opcoes">
+<li><button type="button">há corrente, pois o campo que ela sente muda</button></li>
+<li><button type="button">não há corrente, pois a espira está parada</button></li>
+<li><button type="button">não há corrente, pois nada encosta nela</button></li>
+<li><button type="button">há corrente somente depois da retirada</button></li>
+</ul>
+<div class="resposta" hidden>
+<p>Primeira pergunta do teste: mudou o campo que a espira sente? Mudou — o ímã estava perto e saiu. Há corrente durante a retirada.</p>
+<ul class="erros">
+<li><strong>pois a espira está parada:</strong> movimento da espira nunca foi a pergunta. Quem se move aqui é o ímã, e o que importa é o movimento relativo entre os dois.</li>
+<li><strong>depois da retirada:</strong> depois, acabou a variação, e com ela a corrente.</li>
+</ul>
+</div>
+</div>
+
+<div class="questao" data-certa="1" data-dinamica="Oersted">
+<p class="enunciado">7. Um fio retilíneo vertical, no plano do papel, conduz corrente <strong>de cima para baixo</strong>. Num ponto à direita do fio, no plano do papel, o campo magnético aponta</p>
+<ul class="opcoes">
+<li><button type="button">entrando no papel, afastando-se de você</button></li>
+<li><button type="button">saindo do papel, na sua direção</button></li>
+<li><button type="button">para baixo, acompanhando a corrente</button></li>
+<li><button type="button">para a direita, afastando-se do fio</button></li>
+</ul>
+<div class="resposta" hidden>
+<p>Saindo. O caso-padrão que você decorou é <em>corrente para cima, ponto à direita, entra no papel</em>. Aqui a corrente está invertida, então o sentido do campo inverte: sai.</p>
+<p>Esse é o atalho — não refaça a mão direita do zero, parta do caso-padrão e veja o que mudou.</p>
+<ul class="erros">
+<li><strong>para baixo:</strong> dá ao campo a direção da corrente. O campo é sempre perpendicular ao fio.</li>
+<li><strong>para a direita:</strong> campo radial, que é o desenho do campo elétrico de uma carga.</li>
+</ul>
+</div>
+</div>
+
+<div class="questao" data-certa="0" data-tipo="ce" data-dinamica="campo terrestre">
+<p class="enunciado">8. Julgue o item: o polo norte da agulha de uma bússola é atraído pelo polo sul magnético da Terra, situado nas proximidades do polo norte geográfico.</p>
+<ul class="opcoes">
+<li><button type="button">Certo</button></li>
+<li><button type="button">Errado</button></li>
+</ul>
+<div class="resposta" hidden>
+<p><strong>Certo.</strong> A frase está inteira e corretamente montada: norte da agulha, atraído por sul magnético, que fica no norte geográfico. A Terra está magneticamente invertida em relação à geografia.</p>
+</div>
+</div>
+
+<p class="altitude">Altitude 3 · estresse e síntese</p>
+
+<div class="questao" data-certa="2" data-dinamica="indução">
+<p class="enunciado">9. Duas espiras estão próximas, sem nenhum contato elétrico entre si. Pela primeira passa uma corrente constante, e nada acontece na segunda. Se a chave do circuito da primeira for <strong>aberta</strong>, interrompendo a corrente, na segunda espira</p>
+<ul class="opcoes">
+<li><button type="button">continua não acontecendo nada</button></li>
+<li><button type="button">surge uma corrente constante</button></li>
+<li><button type="button">surge uma corrente momentânea</button></li>
+<li><button type="button">surge corrente só se elas se encostarem</button></li>
+</ul>
+<div class="resposta" hidden>
+<p>Momentânea. Esta é a síntese das duas dinâmicas centrais do grupo.</p>
+<p>Corrente na primeira espira cria campo em volta dela — isso é Oersted. Enquanto essa corrente é constante, o campo é constante, o fluxo na segunda espira é constante e não há nada. Mas ao abrir a chave, a corrente despenca a zero, o campo despenca junto, e o fluxo na segunda espira varia bruscamente. Durante esse instante, há corrente induzida.</p>
+<p>É literalmente o experimento com que Faraday descobriu a indução: ele só detectava corrente no instante de ligar e no instante de desligar.</p>
+<ul class="erros">
+<li><strong>corrente constante:</strong> exigiria variação permanente. Depois que a corrente da primeira zera, tudo fica parado de novo.</li>
+<li><strong>só se encostarem:</strong> o ponto do fenômeno é justamente não precisar de contato.</li>
+</ul>
+</div>
+</div>
+
+<div class="questao" data-certa="1" data-tipo="ce" data-dinamica="Maxwell">
+<p class="enunciado">10. Julgue o item: a Lei de Ampère descreve a relação entre o campo elétrico e o fluxo magnético variável que o origina.</p>
+<ul class="opcoes">
+<li><button type="button">Certo</button></li>
+<li><button type="button">Errado</button></li>
+</ul>
+<div class="resposta" hidden>
+<p><strong>Errado.</strong> A frase descreve <em>Faraday</em> — fluxo magnético variável originando campo elétrico — e carimba o nome de Ampère em cima. Ampère é o espelho: corrente, ou campo elétrico variável, criando campo magnético.</p>
+<p>Lembre do atalho: Faraday termina em elétrico.</p>
+</div>
+</div>
+
+<div class="questao" data-certa="2" data-dinamica="indução">
+<p class="enunciado">11. Um ímã é preso firmemente dentro de uma bobina, e o conjunto inteiro é transportado na carroceria de um caminhão em movimento. Durante a viagem, na bobina</p>
+<ul class="opcoes">
+<li><button type="button">há corrente proporcional à velocidade</button></li>
+<li><button type="button">há corrente alternada ao longo do trajeto</button></li>
+<li><button type="button">não há corrente em momento nenhum</button></li>
+<li><button type="button">há corrente apenas no instante da partida</button></li>
+</ul>
+<div class="resposta" hidden>
+<p>Não há. O conjunto inteiro viaja junto: a distância entre ímã e bobina não muda, a orientação não muda, a área não muda. Da perspectiva da bobina, o ímã está parado ali dentro.</p>
+<p>O que conta nunca é o movimento em relação ao chão — é o <strong>movimento relativo</strong> entre o ímã e a espira. Há movimento no mundo e fluxo constante na bobina.</p>
+</div>
+</div>
+
+<div class="questao" data-certa="3" data-dinamica="ponte para a próxima dinâmica">
+<p class="enunciado">12. Uma carga elétrica encontra-se <strong>em repouso</strong> numa região onde existe um campo magnético intenso e uniforme. Sobre essa carga</p>
+<ul class="opcoes">
+<li><button type="button">age uma força magnética intensa</button></li>
+<li><button type="button">age uma força magnética fraca</button></li>
+<li><button type="button">age uma força magnética variável</button></li>
+<li><button type="button">não age força magnética alguma</button></li>
+</ul>
+<div class="resposta" hidden>
+<p>Nenhuma. Campo magnético só age sobre carga <strong>em movimento</strong> — carga parada não sente força magnética, por mais intenso que seja o campo.</p>
+<p>Repare que esta é a mesma forma de armadilha que te pegou no gate de indução: a presença de alguma coisa não implica o efeito dela. Lá era campo presente sem corrente; aqui é campo presente sem força.</p>
+<p>E esta questão é uma ponte: ela já pertence à próxima dinâmica, a de força magnética sobre cargas, que é a maior do caderno. Você acabou de dar o primeiro passo nela.</p>
+</div>
+</div>
+
+</div>
+
+<button type="button" class="corrigir" id="corrigir">Corrigir as doze</button>
+<p class="aviso" id="aviso" hidden></p>
+
+<div class="final" id="final" hidden></div>
+<div class="mapaErro" id="mapaErro"></div>
+
+<div class="rodape">
+<h2>Depois de corrigir</h2>
+<p>Me diga o número e, nas que errar, o raciocínio. E diga também se alguma saiu
+certa mas lenta — com cinco dinâmicas na cabeça, a velocidade de
+<em>reconhecer</em> passa a valer tanto quanto o acerto.</p>
+<p><a href="../reference/00-mapa-das-dinamicas.html">Mapa</a></p>
+</div>
+
+<script>
+(function () {
+  var questoes = [].slice.call(document.querySelectorAll('#quiz .questao'));
+  var botaoCorrigir = document.getElementById('corrigir');
+  var aviso = document.getElementById('aviso');
+  var final = document.getElementById('final');
+  var mapaErro = document.getElementById('mapaErro');
+
+  questoes.forEach(function (questao) {
+    var botoes = [].slice.call(questao.querySelectorAll('.opcoes button'));
+    botoes.forEach(function (botao, indice) {
+      botao.addEventListener('click', function () {
+        if (questao.dataset.corrigida) return;
+        botoes.forEach(function (b) { b.classList.remove('marcada'); });
+        botao.classList.add('marcada');
+        questao.dataset.marcada = indice;
+        aviso.hidden = true;
+      });
+    });
+  });
+
+  botaoCorrigir.addEventListener('click', function () {
+    var pendentes = questoes.filter(function (q) { return q.dataset.marcada === undefined; });
+    if (pendentes.length) {
+      aviso.textContent = 'Falta' + (pendentes.length > 1 ? 'm ' : ' ') + pendentes.length +
+        (pendentes.length > 1 ? ' questões' : ' questão') + ' por responder.';
+      aviso.hidden = false;
+      pendentes[0].scrollIntoView({ behavior: 'smooth', block: 'center' });
+      return;
+    }
+
+    var certas = 0, erradas = [];
+
+    questoes.forEach(function (questao, posicao) {
+      questao.dataset.corrigida = 'sim';
+      var gabarito = parseInt(questao.dataset.certa, 10);
+      var marcada = parseInt(questao.dataset.marcada, 10);
+      var botoes = questao.querySelectorAll('.opcoes button');
+
+      botoes[gabarito].classList.add('certa');
+      if (marcada !== gabarito) {
+        botoes[marcada].classList.add('errada');
+        erradas.push({ n: posicao + 1, dinamica: questao.dataset.dinamica });
+      } else {
+        certas++;
+      }
+      [].forEach.call(botoes, function (b) { b.disabled = true; b.classList.remove('marcada'); });
+      questao.querySelector('.resposta').hidden = false;
+    });
+
+    botaoCorrigir.disabled = true;
+    botaoCorrigir.textContent = certas + ' de 12';
+    aviso.hidden = true;
+
+    var texto;
+    if (certas === 12) {
+      texto = '<strong>Doze de doze.</strong> O grupo conceitual inteiro está fechado: cinco dinâmicas, cerca de 48 questões do caderno, 30% do total — e nenhuma conta feita até aqui.';
+    } else if (certas === 11) {
+      texto = '<strong>Onze de doze — passou.</strong> Grupo conceitual fechado. Me conte o raciocínio da que escapou.';
+    } else if (certas >= 9) {
+      texto = '<strong>' + certas + ' de 12 — perto.</strong> Com cinco dinâmicas misturadas, duas ou três escapando é normal e quase sempre é confusão entre dinâmicas, não falta de conteúdo. Veja o mapa abaixo.';
+    } else {
+      texto = '<strong>' + certas + ' de 12.</strong> Não é para refazer as cinco aulas. O mapa abaixo mostra onde os erros se concentraram — vamos atacar só aquilo.';
+    }
+    final.innerHTML = texto;
+    final.hidden = false;
+
+    if (erradas.length) {
+      var linhas = erradas.map(function (e) {
+        return '<li>questão ' + e.n + ' — <strong>' + e.dinamica + '</strong></li>';
+      }).join('');
+      mapaErro.innerHTML = '<p>Onde os erros caíram:</p><ul>' + linhas + '</ul>' +
+        '<p>Se duas ou mais caíram na mesma dinâmica, é uma confusão só. Se caíram espalhadas, é cansaço — e aí o remédio é parar, não estudar mais.</p>';
+    } else {
+      mapaErro.innerHTML = '';
+    }
+    final.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+})();
+</script>
+
+</body>
+</html>

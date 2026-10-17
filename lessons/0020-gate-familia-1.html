@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gate da Família I — quem cria o campo</title>
+<link rel="stylesheet" href="../assets/estilo.css">
+<link rel="stylesheet" href="../assets/bancada.css">
+<style>
+.ponte { border-left: 3px solid var(--tinta-tenue); padding-left: .8rem; }
+.fase { font-family: var(--sans); font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; color: var(--tinta-tenue); margin: 2rem 0 .5rem; }
+.ferramentas { font-family: var(--sans); font-size: .8rem; color: var(--tinta-tenue); }
+</style>
+</head>
+<body>
+
+<nav class="trilha">Gate · Família I · dinâmicas 10, 11 e 12 · campo criado, superposição, fios paralelos</nav>
+
+<h1>Gate da Família I</h1>
+<p class="subtitulo">Três altitudes, como manda o mapa: conceito, número, estresse.</p>
+<p class="custo">Dez que contam e uma ponte que não conta. Passar é <strong>9 de 10</strong>.
+Papel e caneta liberados; consulta, não. Dado em todas: μ₀ = 4π × 10⁻⁷ T·m/A.</p>
+<p class="ferramentas">Montado com: <strong>deeptutor</strong> (Quiz em 3 fases e
+diagnóstico de erro) sobre os moldes do <strong>tutor-concurso /reverso</strong>.</p>
+
+<div class="quiz" id="quiz"
+     data-fim=" — Família I dominada: três dinâmicas de uma vez. Me avise e eu abro a Família II."
+     data-parcial=" — me diga quais errou e em que passo do protocolo parou. Eu faço o diagnóstico de cada erro antes de seguir.">
+
+<p class="fase">Fase 1 · conceito</p>
+
+<div class="questao" data-certa="2">
+  <p><strong>1.</strong> Dois fios longos e paralelos conduzem correntes em sentidos
+  opostos. Sobre a interação entre eles:</p>
+  <ul class="opcoes">
+    <li><button type="button">atraem-se, porque as correntes são opostas</button></li>
+    <li><button type="button">não interagem, porque os campos se anulam</button></li>
+    <li><button type="button">repelem-se, porque as correntes são opostas</button></li>
+    <li><button type="button">atraem-se, porque só um deles cria campo</button></li></ul>
+  <div class="resposta" hidden><p><strong>Repelem-se.</strong> Mesmo sentido atrai,
+  oposto repele, o inverso das cargas. "Opostos se atraem" é a eletrostática
+  importada, exatamente a armadilha da UnB 2016. E os dois fios criam campo:
+  cada um sente o campo do outro.</p></div>
+</div>
+
+<div class="questao" data-certa="0">
+  <p><strong>2.</strong> No interior de um solenoide longo percorrido por corrente
+  contínua, o campo magnético é:</p>
+  <ul class="opcoes">
+    <li><button type="button">uniforme e paralelo ao eixo do solenoide</button></li>
+    <li><button type="button">nulo, porque as voltas se anulam entre si</button></li>
+    <li><button type="button">circular, dando voltas em torno do eixo</button></li>
+    <li><button type="button">mais forte junto ao fio e nulo no eixo</button></li></ul>
+  <div class="resposta" hidden><p><strong>Uniforme e paralelo ao eixo.</strong> As
+  voltas somam os campos lá dentro, e o resultado são linhas retas e igualmente
+  espaçadas: um ímã de barra feito de corrente. "Nulo" é o item E da UnB que o
+  caderno marca como falso. "Circular" é o campo de um <em>fio</em>, não de um
+  solenoide.</p></div>
+</div>
+
+<div class="questao" data-certa="3">
+  <p><strong>3.</strong> Dois fios longos e paralelos têm correntes de <strong>mesma
+  intensidade</strong> e sentidos <strong>opostos</strong>. Em que ponto do plano
+  dos fios o campo resultante é nulo?</p>
+  <ul class="opcoes">
+    <li><button type="button">No ponto médio da linha que liga os fios</button></li>
+    <li><button type="button">Do lado de fora, mais perto de um dos fios</button></li>
+    <li><button type="button">Em qualquer ponto da linha que liga os fios</button></li>
+    <li><button type="button">Em nenhum ponto situado a distância finita</button></li></ul>
+  <div class="resposta" hidden><p><strong>Em nenhum ponto.</strong> Com correntes
+  opostas, <em>entre</em> os fios os dois campos apontam para o mesmo lado e
+  somam. <em>Fora</em>, apontam para lados opostos, mas você está mais perto de
+  um fio que do outro, e com correntes iguais o mais perto sempre ganha. O ponto
+  médio é a resposta da aula, onde as correntes eram no mesmo sentido. A
+  pergunta mudou um detalhe só, e era esse detalhe que valia.</p></div>
+</div>
+
+<p class="fase">Fase 2 · número</p>
+
+<div class="questao" data-certa="1">
+  <p><strong>4.</strong> Um solenoide tem o número de voltas dobrado, o comprimento
+  dobrado e a corrente triplicada. Seu campo interno, antes B, passa a ser:</p>
+  <ul class="opcoes">
+    <li><button type="button">12B</button></li>
+    <li><button type="button">3B</button></li>
+    <li><button type="button">6B</button></li>
+    <li><button type="button">1,5B</button></li></ul>
+  <div class="resposta" hidden><p><strong>3B.</strong> B = μ₀ N i ÷ L. N × 2 em
+  cima e L × 2 embaixo se cancelam; sobra a corrente × 3. 12B multiplicou tudo
+  sem olhar quem divide; 6B esqueceu o comprimento.</p></div>
+</div>
+
+<div class="questao" data-certa="2">
+  <p><strong>5.</strong> Um fio longo conduz 10 A. O campo a 0,2 m dele vale:</p>
+  <ul class="opcoes">
+    <li><button type="button">2 × 10⁻⁵ T</button></li>
+    <li><button type="button">π × 10⁻⁵ T</button></li>
+    <li><button type="button">1 × 10⁻⁵ T</button></li>
+    <li><button type="button">1 × 10⁻⁶ T</button></li></ul>
+  <div class="resposta" hidden><p><strong>1 × 10⁻⁵ T.</strong> Fio: B = μ₀ i ÷ 2πd =
+  (4π × 10⁻⁷ × 10) ÷ (2π × 0,2) = 40π × 10⁻⁷ ÷ 0,4π = 100 × 10⁻⁷ = 1 × 10⁻⁵ T.
+  π × 10⁻⁵ é quem usou a fórmula da <em>espira</em> (2R, sem π): o π sobra.</p></div>
+</div>
+
+<div class="questao" data-certa="0">
+  <p><strong>6.</strong> Um solenoide de 0,5 m de comprimento tem 500 voltas e
+  conduz 2 A. O campo no interior dele vale:</p>
+  <ul class="opcoes">
+    <li><button type="button">8π × 10⁻⁴ T</button></li>
+    <li><button type="button">2π × 10⁻⁴ T</button></li>
+    <li><button type="button">4π × 10⁻⁴ T</button></li>
+    <li><button type="button">8π × 10⁻⁷ T</button></li></ul>
+  <div class="resposta" hidden><p><strong>8π × 10⁻⁴ T.</strong> B = μ₀ N i ÷ L =
+  4π × 10⁻⁷ × 500 × 2 ÷ 0,5 = 4π × 10⁻⁷ × 2000 = 8π × 10⁻⁴ T. 2π × 10⁻⁴ é quem
+  multiplicou por L em vez de dividir; 4π × 10⁻⁴ esqueceu a corrente.</p></div>
+</div>
+
+<div class="questao" data-certa="3">
+  <p><strong>7.</strong> A 3 cm de um fio longo o campo vale 6 × 10⁻⁶ T. A 9 cm do
+  mesmo fio, ele vale:</p>
+  <ul class="opcoes">
+    <li><button type="button">1,8 × 10⁻⁵ T</button></li>
+    <li><button type="button">6,0 × 10⁻⁷ T</button></li>
+    <li><button type="button">3,0 × 10⁻⁶ T</button></li>
+    <li><button type="button">2,0 × 10⁻⁶ T</button></li></ul>
+  <div class="resposta" hidden><p><strong>2 × 10⁻⁶ T.</strong> Distância × 3, campo
+  ÷ 3. É a curva que despenca da <a href="0017-graficos.html">aula de gráficos</a>
+  com número. 1,8 × 10⁻⁵ multiplicou em vez de dividir: chegou longe e o campo
+  "cresceu".</p></div>
+</div>
+
+<div class="questao" data-certa="1">
+  <p><strong>8.</strong> Uma espira está no plano do papel, com corrente no sentido
+  <strong>anti-horário</strong>, e cria no seu centro um campo de 6 × 10⁻⁶ T.
+  Logo abaixo dela, no mesmo plano, passa um fio horizontal com corrente
+  <strong>para a direita</strong>, que cria no centro da espira 2 × 10⁻⁶ T. O campo
+  resultante no centro é:</p>
+  <figure>
+  <svg viewBox="0 0 440 240" role="img" aria-label="Figura da questão 8: espira com corrente anti-horária e, abaixo dela, um fio horizontal com corrente para a direita">
+    <circle cx="220" cy="100" r="58" fill="none" stroke="#1a1a18" stroke-width="2.5"/>
+    <g fill="#1a1a18">
+      <path d="M 253.2 51.2 L 265.2 54.8 L 256.8 63.2 z"/>
+      <path d="M 171.2 66.8 L 174.8 54.8 L 183.2 63.2 z"/>
+      <path d="M 186.8 148.8 L 174.8 145.2 L 183.2 136.8 z"/>
+      <path d="M 268.8 133.2 L 265.2 145.2 L 256.8 136.8 z"/>
+    </g>
+    <circle cx="220" cy="100" r="2.5" fill="#1a1a18"/>
+    <text x="212" y="104" font-size="12" text-anchor="end" fill="#1a1a18">P (centro)</text>
+    <text x="220" y="30" font-size="12" text-anchor="middle" fill="#1a1a18">espira · corrente anti-horária ↺</text>
+    <line x1="30" y1="200" x2="410" y2="200" stroke="#1a1a18" stroke-width="3"/>
+    <path d="M 412 200 l -14 -7 v 14 z" fill="#1a1a18"/>
+    <text x="220" y="226" font-size="12" text-anchor="middle" fill="#1a1a18">fio · corrente para a direita →</text>
+  </svg>
+  <figcaption>Tudo no plano do papel. P está acima do fio.</figcaption>
+  </figure>
+  <details>
+  <summary>Ferramenta: explorar a mão direita (abre numa configuração diferente da questão)</summary>
+  <div class="bancada mao-direita" data-fio="esq" data-espira="horario"></div>
+  <p class="custo">Descubra a regra aqui, depois monte a configuração da questão
+  e confira o seu raciocínio. Dá para usar só como conferência, mas o ganho de
+  verdade vem de decidir ⊙ ou ⊗ <em>antes</em> de ligar o campo.</p>
+  </details>
+  <ul class="opcoes">
+    <li><button type="button">4 × 10⁻⁶ T, saindo do papel</button></li>
+    <li><button type="button">8 × 10⁻⁶ T, saindo do papel</button></li>
+    <li><button type="button">4 × 10⁻⁶ T, entrando no papel</button></li>
+    <li><button type="button">8 × 10⁻⁶ T, entrando no papel</button></li></ul>
+  <div class="resposta" hidden><p><strong>8 × 10⁻⁶ T, saindo.</strong> Sentido
+  primeiro. Espira anti-horária: dedos enrolando no sentido da corrente, polegar
+  <strong>saindo</strong>. Fio com corrente para a direita, ponto <em>acima</em>
+  dele: polegar para a direita, os dedos sobem saindo do papel em cima do fio,
+  então também <strong>saindo</strong>. Mesmo sentido, soma. Quem marcou
+  4 × 10⁻⁶ subtraiu no automático, sem fazer a mão. É o molde da AOCP 2024 do
+  CBM PE.</p></div>
+</div>
+
+<div class="questao" data-certa="0">
+  <p><strong>9.</strong> Dois fios paralelos de 2 m, separados por 0,1 m, conduzem
+  5 A cada, no mesmo sentido. A força entre eles é:</p>
+  <ul class="opcoes">
+    <li><button type="button">1 × 10⁻⁴ N, de atração</button></li>
+    <li><button type="button">1 × 10⁻⁴ N, de repulsão</button></li>
+    <li><button type="button">2 × 10⁻⁴ N, de atração</button></li>
+    <li><button type="button">5 × 10⁻⁵ N, de repulsão</button></li></ul>
+  <div class="resposta" hidden><p><strong>1 × 10⁻⁴ N, atração.</strong> F = μ₀ i₁ i₂
+  L ÷ 2πd = (4π × 10⁻⁷ × 5 × 5 × 2) ÷ (2π × 0,1) = 200π × 10⁻⁷ ÷ 0,2π =
+  1000 × 10⁻⁷ = 1 × 10⁻⁴ N. Mesmo sentido, atração. A outra com o mesmo número é
+  quem acertou a conta e errou a regra: é exatamente o que a banca põe ao lado.</p></div>
+</div>
+
+<p class="fase">Fase 3 · estresse</p>
+
+<div class="questao" data-certa="2">
+  <p><strong>10.</strong> Dois fios paralelos, separados por 8 cm, conduzem 2 A e 6 A
+  no <strong>mesmo</strong> sentido. O ponto de campo nulo entre eles fica:</p>
+  <ul class="opcoes">
+    <li><button type="button">a 4 cm de cada fio, no meio</button></li>
+    <li><button type="button">a 6 cm do fio que conduz 2 A</button></li>
+    <li><button type="button">a 2 cm do fio que conduz 2 A</button></li>
+    <li><button type="button">fora, além do fio que conduz 2 A</button></li></ul>
+  <div class="resposta" hidden><p><strong>A 2 cm do fio de 2 A.</strong> Os campos se
+  anulam onde têm o mesmo tamanho: 2 ÷ x = 6 ÷ (8 − x), logo 16 − 2x = 6x e x = 2 cm.
+  Fica <em>perto do fio fraco</em>: para compensar a corrente menor, é preciso
+  chegar mais perto dele. 6 cm inverte isso. "No meio" só vale com correntes iguais.</p></div>
+</div>
+
+<p class="fase">Ponte · não conta · aplicação para a Família II</p>
+
+<div class="questao ponte" data-certa="3" data-ponte="1">
+  <p><strong>11.</strong> A força sobre uma carga em movimento num campo tem
+  intensidade <strong>F = q · v · B · sen θ</strong>, em que θ é o ângulo entre a
+  velocidade e o campo. Um próton (q = 1,6 × 10⁻¹⁹ C) entra a 2 × 10⁶ m/s num campo
+  de 0,5 T, formando 30° com ele. A força vale:</p>
+  <ul class="opcoes">
+    <li><button type="button">1,6 × 10⁻¹³ N</button></li>
+    <li><button type="button">1,4 × 10⁻¹³ N</button></li>
+    <li><button type="button">8,0 × 10⁻¹² N</button></li>
+    <li><button type="button">8,0 × 10⁻¹⁴ N</button></li></ul>
+  <div class="resposta" hidden><p><strong>8 × 10⁻¹⁴ N.</strong> 1,6 × 10⁻¹⁹ × 2 × 10⁶
+  × 0,5 × 0,5 = 0,8 × 10⁻¹³ = 8 × 10⁻¹⁴ N. 1,6 × 10⁻¹³ ignorou o seno; 1,4 × 10⁻¹³
+  usou o cosseno. O sen θ é a porta de entrada da Família II, e ele explica o seu
+  Ponto R: paralela ao campo (θ = 0°) dá sen 0° = 0, força zero.</p></div>
+</div>
+
+<p class="placar" id="placar" hidden></p>
+</div>
+
+<div class="rodape">
+<p><a href="0019-quem-cria-o-campo.html">Aula 0019</a> ·
+<a href="../reference/00-mapa-das-dinamicas.html">Mapa das 18 dinâmicas</a></p>
+<p class="custo">Errou alguma? Me mande o número e o que você pensou. O diagnóstico
+de cada erro (estrutural, compreensão, aplicação ou atenção) decide se há reforço.</p>
+</div>
+
+<script src="../assets/mao-direita.js"></script>
+<script src="../assets/quiz.js"></script>
+</body>
+</html>

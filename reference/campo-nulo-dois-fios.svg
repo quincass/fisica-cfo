@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" font-family="Segoe UI, sans-serif">
+  <rect width="640" height="300" fill="#fdfcf9"/>
+  <text x="20" y="26" font-size="15" font-weight="700" fill="#1a1a18">A peça-chave: o campo de um fio troca de lado</text>
+  <circle cx="110" cy="95" r="14" fill="#fff" stroke="#1a1a18" stroke-width="2"/><circle cx="110" cy="95" r="4" fill="#1a1a18"/>
+  <circle cx="110" cy="95" r="42" fill="none" stroke="#0f6e56" stroke-opacity=".35"/>
+  <line x1="160" y1="115" x2="160" y2="70" stroke="#0f6e56" stroke-width="3"/><path d="M160 62 l-6 11 h12z" fill="#0f6e56"/>
+  <line x1="60" y1="75" x2="60" y2="120" stroke="#0f6e56" stroke-width="3"/><path d="M60 128 l-6 -11 h12z" fill="#0f6e56"/>
+  <text x="110" y="150" font-size="12" text-anchor="middle" fill="#1a1a18">corrente saindo (⊙)</text>
+  <text x="175" y="90" font-size="12" fill="#0f6e56">direita: para cima</text>
+  <text x="20" y="62" font-size="12" fill="#0f6e56">esquerda: para baixo</text>
+  <line x1="330" y1="40" x2="330" y2="280" stroke="#ddd9cd"/>
+  <text x="350" y="60" font-size="14" font-weight="700" fill="#1a1a18">Onde pode zerar</text>
+  <circle cx="400" cy="100" r="9" fill="#fff" stroke="#1a1a18" stroke-width="2"/><circle cx="400" cy="100" r="3" fill="#1a1a18"/>
+  <circle cx="540" cy="100" r="9" fill="#fff" stroke="#1a1a18" stroke-width="2"/><circle cx="540" cy="100" r="3" fill="#1a1a18"/>
+  <rect x="415" y="88" width="110" height="24" fill="#0f6e56" fill-opacity=".15"/>
+  <text x="470" y="105" font-size="12" text-anchor="middle" fill="#0f6e56" font-weight="700">nulo: ENTRE</text>
+  <text x="350" y="135" font-size="12" fill="#1a1a18">mesmo sentido → i₁/x = i₂/(D − x)</text>
+  <circle cx="400" cy="190" r="9" fill="#fff" stroke="#1a1a18" stroke-width="2"/><circle cx="400" cy="190" r="3" fill="#1a1a18"/>
+  <circle cx="540" cy="190" r="9" fill="#fff" stroke="#1a1a18" stroke-width="2"/><path d="M534 184 l12 12 M546 184 l-12 12" stroke="#1a1a18" stroke-width="2"/>
+  <rect x="340" y="178" width="50" height="24" fill="#993c1d" fill-opacity=".15"/>
+  <rect x="550" y="178" width="70" height="24" fill="#993c1d" fill-opacity=".15"/>
+  <text x="470" y="195" font-size="12" text-anchor="middle" fill="#993c1d" font-weight="700">nulo: FORA</text>
+  <text x="350" y="225" font-size="12" fill="#1a1a18">opostos → i₁/x = i₂/(x + D), lado do fraco</text>
+  <text x="350" y="255" font-size="12" fill="#993c1d">iguais e opostos → NÃO existe nulo</text>
+  <text x="20" y="200" font-size="13" fill="#1a1a18">Sempre mais perto do fio</text>
+  <text x="20" y="218" font-size="13" fill="#1a1a18">de corrente MENOR.</text>
+  <text x="20" y="250" font-size="12" fill="#5f5e5a">Deu x negativo? Região errada.</text>
+</svg>

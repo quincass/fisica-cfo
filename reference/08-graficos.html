@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ficha 08 — gráficos</title>
+<link rel="stylesheet" href="../assets/estilo.css">
+<style>
+.formas { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 1.5rem 0; }
+.formas figure { margin: 0; }
+.formas figcaption { padding-left: 0; border-left: none; text-align: center; margin-top: .4rem; }
+@media (max-width: 520px) { .formas { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<nav class="trilha">Ficha 08 · dinâmica 9 · ≈6 questões do caderno</nav>
+
+<h1>Leitura de gráficos</h1>
+<p class="subtitulo">Nenhuma física nova: é a física que você já tem, desenhada
+em vez de escrita.</p>
+<p class="custo">Dominada em 2026-10-15: 4/5 na aula, e todas as questões de
+gráfico corretas no gate do grupo.
+<a href="../lessons/0017-graficos.html">Aula</a> ·
+<a href="../lessons/0018-gate-grupo-2.html">Gate do grupo</a></p>
+
+<div class="caixa regra">
+<span class="rotulo">Antes de qualquer coisa</span>
+<p><strong>Leia os dois eixos em voz alta.</strong></p>
+<p>A maioria dos erros desta dinâmica não é de física: é responder sobre a
+grandeza errada.</p>
+</div>
+
+<h2>Fluxo contra tempo: a inclinação é a fem</h2>
+
+<p>Faraday diz que o que importa é a <em>rapidez</em> da variação do fluxo. Num
+gráfico, rapidez de variação é <strong>inclinação</strong>.</p>
+
+<table>
+<thead><tr><th>O que você vê</th><th>O que significa</th></tr></thead>
+<tbody>
+<tr><td>Reta <strong>horizontal</strong></td><td>fem = <strong>0</strong>, por mais alto que esteja</td></tr>
+<tr><td>Reta <strong>inclinada</strong></td><td>fem <strong>constante</strong>, diferente de zero</td></tr>
+<tr><td>Trecho mais inclinado</td><td>fem <strong>maior</strong> ali</td></tr>
+<tr><td>Sobe × desce</td><td>mesma fem em tamanho, corrente de <strong>sentido oposto</strong></td></tr>
+<tr><td><strong>Bico</strong> na linha</td><td>a corrente <strong>inverte</strong> ali</td></tr>
+<tr><td>Trapézio (sobe, patamar, desce)</td><td>espira <strong>entrando</strong>, <strong>dentro</strong>, <strong>saindo</strong> da região</td></tr>
+</tbody>
+</table>
+
+<div class="caixa armadilha">
+<span class="rotulo">A confusão número 1</span>
+<p><strong>Fluxo grande não é fem grande.</strong> A alternativa mais marcada em
+prova é "a fem é maior onde o gráfico está mais alto". Vale o quanto ele
+<em>sobe</em>, não o quanto ele <em>está alto</em>. Fluxo enorme e parado dá fem
+zero — é o Ponto K desenhado.</p>
+</div>
+
+<h2>As três formas</h2>
+
+<div class="formas">
+<figure>
+<svg viewBox="0 0 140 120" role="img" aria-label="Reta que sai da origem">
+  <line x1="20" y1="100" x2="130" y2="100" stroke="#8b8a84" stroke-width="1.5"/>
+  <line x1="20" y1="100" x2="20" y2="10" stroke="#8b8a84" stroke-width="1.5"/>
+  <line x1="20" y1="100" x2="120" y2="20" stroke="#0f6e56" stroke-width="3"/>
+</svg>
+<figcaption><strong>Reta pela origem</strong><br>proporcional</figcaption>
+</figure>
+<figure>
+<svg viewBox="0 0 140 120" role="img" aria-label="Reta horizontal">
+  <line x1="20" y1="100" x2="130" y2="100" stroke="#8b8a84" stroke-width="1.5"/>
+  <line x1="20" y1="100" x2="20" y2="10" stroke="#8b8a84" stroke-width="1.5"/>
+  <line x1="20" y1="45" x2="125" y2="45" stroke="#0f6e56" stroke-width="3"/>
+</svg>
+<figcaption><strong>Horizontal</strong><br>não depende</figcaption>
+</figure>
+<figure>
+<svg viewBox="0 0 140 120" role="img" aria-label="Curva que despenca">
+  <line x1="20" y1="100" x2="130" y2="100" stroke="#8b8a84" stroke-width="1.5"/>
+  <line x1="20" y1="100" x2="20" y2="10" stroke="#8b8a84" stroke-width="1.5"/>
+  <path d="M 32 18 Q 55 88 125 95" fill="none" stroke="#0f6e56" stroke-width="3"/>
+</svg>
+<figcaption><strong>Despenca</strong><br>inversamente proporcional</figcaption>
+</figure>
+</div>
+
+<table>
+<thead><tr><th>Gráfico</th><th>Forma</th><th>Por quê</th></tr></thead>
+<tbody>
+<tr><td>Raio da órbita × velocidade</td><td>reta pela origem</td><td>mais rápida, curva mais <strong>aberta</strong>, na mesma proporção</td></tr>
+<tr><td>Período × velocidade</td><td>horizontal</td><td>círculo maior percorrido mais depressa: <strong>mesmo tempo</strong></td></tr>
+<tr><td>Campo de um fio × distância</td><td>despenca</td><td>dobrou a distância, campo <strong>caiu à metade</strong>; nunca chega a zero</td></tr>
+<tr><td>fem × rapidez da variação</td><td>reta pela origem</td><td>é Faraday dito em gráfico</td></tr>
+</tbody>
+</table>
+
+<div class="caixa regra">
+<span class="rotulo">A analogia que fixa o raio</span>
+<p>Carro numa curva: mesmo asfalto, mesmo pneu, <strong>mais velocidade, curva
+mais aberta</strong>. Ele não consegue fazê-la fechada.</p>
+<p>A carga é igual — quanto mais rápida, mais difícil de virar, maior o raio.
+A intuição errada ("rápido curva mais fechado") é a alternativa mais marcada.</p>
+</div>
+
+<h2>Armadilhas</h2>
+<ul>
+<li><strong>Confundir altura com inclinação</strong> em Φ × t. A número 1.</li>
+<li><strong>Responder sobre o eixo errado.</strong> Ler os dois eixos primeiro
+custa três segundos e evita o erro mais caro.</li>
+<li><strong>Trocar "diminui" por "reta descendo".</strong> O campo de um fio
+diminui numa curva, não numa reta — e nunca fica negativo.</li>
+<li><strong>Achar que reta horizontal significa "nada acontece".</strong> Em
+Φ × t significa fem zero; em T × v significa independência, que é um resultado
+forte e não ausência de resultado.</li>
+<li><strong>Esquecer que reta proporcional nasce na origem.</strong> Sem
+velocidade não há raio; a reta não pode começar acima do zero.</li>
+</ul>
+
+<h2>Para onde esta dinâmica leva</h2>
+<p>Ela é a porta do grupo de cálculo: os mesmos gráficos reaparecem pedindo
+<strong>valor</strong> em vez de forma. Quando isso acontece, o obstáculo deixa
+de ser leitura e passa a ser <strong>potência de 10</strong> — ver o
+<a href="06-inventario-cbm.html">inventário CBM</a>.</p>
+
+<div class="rodape">
+<p><a href="00-mapa-das-dinamicas.html">Voltar ao mapa</a> ·
+<a href="07-lenz.html">Ficha 07 — Lenz</a></p>
+</div>
+
+</body>
+</html>

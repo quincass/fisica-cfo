@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reforço — onde o campo zera</title>
+<link rel="stylesheet" href="../assets/estilo.css">
+<link rel="stylesheet" href="../assets/bancada.css">
+<style>
+.ferramentas { font-family: var(--sans); font-size: .8rem; color: var(--tinta-tenue); }
+.exemplo { border: 1px solid var(--linha); border-radius: 4px; padding: .8rem 1rem; margin: 1.2rem 0; }
+.exemplo h3 { margin-top: 0; }
+.passo { margin: .3rem 0; }
+.passo b { font-family: var(--sans); font-size: .8rem; color: var(--destaque); margin-right: .4rem; }
+</style>
+</head>
+<body>
+
+<nav class="trilha">Reforço · dinâmica 11 · superposição e campo nulo · depois do gate 0020</nav>
+
+<h1>Onde o campo zera</h1>
+<p class="subtitulo">Você errou as questões 3 e 10 do gate porque não sabia <em>fazer</em>.
+Então aqui não tem teoria nova: tem um método de três passos e quatro exemplos
+resolvidos na sua frente, do jeito que se resolve na prova.</p>
+<p class="custo">Leitura: 8 minutos. As quatro questões do fim são o reteste da dinâmica.</p>
+<p class="ferramentas">Montado com: <strong>deeptutor</strong> (diagnóstico: procedimento
+ausente nas questões 3 e 10, conceito ausente na 2) · <strong>tutor-concurso
+/mecanica</strong> nível 1 nos exemplos e nível 2 no reteste · <strong>teach</strong>.</p>
+
+<h2>1 · O método em três passos</h2>
+
+<div class="caixa regra">
+<span class="rotulo">Campo nulo na reta que liga dois fios</span>
+<p class="passo"><b>1</b><strong>Divida a reta em três regiões:</strong> à esquerda dos dois, entre eles, à direita dos dois.</p>
+<p class="passo"><b>2</b><strong>Ache a região onde os campos se opõem.</strong> Só lá pode haver nulo. A regra sai da mão direita, e vale sempre:</p>
+<table>
+<thead><tr><th>Correntes</th><th>Os campos se opõem…</th></tr></thead>
+<tbody>
+<tr><td>no <strong>mesmo</strong> sentido</td><td><strong>entre</strong> os fios</td></tr>
+<tr><td>em sentidos <strong>opostos</strong></td><td><strong>fora</strong> dos fios</td></tr>
+</tbody></table>
+<p class="passo"><b>3</b><strong>Iguale os dois campos:</strong> i₁ ÷ d₁ = i₂ ÷ d₂. O μ₀ e o 2π
+são iguais dos dois lados e somem. O ponto fica sempre <strong>mais perto do fio de
+corrente menor</strong>.</p>
+</div>
+
+<div class="caixa armadilha">
+<span class="rotulo">O caso que derruba: correntes iguais e opostas</span>
+<p>O passo 2 manda procurar <strong>fora</strong>. Mas fora você está sempre mais perto
+de um fio do que do outro, e com correntes iguais o mais perto sempre ganha. A
+equação não tem solução: <strong>não existe ponto nulo</strong>. Foi a questão 3.</p>
+</div>
+
+<p>Confira os quatro casos na bancada antes de ler os exemplos:</p>
+<div class="bancada dois-fios" data-s2="1" data-k2="3"></div>
+
+<h2>2 · Quatro exemplos resolvidos</h2>
+
+<div class="exemplo">
+<h3>Exemplo 1 · iguais, mesmo sentido</h3>
+<p>Dois fios a 10 cm, 4 A cada, mesmo sentido. Onde o campo é nulo?</p>
+<p class="passo"><b>passo 2</b>Mesmo sentido: os campos se opõem <strong>entre</strong> os fios.</p>
+<p class="passo"><b>passo 3</b>Correntes iguais pedem distâncias iguais: <strong>no meio, a 5 cm de cada fio.</strong></p>
+</div>
+
+<div class="exemplo">
+<h3>Exemplo 2 · iguais, sentidos opostos (a questão 3)</h3>
+<p>Dois fios a 10 cm, 4 A cada, sentidos opostos. Onde o campo é nulo?</p>
+<p class="passo"><b>passo 2</b>Sentidos opostos: os campos se opõem <strong>fora</strong> dos fios.</p>
+<p class="passo"><b>passo 3</b>Fora, um fio está sempre mais perto que o outro (por exemplo, 3 cm
+de um e 13 cm do outro). Com a mesma corrente, o mais perto sempre cria mais
+campo. <strong>Não há ponto nulo.</strong> E entre os fios eles somam: o meio é o ponto
+mais forte, não o mais fraco.</p>
+</div>
+
+<div class="exemplo">
+<h3>Exemplo 3 · diferentes, mesmo sentido (a questão 10)</h3>
+<p>Fios a 8 cm, com 2 A e 6 A no mesmo sentido. Onde o campo é nulo?</p>
+<p class="passo"><b>passo 2</b>Mesmo sentido: <strong>entre</strong> os fios, mais perto do de 2 A.</p>
+<p class="passo"><b>passo 3</b>Chame de <strong>x</strong> a distância até o fio de 2 A. Então a
+distância até o de 6 A é <strong>8 − x</strong> (o que sobra dos 8 cm).</p>
+<p style="text-align:center">2 ÷ x = 6 ÷ (8 − x)</p>
+<p class="passo"><b>conta</b>Multiplique cruzado: 2 · (8 − x) = 6 · x → 16 − 2x = 6x → 16 = 8x →
+<strong>x = 2 cm</strong> do fio de 2 A (e 6 cm do de 6 A).</p>
+<p class="passo"><b>confira</b>2 ÷ 2 = 1 e 6 ÷ 6 = 1. Iguais, então está certo. Confira sempre: custa 5 segundos.</p>
+</div>
+
+<div class="exemplo">
+<h3>Exemplo 4 · diferentes, sentidos opostos</h3>
+<p>Fios a 10 cm, com 1 A e 3 A em sentidos opostos. Onde o campo é nulo?</p>
+<p class="passo"><b>passo 2</b>Sentidos opostos: <strong>fora</strong>, do lado do fio de 1 A (o mais fraco).</p>
+<p class="passo"><b>passo 3</b>Chame de <strong>x</strong> a distância até o fio de 1 A. Como o ponto está
+do lado de fora, o fio de 3 A fica <em>depois</em> do de 1 A: a distância até ele é
+<strong>x + 10</strong>.</p>
+<p style="text-align:center">1 ÷ x = 3 ÷ (x + 10)</p>
+<p class="passo"><b>conta</b>x + 10 = 3x → 10 = 2x → <strong>x = 5 cm</strong> do fio de 1 A, do lado
+de fora (e 15 cm do de 3 A).</p>
+<p class="passo"><b>confira</b>1 ÷ 5 = 0,2 e 3 ÷ 15 = 0,2. Certo.</p>
+</div>
+
+<div class="caixa gatilho">
+<span class="rotulo">A única diferença entre os exemplos 3 e 4</span>
+<p>Entre os fios, as distâncias <strong>somam o total</strong>: x e (D − x).
+Fora, uma <strong>contém a outra</strong>: x e (x + D). Errar isto é o que faz a conta
+dar número negativo, e número negativo é o aviso de que você escolheu a região
+errada no passo 2.</p>
+</div>
+
+<h2>3 · E a questão 2: o interior do solenoide</h2>
+<p>Isto a aula não disse com todas as letras, e devia ter dito. Dentro de um
+solenoide longo o campo é <strong>uniforme</strong> (mesmo tamanho em todo lugar) e
+<strong>paralelo ao eixo</strong>: as voltas somam os campos lá dentro, e o resultado
+são linhas retas, igualmente espaçadas. Do lado de fora ele é quase nulo. Pense
+nele como um <strong>ímã de barra feito de corrente</strong>, com polo norte de um lado
+e sul do outro.</p>
+
+<h2>Vídeos de exercícios resolvidos</h2>
+<p class="custo">Buscados agora e confirmados como existentes, mas eu
+<strong>não os assisti</strong>. A ordem é a sugerida para ver.</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=15WVFjfhyyo">FATEC-SP: dois fios com i e 3i no mesmo sentido</a>. É o exemplo 3 em questão de vestibular: o campo nulo entre os fios, perto do mais fraco.</li>
+<li><a href="https://www.youtube.com/watch?v=6cO2-sM9Sh8">UFPE: dois fios com correntes iguais e de sentidos opostos</a>. É o exemplo 2, a sua questão 3.</li>
+<li><a href="https://www.youtube.com/watch?v=5k1z5esok6w">Aula 17.8: campo resultante em fios paralelos</a>. Mostra o método geral, soma ou subtrai.</li>
+<li><a href="https://www.youtube.com/watch?v=JRy5UgbbUUY">FUVEST: arranjos de fios paralelos</a>, um exercício de vestibular mais pesado, para depois.</li>
+<li><a href="https://www.youtube.com/watch?v=Zbdh7pi63Dc">UEMG: campo no interior de um solenoide</a>, a conta com B = μ₀ N i ÷ L.</li>
+</ul>
+
+<h2>Reteste · quatro novas</h2>
+<p class="custo">Correção imediata. Rode os três passos em cada uma. Acertando
+as quatro, a dinâmica 11 está dominada.</p>
+
+<div class="quiz" id="quiz"
+     data-fim=" — dinâmica 11 dominada. Família I fechada. Me avise e eu abro a Família II."
+     data-parcial=" — me diga quais errou e em qual dos três passos parou.">
+
+<div class="questao" data-certa="2">
+  <p><strong>1.</strong> Dois fios paralelos, separados por 12 cm, conduzem 1 A e 3 A no
+  <strong>mesmo</strong> sentido. O campo é nulo:</p>
+  <ul class="opcoes">
+    <li><button type="button">a 6 cm de cada fio, no meio</button></li>
+    <li><button type="button">a 9 cm do fio que conduz 1 A</button></li>
+    <li><button type="button">a 3 cm do fio que conduz 1 A</button></li>
+    <li><button type="button">fora, além do fio que conduz 1 A</button></li></ul>
+  <div class="resposta" hidden><p><strong>A 3 cm do fio de 1 A.</strong> Mesmo sentido:
+  entre os fios. 1 ÷ x = 3 ÷ (12 − x) → 12 − x = 3x → x = 3 cm. Confira: 1 ÷ 3 e
+  3 ÷ 9, iguais. 9 cm é o ponto certo medido a partir do fio errado.</p></div>
+</div>
+
+<div class="questao" data-certa="0">
+  <p><strong>2.</strong> Dois fios paralelos conduzem correntes iguais em sentidos
+  <strong>opostos</strong>. No ponto médio entre eles, o campo resultante é:</p>
+  <ul class="opcoes">
+    <li><button type="button">o mais intenso de toda a reta</button></li>
+    <li><button type="button">nulo, porque as correntes se opõem</button></li>
+    <li><button type="button">igual ao campo de um fio sozinho</button></li>
+    <li><button type="button">nulo, porque as distâncias são iguais</button></li></ul>
+  <div class="resposta" hidden><p><strong>O mais intenso da reta.</strong> Com correntes
+  opostas, entre os fios os campos apontam para o mesmo lado e somam. O meio vale o
+  dobro do campo de um fio. "Correntes opostas, então anula" é a intuição que a
+  banca espera: corrente oposta não é campo oposto.</p></div>
+</div>
+
+<div class="questao" data-certa="3">
+  <p><strong>3.</strong> Dois fios paralelos, separados por 6 cm, conduzem 2 A e 8 A em
+  sentidos <strong>opostos</strong>. O campo é nulo:</p>
+  <ul class="opcoes">
+    <li><button type="button">entre os fios, a 1,2 cm do de 2 A</button></li>
+    <li><button type="button">fora, a 2 cm além do fio de 8 A</button></li>
+    <li><button type="button">entre os fios, a 3 cm de cada um</button></li>
+    <li><button type="button">fora, a 2 cm além do fio de 2 A</button></li></ul>
+  <div class="resposta" hidden><p><strong>Fora, a 2 cm além do fio de 2 A.</strong>
+  Sentidos opostos: fora, do lado do mais fraco. 2 ÷ x = 8 ÷ (x + 6) → 2x + 12 = 8x
+  → x = 2 cm. Confira: 2 ÷ 2 = 1 e 8 ÷ 8 = 1. 1,2 cm é a mesma equação montada
+  entre os fios, na região onde os campos somam e nunca zeram.</p></div>
+</div>
+
+<div class="questao" data-certa="1">
+  <p><strong>4.</strong> Uma pequena bússola é colocada em três pontos diferentes no
+  interior de um solenoide longo com corrente. Nos três pontos, a agulha:</p>
+  <ul class="opcoes">
+    <li><button type="button">gira, porque o campo é circular ali</button></li>
+    <li><button type="button">aponta igual, paralela ao eixo dele</button></li>
+    <li><button type="button">fica solta, porque o campo é nulo ali</button></li>
+    <li><button type="button">aponta para o fio mais próximo dela</button></li></ul>
+  <div class="resposta" hidden><p><strong>Aponta igual, paralela ao eixo.</strong> Campo
+  uniforme: mesma direção, mesmo sentido, mesma intensidade em todo o interior.
+  Circular é o campo de um fio isolado; nulo é o que fica <em>fora</em> do
+  solenoide ideal, não dentro.</p></div>
+</div>
+
+<p class="placar" id="placar" hidden></p>
+</div>
+
+<div class="rodape">
+<p><a href="0019-quem-cria-o-campo.html">Aula 0019</a> ·
+<a href="0020-gate-familia-1.html">Gate 0020</a> ·
+<a href="../reference/00-mapa-das-dinamicas.html">Mapa das 18 dinâmicas</a></p>
+<p class="custo">Travou? Me diga em qual dos três passos. Se for no passo 3, me
+mande a equação que você montou: o erro de região aparece nela.</p>
+</div>
+
+<script src="../assets/dois-fios.js"></script>
+<script src="../assets/quiz.js"></script>
+</body>
+</html>

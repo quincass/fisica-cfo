@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reforço — o teste das três perguntas</title>
+<link rel="stylesheet" href="../assets/estilo.css">
+<style>
+  .teste { counter-reset: passo; margin: 1.5rem 0; }
+  .passo { display: flex; gap: 0.875rem; align-items: baseline; padding: 0.875rem 0; border-top: 1px solid var(--linha); }
+  .passo:last-child { border-bottom: 1px solid var(--linha); }
+  .passo::before { counter-increment: passo; content: counter(passo); font-family: var(--sans); font-size: 0.75rem; font-weight: 600; color: var(--destaque); min-width: 1.25rem; }
+  .passo p { margin: 0; }
+  td.sim { color: var(--destaque); font-weight: 600; }
+  td.nao { color: var(--tinta-tenue); }
+</style>
+</head>
+<body>
+
+<nav class="trilha">
+Reforço · <a href="0005-inducao.html">aula de indução</a> · <a href="../reference/00-mapa-das-dinamicas.html">mapa</a>
+</nav>
+
+<h1>O teste das três perguntas</h1>
+<p class="subtitulo">Por que a 7 e a 8 do gate eram o mesmo erro, e o procedimento que resolve as duas.</p>
+<p class="custo">6 minutos · depois vem o reteste</p>
+
+<p>Você acertou tudo que era reconhecer aparelho. Errou as duas questões em que
+era preciso <em>decidir</em> se havia corrente. A diferença entre as duas coisas
+é que reconhecer é memória, e decidir é procedimento — e procedimento se treina
+com uma rotina fixa, não com entendimento.</p>
+
+<p>Na questão 7 havia <strong>movimento</strong>, e você concluiu corrente.
+Na 8 havia <strong>campo</strong>, e você concluiu corrente. Movimento não é
+causa. Campo não é causa. A causa é uma só:</p>
+
+<div class="regra">
+Corrente induzida existe se, e somente se,<br>
+o <strong>fluxo mudou</strong>.
+</div>
+
+<h2>1 · Veja o fluxo não mudar</h2>
+
+<p>Esta é a cena da questão 7. A região tracejada tem campo uniforme — os ⊗ são
+as linhas entrando no papel. Arraste a espira e olhe o número, não o desenho:</p>
+
+<figure>
+<svg viewBox="0 0 560 250" role="img" aria-labelledby="rft rfd" style="display:block;width:100%;height:auto;font-family:sans-serif;font-size:12px;fill:#5f5e5a">
+<title id="rft">Espira atravessando uma região de campo uniforme</title>
+<desc id="rfd">Uma espira é arrastada dentro de uma região de campo magnético uniforme. Enquanto ela está inteiramente dentro, o número de linhas que a atravessam não muda e não há corrente. Quando ela começa a sair, o número cai e surge corrente.</desc>
+
+<rect x="40" y="48" width="330" height="150" fill="none" stroke="#8b8a84" stroke-width="1" stroke-dasharray="5 5"/>
+<text x="40" y="40">região com campo uniforme</text>
+<g stroke="#378ADD" stroke-width="1.1" fill="none" opacity="0.75">
+<circle cx="70" cy="80" r="5.5"/><line x1="66" y1="76" x2="74" y2="84"/><line x1="74" y1="76" x2="66" y2="84"/>
+<circle cx="120" cy="80" r="5.5"/><line x1="116" y1="76" x2="124" y2="84"/><line x1="124" y1="76" x2="116" y2="84"/>
+<circle cx="170" cy="80" r="5.5"/><line x1="166" y1="76" x2="174" y2="84"/><line x1="174" y1="76" x2="166" y2="84"/>
+<circle cx="220" cy="80" r="5.5"/><line x1="216" y1="76" x2="224" y2="84"/><line x1="224" y1="76" x2="216" y2="84"/>
+<circle cx="270" cy="80" r="5.5"/><line x1="266" y1="76" x2="274" y2="84"/><line x1="274" y1="76" x2="266" y2="84"/>
+<circle cx="320" cy="80" r="5.5"/><line x1="316" y1="76" x2="324" y2="84"/><line x1="324" y1="76" x2="316" y2="84"/>
+<circle cx="70" cy="123" r="5.5"/><line x1="66" y1="119" x2="74" y2="127"/><line x1="74" y1="119" x2="66" y2="127"/>
+<circle cx="120" cy="123" r="5.5"/><line x1="116" y1="119" x2="124" y2="127"/><line x1="124" y1="119" x2="116" y2="127"/>
+<circle cx="170" cy="123" r="5.5"/><line x1="166" y1="119" x2="174" y2="127"/><line x1="174" y1="119" x2="166" y2="127"/>
+<circle cx="220" cy="123" r="5.5"/><line x1="216" y1="119" x2="224" y2="127"/><line x1="224" y1="119" x2="216" y2="127"/>
+<circle cx="270" cy="123" r="5.5"/><line x1="266" y1="119" x2="274" y2="127"/><line x1="274" y1="119" x2="266" y2="127"/>
+<circle cx="320" cy="123" r="5.5"/><line x1="316" y1="119" x2="324" y2="127"/><line x1="324" y1="119" x2="316" y2="127"/>
+<circle cx="70" cy="166" r="5.5"/><line x1="66" y1="162" x2="74" y2="170"/><line x1="74" y1="162" x2="66" y2="170"/>
+<circle cx="120" cy="166" r="5.5"/><line x1="116" y1="162" x2="124" y2="170"/><line x1="124" y1="162" x2="116" y2="170"/>
+<circle cx="170" cy="166" r="5.5"/><line x1="166" y1="162" x2="174" y2="170"/><line x1="174" y1="162" x2="166" y2="170"/>
+<circle cx="220" cy="166" r="5.5"/><line x1="216" y1="162" x2="224" y2="170"/><line x1="224" y1="162" x2="216" y2="170"/>
+<circle cx="270" cy="166" r="5.5"/><line x1="266" y1="162" x2="274" y2="170"/><line x1="274" y1="162" x2="266" y2="170"/>
+<circle cx="320" cy="166" r="5.5"/><line x1="316" y1="162" x2="324" y2="170"/><line x1="324" y1="162" x2="316" y2="170"/>
+</g>
+
+<rect id="espira" x="60" y="68" width="92" height="110" fill="none" stroke="#D85A30" stroke-width="2.5" rx="4"/>
+
+<text x="400" y="86" id="rotuloFluxo" font-size="14">fluxo: 10</text>
+<text x="400" y="108" id="rotuloEstado">não variou</text>
+<circle id="lampadaR" cx="414" cy="150" r="16" fill="#fdfcf9" stroke="#8b8a84" stroke-width="1"/>
+<text x="400" y="190" id="rotuloCorrente">sem corrente</text>
+</svg>
+<div style="margin-top:0.75rem">
+<label for="posEspira" style="font-family:var(--sans);font-size:0.8125rem;color:var(--tinta-fraca)">posição da espira</label>
+<input type="range" id="posEspira" min="0" max="100" value="5" step="0.5" style="width:100%;margin-top:0.375rem" aria-label="posição da espira">
+</div>
+<figcaption>Arraste do começo até o meio da região: a espira anda, os ⊗ passam
+por baixo dela, <strong>e o número não se mexe</strong>. Dez linhas antes, dez
+linhas depois. Não variou, não há corrente — por mais movimento que você veja.
+Agora continue arrastando até ela começar a sair pela direita: o número cai, e
+só então a lâmpada acende.</figcaption>
+</figure>
+
+<p>Era isso a questão 7. A espira se movia, mas permanecia inteiramente dentro da
+região — então o número de linhas que a atravessavam nunca mudou. Movimento sem
+variação de fluxo é movimento sem corrente.</p>
+
+<h2>2 · O procedimento, para usar na prova</h2>
+
+<p>Diante de qualquer cena, faça três perguntas nesta ordem. Se as três derem
+não, a corrente é zero — e você pode marcar sem medo.</p>
+
+<div class="teste">
+<div class="passo"><p><strong>Mudou o campo que a espira sente?</strong> O ímã se aproximou, se afastou, ligou, desligou, ficou mais forte? Ou a espira entrou ou saiu da região onde há campo?</p></div>
+<div class="passo"><p><strong>Mudou a área da espira?</strong> Ela foi esticada, encolhida, amassada?</p></div>
+<div class="passo"><p><strong>Ela girou?</strong> Mudou o ângulo entre o plano da espira e as linhas?</p></div>
+</div>
+
+<p>Três nãos, corrente zero. Um sim que seja, há corrente.</p>
+
+<h2>3 · As cenas que a banca usa</h2>
+
+<p>Passe o olho na coluna da direita. Repare que em todas as linhas com "não" nas
+três perguntas, há alguma coisa acontecendo na cena — e mesmo assim não há
+corrente. É isso que a banca explora.</p>
+
+<table>
+<thead><tr><th>A cena</th><th>Campo?</th><th>Área?</th><th>Girou?</th><th>Corrente</th></tr></thead>
+<tbody>
+<tr><td>Ímã se aproxima da bobina</td><td class="sim">sim</td><td class="nao">não</td><td class="nao">não</td><td class="sim">sim</td></tr>
+<tr><td>Ímã parado dentro da bobina</td><td class="nao">não</td><td class="nao">não</td><td class="nao">não</td><td class="nao">não</td></tr>
+<tr><td>Espira anda dentro de campo uniforme</td><td class="nao">não</td><td class="nao">não</td><td class="nao">não</td><td class="nao">não</td></tr>
+<tr><td>Espira começa a sair da região de campo</td><td class="sim">sim</td><td class="nao">não</td><td class="nao">não</td><td class="sim">sim</td></tr>
+<tr><td>Espira gira no campo</td><td class="nao">não</td><td class="nao">não</td><td class="sim">sim</td><td class="sim">sim</td></tr>
+<tr><td>Espira é amassada ou esticada</td><td class="nao">não</td><td class="sim">sim</td><td class="nao">não</td><td class="sim">sim</td></tr>
+<tr><td>Fio com corrente <em>constante</em>, espira parada ao lado</td><td class="nao">não</td><td class="nao">não</td><td class="nao">não</td><td class="nao">não</td></tr>
+<tr><td>Corrente no fio <em>aumentando</em>, espira parada ao lado</td><td class="sim">sim</td><td class="nao">não</td><td class="nao">não</td><td class="sim">sim</td></tr>
+</tbody>
+</table>
+
+<p>As duas últimas linhas são a questão 8 e o que a banca faria para transformá-la
+no caso oposto. A espira está parada nas duas. O fio está lá nas duas. O que
+muda é só uma palavra do enunciado: <em>constante</em> ou <em>aumentando</em>.
+É nessa palavra que mora a questão inteira.</p>
+
+<div class="caixa armadilha">
+<span class="rotulo">A frase que você deve desconfiar</span>
+<p>Sempre que um enunciado disser que alguma coisa <strong>se move</strong> ou
+que <strong>existe um campo</strong>, e perguntar se há corrente — não responda
+pelo movimento nem pela presença. Rode as três perguntas. A banca constrói essas
+questões exatamente para quem responde pelo instinto.</p>
+</div>
+
+<h2>4 · Ver em vídeo</h2>
+
+<p>A aula do <a href="https://www.youtube.com/watch?v=dv3Ili8mBvs">Prof. Marcelo
+Boaro sobre a Lei de Faraday</a> é a que detalha melhor o fluxo em espiras — é o
+conceito exato que faltou. E <a href="https://www.youtube.com/watch?v=-0FgrxDdlq8">esta
+outra</a> percorre justamente as diferentes maneiras de variar o fluxo, que é a
+lista das três perguntas acima.</p>
+<p style="font-size:0.8125rem">Como das outras vezes: achei por busca,
+não assisti. Se não prestarem, me avise que eu procuro outras.</p>
+
+<div class="rodape">
+<h2>Agora o reteste</h2>
+<p>Oito questões novas, em
+<a href="0008-reteste-inducao.html">reteste de indução</a>. A maioria vai te
+obrigar a rodar as três perguntas. Faça com a mão, item por item, mesmo quando
+a resposta parecer óbvia — principalmente quando parecer óbvia.</p>
+<p><a href="0005-inducao.html">Aula de indução</a> · <a href="../reference/00-mapa-das-dinamicas.html">Mapa</a></p>
+</div>
+
+<script>
+(function () {
+  var controle = document.getElementById('posEspira');
+  var espira = document.getElementById('espira');
+  var rotuloFluxo = document.getElementById('rotuloFluxo');
+  var rotuloEstado = document.getElementById('rotuloEstado');
+  var rotuloCorrente = document.getElementById('rotuloCorrente');
+  var lampada = document.getElementById('lampadaR');
+  if (!controle) return;
+
+  var CAMPO_X = 40, CAMPO_FIM = 370;
+  var LARGURA = 92, X_MIN = 48, X_MAX = 430;
+
+  var fluxoAnterior = null;
+  var ultimoTempo = performance.now();
+  var acesa = false;
+
+  function fluxoEm(x) {
+    var dentro = Math.max(0, Math.min(x + LARGURA, CAMPO_FIM) - Math.max(x, CAMPO_X));
+    return Math.round((dentro / LARGURA) * 10);
+  }
+
+  function render() {
+    var x = X_MIN + (parseFloat(controle.value) / 100) * (X_MAX - X_MIN);
+    espira.setAttribute('x', x.toFixed(1));
+
+    var fluxo = fluxoEm(x);
+    rotuloFluxo.textContent = 'fluxo: ' + fluxo;
+
+    if (fluxoAnterior !== null && fluxo !== fluxoAnterior) {
+      acesa = true;
+      ultimoTempo = performance.now();
+    }
+    fluxoAnterior = fluxo;
+    pintar();
+  }
+
+  function pintar() {
+    lampada.setAttribute('fill', acesa ? '#EF9F27' : '#fdfcf9');
+    rotuloEstado.textContent = acesa ? 'está variando' : 'não variou';
+    rotuloCorrente.textContent = acesa ? 'corrente!' : 'sem corrente';
+    rotuloCorrente.setAttribute('fill', acesa ? '#854F0B' : '#5f5e5a');
+  }
+
+  controle.addEventListener('input', render);
+
+  setInterval(function () {
+    if (acesa && performance.now() - ultimoTempo > 160) {
+      acesa = false;
+      pintar();
+    }
+  }, 60);
+
+  render();
+})();
+</script>
+
+</body>
+</html>

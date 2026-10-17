@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Para onde a força empurra a carga</title>
+<link rel="stylesheet" href="../assets/estilo.css">
+<style>
+.bancada { border: 1px solid var(--linha); border-radius: 4px; padding: 1rem; margin: 1.5rem 0; }
+.bancada .botoes { display: flex; flex-wrap: wrap; gap: .4rem; margin: .5rem 0 .9rem; }
+.bancada button.opc {
+  font: inherit; font-size: .92rem; padding: .35rem .7rem; cursor: pointer;
+  background: var(--papel-caixa); color: var(--tinta);
+  border: 1px solid var(--linha); border-radius: 3px;
+}
+.bancada button.opc[aria-pressed="true"] { background: var(--destaque); color: #fff; border-color: var(--destaque); }
+.bancada .legenda { font-size: .9rem; color: var(--tinta-fraca); margin: .15rem 0 .35rem; }
+#veredito { font-size: 1.05rem; margin-top: .8rem; padding: .6rem .8rem; border-left: 3px solid var(--destaque); background: var(--papel-caixa); }
+#veredito.nulo { border-left-color: var(--alerta); }
+</style>
+</head>
+<body>
+
+<nav class="trilha">Aula · grupo 2, dinâmica 6 de 18 · força magnética sobre carga</nav>
+
+<h1>Para onde a força empurra a carga</h1>
+<p class="subtitulo">A maior dinâmica do caderno: 14 questões. E aqui ela não pede
+nenhuma conta — pede uma direção.</p>
+<p class="custo">Leitura: 9 minutos. Uma bancada para brincar no meio.</p>
+
+<p>Você já acertou a primeira questão desta dinâmica, no gate de ontem, sem nunca
+ter tido esta aula: carga <strong>parada</strong> num campo magnético não sofre
+força nenhuma. Guarde essa frase — ela é metade da aula.</p>
+
+<h2>1 · O elenco mudou: agora são três coisas</h2>
+
+<p>Em tudo que você estudou até aqui havia <strong>duas</strong> coisas em jogo:
+corrente e campo, ou campo e espira. Aqui há <strong>três</strong>, e é só isso
+que torna esta dinâmica diferente:</p>
+
+<table>
+<thead><tr><th>Símbolo</th><th>O que é</th><th>Quem dá</th></tr></thead>
+<tbody>
+<tr><td><strong>v</strong></td><td>a velocidade da carga — para onde ela está indo</td><td>o enunciado</td></tr>
+<tr><td><strong>B</strong></td><td>o campo magnético da região</td><td>o enunciado</td></tr>
+<tr><td><strong>F</strong></td><td>a força magnética sobre a carga</td><td><em>você</em></td></tr>
+</tbody>
+</table>
+
+<div class="caixa regra">
+<span class="rotulo">O fato que organiza tudo</span>
+<p><strong>F é perpendicular a v e perpendicular a B, ao mesmo tempo.</strong></p>
+<p>Isto não é macete: é a definição. A força nunca aponta ao longo do movimento e
+nunca aponta ao longo do campo. Ela sai pelo lado — pela única direção que é
+perpendicular às duas.</p>
+<p>Consequência prática: se na figura v e B estão os dois no plano do papel, F
+<em>obrigatoriamente</em> entra ou sai do papel. Se B entra no papel e v está no
+plano dele, F fica no plano. Metade das alternativas morre antes de você pensar.</p>
+</div>
+
+<figure>
+<svg viewBox="0 0 540 200" role="img" aria-label="Os três vetores mutuamente perpendiculares">
+  <!-- eixo v -->
+  <line x1="120" y1="150" x2="250" y2="150" stroke="#8b8a84" stroke-width="2" class="eixo"/>
+  <polygon points="250,150 240,145 240,155" fill="#8b8a84" class="eixo"/>
+  <text x="256" y="155" fill="#4a4845" font-size="15" font-weight="600">v</text>
+  <!-- eixo F -->
+  <line x1="120" y1="150" x2="120" y2="40" stroke="#8b8a84" stroke-width="2" class="eixo"/>
+  <polygon points="120,40 115,50 125,50" fill="#8b8a84" class="eixo"/>
+  <text x="112" y="32" fill="#4a4845" font-size="15" font-weight="600">F</text>
+  <!-- eixo B (em perspectiva, saindo) -->
+  <line x1="120" y1="150" x2="185" y2="190" stroke="#8b8a84" stroke-width="2" class="eixo"/>
+  <polygon points="185,190 174,186 179,179" fill="#8b8a84" class="eixo"/>
+  <text x="192" y="196" fill="#4a4845" font-size="15" font-weight="600">B</text>
+  <!-- marcas de angulo reto -->
+  <path d="M 120 136 L 134 136 L 134 150" fill="none" stroke="#8b8a84" stroke-width="1" class="eixo"/>
+  <text x="300" y="90" fill="#4a4845" font-size="14">Três direções, duas a duas</text>
+  <text x="300" y="112" fill="#4a4845" font-size="14">perpendiculares — como as três</text>
+  <text x="300" y="134" fill="#4a4845" font-size="14">quinas de uma caixa.</text>
+</svg>
+<figcaption>É o canto de uma caixa. Onde quer que estejam v e B, F aponta pela
+terceira quina.</figcaption>
+</figure>
+
+<h2>2 · A regra da mão direita espalmada</h2>
+
+<p>Existem várias versões dessa regra e todas dão o mesmo resultado. Use
+<strong>uma só</strong>, sempre a mesma, com a mão de verdade — não imaginada.
+Esta é a que vamos adotar neste workspace, e ela é chamada de
+<strong>regra do tapa</strong>:</p>
+
+<ol>
+<li>Abra a <strong>mão direita</strong> espalmada, dedos juntos e esticados.</li>
+<li>O <strong>polegar</strong> aponta para onde vai a <strong>velocidade v</strong>.</li>
+<li>Os <strong>quatro dedos</strong> apontam para onde vai o <strong>campo B</strong>.</li>
+<li>A <strong>palma empurra</strong>: esse é o sentido da <strong>força F</strong>
+— para carga <strong>positiva</strong>.</li>
+<li>Carga <strong>negativa</strong> (elétron!): o resultado é o <strong>oposto</strong>
+do que a palma diz. Não é outra regra — é a mesma, com a resposta invertida no fim.</li>
+</ol>
+
+<div class="caixa armadilha">
+<span class="rotulo">O passo que todo mundo esquece</span>
+<p>O passo 5. A banca sabe disso e enche as questões de <strong>elétron</strong>,
+<strong>partícula beta</strong> e <strong>íon negativo</strong>, justamente porque
+o aluno aplica a mão certo e esquece de inverter. Antes de marcar, leia o
+enunciado de novo procurando <em>uma única coisa</em>: o sinal da carga.</p>
+</div>
+
+<h2>3 · A bancada</h2>
+
+<p>Escolha o sinal da carga, para onde ela vai e como é o campo. A seta vermelha
+é a resposta. Faça o movimento com a sua mão direita <em>antes</em> de olhar, e
+confira — é assim que a regra sai do papel e entra no corpo.</p>
+
+<div class="bancada">
+  <p class="legenda">Sinal da carga</p>
+  <div class="botoes" id="g-carga">
+    <button class="opc" type="button" data-v="1" aria-pressed="true">carga positiva (próton)</button>
+    <button class="opc" type="button" data-v="-1" aria-pressed="false">carga negativa (elétron)</button>
+  </div>
+
+  <p class="legenda">Para onde a carga vai (v)</p>
+  <div class="botoes" id="g-v">
+    <button class="opc" type="button" data-v="dir" aria-pressed="true">→ direita</button>
+    <button class="opc" type="button" data-v="esq" aria-pressed="false">← esquerda</button>
+    <button class="opc" type="button" data-v="cima" aria-pressed="false">↑ para cima</button>
+    <button class="opc" type="button" data-v="baixo" aria-pressed="false">↓ para baixo</button>
+    <button class="opc" type="button" data-v="dentro" aria-pressed="false">⊗ entrando no papel</button>
+    <button class="opc" type="button" data-v="parada" aria-pressed="false">parada</button>
+  </div>
+
+  <p class="legenda">Campo magnético da região (B)</p>
+  <div class="botoes" id="g-b">
+    <button class="opc" type="button" data-v="dentro" aria-pressed="true">⊗ entrando no papel</button>
+    <button class="opc" type="button" data-v="fora" aria-pressed="false">⊙ saindo do papel</button>
+  </div>
+
+  <svg id="cena" viewBox="0 0 440 260" role="img" aria-label="Carga em campo magnético e a força resultante">
+    <rect x="20" y="20" width="400" height="220" fill="none" stroke="#8b8a84" stroke-width="1" stroke-dasharray="4 4"/>
+    <g id="campo"></g>
+    <g id="setas"></g>
+    <circle id="carga" cx="220" cy="130" r="13" fill="#0f6e56" stroke="#ffffff" stroke-width="2"/>
+    <text id="sinal" x="220" y="136" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="700">+</text>
+  </svg>
+
+  <p id="veredito">—</p>
+</div>
+
+<h2>4 · Os três casos em que a força é zero</h2>
+
+<p>Questão de prova adora o zero, porque o aluno treinado só para achar direção
+não considera que possa não haver direção nenhuma. São três, e só três:</p>
+
+<table>
+<thead><tr><th>Quando</th><th>Por quê</th></tr></thead>
+<tbody>
+<tr><td>A carga está <strong>parada</strong></td><td>Sem v não há o que o campo "pegue". Campo magnético só age sobre carga <em>em movimento</em>.</td></tr>
+<tr><td>v é <strong>paralela a B</strong> (mesmo sentido ou oposto)</td><td>Não existe terceira direção perpendicular às duas quando as duas são a mesma. A carga atravessa o campo em linha reta, como se ele não existisse.</td></tr>
+<tr><td>A partícula é <strong>neutra</strong> (nêutron, átomo)</td><td>Sem carga, nada a empurrar.</td></tr>
+</tbody>
+</table>
+
+<div class="caixa gatilho">
+<span class="rotulo">A forma de erro que você já conhece</span>
+<p>"Tem campo, logo tem força." É <em>exatamente</em> a mesma forma do erro que
+te pegou no gate de indução — "tem campo, logo tem corrente" — e é por ter
+reconhecido essa forma que você acertou a questão 12 ontem sem aula.</p>
+<p>Presença não é efeito. Em indução, quem decide é a <em>variação</em> do fluxo.
+Aqui, quem decide é a <em>componente de v perpendicular a B</em>. Em nenhum dos
+dois casos a simples existência do campo decide algo.</p>
+</div>
+
+<h2>5 · O que a força faz com a carga (e o que ela nunca faz)</h2>
+
+<p>Aqui está a consequência mais bonita, e ela é cobrada direto:</p>
+
+<div class="caixa regra">
+<span class="rotulo">Força perpendicular não acelera, só curva</span>
+<p>Como F é sempre perpendicular a v, ela <strong>nunca</strong> empurra a carga
+para frente nem a freia. Logo:</p>
+<ul>
+<li>O <strong>módulo</strong> da velocidade <strong>não muda</strong> — a carga
+não ganha nem perde rapidez.</li>
+<li>A <strong>energia cinética não muda</strong>. A força magnética
+<strong>não realiza trabalho</strong>.</li>
+<li>Só a <strong>direção</strong> muda — e muda continuamente, sempre pelo lado.</li>
+</ul>
+<p>Uma força constante em módulo, sempre perpendicular ao movimento, é a receita
+exata de <strong>movimento circular uniforme</strong>. É por isso que a carga
+descreve uma circunferência dentro do campo. E é dessa circunferência que vêm as
+14 questões de raio e período do grupo de cálculo — mas isso é aula de outro
+dia.</p>
+</div>
+
+<figure>
+<svg viewBox="0 0 440 200" role="img" aria-label="Trajetória circular da carga no campo">
+  <rect x="20" y="15" width="400" height="170" fill="none" stroke="#8b8a84" stroke-width="1" stroke-dasharray="4 4"/>
+  <g fill="#8b8a84" font-size="13">
+    <text x="60" y="45">⊗</text><text x="140" y="45">⊗</text><text x="220" y="45">⊗</text><text x="300" y="45">⊗</text><text x="380" y="45">⊗</text>
+    <text x="60" y="105">⊗</text><text x="380" y="105">⊗</text>
+    <text x="60" y="165">⊗</text><text x="140" y="165">⊗</text><text x="220" y="165">⊗</text><text x="300" y="165">⊗</text><text x="380" y="165">⊗</text>
+  </g>
+  <circle cx="220" cy="100" r="58" fill="none" stroke="#0f6e56" stroke-width="2"/>
+  <circle cx="278" cy="100" r="7" fill="#0f6e56"/>
+  <line x1="278" y1="100" x2="278" y2="52" stroke="#8b8a84" stroke-width="2"/>
+  <polygon points="278,48 273,58 283,58" fill="#8b8a84"/>
+  <text x="286" y="48" fill="#4a4845" font-size="14">v</text>
+  <line x1="278" y1="100" x2="236" y2="100" stroke="#993c1d" stroke-width="2"/>
+  <polygon points="232,100 242,95 242,105" fill="#993c1d"/>
+  <text x="240" y="92" fill="#4a4845" font-size="14">F</text>
+</svg>
+<figcaption>v é tangente ao círculo, F aponta sempre para o centro. A força muda
+de direção junto com a carga, e é sempre perpendicular ao movimento — por isso a
+volta nunca termina.</figcaption>
+</figure>
+
+<h2>Vídeos</h2>
+<p class="custo">Buscados agora e verificados como existentes — mas eu
+<strong>não os assisti</strong>. Use como segunda voz sobre o mesmo conteúdo: se
+algum contradisser esta aula, me diga qual e em que ponto.</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=Z0NHlCQQkfg">Regra da mão direita e força magnética em uma carga elétrica num campo magnético</a> — o mesmo recorte desta aula.</li>
+<li><a href="https://www.youtube.com/watch?v=uu6Sjpwx6aY">Força magnética — 2ª regra da mão direita (prof. Daniel Japiassú)</a> — a mesma regra com outra didática.</li>
+<li><a href="https://www.youtube.com/watch?v=A1q2bwDzPWI">Questão de vestibular (UFPA) — carga negativa entrando num campo ⊗</a> — justamente o passo 5, o da inversão.</li>
+<li><a href="https://www.youtube.com/watch?v=JZ-XPvYwQlc">Movimentos da carga no campo magnético</a> — a trajetória circular da seção 5.</li>
+</ul>
+
+<h2>Cinco para fechar</h2>
+<p class="custo">Correção imediata, uma por uma. Faça com a mão direita na frente
+da tela, sem pressa. Isto mede fluência, não retenção — o gate vem depois.</p>
+
+<div class="quiz" id="quiz">
+
+<div class="questao" data-certa="0">
+  <p><strong>1.</strong> Um próton se move para a <strong>direita</strong>, no plano
+  do papel, numa região onde o campo magnético <strong>entra no papel</strong> (⊗).
+  Para onde aponta a força magnética sobre ele?</p>
+  <ul class="opcoes">
+    <li><button type="button">Para cima</button></li>
+    <li><button type="button">Para baixo</button></li>
+    <li><button type="button">Para a direita, no sentido do movimento</button></li>
+    <li><button type="button">Entrando no papel</button></li></ul>
+  <div class="resposta" hidden><p><strong>Para cima.</strong> Polegar direito para
+  a direita, dedos entrando no papel, palma empurra para cima. Carga positiva:
+  vale o que a palma diz. Note que as alternativas C e D já estavam mortas antes
+  de qualquer regra — F nunca aponta ao longo de v nem ao longo de B.</p></div>
+</div>
+
+<div class="questao" data-certa="1">
+  <p><strong>2.</strong> Mesma cena da questão 1, trocando apenas o próton por um
+  <strong>elétron</strong>. Para onde aponta a força?</p>
+  <ul class="opcoes">
+    <li><button type="button">Para cima, igual ao próton</button></li>
+    <li><button type="button">Para baixo</button></li>
+    <li><button type="button">Para a esquerda</button></li>
+    <li><button type="button">A força é nula, porque o elétron é negativo</button></li></ul>
+  <div class="resposta" hidden><p><strong>Para baixo.</strong> A mão dá "para
+  cima" exatamente como antes; o sinal negativo inverte o resultado no fim. É o
+  passo 5, e é o erro mais cobrado desta dinâmica. A alternativa D é a confusão
+  entre "não tem carga" e "tem carga negativa".</p></div>
+</div>
+
+<div class="questao" data-certa="2">
+  <p><strong>3.</strong> Um próton entra numa região de campo magnético uniforme
+  viajando <strong>exatamente na mesma direção e sentido do campo</strong>. O que
+  acontece com ele?</p>
+  <ul class="opcoes">
+    <li><button type="button">Descreve uma circunferência</button></li>
+    <li><button type="button">É freado e para</button></li>
+    <li><button type="button">Segue em linha reta, com a mesma velocidade</button></li>
+    <li><button type="button">É empurrado para fora da região</button></li></ul>
+  <div class="resposta" hidden><p><strong>Segue em linha reta.</strong> v paralela
+  a B é um dos três casos de força nula: não há direção perpendicular às duas
+  quando as duas são a mesma. Para ele, é como se o campo não existisse. Tente na
+  bancada: v "entrando no papel" com B "entrando no papel".</p></div>
+</div>
+
+<div class="questao" data-certa="3">
+  <p><strong>4.</strong> Uma carga descreve uma circunferência dentro de um campo
+  magnético uniforme. Sobre a energia cinética e a rapidez dela, o que é correto?</p>
+  <ul class="opcoes">
+    <li><button type="button">Ambas aumentam, porque há força atuando</button></li>
+    <li><button type="button">Ambas diminuem, porque a força se opõe ao movimento</button></li>
+    <li><button type="button">A rapidez se mantém, mas a energia cinética aumenta</button></li>
+    <li><button type="button">Ambas se mantêm: a força magnética não realiza trabalho</button></li></ul>
+  <div class="resposta" hidden><p><strong>Ambas se mantêm.</strong> Força
+  perpendicular ao deslocamento não realiza trabalho, e sem trabalho não há
+  mudança de energia cinética. A força muda a carga de direção o tempo todo sem
+  nunca mudar o quanto ela é rápida. A alternativa C é impossível: energia
+  cinética depende só da massa e da rapidez.</p></div>
+</div>
+
+<div class="questao" data-certa="0">
+  <p><strong>5.</strong> Um elétron se move <strong>para baixo</strong>, no plano
+  do papel, numa região onde o campo <strong>sai do papel</strong> (⊙). Para onde
+  aponta a força sobre ele?</p>
+  <ul class="opcoes">
+    <li><button type="button">Para a direita</button></li>
+    <li><button type="button">Para a esquerda</button></li>
+    <li><button type="button">Para cima</button></li>
+    <li><button type="button">Saindo do papel</button></li></ul>
+  <div class="resposta" hidden><p><strong>Para a direita.</strong> Polegar para
+  baixo, dedos saindo do papel (apontando para você), a palma empurra para a
+  esquerda — e o elétron é negativo, então inverte: direita. Esta questão exige
+  os dois passos novos ao mesmo tempo: campo saindo e carga negativa. Confira na
+  bancada.</p></div>
+</div>
+
+<p class="placar" id="placar" hidden></p>
+</div>
+
+<div class="rodape">
+<h2>O que vem agora</h2>
+<p>Esta dinâmica tem 14 questões no caderno e é a maior de todas. O gate dela vem
+em seguida, e vai ser todo de figura: cena dada, direção pedida.</p>
+<p>Depois, com a mesma mão direita e nenhuma regra nova, cai a dinâmica de
+<strong>força sobre fio</strong> — porque corrente é carga em movimento, e a
+força sobre o fio é a soma das forças sobre as cargas dele. É a mesma força, não
+uma segunda.</p>
+<p><a href="../reference/00-mapa-das-dinamicas.html">Voltar ao mapa</a></p>
+</div>
+
+<script>
+(function () {
+  // ---------- bancada ----------
+  var VETORES = {
+    dir:    [1, 0, 0],
+    esq:    [-1, 0, 0],
+    cima:   [0, 1, 0],
+    baixo:  [0, -1, 0],
+    dentro: [0, 0, -1],
+    parada: [0, 0, 0]
+  };
+  var CAMPOS = { dentro: [0, 0, -1], fora: [0, 0, 1] };
+
+  var estado = { carga: 1, v: 'dir', b: 'dentro' };
+
+  var CX = 220, CY = 130;
+
+  function cruz(a, b) {
+    return [
+      a[1] * b[2] - a[2] * b[1],
+      a[2] * b[0] - a[0] * b[2],
+      a[0] * b[1] - a[1] * b[0]
+    ];
+  }
+
+  // Monta uma seta a partir do centro. dx/dy em coordenadas de matemática
+  // (y para cima); o SVG tem y para baixo, por isso o sinal invertido.
+  function seta(dx, dy, comprimento, cor, rotulo) {
+    var fx = CX + dx * comprimento, fy = CY - dy * comprimento;
+    var ux = dx, uy = -dy;
+    var px = -uy, py = ux; // perpendicular, para a base da ponta
+    var b1x = fx - ux * 12 + px * 6, b1y = fy - uy * 12 + py * 6;
+    var b2x = fx - ux * 12 - px * 6, b2y = fy - uy * 12 - py * 6;
+    var tx = fx + ux * 16 + px * 4, ty = fy + uy * 16 + py * 4;
+    return '<line x1="' + CX + '" y1="' + CY + '" x2="' + fx + '" y2="' + fy +
+      '" stroke="' + cor + '" stroke-width="3"/>' +
+      '<polygon points="' + fx + ',' + fy + ' ' + b1x + ',' + b1y + ' ' +
+      b2x + ',' + b2y + '" fill="' + cor + '"/>' +
+      '<text x="' + tx + '" y="' + ty + '" fill="' + cor +
+      '" font-size="16" font-weight="700" text-anchor="middle">' + rotulo + '</text>';
+  }
+
+  var COR_V = '#0f6e56', COR_F = '#993c1d';
+
+  function pintar() {
+    var v = VETORES[estado.v], b = CAMPOS[estado.b];
+
+    // fundo de campo
+    var simbolo = estado.b === 'dentro' ? '⊗' : '⊙';
+    var marcas = '';
+    for (var ly = 50; ly <= 215; ly += 55) {
+      for (var lx = 45; lx <= 405; lx += 60) {
+        var longe = Math.abs(lx - CX) > 34 || Math.abs(ly - CY) > 30;
+        if (longe) {
+          marcas += '<text x="' + lx + '" y="' + ly + '" fill="#8b8a84" ' +
+            'font-size="15" text-anchor="middle">' + simbolo + '</text>';
+        }
+      }
+    }
+    document.getElementById('campo').innerHTML = marcas;
+
+    // carga
+    document.getElementById('sinal').textContent = estado.carga > 0 ? '+' : '–';
+
+    // forca = q (v x B)
+    var f = cruz(v, b).map(function (c) { return c * estado.carga; });
+    var desenho = '';
+    var texto = '';
+
+    // seta de v (ou simbolo, se for fora do plano)
+    if (estado.v === 'parada') {
+      desenho += '<text x="' + (CX + 30) + '" y="' + (CY - 22) + '" fill="' + COR_V +
+        '" font-size="14" font-weight="600">v = 0</text>';
+    } else if (estado.v === 'dentro') {
+      desenho += '<text x="' + (CX + 34) + '" y="' + (CY - 18) + '" fill="' + COR_V +
+        '" font-size="14" font-weight="600">v entra no papel</text>';
+    } else {
+      desenho += seta(v[0], v[1], 74, COR_V, 'v');
+    }
+
+    var nula = (f[0] === 0 && f[1] === 0 && f[2] === 0);
+    if (nula) {
+      if (estado.v === 'parada') {
+        texto = '<strong>F = 0.</strong> A carga está parada. Campo magnético só ' +
+          'age sobre carga em movimento — esta é a questão 12 do seu gate de ontem.';
+      } else {
+        texto = '<strong>F = 0.</strong> v é paralela a B: as duas apontam na mesma ' +
+          'direção, e não existe uma terceira direção perpendicular a uma direção só. ' +
+          'A carga atravessa em linha reta, como se o campo não estivesse ali.';
+      }
+    } else {
+      desenho += seta(f[0], f[1], 74, COR_F, 'F');
+      var nome = f[1] > 0 ? 'para cima' : (f[1] < 0 ? 'para baixo' :
+                (f[0] > 0 ? 'para a direita' : 'para a esquerda'));
+      var palma = estado.carga > 0 ? '' :
+        ' A palma da sua mão apontou para o lado oposto — a carga é negativa, ' +
+        'então o resultado inverteu (passo 5).';
+      texto = '<strong>F aponta ' + nome + '.</strong>' + palma +
+        ' Repare: perpendicular a v e perpendicular a B, sempre.';
+    }
+
+    document.getElementById('setas').innerHTML = desenho;
+    var vd = document.getElementById('veredito');
+    vd.innerHTML = texto;
+    vd.className = nula ? 'nulo' : '';
+  }
+
+  function grupo(id, campo, converter) {
+    var cx = document.getElementById(id);
+    cx.addEventListener('click', function (ev) {
+      var bt = ev.target.closest('button.opc');
+      if (!bt) return;
+      Array.prototype.forEach.call(cx.querySelectorAll('button.opc'), function (o) {
+        o.setAttribute('aria-pressed', o === bt ? 'true' : 'false');
+      });
+      estado[campo] = converter(bt.dataset.v);
+      pintar();
+    });
+  }
+
+  grupo('g-carga', 'carga', function (s) { return parseInt(s, 10); });
+  grupo('g-v', 'v', function (s) { return s; });
+  grupo('g-b', 'b', function (s) { return s; });
+  pintar();
+
+  // ---------- quiz ----------
+  var questoes = Array.prototype.slice.call(document.querySelectorAll('#quiz .questao'));
+  var placar = document.getElementById('placar');
+  var acertos = 0, feitas = 0;
+
+  questoes.forEach(function (q) {
+    var certa = parseInt(q.dataset.certa, 10);
+    var botoes = Array.prototype.slice.call(q.querySelectorAll('.opcoes button'));
+    botoes.forEach(function (bt, i) {
+      bt.addEventListener('click', function () {
+        if (q.dataset.respondida) return;
+        q.dataset.respondida = '1';
+        feitas++;
+        if (i === certa) { acertos++; bt.classList.add('certa'); }
+        else { bt.classList.add('errada'); botoes[certa].classList.add('certa'); }
+        botoes.forEach(function (o) { o.disabled = true; });
+        q.querySelector('.resposta').hidden = false;
+        if (feitas === questoes.length) {
+          placar.hidden = false;
+          placar.textContent = acertos + ' de ' + questoes.length +
+            (acertos === questoes.length
+              ? ' — pronto para o gate desta dinâmica. É o maior do caderno: 14 questões.'
+              : ' — me diga quais você errou e em que raciocínio travou, antes do gate.');
+        }
+      });
+    });
+  });
+})();
+</script>
+
+</body>
+</html>

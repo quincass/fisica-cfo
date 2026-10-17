@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reteste — indução</title>
+<link rel="stylesheet" href="../assets/estilo.css">
+<style>
+  .altitude { font-family: var(--sans); font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--tinta-tenue); margin: 2.5rem 0 0; }
+  .corrigir { font-family: var(--sans); font-size: 0.9375rem; font-weight: 600; color: var(--papel); background: var(--destaque); border: none; border-radius: 3px; padding: 0.75rem 1.5rem; cursor: pointer; margin-top: 1.5rem; }
+  .corrigir:disabled { background: var(--tinta-tenue); cursor: not-allowed; }
+  .aviso { font-family: var(--sans); font-size: 0.875rem; color: var(--alerta); margin-top: 0.75rem; }
+  .aviso[hidden] { display: none; }
+  .opcoes button.marcada { border-color: var(--tinta-fraca); background: var(--papel-caixa); font-weight: 600; }
+  .erros { font-family: var(--sans); font-size: 0.8125rem; line-height: 1.55; color: var(--tinta-fraca); margin-top: 0.625rem; padding-left: 0.875rem; border-left: 2px solid var(--linha); }
+  .erros li { margin-bottom: 0.35rem; }
+  .final { font-size: 1.125rem; line-height: 1.5; margin-top: 2rem; padding: 1.5rem; border: 1px solid var(--linha); border-radius: 3px; }
+  .final[hidden] { display: none; }
+  .lembrete { font-family: var(--sans); font-size: 0.8125rem; line-height: 1.6; background: var(--papel-caixa); border: 1px solid var(--linha); border-radius: 3px; padding: 0.875rem 1.125rem; margin: 1.5rem 0 0; }
+</style>
+</head>
+<body>
+
+<nav class="trilha">
+Reteste · <a href="0007-reforco-o-teste-do-fluxo.html">reforço</a> · <a href="0005-inducao.html">aula</a> · <a href="../reference/00-mapa-das-dinamicas.html">mapa</a>
+</nav>
+
+<h1>Reteste — indução</h1>
+<p class="subtitulo">Oito questões novas. Passa com sete.</p>
+<p class="custo">Nenhuma repetida do gate anterior · o gabarito só abre no fim</p>
+
+<p>Metade destas questões foi desenhada para te obrigar a rodar as três
+perguntas. Em várias delas a resposta intuitiva está errada — e em pelo menos
+uma, a resposta intuitiva está certa, para você não cair no excesso de
+desconfiança.</p>
+
+<p class="lembrete">
+<strong>O teste, antes de cada questão:</strong> mudou o campo que a espira
+sente? &nbsp;·&nbsp; mudou a área dela? &nbsp;·&nbsp; ela girou?<br>
+Três nãos, corrente zero. Um sim, há corrente.
+</p>
+
+<div class="quiz" id="quiz">
+
+<p class="altitude">Altitude 1 · conceitual direto</p>
+
+<div class="questao" data-certa="2">
+<p class="enunciado">1. Uma espira é mantida parada diante de um ímã que também está parado. Na espira</p>
+<ul class="opcoes">
+<li><button type="button">circula corrente elétrica constante</button></li>
+<li><button type="button">circula corrente elétrica alternada</button></li>
+<li><button type="button">não circula corrente nenhuma</button></li>
+<li><button type="button">circula corrente apenas no começo</button></li>
+</ul>
+<div class="resposta" hidden>
+<p>Três nãos: o campo não muda, a área não muda, nada gira. Corrente zero.</p>
+<ul class="erros">
+<li><strong>apenas no começo:</strong> haveria corrente no instante em que o ímã fosse <em>trazido</em> para perto. Mas o enunciado já começa com tudo parado — não existe "começo".</li>
+</ul>
+</div>
+</div>
+
+<div class="questao" data-certa="0" data-tipo="ce">
+<p class="enunciado">2. Julgue o item: no fogão de indução, o aquecimento ocorre por meio de correntes elétricas induzidas no próprio fundo da panela.</p>
+<ul class="opcoes">
+<li><button type="button">Certo</button></li>
+<li><button type="button">Errado</button></li>
+</ul>
+<div class="resposta" hidden>
+<p><strong>Certo.</strong> A bobina sob o vidro cria campo variável, o campo induz corrente no metal do fundo da panela, e essa corrente aquece por efeito Joule. A panela é o circuito — por isso panela de vidro ou alumínio fino não funciona nesse fogão.</p>
+</div>
+</div>
+
+<p class="altitude">Altitude 2 · rodando o teste</p>
+
+<div class="questao" data-certa="0">
+<p class="enunciado">3. Uma espira está <strong>parada</strong> numa região de campo magnético uniforme. O campo então começa a enfraquecer lentamente. Na espira</p>
+<ul class="opcoes">
+<li><button type="button">surge corrente, pois o campo mudou</button></li>
+<li><button type="button">não surge corrente, pois ela está parada</button></li>
+<li><button type="button">não surge corrente, pois o campo é uniforme</button></li>
+<li><button type="button">surge corrente apenas se ela girar</button></li>
+</ul>
+<div class="resposta" hidden>
+<p>Surge. Primeira pergunta do teste: mudou o campo que a espira sente? Mudou — está enfraquecendo. Um sim basta.</p>
+<ul class="erros">
+<li><strong>pois ela está parada:</strong> este é o erro oposto ao do gate anterior. Lá você concluiu corrente a partir de movimento; aqui o convite é concluir ausência de corrente a partir de ausência de movimento. Os dois erram pelo mesmo motivo — olham o movimento em vez do fluxo. Movimento nunca foi a pergunta.</li>
+<li><strong>pois o campo é uniforme:</strong> uniforme significa igual em todos os pontos do espaço, não constante no tempo. São coisas diferentes.</li>
+</ul>
+</div>
+</div>
+
+<div class="questao" data-certa="1">
+<p class="enunciado">4. Uma espira feita de material condutor elástico, dentro de um campo magnético constante, é esticada até dobrar de área. <strong>Enquanto está sendo esticada</strong>,</p>
+<ul class="opcoes">
+<li><button type="button">não há corrente, pois o campo é constante</button></li>
+<li><button type="button">há corrente, pois a área está mudando</button></li>
+<li><button type="button">não há corrente, pois ela não girou</button></li>
+<li><button type="button">há corrente somente depois de esticada</button></li>
+</ul>
+<div class="resposta" hidden>
+<p>Segunda pergunta do teste: mudou a área? Mudou. Há corrente enquanto o estiramento acontece.</p>
+<ul class="erros">
+<li><strong>somente depois de esticada:</strong> é o inverso. Depois que ela para de esticar, a área fica constante de novo e a corrente cessa. A corrente existe <em>durante</em> a mudança, nunca depois dela.</li>
+<li><strong>pois o campo é constante</strong> e <strong>pois não girou:</strong> as duas checam só uma das três perguntas e param. O teste tem três; basta uma dar sim.</li>
+</ul>
+</div>
+</div>
+
+<div class="questao" data-certa="1" data-tipo="ce">
+<p class="enunciado">5. Julgue o item: uma espira gira com velocidade angular constante no interior de um campo magnético uniforme e constante. Como o campo não varia, não surge corrente induzida na espira.</p>
+<ul class="opcoes">
+<li><button type="button">Certo</button></li>
+<li><button type="button">Errado</button></li>
+</ul>
+<div class="resposta" hidden>
+<p><strong>Errado.</strong> Terceira pergunta do teste: ela girou? Girou. O fluxo depende do ângulo entre o plano da espira e as linhas — girando, ora muitas linhas a atravessam, ora nenhuma. O fluxo varia mesmo com o campo parado.</p>
+<p>Este é o princípio de todo gerador do mundo: ninguém mexe no ímã da usina, quem gira é a bobina.</p>
+</div>
+</div>
+
+<div class="questao" data-certa="3">
+<p class="enunciado">6. Um fio retilíneo longo conduz uma corrente que está <strong>aumentando</strong> com o tempo. Uma espira parada ao lado dele, no mesmo plano,</p>
+<ul class="opcoes">
+<li><button type="button">não sente nada, pois está parada</button></li>
+<li><button type="button">tem corrente apenas se encostar no fio</button></li>
+<li><button type="button">é repelida pelo fio, sem gerar corrente</button></li>
+<li><button type="button">tem corrente induzida, pois o campo muda</button></li>
+</ul>
+<div class="resposta" hidden>
+<p>Corrente maior no fio significa campo maior em volta dele (Oersted). Campo crescendo onde a espira está significa fluxo crescendo através dela. Primeira pergunta do teste: sim.</p>
+<p>Compare com a questão 8 do gate anterior, que você errou: lá a corrente do fio era <em>constante</em>. Mesma figura, mesma espira parada — e uma única palavra do enunciado inverte a resposta. É sempre nessa palavra que mora a questão.</p>
+</div>
+</div>
+
+<p class="altitude">Altitude 3 · estresse</p>
+
+<div class="questao" data-certa="1">
+<p class="enunciado">7. Uma espira quadrada atravessa, com velocidade constante, uma região de campo magnético uniforme: entra por um lado, percorre o interior e sai pelo outro. Durante a travessia completa, haverá corrente induzida</p>
+<ul class="opcoes">
+<li><button type="button">durante todo o percurso da espira</button></li>
+<li><button type="button">somente na entrada e na saída dela</button></li>
+<li><button type="button">somente no meio do percurso dela</button></li>
+<li><button type="button">em nenhum momento do percurso</button></li>
+</ul>
+<div class="resposta" hidden>
+<p>Só na entrada e na saída — é exatamente a cena que você arrastou no reforço.</p>
+<p>Entrando, uma parte da espira já está no campo e outra ainda não: o fluxo está crescendo, há corrente. Inteiramente dentro, o fluxo fica travado no máximo e não muda: corrente zero, apesar de a espira continuar se movendo. Saindo, o fluxo cai: há corrente de novo.</p>
+<ul class="erros">
+<li><strong>durante todo o percurso:</strong> era a sua resposta na questão 7 do gate. Conclui corrente a partir de movimento.</li>
+<li><strong>em nenhum momento:</strong> é o excesso de correção — depois de aprender que movimento não basta, passar a negar corrente sempre que há movimento.</li>
+</ul>
+</div>
+</div>
+
+<div class="questao" data-certa="2">
+<p class="enunciado">8. Em qual das situações a seguir <strong>não</strong> há corrente induzida na espira?</p>
+<ul class="opcoes">
+<li><button type="button">o ímã se afasta da espira parada</button></li>
+<li><button type="button">a espira gira dentro do campo do ímã</button></li>
+<li><button type="button">espira e ímã se movem juntos, lado a lado</button></li>
+<li><button type="button">o campo onde está a espira enfraquece</button></li>
+</ul>
+<div class="resposta" hidden>
+<p>Espira e ímã se movendo juntos. Os dois estão em movimento — e mesmo assim a distância entre eles não muda, a orientação não muda, a área não muda. Da perspectiva da espira, o ímã está parado ali do lado. Fluxo constante, corrente zero.</p>
+<p>O que importa nunca é o movimento no chão: é o <strong>movimento relativo</strong> entre o ímã e a espira. Se eles viajam juntos, não há movimento relativo nenhum.</p>
+<ul class="erros">
+<li>As outras três têm, cada uma, um sim no teste: o ímã se afastando muda o campo que ela sente, girar muda o ângulo, e o campo enfraquecendo muda o campo. Marcar qualquer uma delas significa que o teste não foi rodado item por item.</li>
+</ul>
+</div>
+</div>
+
+</div>
+
+<button type="button" class="corrigir" id="corrigir">Corrigir as oito</button>
+<p class="aviso" id="aviso" hidden></p>
+
+<div class="final" id="final" hidden></div>
+
+<div class="rodape">
+<h2>Depois de corrigir</h2>
+<p>Me diga o número e, nas que errar, o raciocínio. Se errar alguma, não vamos
+repetir o mesmo caminho pela terceira vez — a explicação muda de forma, não de
+volume.</p>
+<p><a href="0007-reforco-o-teste-do-fluxo.html">Reforço</a> · <a href="0005-inducao.html">Aula</a> · <a href="../reference/00-mapa-das-dinamicas.html">Mapa</a></p>
+</div>
+
+<script>
+(function () {
+  var questoes = [].slice.call(document.querySelectorAll('#quiz .questao'));
+  var botaoCorrigir = document.getElementById('corrigir');
+  var aviso = document.getElementById('aviso');
+  var final = document.getElementById('final');
+
+  questoes.forEach(function (questao) {
+    var botoes = [].slice.call(questao.querySelectorAll('.opcoes button'));
+    botoes.forEach(function (botao, indice) {
+      botao.addEventListener('click', function () {
+        if (questao.dataset.corrigida) return;
+        botoes.forEach(function (b) { b.classList.remove('marcada'); });
+        botao.classList.add('marcada');
+        questao.dataset.marcada = indice;
+        aviso.hidden = true;
+      });
+    });
+  });
+
+  botaoCorrigir.addEventListener('click', function () {
+    var pendentes = questoes.filter(function (q) { return q.dataset.marcada === undefined; });
+    if (pendentes.length) {
+      aviso.textContent = 'Falta' + (pendentes.length > 1 ? 'm ' : ' ') + pendentes.length +
+        (pendentes.length > 1 ? ' questões' : ' questão') + ' por responder.';
+      aviso.hidden = false;
+      pendentes[0].scrollIntoView({ behavior: 'smooth', block: 'center' });
+      return;
+    }
+
+    var certas = 0, erradas = [];
+
+    questoes.forEach(function (questao, posicao) {
+      questao.dataset.corrigida = 'sim';
+      var gabarito = parseInt(questao.dataset.certa, 10);
+      var marcada = parseInt(questao.dataset.marcada, 10);
+      var botoes = questao.querySelectorAll('.opcoes button');
+
+      botoes[gabarito].classList.add('certa');
+      if (marcada !== gabarito) {
+        botoes[marcada].classList.add('errada');
+        erradas.push(posicao + 1);
+      } else {
+        certas++;
+      }
+      [].forEach.call(botoes, function (b) { b.disabled = true; b.classList.remove('marcada'); });
+      questao.querySelector('.resposta').hidden = false;
+    });
+
+    botaoCorrigir.disabled = true;
+    botaoCorrigir.textContent = certas + ' de 8';
+    aviso.hidden = true;
+
+    var texto;
+    if (certas === 8) {
+      texto = '<strong>Oito de oito.</strong> Indução fechada — e fechada no reteste, que é mais difícil que passar de primeira: significa que o conceito foi construído, não reconhecido. Quatro dinâmicas de dezoito.';
+    } else if (certas === 7) {
+      texto = '<strong>Sete de oito — passou.</strong> Indução fechada. Me conte o raciocínio da questão ' + erradas[0] + ' assim mesmo.';
+    } else if (certas >= 5) {
+      texto = '<strong>' + certas + ' de 8 — ainda não.</strong> Erradas: ' + erradas.join(', ') + '. Me diga o raciocínio de cada uma. Na terceira tentativa eu mudo a forma da explicação, não o volume — e se for preciso, paramos indução e voltamos depois com a cabeça fria.';
+    } else {
+      texto = '<strong>' + certas + ' de 8.</strong> Não insista sozinho. Me diga o que pensou em duas delas e eu reconstruo por um caminho diferente — provavelmente com um experimento de verdade em vez de figura.';
+    }
+    final.innerHTML = texto;
+    final.hidden = false;
+    final.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+})();
+</script>
+
+</body>
+</html>

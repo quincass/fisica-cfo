@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A força sobre a carga, com número</title>
+<link rel="stylesheet" href="../assets/estilo.css">
+<link rel="stylesheet" href="../assets/bancada.css">
+<style>
+.ferramentas { font-family: var(--sans); font-size: .8rem; color: var(--tinta-tenue); }
+.exemplo { border: 1px solid var(--linha); border-radius: 4px; padding: .8rem 1rem; margin: 1.2rem 0; }
+.exemplo h3 { margin-top: 0; }
+.passo { margin: .3rem 0; }
+.passo b { font-family: var(--sans); font-size: .8rem; color: var(--destaque); margin-right: .4rem; }
+</style>
+</head>
+<body>
+
+<nav class="trilha">Aula · Família II do Grupo 3 · dinâmicas 13, 14 e 15 de 18 · força com ângulo, carga em círculo, seletor</nav>
+
+<h1>A força sobre a carga, com número</h1>
+<p class="subtitulo">Uma fórmula fazendo três trabalhos. Aqui moram as
+<strong>duas questões de CBM PE que faltavam</strong>: a AOCP 2024 Aspirante (elétron,
+três voltas) e a IAUPE 2018 (energia dobrada, mesmo tempo).</p>
+<p class="custo">Leitura: 10 minutos. Quatro exemplos resolvidos antes de você responder qualquer coisa.</p>
+<p class="ferramentas">Montada com: <strong>tutor-concurso /reverso</strong> (moldes de 8
+questões reais, gabarito conferido) · <strong>/mecanica</strong> nível 1 nos exemplos ·
+<strong>teach</strong> (aula e simulador de órbita).</p>
+
+<div class="caixa gatilho">
+<span class="rotulo">Você já tem os fatos; falta o número</span>
+<p>Na <a href="0011-forca-magnetica-direcao.html">aula 0011</a> você aprendeu o
+<strong>sentido</strong> da força e os três zeros (carga parada, carga paralela ao
+campo, campo nulo). Na <a href="0017-graficos.html">aula de gráficos</a>, que o raio
+cresce com a velocidade e que o período não depende dela. Esta aula só põe número
+nisso.</p>
+</div>
+
+<h2>1 · Força com ângulo: só conta o pedaço perpendicular</h2>
+
+<figure>
+<svg viewBox="0 0 440 170" role="img" aria-label="Velocidade formando um ângulo teta com o campo; só a componente perpendicular ao campo produz força">
+  <line x1="40" y1="130" x2="400" y2="130" stroke="#0f6e56" stroke-width="2.5"/>
+  <path d="M 408 130 l -12 -6 v 12 z" fill="#0f6e56"/>
+  <text x="400" y="152" font-size="13" fill="#0f6e56" text-anchor="end">B</text>
+  <line x1="80" y1="130" x2="220" y2="40" stroke="#1a1a18" stroke-width="3"/>
+  <path d="M 226 36 l -13 1 l 6 10 z" fill="#1a1a18"/>
+  <text x="232" y="36" font-size="13" fill="#1a1a18">v</text>
+  <line x1="220" y1="40" x2="220" y2="130" stroke="#993c1d" stroke-width="2" stroke-dasharray="5 3"/>
+  <text x="228" y="92" font-size="12" fill="#993c1d">v · sen θ  ← só este pedaço gera força</text>
+  <path d="M 120 130 A 40 40 0 0 0 113 109" fill="none" stroke="#1a1a18"/>
+  <text x="126" y="120" font-size="13" fill="#1a1a18">θ</text>
+</svg>
+</figure>
+
+<div class="caixa regra">
+<span class="rotulo">A fórmula</span>
+<p style="text-align:center; font-size:1.15rem"><strong>F = q · v · B · sen θ</strong></p>
+<p>θ é o ângulo <strong>entre a velocidade e o campo</strong>. É o seu Ponto R com número:
+θ = 0° dá sen 0° = 0 (paralela, força zero) e θ = 90° dá sen 90° = 1 (força máxima).</p>
+</div>
+
+<div class="exemplo">
+<h3>Exemplo 1 · achar a força</h3>
+<p>Um próton (1,6 × 10⁻¹⁹ C) entra a 5 × 10⁵ m/s num campo de 0,2 T, formando 30°
+com ele. Dados: sen 30° = 0,5 e cos 30° = 0,87.</p>
+<p class="passo"><b>escolha</b>O ângulo é entre v e B, então é <strong>seno</strong>. O cosseno está ali para você errar.</p>
+<p class="passo"><b>conta</b>F = 1,6 × 10⁻¹⁹ × 5 × 10⁵ × 0,2 × 0,5 = 0,8 × 10⁻¹⁴ = <strong>8 × 10⁻¹⁵ N</strong>.</p>
+<p class="passo"><b>variações</b>A banca também pede v ou sen θ sabendo F. É a mesma fórmula com outra incógnita.</p>
+</div>
+
+<h2>2 · Carga em círculo: raio e período</h2>
+
+<p>Com v perpendicular a B, a força é sempre perpendicular à velocidade. Ela nunca
+acelera nem freia, <strong>só vira</strong>. Uma força que só vira dá um círculo, como
+uma pedra girando presa num barbante: o barbante puxa para o centro o tempo todo.</p>
+
+<p>Da mecânica: para manter uma massa m em círculo de raio R a uma velocidade v, é
+preciso uma força para o centro de tamanho <strong>m · v² ÷ R</strong>. Aqui, quem faz
+o papel do barbante é a força magnética. Igualando as duas:</p>
+
+<div class="caixa regra">
+<span class="rotulo">As duas fórmulas que saem disso</span>
+<p>q · v · B = m · v² ÷ R → <strong>R = m · v ÷ (q · B)</strong></p>
+<p>Uma volta é 2πR percorrida a v: T = 2πR ÷ v → <strong>T = 2π · m ÷ (q · B)</strong></p>
+<p>O <strong>v sumiu do período</strong>. É por isso que ele não depende da
+velocidade, nem da energia.</p>
+</div>
+
+<p>Mude só a velocidade e olhe o cronômetro:</p>
+<div class="bancada orbita"></div>
+
+<div class="exemplo">
+<h3>Exemplo 2 · raio e distância em n voltas (molde AOCP 2024 Aspirante)</h3>
+<p>Um próton (m = 1,6 × 10⁻²⁷ kg, q = 1,6 × 10⁻¹⁹ C) entra perpendicularmente num
+campo de 0,1 T a 2 × 10⁵ m/s. Que distância ele percorre em 5 voltas?</p>
+<p class="passo"><b>raio</b>R = m v ÷ (q B) = (1,6 × 10⁻²⁷ × 2 × 10⁵) ÷ (1,6 × 10⁻¹⁹ × 0,1) = 3,2 × 10⁻²² ÷ 1,6 × 10⁻²⁰ = <strong>2 × 10⁻² m</strong> (2 cm).</p>
+<p class="passo"><b>uma volta</b>É o perímetro, 2πR = 2π × 0,02 = 0,04π m.</p>
+<p class="passo"><b>5 voltas</b>5 × 0,04π = <strong>0,2π m</strong>.</p>
+<p class="passo"><b>pegadinha</b>A distância de uma volta é <strong>2πR</strong>, não R nem 2R. É o que a AOCP mede.</p>
+</div>
+
+<div class="exemplo">
+<h3>Exemplo 3 · energia aumentada, e o tempo? (molde IAUPE 2018)</h3>
+<p>Uma partícula entra num campo, faz meia volta e sai depois de 50 ns. Ela volta com
+o <strong>quádruplo</strong> da energia. Quanto tempo fica na região agora?</p>
+<p class="passo"><b>raciocínio</b>Meia volta é meio período, e o período é 2πm ÷ qB: não tem v nem energia nele.</p>
+<p class="passo"><b>resposta</b><strong>50 ns, o mesmo tempo.</strong> O semicírculo fica maior (energia × 4 → v × 2 → R × 2), mas é percorrido duas vezes mais depressa.</p>
+<p class="passo"><b>pegadinha</b>"Mais energia, mais tempo" ou "mais energia, menos tempo". Os dois estão errados, e as alternativas da banca são exatamente essas.</p>
+</div>
+
+<div class="caixa armadilha">
+<span class="rotulo">Se o ângulo não for 90°</span>
+<p>O pedaço da velocidade paralelo ao campo não sofre força e segue reto; o pedaço
+perpendicular gira. Junto, fica uma <strong>hélice</strong>, como uma mola. É a
+"trajetória helicoidal" do ENEM 2019. Basta reconhecer: não cai conta disso em CBM.</p>
+</div>
+
+<h2>3 · Seletor de velocidades</h2>
+
+<figure>
+<svg viewBox="0 0 440 180" role="img" aria-label="Carga positiva entre placas: força elétrica para cima e força magnética para baixo, que se anulam numa velocidade">
+  <rect x="60" y="20" width="320" height="10" fill="#8b8a84"/><text x="390" y="30" font-size="12" fill="#5f5e5a">−</text>
+  <rect x="60" y="150" width="320" height="10" fill="#8b8a84"/><text x="390" y="160" font-size="12" fill="#5f5e5a">+</text>
+  <g opacity=".35" stroke="#0f6e56" fill="none">
+    <circle cx="110" cy="60" r="6"/><circle cx="110" cy="120" r="6"/><circle cx="330" cy="60" r="6"/><circle cx="330" cy="120" r="6"/>
+  </g>
+  <g fill="#0f6e56" opacity=".5"><circle cx="110" cy="60" r="2"/><circle cx="110" cy="120" r="2"/><circle cx="330" cy="60" r="2"/><circle cx="330" cy="120" r="2"/></g>
+  <text x="120" y="100" font-size="12" fill="#0f6e56">B saindo (⊙)</text>
+  <line x1="20" y1="90" x2="420" y2="90" stroke="#1a1a18" stroke-dasharray="4 3"/>
+  <circle cx="220" cy="90" r="9" fill="#993c1d"/><text x="220" y="94" font-size="11" text-anchor="middle" fill="#fff">+</text>
+  <line x1="230" y1="90" x2="275" y2="90" stroke="#1a1a18" stroke-width="2.5"/><path d="M 282 90 l -10 -5 v 10 z" fill="#1a1a18"/>
+  <text x="278" y="84" font-size="12" fill="#1a1a18">v</text>
+  <line x1="220" y1="80" x2="220" y2="48" stroke="#993c1d" stroke-width="2.5"/><path d="M 220 42 l -5 10 h 10 z" fill="#993c1d"/>
+  <text x="228" y="52" font-size="12" fill="#993c1d">força elétrica qE</text>
+  <line x1="220" y1="100" x2="220" y2="132" stroke="#0f6e56" stroke-width="2.5"/><path d="M 220 138 l -5 -10 h 10 z" fill="#0f6e56"/>
+  <text x="228" y="132" font-size="12" fill="#0f6e56">força magnética qvB</text>
+</svg>
+<figcaption>Campo elétrico empurra para um lado; o magnético, para o outro.</figcaption>
+</figure>
+
+<div class="exemplo">
+<h3>Exemplo 4 · a velocidade que passa reto</h3>
+<p>Num seletor, E = 2 × 10⁴ V/m e B = 0,1 T. Que velocidade atravessa sem desviar?</p>
+<p class="passo"><b>condição</b>As duas forças se anulam: q E = q v B. O q cancela → <strong>v = E ÷ B</strong>.</p>
+<p class="passo"><b>conta</b>v = 2 × 10⁴ ÷ 0,1 = <strong>2 × 10⁵ m/s</strong>, para qualquer carga e qualquer massa.</p>
+<p class="passo"><b>e as outras?</b>Mais rápida: a força magnética ganha e ela desvia para o lado dela. Mais lenta: a elétrica ganha.</p>
+</div>
+
+<h2>4 · O protocolo</h2>
+<ol>
+<li><strong>v ⟂ B ou com ângulo?</strong> Com ângulo e pedindo força, use F = qvB sen θ.</li>
+<li><strong>Pede raio, distância ou tempo?</strong> Raio: R = mv ÷ qB. Distância: n · 2πR. Tempo: T = 2πm ÷ qB (meia volta = T ÷ 2).</li>
+<li><strong>Mudou v ou a energia?</strong> O raio muda; o período <strong>não</strong>.</li>
+<li><strong>Tem campo elétrico junto e "não desvia"?</strong> É seletor: v = E ÷ B.</li>
+</ol>
+
+<h2>Vídeos de exercícios resolvidos</h2>
+<p class="custo">Buscados agora e confirmados como existentes, mas eu
+<strong>não os assisti</strong>.</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=PnRj8fY9Oa8">Partícula eletrizada em campo uniforme: raio e período</a>, a seção 2 com calma.</li>
+<li><a href="https://www.youtube.com/watch?v=zxcM044YoIM">Halliday 28.26: semicircunferência e saída da região</a>, o molde da IAUPE 2018.</li>
+<li><a href="https://www.youtube.com/watch?v=1KIMzM8JsmY">UERJ 2016: quatro partículas entrando com ângulos diferentes</a>, o sen θ da seção 1.</li>
+<li><a href="https://www.youtube.com/watch?v=W24vtZo7leU">Halliday 28.10: próton com campo elétrico e magnético</a>, os campos cruzados da seção 3.</li>
+</ul>
+
+<h2>Cinco para fechar</h2>
+<p class="custo">Correção imediata. Dados em todas: q = 1,6 × 10⁻¹⁹ C; próton m = 1,6 × 10⁻²⁷ kg.</p>
+
+<div class="quiz" id="quiz"
+     data-fim=" — Família II pronta para o gate. Me avise."
+     data-parcial=" — me diga quais errou e em que passo do protocolo travou.">
+
+<div class="questao" data-certa="2">
+  <p><strong>1.</strong> Uma carga de 1,6 × 10⁻¹⁹ C a 1 × 10⁶ m/s num campo de 0,5 T sofre
+  força de 4 × 10⁻¹⁴ N. O ângulo entre a velocidade e o campo é:</p>
+  <ul class="opcoes">
+    <li><button type="button">60°</button></li>
+    <li><button type="button">90°</button></li>
+    <li><button type="button">30°</button></li>
+    <li><button type="button">0°</button></li></ul>
+  <div class="resposta" hidden><p><strong>30°.</strong> sen θ = F ÷ (qvB) = 4 × 10⁻¹⁴ ÷
+  (1,6 × 10⁻¹⁹ × 10⁶ × 0,5) = 4 × 10⁻¹⁴ ÷ 8 × 10⁻¹⁴ = 0,5. Seno 0,5 é 30°. Quem
+  marca 60° usou cos 60° = 0,5: trocou seno por cosseno.</p></div>
+</div>
+
+<div class="questao" data-certa="0">
+  <p><strong>2.</strong> Uma partícula gira num campo uniforme. A velocidade dela dobra e o
+  campo também dobra. O novo raio é:</p>
+  <ul class="opcoes">
+    <li><button type="button">o mesmo raio de antes</button></li>
+    <li><button type="button">o dobro do raio anterior</button></li>
+    <li><button type="button">a metade do raio anterior</button></li>
+    <li><button type="button">o quádruplo do raio anterior</button></li></ul>
+  <div class="resposta" hidden><p><strong>O mesmo.</strong> R = mv ÷ qB: v × 2 em cima e
+  B × 2 embaixo se cancelam. É a regra do fator da Família I, com outra fórmula.</p></div>
+</div>
+
+<div class="questao" data-certa="1">
+  <p><strong>3.</strong> Um íon entra num campo, descreve meia circunferência e sai depois de
+  40 ns. Lançado de novo com o triplo da velocidade, ele fica na região:</p>
+  <ul class="opcoes">
+    <li><button type="button">120 ns</button></li>
+    <li><button type="button">40 ns</button></li>
+    <li><button type="button">13 ns</button></li>
+    <li><button type="button">360 ns</button></li></ul>
+  <div class="resposta" hidden><p><strong>40 ns.</strong> Meia volta é meio período, e
+  T = 2πm ÷ qB não tem v. O semicírculo fica três vezes maior e é percorrido três
+  vezes mais depressa. 120 e 13 ns são as duas intuições erradas, uma para cada lado.</p></div>
+</div>
+
+<div class="questao" data-certa="3">
+  <p><strong>4.</strong> Um próton entra perpendicularmente num campo de 0,2 T a 4 × 10⁵ m/s.
+  A distância que ele percorre em 2 voltas completas é:</p>
+  <ul class="opcoes">
+    <li><button type="button">0,04π m</button></li>
+    <li><button type="button">0,02 m</button></li>
+    <li><button type="button">0,04 m</button></li>
+    <li><button type="button">0,08π m</button></li></ul>
+  <div class="resposta" hidden><p><strong>0,08π m.</strong> R = (1,6 × 10⁻²⁷ × 4 × 10⁵) ÷
+  (1,6 × 10⁻¹⁹ × 0,2) = 6,4 × 10⁻²² ÷ 3,2 × 10⁻²⁰ = 0,02 m. Uma volta: 2π × 0,02 =
+  0,04π m. Duas: 0,08π m. 0,04π é uma volta só; 0,02 m é o raio, não a distância.</p></div>
+</div>
+
+<div class="questao" data-certa="0">
+  <p><strong>5.</strong> Num seletor de velocidades, E = 3 × 10³ V/m e B = 2 × 10⁻² T. A
+  velocidade que atravessa sem desviar é:</p>
+  <ul class="opcoes">
+    <li><button type="button">1,5 × 10⁵ m/s</button></li>
+    <li><button type="button">6,7 × 10⁻⁶ m/s</button></li>
+    <li><button type="button">6,0 × 10¹ m/s</button></li>
+    <li><button type="button">1,5 × 10³ m/s</button></li></ul>
+  <div class="resposta" hidden><p><strong>1,5 × 10⁵ m/s.</strong> v = E ÷ B = 3 × 10³ ÷
+  2 × 10⁻² = 1,5 × 10⁵. 6,7 × 10⁻⁶ é B ÷ E (a fórmula de cabeça para baixo); 60 é E × B.</p></div>
+</div>
+
+<p class="placar" id="placar" hidden></p>
+</div>
+
+<div class="rodape">
+<h2>O que vem agora</h2>
+<p>Gate da Família II, em 3 fases, com o deeptutor. Depois, a última família:
+<strong>fluxo e Faraday com número</strong> (fluxo com cosseno, fem, transformador).</p>
+<p><a href="0011-forca-magnetica-direcao.html">Aula 0011 — direção da força</a> ·
+<a href="0017-graficos.html">Aula 0017 — gráficos</a> ·
+<a href="../reference/04-forca-magnetica-carga.html">Ficha 04</a> ·
+<a href="../reference/00-mapa-das-dinamicas.html">Mapa das 18 dinâmicas</a></p>
+<p class="custo">Travou? Me pergunte, e diga em que passo do protocolo.</p>
+</div>
+
+<script src="../assets/orbita.js"></script>
+<script src="../assets/quiz.js"></script>
+</body>
+</html>

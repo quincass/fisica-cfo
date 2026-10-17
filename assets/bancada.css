@@ -1,0 +1,56 @@
+/* Bancada interativa — componente compartilhado.
+   Painel de botões + cena SVG + veredito em texto. Nasceu na aula 0011
+   (força sobre carga) e foi extraído aqui na aula 0013 (força sobre fio),
+   que usa exatamente o mesmo mecanismo com outro conteúdo.
+   Depende das variáveis de cor definidas em estilo.css. */
+
+.bancada {
+  border: 1px solid var(--linha);
+  border-radius: 4px;
+  padding: 1rem;
+  margin: 1.5rem 0;
+}
+
+.bancada .botoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
+  margin: .5rem 0 .9rem;
+}
+
+.bancada button.opc {
+  font: inherit;
+  font-size: .92rem;
+  padding: .35rem .7rem;
+  cursor: pointer;
+  background: var(--papel-caixa);
+  color: var(--tinta);
+  border: 1px solid var(--linha);
+  border-radius: 3px;
+}
+
+.bancada button.opc[aria-pressed="true"] {
+  background: var(--destaque);
+  color: #fff;
+  border-color: var(--destaque);
+}
+
+.bancada .legenda {
+  font-size: .9rem;
+  color: var(--tinta-fraca);
+  margin: .15rem 0 .35rem;
+}
+
+.bancada .veredito {
+  font-size: 1.05rem;
+  margin-top: .8rem;
+  padding: .6rem .8rem;
+  border-left: 3px solid var(--destaque);
+  background: var(--papel-caixa);
+}
+
+.bancada .veredito.nulo { border-left-color: var(--alerta); }
+
+@media print {
+  .bancada .botoes { display: none; }
+}

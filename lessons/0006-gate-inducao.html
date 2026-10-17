@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gate — indução: campo que varia cria corrente</title>
+<link rel="stylesheet" href="../assets/estilo.css">
+<style>
+  .altitude { font-family: var(--sans); font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--tinta-tenue); margin: 2.5rem 0 0; }
+  .corrigir { font-family: var(--sans); font-size: 0.9375rem; font-weight: 600; color: var(--papel); background: var(--destaque); border: none; border-radius: 3px; padding: 0.75rem 1.5rem; cursor: pointer; margin-top: 1.5rem; }
+  .corrigir:disabled { background: var(--tinta-tenue); cursor: not-allowed; }
+  .aviso { font-family: var(--sans); font-size: 0.875rem; color: var(--alerta); margin-top: 0.75rem; }
+  .aviso[hidden] { display: none; }
+  .opcoes button.marcada { border-color: var(--tinta-fraca); background: var(--papel-caixa); font-weight: 600; }
+  .erros { font-family: var(--sans); font-size: 0.8125rem; line-height: 1.55; color: var(--tinta-fraca); margin-top: 0.625rem; padding-left: 0.875rem; border-left: 2px solid var(--linha); }
+  .erros li { margin-bottom: 0.35rem; }
+  .final { font-size: 1.125rem; line-height: 1.5; margin-top: 2rem; padding: 1.5rem; border: 1px solid var(--linha); border-radius: 3px; }
+  .final[hidden] { display: none; }
+  .questao figure { margin: 1rem 0 1.25rem; }
+</style>
+</head>
+<body>
+
+<nav class="trilha">
+Gate 3 · <a href="0005-inducao.html">volta para a aula</a> · <a href="../reference/00-mapa-das-dinamicas.html">mapa</a>
+</nav>
+
+<h1>Gate — indução</h1>
+<p class="subtitulo">Oito questões inéditas em três altitudes. Passa com sete.</p>
+<p class="custo">Sem consultar a aula · o gabarito só abre no fim · duas questões cobram Oersted junto</p>
+
+<p>Nenhuma destas questões está no caderno; as armadilhas, todas. Responda as oito
+e só então corrija.</p>
+
+<div class="quiz" id="quiz">
+
+<p class="altitude">Altitude 1 · conceitual direto</p>
+
+<div class="questao" data-certa="2">
+<p class="enunciado">1. Uma espira de cobre está imersa num campo magnético muito intenso, uniforme e <strong>constante no tempo</strong>. A corrente induzida nessa espira é</p>
+<ul class="opcoes">
+<li><button type="button">intensa, pois o campo é muito forte</button></li>
+<li><button type="button">fraca, porém diferente de zero</button></li>
+<li><button type="button">nula, pois o campo não varia</button></li>
+<li><button type="button">alternada, acompanhando o campo</button></li>
+</ul>
+<div class="resposta" hidden>
+<p>Nula. A intensidade do campo não importa — o que induz corrente é a <em>variação</em> do fluxo. Campo parado, por mais forte que seja, não induz nada.</p>
+<ul class="erros">
+<li><strong>intensa</strong> e <strong>fraca, mas não nula:</strong> ambas confundem presença de campo com variação de campo. É o erro central da dinâmica, e a banca oferece as duas versões para capturar quem hesita.</li>
+<li><strong>alternada:</strong> inventa uma variação que o enunciado nega explicitamente ao dizer "constante no tempo".</li>
+</ul>
+</div>
+</div>
+
+<div class="questao" data-certa="1" data-tipo="ce">
+<p class="enunciado">2. Julgue o item: para que surja corrente induzida em uma espira, basta que exista fluxo magnético através dela.</p>
+<ul class="opcoes">
+<li><button type="button">Certo</button></li>
+<li><button type="button">Errado</button></li>
+</ul>
+<div class="resposta" hidden>
+<p><strong>Errado.</strong> Não basta existir fluxo — ele tem de <strong>variar</strong>. A palavra que derruba o item é "basta". Fluxo constante, por maior que seja, dá corrente induzida zero.</p>
+</div>
+</div>
+
+<div class="questao" data-certa="0">
+<p class="enunciado">3. O carregador de celular sem fio funciona porque</p>
+<ul class="opcoes">
+<li><button type="button">o campo variável induz corrente no celular</button></li>
+<li><button type="button">o celular encosta em contatos metálicos</button></li>
+<li><button type="button">a bobina do carregador aquece a bateria</button></li>
+<li><button type="button">um ímã do carregador atrai o aparelho</button></li>
+</ul>
+<div class="resposta" hidden>
+<p>Corrente alternada passa pela bobina do carregador, criando campo variável; esse campo induz corrente na bobina dentro do celular, que alimenta a bateria. Nenhum contato elétrico é necessário — é esse o ponto do "sem fio".</p>
+<ul class="erros">
+<li><strong>contatos metálicos:</strong> contradiz o nome do aparelho.</li>
+<li><strong>aquece a bateria:</strong> aquecer bateria é o contrário do que se quer; confunde com o fogão de indução, onde o aquecimento é o objetivo.</li>
+<li><strong>ímã atrai:</strong> alguns carregadores realmente têm ímãs, mas só para alinhar o aparelho. Atração não carrega nada.</li>
+</ul>
+</div>
+</div>
+
+<p class="altitude">Altitude 2 · aplicado</p>
+
+<div class="questao" data-certa="1">
+<p class="enunciado">4. Uma espira gira dentro de um campo magnético uniforme. O fluxo magnético através dela é <strong>nulo</strong> no instante em que</p>
+<ul class="opcoes">
+<li><button type="button">o plano da espira está de frente para as linhas</button></li>
+<li><button type="button">o plano da espira está de lado para as linhas</button></li>
+<li><button type="button">a espira completa uma volta inteira</button></li>
+<li><button type="button">a velocidade de rotação atinge o máximo</button></li>
+</ul>
+<div class="resposta" hidden>
+<p>De lado. Com a espira de perfil, nenhuma linha a atravessa — e fluxo é exatamente "quantas linhas atravessam". De frente é o oposto: fluxo máximo.</p>
+<ul class="erros">
+<li><strong>de frente:</strong> é o instante de fluxo <em>máximo</em>. Inverte a resposta.</li>
+<li><strong>volta inteira:</strong> depois de uma volta a espira voltou à posição inicial, com o mesmo fluxo de antes, não com fluxo nulo.</li>
+<li><strong>velocidade máxima:</strong> mistura a rapidez do giro com a posição da espira. São coisas independentes.</li>
+</ul>
+</div>
+</div>
+
+<div class="questao" data-certa="0" data-tipo="ce">
+<p class="enunciado">5. Julgue o item: uma etiqueta RFID passiva obtém, do próprio campo gerado pelo leitor, a energia de que precisa para transmitir seu sinal.</p>
+<ul class="opcoes">
+<li><button type="button">Certo</button></li>
+<li><button type="button">Errado</button></li>
+</ul>
+<div class="resposta" hidden>
+<p><strong>Certo.</strong> É isso que torna a etiqueta barata e eterna: sem bateria. O campo do leitor induz corrente na bobina da etiqueta, e essa corrente alimenta o microchip. O ENEM gosta deste exemplo justamente porque a ausência de bateria parece impossível.</p>
+</div>
+</div>
+
+<div class="questao" data-certa="3">
+<p class="enunciado">6. Entre os dispositivos a seguir, o único que <strong>não</strong> funciona por indução eletromagnética é</p>
+<ul class="opcoes">
+<li><button type="button">o fogão de indução de uso doméstico</button></li>
+<li><button type="button">o microfone de bobina móvel</button></li>
+<li><button type="button">o gerador de uma usina hidrelétrica</button></li>
+<li><button type="button">o guindaste eletroímã de ferro-velho</button></li>
+</ul>
+<div class="resposta" hidden>
+<p>O guindaste é <strong>eletroímã</strong>, ou seja, Oersted: a corrente passa pela bobina e <em>cria</em> um campo que atrai a sucata. A corrente é a causa, não o efeito.</p>
+<p>Nos outros três a corrente é o efeito de um fluxo que varia: a bobina do fogão induz corrente na panela, a bobina do microfone vibra perto do ímã, e a bobina do gerador gira no campo.</p>
+<ul class="erros">
+<li>Marcar qualquer um dos outros três significa não estar aplicando o teste de quem veio primeiro — corrente como causa ou como efeito. Ter bobina na descrição não faz o dispositivo ser de indução.</li>
+</ul>
+</div>
+</div>
+
+<p class="altitude">Altitude 3 · estresse</p>
+
+<div class="questao" data-certa="1" data-tipo="ce">
+<p class="enunciado">7. Julgue o item: uma espira é deslocada com velocidade constante dentro de uma região de campo magnético <strong>uniforme</strong>, permanecendo inteiramente dentro dessa região durante todo o percurso. Durante o deslocamento, surge corrente induzida na espira.</p>
+<ul class="opcoes">
+<li><button type="button">Certo</button></li>
+<li><button type="button">Errado</button></li>
+</ul>
+<div class="resposta" hidden>
+<p><strong>Errado</strong> — e esta é a questão que separa quem entendeu de quem decorou "movimento gera corrente".</p>
+<p>Verifique as três maneiras de variar o fluxo, uma por uma. O campo é uniforme, então deslocar a espira não muda o <strong>B</strong> que ela sente. A espira não muda de tamanho, então a <strong>área</strong> é a mesma. Ela não gira, então o <strong>ângulo</strong> é o mesmo. Nenhuma das três mudou: o fluxo é constante e a corrente induzida é zero. Há movimento e não há corrente.</p>
+<p>Se a espira estivesse <em>entrando</em> ou <em>saindo</em> da região, aí sim — porque parte dela estaria fora do campo e o fluxo mudaria.</p>
+</div>
+</div>
+
+<div class="questao" data-certa="2">
+<p class="enunciado">8. Um fio retilíneo longo conduz corrente <strong>constante</strong>. Uma espira é colocada ao lado dele, parada, no mesmo plano do fio. Na espira</p>
+<ul class="opcoes">
+<li><button type="button">surge corrente, pois o fio cria campo</button></li>
+<li><button type="button">surge corrente alternada de mesma frequência</button></li>
+<li><button type="button">não surge corrente, pois nada varia</button></li>
+<li><button type="button">surge corrente apenas se o fio esquentar</button></li>
+</ul>
+<div class="resposta" hidden>
+<p>Não surge. O fio realmente cria campo — isso é Oersted e está certo. Mas corrente constante cria campo constante, e espira parada num campo constante tem fluxo constante. Sem variação, sem corrente induzida.</p>
+<ul class="erros">
+<li><strong>surge, pois o fio cria campo:</strong> é a pegadinha. A primeira metade da frase é verdadeira e leva o candidato a aceitar a conclusão. Existir campo nunca foi suficiente.</li>
+<li><strong>corrente alternada:</strong> inventa uma oscilação que a palavra "constante" exclui.</li>
+<li><strong>se o fio esquentar:</strong> efeito Joule existe, mas não é fonte de indução.</li>
+</ul>
+</div>
+</div>
+
+</div>
+
+<button type="button" class="corrigir" id="corrigir">Corrigir as oito</button>
+<p class="aviso" id="aviso" hidden></p>
+
+<div class="final" id="final" hidden></div>
+
+<div class="rodape">
+<h2>Depois de corrigir</h2>
+<p>Me diga o número, o raciocínio das que errar, e — como você fez da última vez —
+se alguma saiu certa mas <strong>demorada</strong>. Acerto lento vira ponto de
+revisão curta, igual ao Ponto F.</p>
+<p><a href="0005-inducao.html">Aula de indução</a> · <a href="../reference/00-mapa-das-dinamicas.html">Mapa</a></p>
+</div>
+
+<script>
+(function () {
+  var questoes = [].slice.call(document.querySelectorAll('#quiz .questao'));
+  var botaoCorrigir = document.getElementById('corrigir');
+  var aviso = document.getElementById('aviso');
+  var final = document.getElementById('final');
+
+  questoes.forEach(function (questao) {
+    var botoes = [].slice.call(questao.querySelectorAll('.opcoes button'));
+    botoes.forEach(function (botao, indice) {
+      botao.addEventListener('click', function () {
+        if (questao.dataset.corrigida) return;
+        botoes.forEach(function (b) { b.classList.remove('marcada'); });
+        botao.classList.add('marcada');
+        questao.dataset.marcada = indice;
+        aviso.hidden = true;
+      });
+    });
+  });
+
+  botaoCorrigir.addEventListener('click', function () {
+    var pendentes = questoes.filter(function (q) { return q.dataset.marcada === undefined; });
+    if (pendentes.length) {
+      aviso.textContent = 'Falta' + (pendentes.length > 1 ? 'm ' : ' ') + pendentes.length +
+        (pendentes.length > 1 ? ' questões' : ' questão') + ' por responder.';
+      aviso.hidden = false;
+      pendentes[0].scrollIntoView({ behavior: 'smooth', block: 'center' });
+      return;
+    }
+
+    var certas = 0, erradas = [];
+
+    questoes.forEach(function (questao, posicao) {
+      questao.dataset.corrigida = 'sim';
+      var gabarito = parseInt(questao.dataset.certa, 10);
+      var marcada = parseInt(questao.dataset.marcada, 10);
+      var botoes = questao.querySelectorAll('.opcoes button');
+
+      botoes[gabarito].classList.add('certa');
+      if (marcada !== gabarito) {
+        botoes[marcada].classList.add('errada');
+        erradas.push(posicao + 1);
+      } else {
+        certas++;
+      }
+      [].forEach.call(botoes, function (b) { b.disabled = true; b.classList.remove('marcada'); });
+      questao.querySelector('.resposta').hidden = false;
+    });
+
+    botaoCorrigir.disabled = true;
+    botaoCorrigir.textContent = certas + ' de 8';
+    aviso.hidden = true;
+
+    var texto;
+    if (certas === 8) {
+      texto = '<strong>Oito de oito.</strong> Indução passou, incluindo a espira que se move sem gerar corrente. Quatro dinâmicas de dezoito, e falta só Maxwell para fechar o grupo inteiro de conceito.';
+    } else if (certas === 7) {
+      texto = '<strong>Sete de oito — passou.</strong> Me conte o raciocínio da questão ' + erradas[0] + '.';
+    } else if (certas >= 5) {
+      texto = '<strong>' + certas + ' de 8 — perto, não passou.</strong> Me diga o que pensou nas questões ' + erradas.join(', ') + '. Se alguma delas for a 7 ou a 8, o ponto é o mesmo: existir campo não é o mesmo que variar campo.';
+    } else {
+      texto = '<strong>' + certas + ' de 8.</strong> Volte à bancada interativa da aula e faça só uma coisa: pare o ímã dentro da bobina e segure. Essa única imagem resolve a maioria destas oito.';
+    }
+    final.innerHTML = texto;
+    final.hidden = false;
+    final.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+})();
+</script>
+
+</body>
+</html>

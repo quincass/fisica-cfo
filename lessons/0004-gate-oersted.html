@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gate — Oersted: corrente cria campo</title>
+<link rel="stylesheet" href="../assets/estilo.css">
+<style>
+  .altitude { font-family: var(--sans); font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--tinta-tenue); margin: 2.5rem 0 0; }
+  .corrigir { font-family: var(--sans); font-size: 0.9375rem; font-weight: 600; color: var(--papel); background: var(--destaque); border: none; border-radius: 3px; padding: 0.75rem 1.5rem; cursor: pointer; margin-top: 1.5rem; }
+  .corrigir:disabled { background: var(--tinta-tenue); cursor: not-allowed; }
+  .aviso { font-family: var(--sans); font-size: 0.875rem; color: var(--alerta); margin-top: 0.75rem; }
+  .aviso[hidden] { display: none; }
+  .opcoes button.marcada { border-color: var(--tinta-fraca); background: var(--papel-caixa); font-weight: 600; }
+  .erros { font-family: var(--sans); font-size: 0.8125rem; line-height: 1.55; color: var(--tinta-fraca); margin-top: 0.625rem; padding-left: 0.875rem; border-left: 2px solid var(--linha); }
+  .erros li { margin-bottom: 0.35rem; }
+  .final { font-size: 1.125rem; line-height: 1.5; margin-top: 2rem; padding: 1.5rem; border: 1px solid var(--linha); border-radius: 3px; }
+  .final[hidden] { display: none; }
+  .questao figure { margin: 1rem 0 1.25rem; }
+</style>
+</head>
+<body>
+
+<nav class="trilha">
+Gate 2 · <a href="0003-oersted.html">volta para a aula</a> · <a href="../reference/00-mapa-das-dinamicas.html">mapa</a>
+</nav>
+
+<h1>Gate — Oersted: corrente cria campo</h1>
+<p class="subtitulo">Oito questões inéditas em três altitudes. Passa com sete.</p>
+<p class="custo">Sem consultar a aula · o gabarito só abre no fim · uma das questões tem figura</p>
+
+<p>Nenhuma destas questões está no caderno; as armadilhas, todas. Responda as oito
+e só então corrija.</p>
+
+<div class="quiz" id="quiz">
+
+<p class="altitude">Altitude 1 · conceitual direto</p>
+
+<div class="questao" data-certa="2">
+<p class="enunciado">1. No experimento de Oersted, o que permitiu concluir que foi a <strong>corrente</strong> que criou o campo magnético?</p>
+<ul class="opcoes">
+<li><button type="button">o fio ter sido atraído pela bússola</button></li>
+<li><button type="button">a agulha ter apontado para o norte</button></li>
+<li><button type="button">a agulha só girar com o circuito fechado</button></li>
+<li><button type="button">o fio ter esquentado com a corrente</button></li>
+</ul>
+<div class="resposta" hidden>
+<p>O que prova a causa é o liga-desliga: sem corrente a agulha fica parada no norte, com corrente ela gira. A única coisa que mudou entre os dois momentos foi a passagem da corrente.</p>
+<ul class="erros">
+<li><strong>fio atraído pela bússola:</strong> inverte quem age sobre quem, e um fio de cobre sem corrente não é atraído por ímã nenhum.</li>
+<li><strong>apontar para o norte:</strong> é o que ela já fazia antes. Não distingue nada.</li>
+<li><strong>fio esquentar:</strong> acontece de verdade (efeito Joule), mas é outro fenômeno e não explica o giro da agulha.</li>
+</ul>
+</div>
+</div>
+
+<div class="questao" data-certa="1" data-tipo="ce">
+<p class="enunciado">2. Julgue o item: o campo magnético criado por um fio retilíneo longo é tanto mais intenso quanto mais distante do fio estiver o ponto considerado.</p>
+<ul class="opcoes">
+<li><button type="button">Certo</button></li>
+<li><button type="button">Errado</button></li>
+</ul>
+<div class="resposta" hidden>
+<p><strong>Errado.</strong> É o contrário: quanto mais longe, mais fraco. Na figura das circunferências concêntricas, as de fora valem menos. A banca escreve "diretamente proporcional à distância" exatamente porque o candidato lê rápido e aceita.</p>
+</div>
+</div>
+
+<div class="questao" data-certa="1">
+<p class="enunciado">3. As linhas de campo magnético criadas por um fio retilíneo com corrente têm a forma de</p>
+<ul class="opcoes">
+<li><button type="button">retas paralelas ao fio condutor</button></li>
+<li><button type="button">circunferências em torno do fio</button></li>
+<li><button type="button">retas saindo do fio em todas as direções</button></li>
+<li><button type="button">curvas unindo as duas pontas do fio</button></li>
+</ul>
+<div class="resposta" hidden>
+<p>Circunferências concêntricas, num plano perpendicular ao fio — anéis enfiados num bastão.</p>
+<ul class="erros">
+<li><strong>paralelas ao fio:</strong> é a intuição natural, e é o erro mais comum da dinâmica.</li>
+<li><strong>saindo em todas as direções:</strong> é o desenho do campo <em>elétrico</em> de uma carga. Modelo errado importado.</li>
+<li><strong>unindo as pontas:</strong> mistura com as linhas de um ímã de barra entre polos.</li>
+</ul>
+</div>
+</div>
+
+<p class="altitude">Altitude 2 · aplicado</p>
+
+<div class="questao" data-certa="2">
+<p class="enunciado">4. A figura mostra um fio retilíneo visto de ponta, com a corrente vindo na sua direção. Nos pontos A, B e C o campo magnético é tangente às circunferências. No ponto <strong>B</strong>, o campo aponta</p>
+<figure>
+<svg viewBox="0 0 560 260" role="img" aria-labelledby="g4t g4d" style="display:block;width:100%;height:auto;font-family:sans-serif;font-size:12px;fill:#5f5e5a">
+<title id="g4t">Fio visto de ponta com três pontos ao redor</title>
+<desc id="g4d">Um fio perpendicular ao papel, com a corrente saindo em direção ao observador, cercado por circunferências concêntricas. O ponto A está acima do fio, o ponto B à direita e o ponto C abaixo.</desc>
+<circle cx="280" cy="130" r="45" fill="none" stroke="#8b8a84" stroke-width="1"/>
+<circle cx="280" cy="130" r="75" fill="none" stroke="#8b8a84" stroke-width="1"/>
+<circle cx="280" cy="130" r="105" fill="none" stroke="#8b8a84" stroke-width="1"/>
+<circle cx="280" cy="130" r="12" fill="#fdfcf9" stroke="#D85A30" stroke-width="1.5"/>
+<circle cx="280" cy="130" r="4" fill="#D85A30"/>
+<text x="300" y="148" fill="#D85A30">i</text>
+<circle cx="280" cy="55" r="4.5" fill="#5f5e5a"/>
+<text x="280" y="38" text-anchor="middle" font-size="14">A</text>
+<circle cx="355" cy="130" r="4.5" fill="#5f5e5a"/>
+<text x="372" y="134" font-size="14">B</text>
+<circle cx="280" cy="205" r="4.5" fill="#5f5e5a"/>
+<text x="280" y="228" text-anchor="middle" font-size="14">C</text>
+</svg>
+</figure>
+<ul class="opcoes">
+<li><button type="button">para baixo, na figura</button></li>
+<li><button type="button">para a direita, na figura</button></li>
+<li><button type="button">para cima, na figura</button></li>
+<li><button type="button">para a esquerda, na figura</button></li>
+<li><button type="button">para fora do papel</button></li>
+</ul>
+<div class="resposta" hidden>
+<p>Polegar da mão direita apontando para você (a corrente sai do papel), dedos fecham no sentido <strong>anti-horário</strong>. Em B, que está à direita do fio, o anti-horário sobe — o campo aponta <strong>para cima</strong>.</p>
+<ul class="erros">
+<li><strong>para a direita</strong> e <strong>para a esquerda:</strong> apontariam ao longo do raio, afastando-se ou aproximando-se do fio. O campo é <em>tangente</em> à circunferência, nunca radial.</li>
+<li><strong>para fora do papel:</strong> confunde a direção da corrente com a do campo. Quem sai do papel é a corrente; o campo gira no plano do papel.</li>
+<li><strong>para baixo:</strong> é a resposta de quem fechou a mão com a esquerda, ou com o polegar para dentro do papel.</li>
+</ul>
+</div>
+</div>
+
+<div class="questao" data-certa="3">
+<p class="enunciado">5. Um fio retilíneo vertical, contido no plano do papel, conduz corrente de baixo para cima. Em um ponto situado à direita do fio, também no plano do papel, o campo magnético aponta</p>
+<ul class="opcoes">
+<li><button type="button">para cima, acompanhando a corrente</button></li>
+<li><button type="button">para a direita, afastando-se do fio</button></li>
+<li><button type="button">saindo do papel, na sua direção</button></li>
+<li><button type="button">entrando no papel, afastando-se de você</button></li>
+</ul>
+<div class="resposta" hidden>
+<p>Polegar para cima, dedos fechando: à direita do fio eles estão <strong>entrando</strong> no papel; à esquerda, saindo. Dá para conferir pela figura da questão anterior girada — o campo sempre fura o plano quando o fio está deitado nele.</p>
+<ul class="erros">
+<li><strong>para cima:</strong> dá ao campo a direção da corrente. É o erro estrutural da dinâmica.</li>
+<li><strong>para a direita:</strong> campo radial, saindo do fio como se fosse campo elétrico de carga.</li>
+<li><strong>saindo do papel:</strong> acertou que o campo fura o plano, errou o lado. É o erro de quem usou a mão esquerda.</li>
+</ul>
+</div>
+</div>
+
+<div class="questao" data-certa="1" data-tipo="ce">
+<p class="enunciado">6. Julgue o item: um fio é dobrado em forma de circunferência e deitado sobre uma mesa horizontal. Nos pontos do plano da mesa, o campo magnético criado pela corrente é horizontal.</p>
+<ul class="opcoes">
+<li><button type="button">Certo</button></li>
+<li><button type="button">Errado</button></li>
+</ul>
+<div class="resposta" hidden>
+<p><strong>Errado.</strong> É vertical. Como o campo circula em torno do fio, nos pontos que estão <em>no mesmo plano do circuito</em> ele só pode apontar para fora do plano. Circuito deitado na mesa, campo furando a mesa — e isso independe do formato do circuito.</p>
+</div>
+</div>
+
+<p class="altitude">Altitude 3 · estresse</p>
+
+<div class="questao" data-certa="0" data-tipo="ce">
+<p class="enunciado">7. Julgue o item: invertendo-se o sentido da corrente em um fio retilíneo, a <strong>direção</strong> do campo magnético em um dado ponto próximo permanece a mesma, invertendo-se apenas o <strong>sentido</strong>.</p>
+<ul class="opcoes">
+<li><button type="button">Certo</button></li>
+<li><button type="button">Errado</button></li>
+</ul>
+<div class="resposta" hidden>
+<p><strong>Certo.</strong> Esta questão testa se você separa duas palavras que em português corrente são sinônimas e em física não são. <strong>Direção</strong> é a reta de suporte — aqui, a tangente à circunferência, que continua a mesma. <strong>Sentido</strong> é para que lado se anda nessa reta, e esse sim inverte: o giro passa de anti-horário a horário. Quem lê rápido pensa "inverteu tudo" e marca Errado.</p>
+</div>
+</div>
+
+<div class="questao" data-certa="1">
+<p class="enunciado">8. Uma bússola é colocada ao lado de um fio vertical percorrido por corrente intensa, e sua agulha se alinha perpendicular ao fio. A corrente é então desligada. A agulha</p>
+<ul class="opcoes">
+<li><button type="button">permanece exatamente onde estava</button></li>
+<li><button type="button">volta a apontar para o norte magnético</button></li>
+<li><button type="button">gira meia-volta e inverte o sentido</button></li>
+<li><button type="button">perde o alinhamento e fica girando</button></li>
+</ul>
+<div class="resposta" hidden>
+<p>Volta para o norte. O campo da Terra nunca deixou de existir — ele só estava sendo dominado pelo campo do fio, muito mais intenso ali perto. Desligada a corrente, sobra o campo terrestre, e a agulha faz o que sempre fez: obedece ao campo do ponto onde está.</p>
+<ul class="erros">
+<li><strong>permanece onde estava:</strong> trata a agulha como se ela guardasse a posição. Ela não tem memória, só obedece ao campo do instante.</li>
+<li><strong>gira meia-volta:</strong> confunde desligar a corrente com inverter a corrente.</li>
+<li><strong>fica girando:</strong> supõe que sem o fio não há campo nenhum — esquece a Terra.</li>
+</ul>
+</div>
+</div>
+
+</div>
+
+<button type="button" class="corrigir" id="corrigir">Corrigir as oito</button>
+<p class="aviso" id="aviso" hidden></p>
+
+<div class="final" id="final" hidden></div>
+
+<div class="rodape">
+<h2>Depois de corrigir</h2>
+<p>Me diga o número e, nas que errar, <strong>o que você pensou</strong> — não o
+que o gabarito diz. Foi assim que o erro de ontem virou a ligação entre ímã
+partido e linha fechada.</p>
+<p><a href="0003-oersted.html">Aula de Oersted</a> · <a href="../reference/00-mapa-das-dinamicas.html">Mapa</a></p>
+</div>
+
+<script>
+(function () {
+  var questoes = [].slice.call(document.querySelectorAll('#quiz .questao'));
+  var botaoCorrigir = document.getElementById('corrigir');
+  var aviso = document.getElementById('aviso');
+  var final = document.getElementById('final');
+
+  questoes.forEach(function (questao) {
+    var botoes = [].slice.call(questao.querySelectorAll('.opcoes button'));
+    botoes.forEach(function (botao, indice) {
+      botao.addEventListener('click', function () {
+        if (questao.dataset.corrigida) return;
+        botoes.forEach(function (b) { b.classList.remove('marcada'); });
+        botao.classList.add('marcada');
+        questao.dataset.marcada = indice;
+        aviso.hidden = true;
+      });
+    });
+  });
+
+  botaoCorrigir.addEventListener('click', function () {
+    var pendentes = questoes.filter(function (q) { return q.dataset.marcada === undefined; });
+    if (pendentes.length) {
+      aviso.textContent = 'Falta' + (pendentes.length > 1 ? 'm ' : ' ') + pendentes.length +
+        (pendentes.length > 1 ? ' questões' : ' questão') + ' por responder.';
+      aviso.hidden = false;
+      pendentes[0].scrollIntoView({ behavior: 'smooth', block: 'center' });
+      return;
+    }
+
+    var certas = 0;
+    var erradas = [];
+
+    questoes.forEach(function (questao, posicao) {
+      questao.dataset.corrigida = 'sim';
+      var gabarito = parseInt(questao.dataset.certa, 10);
+      var marcada = parseInt(questao.dataset.marcada, 10);
+      var botoes = questao.querySelectorAll('.opcoes button');
+
+      botoes[gabarito].classList.add('certa');
+      if (marcada !== gabarito) {
+        botoes[marcada].classList.add('errada');
+        erradas.push(posicao + 1);
+      } else {
+        certas++;
+      }
+      [].forEach.call(botoes, function (b) { b.disabled = true; b.classList.remove('marcada'); });
+      questao.querySelector('.resposta').hidden = false;
+    });
+
+    botaoCorrigir.disabled = true;
+    botaoCorrigir.textContent = certas + ' de 8';
+    aviso.hidden = true;
+
+    var texto;
+    if (certas === 8) {
+      texto = '<strong>Oito de oito.</strong> Oersted passou no gate, incluindo a questão de direção contra sentido. Três dinâmicas fechadas de dezoito.';
+    } else if (certas === 7) {
+      texto = '<strong>Sete de oito — passou.</strong> Me conte o raciocínio da questão ' + erradas[0] + ' assim mesmo: um erro na altitude 3 significa coisa diferente de um erro na altitude 1.';
+    } else if (certas >= 5) {
+      texto = '<strong>' + certas + ' de 8 — perto, não passou.</strong> Me diga o que pensou nas questões ' + erradas.join(', ') + '. Aposto que é uma confusão só aparecendo duas vezes, não ' + erradas.length + ' problemas.';
+    } else {
+      texto = '<strong>' + certas + ' de 8.</strong> O ponto que precisa assentar é a forma circular do campo — quase tudo nesta dinâmica sai dela. Me diga o seu raciocínio e eu mostro por outro caminho.';
+    }
+    final.innerHTML = texto;
+    final.hidden = false;
+    final.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+})();
+</script>
+
+</body>
+</html>

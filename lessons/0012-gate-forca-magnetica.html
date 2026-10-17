@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gate — força magnética sobre carga</title>
+<link rel="stylesheet" href="../assets/estilo.css">
+<style>
+#aviso { color: var(--alerta); font-family: var(--sans); font-size: .9rem; margin: .6rem 0 0; }
+#corrigir {
+  font-family: var(--sans); font-size: 1rem; padding: .7rem 1.4rem; cursor: pointer;
+  background: var(--destaque); color: #fff; border: none; border-radius: 3px; margin-top: 1.5rem;
+}
+#mapa-erro { font-family: var(--sans); font-size: .9rem; color: var(--tinta-fraca); }
+#mapa-erro ul { margin: .4rem 0 .8rem; }
+.final { margin-top: 1rem; }
+</style>
+</head>
+<body>
+
+<nav class="trilha">Gate · dinâmica 6 · força magnética sobre carga</nav>
+
+<h1>Gate — para onde a força empurra</h1>
+<p class="subtitulo">Dez questões. Passa com nove.</p>
+
+<div class="caixa regra">
+<span class="rotulo">Regras</span>
+<p>Nada de consultar a aula, a bancada ou a mão de ninguém — a sua, sim, use à
+vontade: ela é a ferramenta, não a cola. <strong>Não há correção item a item:</strong>
+você responde as dez e só então corrige. Se desistir de uma, chute e siga — o
+placar precisa ser honesto para servir de medida.</p>
+<p>Isto não mede se você entendeu a aula. A aula você já mostrou que entendeu,
+com 5 de 5. Isto mede se ficou.</p>
+</div>
+
+<div class="quiz" id="quiz">
+
+<div class="questao" data-certa="1" data-tipo="regra da mão">
+<p><strong>1.</strong> Um próton se move <strong>para cima</strong>, no plano do
+papel, numa região em que o campo magnético <strong>entra no papel</strong> (⊗).
+A força magnética sobre ele aponta:</p>
+<ul class="opcoes">
+<li><button type="button">para a direita</button></li>
+<li><button type="button">para a esquerda</button></li>
+<li><button type="button">para cima, no sentido do movimento</button></li>
+<li><button type="button">entrando no papel, no sentido do campo</button></li>
+</ul>
+<p class="resposta" hidden><strong>Para a esquerda.</strong> Polegar para cima,
+dedos entrando no papel, a palma empurra para a esquerda; carga positiva, vale o
+que a palma diz. As alternativas C e D podiam ser descartadas sem usar a mão: F
+nunca aponta ao longo de v nem ao longo de B.</p>
+</div>
+
+<div class="questao" data-certa="0" data-tipo="regra da mão · carga negativa">
+<p><strong>2.</strong> Um <strong>elétron</strong> se move <strong>para a
+direita</strong>, no plano do papel, numa região em que o campo <strong>sai do
+papel</strong> (⊙). A força sobre ele aponta:</p>
+<ul class="opcoes">
+<li><button type="button">para cima</button></li>
+<li><button type="button">para baixo</button></li>
+<li><button type="button">saindo do papel</button></li>
+<li><button type="button">é nula, porque a carga é negativa</button></li>
+</ul>
+<p class="resposta" hidden><strong>Para cima.</strong> A palma manda para baixo;
+a carga é negativa, então inverte. Os dois passos novos na mesma questão: campo
+saindo do papel e sinal negativo.</p>
+</div>
+
+<div class="questao" data-certa="2" data-tipo="caso nulo">
+<p><strong>3.</strong> Um próton entra numa região de campo magnético uniforme
+viajando <strong>em sentido exatamente oposto ao do campo</strong>. O que
+acontece com ele?</p>
+<ul class="opcoes">
+<li><button type="button">descreve uma circunferência</button></li>
+<li><button type="button">é freado até parar</button></li>
+<li><button type="button">segue em linha reta, com a mesma velocidade</button></li>
+<li><button type="button">é expulso lateralmente da região</button></li>
+</ul>
+<p class="resposta" hidden><strong>Segue em linha reta.</strong> Força nula.
+Paralela e antiparalela dão no mesmo: em ambos os casos v e B estão na mesma
+direção, e não existe uma terceira direção perpendicular a uma direção só. O
+"sentido oposto" é a maquiagem — ele não muda nada.</p>
+</div>
+
+<div class="questao" data-certa="1" data-tipo="caso nulo">
+<p><strong>4.</strong> Julgue: <em>um campo magnético suficientemente intenso
+exerce força sobre uma carga em repouso, desde que o valor da carga seja
+grande.</em></p>
+<ul class="opcoes">
+<li><button type="button">Certo</button></li>
+<li><button type="button">Errado</button></li>
+</ul>
+<p class="resposta" hidden><strong>Errado.</strong> Sem velocidade não há força
+magnética, por maior que sejam o campo e a carga. Nenhuma quantidade de campo
+compensa a ausência de movimento. Repare na estrutura do item: ele oferece dois
+números grandes para distrair de uma condição que é de tudo-ou-nada.</p>
+</div>
+
+<div class="questao" data-certa="2" data-tipo="consequência">
+<p><strong>5.</strong> Uma carga descreve uma circunferência dentro de um campo
+magnético uniforme, sob ação apenas da força magnética. Então:</p>
+<ul class="opcoes">
+<li><button type="button">a rapidez dela aumenta ao longo da trajetória</button></li>
+<li><button type="button">a energia cinética aumenta, mas a rapidez não</button></li>
+<li><button type="button">nem a rapidez nem a energia cinética mudam</button></li>
+<li><button type="button">a carga é freada e a trajetória fecha numa espiral</button></li>
+</ul>
+<p class="resposta" hidden><strong>Nem a rapidez nem a energia cinética mudam.</strong>
+A força é sempre perpendicular ao deslocamento, logo não realiza trabalho, logo
+não altera a energia cinética. Ela muda a direção o tempo todo sem nunca mudar o
+quanto a carga é rápida. A alternativa B é impossível em qualquer contexto:
+energia cinética depende só da massa e da rapidez.</p>
+</div>
+
+<div class="questao" data-certa="3" data-tipo="caso nulo">
+<p><strong>6.</strong> Um <strong>nêutron</strong> atravessa, em alta
+velocidade, uma região de campo magnético intenso, perpendicularmente às linhas
+de campo. Ele:</p>
+<ul class="opcoes">
+<li><button type="button">desvia para um lado, como qualquer partícula</button></li>
+<li><button type="button">desvia para o lado oposto ao de um próton</button></li>
+<li><button type="button">descreve uma circunferência de raio muito grande</button></li>
+<li><button type="button">não sofre força magnética alguma</button></li>
+</ul>
+<p class="resposta" hidden><strong>Não sofre força alguma.</strong> O terceiro
+caso nulo: sem carga, não há o que empurrar. Velocidade e campo estão os dois
+presentes e perpendiculares — e mesmo assim, nada. Presença não é efeito.</p>
+</div>
+
+<div class="questao" data-certa="2" data-tipo="regra da mão">
+<p><strong>7.</strong> Na figura, um próton entra numa região de campo magnético
+uniforme movendo-se <strong>para a esquerda</strong>. O campo da região
+<strong>entra no papel</strong>. Ao entrar, o próton desvia:</p>
+<figure>
+<svg viewBox="0 0 420 170" role="img" aria-label="Próton entrando para a esquerda numa região de campo entrando no papel">
+  <rect x="30" y="20" width="360" height="130" fill="none" stroke="#8b8a84" stroke-width="1" stroke-dasharray="4 4"/>
+  <g fill="#8b8a84" font-size="15" text-anchor="middle">
+    <text x="80" y="55">⊗</text><text x="160" y="55">⊗</text><text x="240" y="55">⊗</text><text x="320" y="55">⊗</text>
+    <text x="80" y="135">⊗</text><text x="160" y="135">⊗</text><text x="240" y="135">⊗</text><text x="320" y="135">⊗</text>
+  </g>
+  <circle cx="300" cy="95" r="12" fill="#0f6e56" stroke="#ffffff" stroke-width="2"/>
+  <text x="300" y="101" text-anchor="middle" fill="#ffffff" font-size="15" font-weight="700">+</text>
+  <line x1="286" y1="95" x2="196" y2="95" stroke="#0f6e56" stroke-width="3"/>
+  <polygon points="190,95 202,89 202,101" fill="#0f6e56"/>
+  <text x="212" y="82" fill="#4a4845" font-size="14">v</text>
+</svg>
+<figcaption>Campo uniforme entrando no papel em toda a região tracejada.</figcaption>
+</figure>
+<ul class="opcoes">
+<li><button type="button">saindo do papel, na sua direção</button></li>
+<li><button type="button">para cima</button></li>
+<li><button type="button">para baixo</button></li>
+<li><button type="button">não desvia: segue reto até sair da região</button></li>
+</ul>
+<p class="resposta" hidden><strong>Para baixo.</strong> Polegar para a esquerda,
+dedos entrando no papel, palma para baixo; próton é positivo, não inverte. É a
+mesma cena da questão 1 girada — e a alternativa A está morta de saída, porque
+F não pode apontar ao longo de B.</p>
+</div>
+
+<div class="questao" data-certa="3" data-tipo="consequência">
+<p><strong>8.</strong> A força magnética sobre uma carga em movimento
+<strong>nunca</strong> pode:</p>
+<ul class="opcoes">
+<li><button type="button">ser perpendicular à velocidade</button></li>
+<li><button type="button">ser perpendicular ao campo magnético</button></li>
+<li><button type="button">mudar a direção da velocidade</button></li>
+<li><button type="button">apontar no mesmo sentido da velocidade</button></li>
+</ul>
+<p class="resposta" hidden><strong>Apontar no mesmo sentido da velocidade.</strong>
+Ela é perpendicular a v e a B sempre — por isso A e B descrevem o que ela
+<em>sempre</em> faz, e C é exatamente a única coisa que ela faz de útil. Se a
+força pudesse apontar no sentido do movimento, ela aceleraria a carga, e a
+energia cinética mudaria.</p>
+</div>
+
+<div class="questao" data-certa="1" data-tipo="regra da mão · carga negativa">
+<p><strong>9.</strong> Uma partícula alfa (carga positiva) e uma partícula beta
+(carga negativa) entram na mesma região de campo magnético, com velocidades
+iguais em direção e sentido, perpendiculares ao campo. Elas:</p>
+<ul class="opcoes">
+<li><button type="button">desviam para o mesmo lado</button></li>
+<li><button type="button">desviam para lados opostos</button></li>
+<li><button type="button">não desviam, por serem partículas subatômicas</button></li>
+<li><button type="button">só a alfa desvia; a beta atravessa reta</button></li>
+</ul>
+<p class="resposta" hidden><strong>Para lados opostos.</strong> Mesma v, mesmo
+B, mão direita dá o mesmo resultado — e o sinal inverte o da beta. É assim que
+se identifica o sinal de uma partícula desconhecida num detector: pelo lado para
+o qual ela curva.</p>
+</div>
+
+<div class="questao" data-certa="0" data-tipo="ponte · próxima dinâmica">
+<p><strong>10.</strong> Um fio retilíneo, no plano do papel, conduz corrente
+<strong>para a direita</strong> e está numa região de campo magnético que
+<strong>entra no papel</strong>. A força magnética sobre o fio aponta:</p>
+<ul class="opcoes">
+<li><button type="button">para cima</button></li>
+<li><button type="button">para baixo</button></li>
+<li><button type="button">entrando no papel</button></li>
+<li><button type="button">é nula: o fio como um todo é eletricamente neutro</button></li>
+</ul>
+<p class="resposta" hidden><strong>Para cima.</strong> Esta dinâmica você ainda
+não estudou — e não precisava. Corrente <em>é</em> carga em movimento: use o
+polegar no sentido da corrente, exatamente como faria com a velocidade de uma
+carga positiva, e a palma responde. A alternativa D é a armadilha: o fio é
+neutro, mas as cargas dentro dele estão se movendo, e é sobre elas que a força
+age. Esta é a próxima aula, e você acabou de começá-la.</p>
+</div>
+
+</div>
+
+<button id="corrigir" type="button">Corrigir as dez</button>
+<p id="aviso" hidden></p>
+
+<p class="placar" id="placar" hidden></p>
+<div id="mapa-erro"></div>
+<div class="final" id="final"></div>
+
+<script>
+(function () {
+  var questoes = Array.prototype.slice.call(document.querySelectorAll('#quiz .questao'));
+  var aviso = document.getElementById('aviso');
+  var placar = document.getElementById('placar');
+  var mapaErro = document.getElementById('mapa-erro');
+  var final = document.getElementById('final');
+  var botaoCorrigir = document.getElementById('corrigir');
+
+  questoes.forEach(function (q) {
+    var botoes = Array.prototype.slice.call(q.querySelectorAll('.opcoes button'));
+    botoes.forEach(function (bt, i) {
+      bt.addEventListener('click', function () {
+        if (q.dataset.travada) return;
+        botoes.forEach(function (o) { o.classList.remove('marcada'); o.style.borderColor = ''; });
+        bt.style.borderColor = 'var(--tinta)';
+        q.dataset.marcada = i;
+        aviso.hidden = true;
+      });
+    });
+  });
+
+  botaoCorrigir.addEventListener('click', function () {
+    var pendentes = questoes.filter(function (q) { return q.dataset.marcada === undefined; });
+    if (pendentes.length) {
+      aviso.textContent = 'Falta' + (pendentes.length > 1 ? 'm ' : ' ') + pendentes.length +
+        (pendentes.length > 1 ? ' questões' : ' questão') +
+        '. Chute, se for o caso — mas responda todas antes de corrigir.';
+      aviso.hidden = false;
+      pendentes[0].scrollIntoView({ behavior: 'smooth', block: 'center' });
+      return;
+    }
+
+    var acertos = 0, erradas = [];
+    questoes.forEach(function (q, posicao) {
+      q.dataset.travada = '1';
+      var certa = parseInt(q.dataset.certa, 10);
+      var marcada = parseInt(q.dataset.marcada, 10);
+      var botoes = Array.prototype.slice.call(q.querySelectorAll('.opcoes button'));
+      botoes.forEach(function (o) { o.disabled = true; o.style.borderColor = ''; });
+      botoes[certa].classList.add('certa');
+      if (marcada === certa) { acertos++; }
+      else {
+        botoes[marcada].classList.add('errada');
+        erradas.push({ n: posicao + 1, tipo: q.dataset.tipo });
+      }
+      q.querySelector('.resposta').hidden = false;
+    });
+
+    botaoCorrigir.disabled = true;
+    botaoCorrigir.textContent = 'Corrigido';
+    placar.hidden = false;
+    placar.textContent = acertos + ' de ' + questoes.length +
+      (acertos >= 9 ? ' — passou.' : ' — a passagem era 9.');
+
+    if (erradas.length) {
+      var linhas = erradas.map(function (e) {
+        return '<li>questão ' + e.n + ' — <strong>' + e.tipo + '</strong></li>';
+      }).join('');
+      mapaErro.innerHTML = '<p>Onde os erros caíram:</p><ul>' + linhas + '</ul>' +
+        '<p>Duas ou mais no mesmo rótulo é uma confusão só, e se conserta num reforço curto. ' +
+        'Espalhadas em rótulos diferentes, geralmente é pressa — e aí o remédio é refazer devagar, não estudar mais.</p>';
+    }
+
+    final.innerHTML = acertos >= 9
+      ? '<div class="caixa regra"><span class="rotulo">Dinâmica fechada</span>' +
+        '<p>Catorze questões do caderno, a maior dinâmica de todas, sem uma conta. ' +
+        'Me diga o placar e, se errou alguma, qual — a próxima aula é força sobre fio, ' +
+        'que é esta mesma força com outro nome.</p></div>'
+      : '<div class="caixa armadilha"><span class="rotulo">Ainda não</span>' +
+        '<p>Me diga quais você errou e, em cada uma, o que passou pela sua cabeça antes de marcar. ' +
+        'Não vamos refazer a aula: vou montar um reforço curto só em cima do que o mapa acima mostrar, ' +
+        'e depois um reteste com questões novas. Foi exatamente assim na indução, e deu 8 de 8.</p></div>';
+
+    final.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+})();
+</script>
+
+</body>
+</html>

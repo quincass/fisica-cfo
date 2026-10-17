@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quem cria o campo — uma fórmula, três roupas</title>
+<link rel="stylesheet" href="../assets/estilo.css">
+<link rel="stylesheet" href="../assets/bancada.css">
+<style>
+.formas { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 2rem 0; }
+.formas figure { margin: 0; }
+.formas figcaption { padding-left: 0; border-left: none; text-align: center; margin-top: .4rem; }
+@media (max-width: 520px) { .formas { grid-template-columns: 1fr; } }
+.barra { height: 14px; background: var(--destaque); border-radius: 2px; transition: width .25s; }
+.trilho { background: var(--papel-caixa); border: 1px solid var(--linha); border-radius: 3px; padding: 3px; margin: .3rem 0 .8rem; }
+.ferramentas { font-family: var(--sans); font-size: .8rem; color: var(--tinta-tenue); }
+</style>
+</head>
+<body>
+
+<nav class="trilha">Aula · Família I do Grupo 3 · dinâmicas 10, 11 e 12 de 18 · campo criado, superposição, fios paralelos</nav>
+
+<h1>Quem cria o campo</h1>
+<p class="subtitulo">Uma fórmula em três roupas, e duas regras que saem dela. É a
+família campeã do CBM: 5 das 33 questões de bombeiro do caderno, incluindo
+<strong>duas das quatro de CBM PE</strong> da sua missão.</p>
+<p class="custo">Leitura: 10 minutos. O aquecimento é opcional, mas é a revisão devida hoje.</p>
+<p class="ferramentas">Montada com: <strong>tutor-concurso /reverso</strong> (moldes
+das 6 questões reais) · <strong>/mecanica</strong> (o protocolo da seção 5) ·
+<strong>teach</strong> (aula e bancada).</p>
+
+<div class="caixa gatilho">
+<span class="rotulo">Aquecimento · 2 minutos · revisão de hoje (Pontos A–E)</span>
+<p>Responda em voz alta <em>antes</em> de abrir. Dê a si mesmo uma nota de 0 a 3 em cada um e me mande as cinco notas.</p>
+<details><summary>A · Há linhas de campo dentro do ímã? Em que sentido?</summary>
+<p>Sim, do <strong>sul para o norte</strong>. As linhas são fechadas, porque não existe polo isolado.</p></details>
+<details><summary>B · Que fato explica "ímã partido vira dois ímãs" e "linhas fechadas"?</summary>
+<p>Não existe <strong>monopolo magnético</strong> (Lei de Gauss do magnetismo).</p></details>
+<details><summary>C · Que polo magnético fica perto do norte geográfico?</summary>
+<p>Um polo <strong>sul</strong>: a ponta norte da agulha vai para lá, e norte só é atraído por sul.</p></details>
+<details><summary>D · Bússola adiante do polo norte do ímã, no eixo. Para onde aponta a ponta norte?</summary>
+<p><strong>Para longe do ímã.</strong> Norte diante de norte repele.</p></details>
+<details><summary>E · Ferro e alumínio perto do polo sul?</summary>
+<p>Ferro é <strong>atraído</strong> (seria por qualquer polo). O alumínio fica <strong>indiferente</strong>: não ser atraído não é ser repelido.</p></details>
+</div>
+
+<h2>1 · Você já sabe a metade</h2>
+
+<p>Na <a href="0003-oersted.html">aula de Oersted</a> você aprendeu que corrente
+cria campo, e com a mão direita achou a <strong>forma</strong> e o
+<strong>sentido</strong> dele. O que falta agora é só o <strong>quanto</strong>.
+E o quanto tem a mesma cara nas três geometrias:</p>
+
+<div class="caixa regra">
+<span class="rotulo">A ideia única</span>
+<p style="font-size:1.2rem; text-align:center"><strong>B = μ₀ · i ÷ (um tamanho)</strong></p>
+<p>Mais corrente, mais campo. Mais longe (ou maior), menos campo. A constante
+μ₀ = 4π × 10⁻⁷ vem sempre no enunciado. O que muda de uma roupa para outra é
+só <strong>o tamanho no denominador</strong>.</p>
+</div>
+
+<div class="formas">
+<figure>
+<svg viewBox="0 0 140 130" role="img" aria-label="Fio saindo do papel com circunferências de campo em volta">
+  <circle cx="70" cy="62" r="18" fill="none" stroke="#0f6e56" stroke-width="1.5"/>
+  <circle cx="70" cy="62" r="34" fill="none" stroke="#0f6e56" stroke-width="1.2" opacity=".7"/>
+  <circle cx="70" cy="62" r="50" fill="none" stroke="#0f6e56" stroke-width="1" opacity=".45"/>
+  <circle cx="70" cy="62" r="6" fill="#fdfcf9" stroke="#1a1a18" stroke-width="1.5"/>
+  <circle cx="70" cy="62" r="1.8" fill="#1a1a18"/>
+  <line x1="70" y1="62" x2="104" y2="62" stroke="#993c1d" stroke-width="1.5" stroke-dasharray="3 2"/>
+  <text x="87" y="57" font-size="11" fill="#993c1d" text-anchor="middle">d</text>
+</svg>
+<figcaption><strong>Fio longo</strong><br>B = μ₀ i ÷ (2π d)</figcaption>
+</figure>
+<figure>
+<svg viewBox="0 0 140 130" role="img" aria-label="Espira circular com o campo no centro">
+  <circle cx="70" cy="62" r="42" fill="none" stroke="#1a1a18" stroke-width="2.5"/>
+  <circle cx="70" cy="62" r="7" fill="#fdfcf9" stroke="#0f6e56" stroke-width="1.5"/>
+  <circle cx="70" cy="62" r="2" fill="#0f6e56"/>
+  <line x1="70" y1="62" x2="112" y2="62" stroke="#993c1d" stroke-width="1.5" stroke-dasharray="3 2"/>
+  <text x="93" y="57" font-size="11" fill="#993c1d" text-anchor="middle">R</text>
+  <path d="M 36 36 l 6 -6 l 1 8" fill="none" stroke="#1a1a18" stroke-width="1.5"/>
+</svg>
+<figcaption><strong>Espira, no centro</strong><br>B = μ₀ i ÷ (2 R)</figcaption>
+</figure>
+<figure>
+<svg viewBox="0 0 140 130" role="img" aria-label="Solenoide com linhas de campo paralelas dentro">
+  <g fill="none" stroke="#1a1a18" stroke-width="2">
+    <ellipse cx="30" cy="62" rx="7" ry="28"/><ellipse cx="50" cy="62" rx="7" ry="28"/>
+    <ellipse cx="70" cy="62" rx="7" ry="28"/><ellipse cx="90" cy="62" rx="7" ry="28"/>
+    <ellipse cx="110" cy="62" rx="7" ry="28"/>
+  </g>
+  <g stroke="#0f6e56" stroke-width="1.5">
+    <line x1="18" y1="52" x2="124" y2="52"/><line x1="18" y1="62" x2="124" y2="62"/><line x1="18" y1="72" x2="124" y2="72"/>
+  </g>
+  <line x1="30" y1="108" x2="110" y2="108" stroke="#993c1d" stroke-width="1.5" stroke-dasharray="3 2"/>
+  <text x="70" y="122" font-size="11" fill="#993c1d" text-anchor="middle">L, com N voltas</text>
+</svg>
+<figcaption><strong>Solenoide, dentro</strong><br>B = μ₀ N i ÷ L</figcaption>
+</figure>
+</div>
+
+<div class="caixa armadilha">
+<span class="rotulo">A troca que a banca espera que você faça</span>
+<p>O <strong>fio tem π</strong> no denominador (2π d), porque o campo dele dá a
+volta inteira no fio. A <strong>espira não tem</strong> (só 2R). Quem troca um
+pelo outro erra por um fator π.</p>
+<p>A pista que entrega a espira: quando a banca dá o raio como <strong>"3π m"</strong>,
+é para o π do raio cancelar com o π de μ₀. Foi assim na IAUPE 2007, do CBM PE.</p>
+</div>
+
+<h2>2 · O molde mais cobrado: o fator, sem conta</h2>
+
+<p>"Dobrou a corrente e reduziu o raio à quarta parte. E o campo?" Não precisa
+de μ₀ nem de número nenhum. Como B é <strong>i dividido pelo tamanho</strong>:</p>
+
+<div class="caixa regra">
+<span class="rotulo">Regra do fator</span>
+<p><strong>fator de B = fator da corrente ÷ fator do tamanho</strong></p>
+<p>Corrente × 2 e raio × ¼ → 2 ÷ ¼ = <strong>8 vezes</strong> o campo.</p>
+</div>
+
+<div class="bancada">
+  <p class="legenda">Multiplique a corrente por</p>
+  <div class="botoes" id="b-i">
+    <button class="opc" type="button" data-v="0.5" aria-pressed="false">× ½</button>
+    <button class="opc" type="button" data-v="1" aria-pressed="true">× 1</button>
+    <button class="opc" type="button" data-v="1.5" aria-pressed="false">× 1,5</button>
+    <button class="opc" type="button" data-v="2" aria-pressed="false">× 2</button>
+    <button class="opc" type="button" data-v="3" aria-pressed="false">× 3</button>
+  </div>
+  <p class="legenda">Multiplique a distância (fio), o raio (espira) ou o comprimento (solenoide) por</p>
+  <div class="botoes" id="b-d">
+    <button class="opc" type="button" data-v="0.25" aria-pressed="false">× ¼</button>
+    <button class="opc" type="button" data-v="0.5" aria-pressed="false">× ½</button>
+    <button class="opc" type="button" data-v="1" aria-pressed="true">× 1</button>
+    <button class="opc" type="button" data-v="2" aria-pressed="false">× 2</button>
+    <button class="opc" type="button" data-v="3" aria-pressed="false">× 3</button>
+  </div>
+  <p class="legenda">Campo de antes</p>
+  <div class="trilho"><div class="barra" style="width:8.33%"></div></div>
+  <p class="legenda">Campo de agora</p>
+  <div class="trilho"><div class="barra" id="b-barra" style="width:8.33%"></div></div>
+  <p class="veredito" id="b-veredito">—</p>
+</div>
+
+<h2>3 · Duas fontes no mesmo ponto: superposição</h2>
+
+<p>Quando há duas correntes, cada uma cria o seu campo no ponto, como se a outra
+não existisse. O campo final é a <strong>soma com sentido</strong>:</p>
+
+<table>
+<thead><tr><th>Os dois campos no ponto</th><th>Resultado</th></tr></thead>
+<tbody>
+<tr><td>mesmo sentido (⊙ e ⊙)</td><td><strong>soma</strong> os módulos</td></tr>
+<tr><td>sentidos opostos (⊙ e ⊗)</td><td><strong>subtrai</strong>, e fica o sentido do maior</td></tr>
+<tr><td>opostos e de mesmo tamanho</td><td><strong>campo nulo</strong>: o ponto que a banca pede para achar</td></tr>
+</tbody>
+</table>
+
+<div class="caixa armadilha">
+<span class="rotulo">A ordem que não pode inverter</span>
+<p><strong>Sentido primeiro, número depois.</strong> Faça a mão direita para cada
+fonte e anote ⊙ ou ⊗ <em>antes</em> de calcular. Quem calcula primeiro soma no
+automático, e é exatamente o erro que as alternativas da IAUPE 2007 esperam.</p>
+<p>Exemplo clássico: dois fios paralelos com correntes no <strong>mesmo</strong>
+sentido. Entre eles, um campo aponta para um lado e o outro para o lado oposto.
+No ponto médio, se as correntes forem iguais, o campo é <strong>nulo</strong>.</p>
+</div>
+
+<h3>Veja acontecer: dois fios vistos de cima</h3>
+
+<p>A peça que faz isso funcionar é uma só: <strong>o campo de um fio aponta para um
+lado de um lado dele e para o lado oposto do outro lado</strong>, porque as linhas
+são circunferências em volta do fio. Os fios abaixo atravessam o papel. Em cada
+ponto marcado aparecem a seta do fio 1 (verde), a do fio 2 (vermelha) e a
+<strong>soma</strong> delas (preta). Seta mais longa é campo mais forte, que
+acontece mais perto do fio.</p>
+
+<div class="bancada dois-fios" data-s2="1" data-k2="1"></div>
+
+<h2>4 · Dois fios paralelos: atraem ou repelem?</h2>
+
+<p>Não é regra nova, é a soma de duas que você tem. O fio 1 cria campo no lugar
+do fio 2 (Oersted). O fio 2 tem corrente dentro desse campo, então sofre força
+(<a href="0013-forca-sobre-fio-e-espira.html">aula 0013</a>, a mão com o polegar na corrente).
+Fazendo as duas mãos, sai isto:</p>
+
+<figure>
+<svg viewBox="0 0 440 150" role="img" aria-label="Fios com correntes no mesmo sentido se atraem; com sentidos opostos se repelem">
+  <g stroke="#1a1a18" stroke-width="3">
+    <line x1="60" y1="20" x2="60" y2="120"/><line x1="140" y1="20" x2="140" y2="120"/>
+    <line x1="300" y1="20" x2="300" y2="120"/><line x1="380" y1="20" x2="380" y2="120"/>
+  </g>
+  <g fill="#1a1a18">
+    <path d="M 60 22 l -6 12 h 12 z"/><path d="M 140 22 l -6 12 h 12 z"/>
+    <path d="M 300 22 l -6 12 h 12 z"/><path d="M 380 118 l -6 -12 h 12 z"/>
+  </g>
+  <g stroke="#0f6e56" stroke-width="2.5">
+    <line x1="64" y1="70" x2="90" y2="70"/><line x1="136" y1="70" x2="110" y2="70"/>
+  </g>
+  <g fill="#0f6e56"><path d="M 96 70 l -8 -5 v 10 z"/><path d="M 104 70 l 8 -5 v 10 z"/></g>
+  <g stroke="#993c1d" stroke-width="2.5">
+    <line x1="296" y1="70" x2="270" y2="70"/><line x1="384" y1="70" x2="410" y2="70"/>
+  </g>
+  <g fill="#993c1d"><path d="M 264 70 l 8 -5 v 10 z"/><path d="M 416 70 l -8 -5 v 10 z"/></g>
+  <text x="100" y="142" text-anchor="middle" font-size="13" fill="#0f6e56" font-weight="600">mesmo sentido: atraem</text>
+  <text x="340" y="142" text-anchor="middle" font-size="13" fill="#993c1d" font-weight="600">sentidos opostos: repelem</text>
+</svg>
+<figcaption>As setas pretas são as correntes; as coloridas, a força em cada fio.</figcaption>
+</figure>
+
+<div class="caixa armadilha">
+<span class="rotulo">Duas armadilhas desta dinâmica</span>
+<p><strong>1. Correntes iguais se atraem.</strong> É o contrário de carga e de
+polo, onde iguais se repelem. Quem importa a eletrostática para cá erra. Foi o
+item da UnB 2016: "correntes opostas se atraem" está <em>errado</em>.</p>
+<p><strong>2. A força é a mesma nos dois fios</strong>, mesmo com correntes
+diferentes (2 A e 6 A, por exemplo). É ação e reação: o fio 1 empurra o 2 com a
+mesma força com que o 2 empurra o 1. A fórmula mostra isso, porque as duas
+correntes entram multiplicando:</p>
+<p style="text-align:center"><strong>F = μ₀ · i₁ · i₂ · L ÷ (2π d)</strong></p>
+</div>
+
+<h2>5 · O protocolo para a prova</h2>
+<p class="custo">Do tutor-concurso /mecanica. Cinco perguntas, nesta ordem.</p>
+<ol>
+<li><strong>Qual roupa?</strong> Fio, espira ou solenoide. Isso decide o denominador.</li>
+<li><strong>Pede fator ou valor?</strong> Se pede fator, use a regra da seção 2 e pare.</li>
+<li><strong>Mais de uma fonte?</strong> Faça a mão direita para cada uma e anote ⊙ ou ⊗.</li>
+<li><strong>Soma ou subtrai?</strong></li>
+<li><strong>Só agora a conta.</strong> A potência de 10 é sua: 7 de 7 no diagnóstico de hoje.</li>
+</ol>
+
+<h2>Vídeos</h2>
+<p class="custo">Buscados agora e confirmados como existentes, mas eu
+<strong>não os assisti</strong>.</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=Ea8fSR4t_wI">Aula 04: equações do fio, da espira e do solenoide</a>, as três roupas lado a lado.</li>
+<li><a href="https://www.youtube.com/watch?v=vvQbSYAOKRI">Regra da mão direita em fios, espiras e solenoides</a>, para o passo 3 do protocolo.</li>
+<li><a href="https://www.youtube.com/watch?v=wP1iuKAKLBA">Força magnética entre fios, aula 9 (prof. Marcelo Boaro)</a>, a seção 4 com calma.</li>
+<li><a href="https://www.youtube.com/watch?v=GDF9rVqzIKo">Resolução de questões de campo magnético</a>, o mais recente, em formato de prova.</li>
+</ul>
+
+<h2>Cinco para fechar</h2>
+<p class="custo">Correção imediata. Rode o protocolo da seção 5 em cada uma.</p>
+
+<div class="quiz" id="quiz"
+     data-fim=" — Família I pronta para o gate. Me avise."
+     data-parcial=" — me diga quais errou e em que passo do protocolo travou.">
+
+<div class="questao" data-certa="1">
+  <p><strong>1.</strong> Um fio longo produz campo B num ponto a 6 cm dele. A corrente
+  é triplicada e o ponto passa a ficar a 2 cm do fio. O novo campo é:</p>
+  <ul class="opcoes">
+    <li><button type="button">3B</button></li>
+    <li><button type="button">9B</button></li>
+    <li><button type="button">B</button></li>
+    <li><button type="button">6B</button></li></ul>
+  <div class="resposta" hidden><p><strong>9B.</strong> Corrente × 3; distância
+  de 6 para 2 cm é × ⅓. Fator: 3 ÷ ⅓ = 9. Quem marca 3B esqueceu a distância; quem
+  marca B dividiu em vez de multiplicar.</p></div>
+</div>
+
+<div class="questao" data-certa="0">
+  <p><strong>2.</strong> Uma espira de raio 2π × 10⁻² m é percorrida por 5 A.
+  Com μ₀ = 4π × 10⁻⁷ T·m/A, o campo no centro dela vale:</p>
+  <ul class="opcoes">
+    <li><button type="button">5 × 10⁻⁵ T</button></li>
+    <li><button type="button">1 × 10⁻⁴ T</button></li>
+    <li><button type="button">5 × 10⁻⁷ T</button></li>
+    <li><button type="button">2 × 10⁻⁵ T</button></li></ul>
+  <div class="resposta" hidden><p><strong>5 × 10⁻⁵ T.</strong> Espira: B = μ₀ i ÷ 2R
+  = (4π × 10⁻⁷ × 5) ÷ (2 × 2π × 10⁻²) = 20π × 10⁻⁷ ÷ 4π × 10⁻² = 5 × 10⁻⁵ T. Os
+  π cancelam, que é para isso que a banca deu o raio com π. 1 × 10⁻⁴ é quem
+  esqueceu o 2 do denominador.</p></div>
+</div>
+
+<div class="questao" data-certa="2">
+  <p><strong>3.</strong> Duas espiras concêntricas e no mesmo plano, com correntes em
+  sentidos opostos. Sozinhas, elas criariam no centro 3 × 10⁻⁶ T e 1 × 10⁻⁶ T.
+  O campo resultante no centro vale:</p>
+  <ul class="opcoes">
+    <li><button type="button">4 × 10⁻⁶ T</button></li>
+    <li><button type="button">3 × 10⁻⁶ T</button></li>
+    <li><button type="button">2 × 10⁻⁶ T</button></li>
+    <li><button type="button">zero, sempre</button></li></ul>
+  <div class="resposta" hidden><p><strong>2 × 10⁻⁶ T.</strong> Correntes opostas dão
+  campos opostos no centro (⊙ e ⊗): subtrai. Fica 2 × 10⁻⁶ T, no sentido da
+  espira que cria o campo maior. 4 × 10⁻⁶ é a soma automática, o erro que o
+  passo 3 do protocolo existe para evitar.</p></div>
+</div>
+
+<div class="questao" data-certa="3">
+  <p><strong>4.</strong> Dois fios longos e paralelos têm correntes iguais e no
+  <strong>mesmo</strong> sentido. Onde o campo magnético deles é nulo?</p>
+  <ul class="opcoes">
+    <li><button type="button">Em nenhum ponto, porque os campos sempre somam</button></li>
+    <li><button type="button">Em qualquer ponto do lado de fora dos fios</button></li>
+    <li><button type="button">Somente muito longe, onde os dois enfraquecem</button></li>
+    <li><button type="button">No ponto médio da linha que liga os dois fios</button></li></ul>
+  <div class="resposta" hidden><p><strong>No ponto médio.</strong> Entre os fios, a
+  mão direita dá campos em sentidos opostos; no meio as distâncias são iguais,
+  então os módulos também, e se anulam. Do lado de fora, os dois campos apontam
+  para o mesmo lado e somam. Muito longe eles enfraquecem, mas não zeram.</p></div>
+</div>
+
+<div class="questao" data-certa="2">
+  <p><strong>5.</strong> Dois fios paralelos conduzem 1 A e 4 A no mesmo sentido.
+  Comparada à força sobre o fio de 4 A, a força sobre o fio de 1 A é:</p>
+  <ul class="opcoes">
+    <li><button type="button">quatro vezes menor, e eles se repelem</button></li>
+    <li><button type="button">quatro vezes maior, e eles se atraem</button></li>
+    <li><button type="button">exatamente igual, e eles se atraem</button></li>
+    <li><button type="button">exatamente igual, e eles se repelem</button></li></ul>
+  <div class="resposta" hidden><p><strong>Igual, e se atraem.</strong> Mesmo sentido
+  atrai. E as forças são um par de ação e reação: as duas correntes entram
+  multiplicando em F = μ₀ i₁ i₂ L ÷ 2πd, que é a mesma conta para os dois fios.</p></div>
+</div>
+
+<p class="placar" id="placar" hidden></p>
+</div>
+
+<div class="rodape">
+<h2>O que vem agora</h2>
+<p>Gate da Família I, em 3 fases (conceito → número → estresse), montado com o
+deeptutor. Depois, Família II: <strong>a força sobre carga com número</strong>
+(ângulo, órbita, seletor), onde mora a questão da AOCP 2024 Aspirante do CBM PE.</p>
+<p>
+<a href="0003-oersted.html">Aula 3 — Oersted</a> ·
+<a href="../reference/02-oersted-campo-de-corrente.html">Ficha 02 — Oersted</a> ·
+<a href="../reference/05-forca-sobre-fio-e-espira.html">Ficha 05 — força sobre fio</a> ·
+<a href="../reference/00-mapa-das-dinamicas.html">Mapa das 18 dinâmicas</a>
+</p>
+<p class="custo">Travou em alguma coisa? Me pergunte. Diga em que passo do
+protocolo parou.</p>
+</div>
+
+<script>
+(function () {
+  var fi = 1, fd = 1;
+  function fmt(x) {
+    var r = Math.round(x * 100) / 100;
+    var s = String(r).replace('.', ',');
+    if (Math.abs(x - 1/3) < 0.01) s = '⅓';
+    if (Math.abs(x - 1/6) < 0.01) s = '⅙';
+    if (Math.abs(x - 2/3) < 0.01) s = '⅔';
+    return s;
+  }
+  function frac(x) { return { '0.25': '¼', '0.5': '½', '1': '1', '1.5': '1,5', '2': '2', '3': '3' }[String(x)]; }
+  function atualizar() {
+    var f = fi / fd;
+    document.getElementById('b-barra').style.width = Math.min(100, f * 8.33) + '%';
+    var t = 'Corrente × ' + frac(fi) + ', tamanho × ' + frac(fd) + ' → ' + frac(fi) +
+      ' ÷ ' + frac(fd) + ' = <strong>' + fmt(f) + ' vezes</strong> o campo de antes.';
+    if (f === 1 && fi !== 1) t += ' Os dois efeitos se cancelaram exatamente.';
+    if (f > 12) t += ' A barra saiu da escala.';
+    if (fd < 1) t += ' Chegar perto <em>aumenta</em> o campo: o tamanho está dividindo.';
+    var vd = document.getElementById('b-veredito');
+    vd.innerHTML = t;
+    vd.className = 'veredito' + (f < 1 ? ' nulo' : '');
+  }
+  function grupo(id, set) {
+    var g = document.getElementById(id);
+    g.addEventListener('click', function (ev) {
+      var bt = ev.target.closest('button.opc');
+      if (!bt) return;
+      Array.prototype.forEach.call(g.querySelectorAll('button.opc'), function (o) {
+        o.setAttribute('aria-pressed', o === bt ? 'true' : 'false');
+      });
+      set(parseFloat(bt.dataset.v));
+      atualizar();
+    });
+  }
+  grupo('b-i', function (v) { fi = v; });
+  grupo('b-d', function (v) { fd = v; });
+  atualizar();
+})();
+</script>
+<script src="../assets/dois-fios.js"></script>
+<script src="../assets/quiz.js"></script>
+
+</body>
+</html>

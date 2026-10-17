@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lenz — a natureza cobra o preço</title>
+<link rel="stylesheet" href="../assets/estilo.css">
+<link rel="stylesheet" href="../assets/bancada.css">
+<style>
+.abertura { border-left: 3px solid var(--alerta); border-radius: 0; }
+.abertura .rotulo { color: var(--alerta); }
+</style>
+</head>
+<body>
+
+<nav class="trilha">Aula · dinâmica 8 de 18 · Lei de Lenz</nav>
+
+<h1>A natureza cobra o preço</h1>
+<p class="subtitulo">Oito questões do caderno. É a única lei do eletromagnetismo
+que você pode deduzir sem saber nada de eletromagnetismo.</p>
+<p class="custo">Leitura: 9 minutos. Abre pela questão que você errou há pouco.</p>
+
+<div class="caixa abertura">
+<span class="rotulo">A questão 10 do seu gate</span>
+<p>"O polo norte de um ímã é empurrado em direção a uma espira fechada. Surge
+corrente induzida. O que acontece entre o ímã e a espira?"</p>
+<p>Você respondeu <strong>atração</strong>. A resposta é
+<strong>repulsão</strong> — e eu não tinha ensinado, de propósito. Esta aula
+inteira é essa resposta.</p>
+</div>
+
+<h2>1 · Por que não pode ser atração</h2>
+
+<p>Esqueça magnetismo por um instante. Suponha que a espira
+<strong>atraísse</strong> o ímã que se aproxima. O que aconteceria?</p>
+
+<ul>
+<li>O ímã seria puxado, então <strong>acelera sozinho</strong>.</li>
+<li>Acelerando, ele se aproxima mais rápido, então o fluxo varia mais rápido.</li>
+<li>Variando mais rápido, a corrente induzida <strong>aumenta</strong>.</li>
+<li>Maior corrente, maior atração — e volta ao primeiro item.</li>
+</ul>
+
+<p>Você acabou de construir uma máquina que ganha velocidade sozinha
+<em>enquanto</em> acende uma lâmpada. Energia infinita, de graça, a partir de um
+ímã solto. O universo não permite isso. Logo a hipótese está errada, e só sobra
+uma: a espira <strong>repele</strong> o ímã que chega.</p>
+
+<div class="caixa regra">
+<span class="rotulo">A Lei de Lenz, em uma frase</span>
+<p><strong>A corrente induzida sempre se opõe à variação que a criou.</strong></p>
+<p>Não é uma regra arbitrária a decorar. É conservação de energia escrita em
+linguagem de ímã: para tirar energia elétrica de algum lugar, alguém tem de
+gastar energia mecânica empurrando.</p>
+</div>
+
+<div class="caixa gatilho">
+<span class="rotulo">Onde você já sentiu isto</span>
+<p>Um gerador de manivela acende a lâmpada e <strong>a manivela fica pesada</strong>.
+Acenda mais lâmpadas e ela fica mais pesada ainda. Esse peso <em>é</em> a Lei de
+Lenz: a energia elétrica que sai do fio é exatamente a energia muscular que
+entra na manivela. Nada é criado — tudo é convertido.</p>
+<p>Mesmo motivo pelo qual freio eletromagnético de caminhão e de trem funciona
+sem encostar nada: induz-se corrente na roda, e a corrente induzida se opõe ao
+giro que a criou. Freia sem atrito e sem desgaste.</p>
+</div>
+
+<h2>2 · O procedimento, em três passos</h2>
+
+<p>A frase da lei é bonita, mas a prova pede um <strong>sentido de corrente</strong>:
+horário ou anti-horário. Faça sempre nesta ordem.</p>
+
+<ol>
+<li><strong>Chegando ou indo embora?</strong> É a única coisa que importa do
+movimento.</li>
+<li><strong>A espira vira um ímã, e escolhe a cara.</strong> Se o ímã está
+<em>chegando</em>, a espira empurra: a face voltada para ele vira o
+<strong>mesmo</strong> polo (norte contra norte se repelem). Se está <em>indo
+embora</em>, a espira segura: a face vira o polo <strong>oposto</strong>.</li>
+<li><strong>Do polo para o sentido da corrente.</strong> Mão direita, dedos
+enrolados no sentido em que a corrente corre na espira: o <strong>polegar aponta
+para o norte</strong> da espira. É a mesma mão de Oersted, só que enrolada numa
+volta em vez de num fio reto.</li>
+</ol>
+
+<div class="caixa regra">
+<span class="rotulo">O atalho que resolve a prova inteira</span>
+<p><strong>Chegou, repele. Saiu, atrai.</strong></p>
+<p>A espira é sempre do contra: ela não quer que nada mude. Serve para os quatro
+casos, com ímã de qualquer polo.</p>
+</div>
+
+<h2>3 · A bancada</h2>
+
+<p>Escolha o polo que está de frente para a espira e o que ele está fazendo.
+Decida sozinho <em>antes</em> de olhar o veredito.</p>
+
+<div class="bancada">
+  <p class="legenda">Polo do ímã voltado para a espira</p>
+  <div class="botoes" id="g-polo">
+    <button class="opc" type="button" data-v="N" aria-pressed="true">polo norte (N)</button>
+    <button class="opc" type="button" data-v="S" aria-pressed="false">polo sul (S)</button>
+  </div>
+
+  <p class="legenda">O que o ímã está fazendo</p>
+  <div class="botoes" id="g-mov">
+    <button class="opc" type="button" data-v="chega" aria-pressed="true">→ aproximando-se</button>
+    <button class="opc" type="button" data-v="sai" aria-pressed="false">← afastando-se</button>
+    <button class="opc" type="button" data-v="parado" aria-pressed="false">parado em frente</button>
+  </div>
+
+  <svg id="cena" viewBox="0 0 440 220" role="img" aria-label="Ímã diante de uma espira, com a corrente induzida e a força entre eles">
+    <g id="desenho"></g>
+  </svg>
+
+  <p class="veredito" id="veredito">—</p>
+</div>
+
+<h2>4 · O caso em que a espira não faz nada</h2>
+
+<p>O terceiro botão da bancada é o mais cobrado dos três, e é o seu
+<strong>Ponto K</strong> de volta: ímã <strong>parado</strong> em frente à espira,
+por mais forte que seja, <strong>não induz nada</strong>. Sem variação de fluxo
+não há corrente, e sem corrente não há força nenhuma entre os dois.</p>
+
+<p>Também não há corrente se ímã e espira viajam <strong>juntos</strong>, lado a
+lado: do ponto de vista da espira, o ímã está parado. O que conta é o movimento
+<em>relativo</em>.</p>
+
+<div class="caixa armadilha">
+<span class="rotulo">Lenz dá o sentido, Faraday dá o tamanho</span>
+<p>São duas perguntas diferentes sobre o mesmo fenômeno, e a banca às vezes põe
+as duas na mesma questão:</p>
+<p><strong>Faraday</strong> — <em>quanto</em>? Depende da <strong>rapidez</strong>
+da variação do fluxo. Ímã rápido, corrente forte.<br>
+<strong>Lenz</strong> — <em>para que lado</em>? Sempre contra a variação.</p>
+<p>Repare que Faraday já diz tudo sobre o ímã parado: variação zero, corrente
+zero, por mais intenso que seja o campo.</p>
+</div>
+
+<h2>Vídeos</h2>
+<p class="custo">Buscados agora e verificados como existentes — mas eu
+<strong>não os assisti</strong>. Se algum contradisser esta aula, me diga qual e
+em que ponto.</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=6e6PtSdAYEA">Sentido da corrente induzida — Lei de Lenz</a> — o recorte exato da seção 2.</li>
+<li><a href="https://www.youtube.com/watch?v=VKayc7OGKhU">Lei de Lenz — Eletromagnetismo aula 11 (prof. Marcelo Boaro)</a> — a mesma matéria com mais calma e mais fluxo.</li>
+<li><a href="https://www.youtube.com/watch?v=EbWQ7ln2jHM">Indução eletromagnética: Lei de Lenz</a> — outra regra prática para o mesmo passo 3.</li>
+<li><a href="https://www.youtube.com/watch?v=pZw92qI2xa0">Lei de Lenz — física para concurso</a> — recorte de prova.</li>
+<li><a href="https://www.youtube.com/watch?v=f0Df3rmXij0">UNIOESTE 2022 — questão resolvida de ímã e espiras</a> — exatamente a cena da bancada.</li>
+</ul>
+
+<h2>Cinco para fechar</h2>
+<p class="custo">Correção imediata. Isto mede fluência, não retenção — o gate
+vem depois.</p>
+
+<div class="quiz" id="quiz"
+     data-fim=" — e a questão que te derrubou há pouco agora é a mais fácil delas. Me avise para abrir o gate."
+     data-parcial=" — me diga quais você errou e em qual dos três passos você travou.">
+
+<div class="questao" data-certa="1">
+  <p><strong>1.</strong> O polo <strong>sul</strong> de um ímã é aproximado de
+  uma espira. O que a face da espira voltada para o ímã se torna, e o que ela faz
+  com ele?</p>
+  <ul class="opcoes">
+    <li><button type="button">Torna-se norte e atrai o ímã que chega</button></li>
+    <li><button type="button">Torna-se sul e repele o ímã que chega</button></li>
+    <li><button type="button">Torna-se sul e atrai o ímã que chega</button></li>
+    <li><button type="button">Torna-se norte e repele o ímã que chega</button></li></ul>
+  <div class="resposta" hidden><p><strong>Sul, e repele.</strong> Chegou, repele —
+  e repelir um sul exige mostrar um sul. O polo do ímã mudou em relação ao gate,
+  mas a conclusão não: a espira é sempre do contra.</p></div>
+</div>
+
+<div class="questao" data-certa="3">
+  <p><strong>2.</strong> Um ímã é <strong>afastado</strong> de uma espira. A força
+  magnética entre os dois durante o afastamento é de:</p>
+  <ul class="opcoes">
+    <li><button type="button">Repulsão, pois a espira sempre repele</button></li>
+    <li><button type="button">Nenhuma, pois ele está indo embora</button></li>
+    <li><button type="button">Repulsão, se o ímã for afastado depressa</button></li>
+    <li><button type="button">Atração, pois a espira tenta segurá-lo</button></li></ul>
+  <div class="resposta" hidden><p><strong>Atração.</strong> A espira se opõe à
+  <em>variação</em>, não ao ímã. Se o fluxo está diminuindo, ela tenta manter o
+  fluxo — e para isso puxa o ímã de volta. A alternativa A é o erro de decorar
+  "repele" em vez de entender "se opõe".</p></div>
+</div>
+
+<div class="questao" data-certa="0">
+  <p><strong>3.</strong> Um ímã potente é mantido <strong>imóvel</strong> a poucos
+  centímetros de uma espira fechada, durante um minuto. O que acontece na espira?</p>
+  <ul class="opcoes">
+    <li><button type="button">Nada: sem variação de fluxo, não há corrente</button></li>
+    <li><button type="button">Corrente constante enquanto o ímã estiver ali</button></li>
+    <li><button type="button">Corrente que vai diminuindo ao longo do minuto</button></li>
+    <li><button type="button">Corrente alternada, de sentido sempre variável</button></li></ul>
+  <div class="resposta" hidden><p><strong>Nada.</strong> É o seu Ponto K: campo
+  não é pergunta, variação é. O adjetivo "potente" e a duração "um minuto" estão
+  no enunciado para sugerir que algo tem de acontecer.</p></div>
+</div>
+
+<div class="questao" data-certa="2">
+  <p><strong>4.</strong> Ao acender mais lâmpadas ligadas a um gerador de
+  manivela, quem gira sente a manivela ficar mais pesada. Qual é a explicação?</p>
+  <ul class="opcoes">
+    <li><button type="button">O atrito dos mancais cresce com a corrente</button></li>
+    <li><button type="button">O ímã do gerador esquenta e perde força</button></li>
+    <li><button type="button">A corrente induzida se opõe ao giro que a gera</button></li>
+    <li><button type="button">A bobina aumenta de massa ao ser percorrida</button></li></ul>
+  <div class="resposta" hidden><p><strong>A corrente se opõe ao giro.</strong> A
+  energia elétrica que acende as lâmpadas não vem do nada: vem do seu braço. Mais
+  lâmpadas, mais energia por segundo, manivela mais pesada. Lenz é a conservação
+  de energia em forma de lei.</p></div>
+</div>
+
+<div class="questao" data-certa="1">
+  <p><strong>5.</strong> Um ímã cai dentro de um tubo vertical de
+  <strong>cobre</strong> e desce muito mais devagar do que cairia no ar, apesar de
+  o cobre não ser atraído por ímãs. Por quê?</p>
+  <ul class="opcoes">
+    <li><button type="button">O ar dentro do tubo é comprimido e o segura</button></li>
+    <li><button type="button">A corrente induzida no tubo freia a queda</button></li>
+    <li><button type="button">O cobre se imanta e atrai o ímã para cima</button></li>
+    <li><button type="button">O atrito com a parede do tubo o segura</button></li></ul>
+  <div class="resposta" hidden><p><strong>Corrente induzida no tubo.</strong> O
+  ímã caindo faz o fluxo variar em cada anel de cobre; correntes surgem e se opõem
+  à variação, ou seja, à queda. A energia potencial do ímã vira calor no cobre em
+  vez de velocidade. É o freio eletromagnético, e é demonstração clássica de
+  prova.</p></div>
+</div>
+
+<p class="placar" id="placar" hidden></p>
+</div>
+
+<div class="rodape">
+<h2>O que vem agora</h2>
+<p>O gate desta dinâmica, e nele Lenz virá misturado com indução (dinâmica 4) —
+porque são a mesma cena com perguntas diferentes: Faraday diz se há e quanto,
+Lenz diz para que lado.</p>
+<p>Depois, <strong>gráficos</strong> (≈6 questões) fecha o Grupo 2, e aí vem o
+gate de reconhecimento do grupo inteiro.</p>
+<p>
+<a href="../reference/03-inducao.html">Ficha 03 — indução</a><br>
+<a href="0014-gate-forca-sobre-fio.html">Gate 14 — onde esta aula começou</a><br>
+<a href="../reference/00-mapa-das-dinamicas.html">Mapa das 18 dinâmicas</a>
+</p>
+<p class="custo">Travou em qualquer passo? Me pergunte — principalmente no passo
+3, que é o único realmente novo desta aula.</p>
+</div>
+
+<script>
+(function () {
+  var estado = { polo: 'N', mov: 'chega' };
+
+  function desenhar() {
+    var p = estado.polo, m = estado.mov;
+    var parado = (m === 'parado');
+    var chega = (m === 'chega');
+
+    // Face da espira voltada para o ima: chegando -> mesmo polo; saindo -> oposto.
+    var face = parado ? null : (chega ? p : (p === 'N' ? 'S' : 'N'));
+    // Visto de fora, de frente para a face: face norte -> corrente anti-horaria.
+    var giro = face === 'N' ? 'anti-horário' : 'horário';
+
+    var COR = '#0f6e56', ALERTA = '#993c1d', CINZA = '#8b8a84';
+    var s = '';
+
+    // ---- ima, a esquerda ----
+    var ix = 60;
+    // Metade de tras e metade da frente; a da frente mostra o polo escolhido.
+    var outro = p === 'N' ? 'S' : 'N';
+    s += '<rect x="' + ix + '" y="85" width="50" height="46" fill="' + CINZA + '"/>';
+    s += '<rect x="' + (ix + 50) + '" y="85" width="50" height="46" fill="' + ALERTA + '"/>';
+    s += '<text x="' + (ix + 25) + '" y="114" text-anchor="middle" fill="#fff" font-size="17" font-weight="700">' + outro + '</text>';
+    s += '<text x="' + (ix + 75) + '" y="114" text-anchor="middle" fill="#fff" font-size="17" font-weight="700">' + p + '</text>';
+
+    // seta de movimento do ima
+    if (!parado) {
+      var dir = chega ? 1 : -1;
+      s += '<line x1="' + (chega ? 120 : 54) + '" y1="63" x2="' + (chega ? 160 : 14) + '" y2="63" stroke="' + CINZA + '" stroke-width="2"/>';
+      var px = chega ? 164 : 10;
+      s += '<polygon points="' + px + ',63 ' + (px - dir * 10) + ',58 ' + (px - dir * 10) + ',68" fill="' + CINZA + '"/>';
+      s += '<text x="' + (chega ? 86 : 86) + '" y="52" text-anchor="middle" fill="' + CINZA +
+        '" font-size="13">' + (chega ? 'aproximando' : 'afastando') + '</text>';
+    } else {
+      s += '<text x="110" y="52" text-anchor="middle" fill="' + CINZA + '" font-size="13">parado</text>';
+    }
+
+    // ---- espira, a direita, vista em perspectiva (elipse) ----
+    var ex2 = 300, ey = 108;
+    s += '<ellipse cx="' + ex2 + '" cy="' + ey + '" rx="26" ry="62" fill="none" stroke="' +
+      (parado ? CINZA : COR) + '" stroke-width="4"/>';
+
+    if (parado) {
+      s += '<text x="' + ex2 + '" y="' + (ey - 76) + '" text-anchor="middle" fill="' + CINZA +
+        '" font-size="13">i = 0</text>';
+    } else {
+      // Polo induzido na face voltada para o ima (lado esquerdo da elipse).
+      s += '<text x="' + (ex2 - 54) + '" y="' + (ey + 6) + '" text-anchor="middle" fill="' + COR +
+        '" font-size="17" font-weight="700">' + face + '</text>';
+      s += '<text x="' + (ex2 - 54) + '" y="' + (ey + 24) + '" text-anchor="middle" fill="' + COR +
+        '" font-size="11">face</text>';
+      // Setas de corrente na elipse, em cima e embaixo.
+      var antih = (face === 'N');
+      // Visto deste lado, anti-horario => no topo a corrente vai para a esquerda.
+      var dTopo = antih ? -1 : 1;
+      s += '<polygon points="' + (ex2 + dTopo * 12) + ',' + (ey - 60) + ' ' +
+        (ex2 + dTopo * 1) + ',' + (ey - 66) + ' ' + (ex2 + dTopo * 1) + ',' + (ey - 54) + '" fill="' + COR + '"/>';
+      s += '<polygon points="' + (ex2 - dTopo * 12) + ',' + (ey + 60) + ' ' +
+        (ex2 - dTopo * 1) + ',' + (ey + 66) + ' ' + (ex2 - dTopo * 1) + ',' + (ey + 54) + '" fill="' + COR + '"/>';
+      s += '<text x="' + ex2 + '" y="' + (ey - 76) + '" text-anchor="middle" fill="' + COR +
+        '" font-size="13">corrente ' + giro + '</text>';
+
+      // Setas de forca entre os dois: repulsao se chega, atracao se sai.
+      var y0 = 170;
+      if (chega) {
+        s += '<line x1="146" y1="' + y0 + '" x2="112" y2="' + y0 + '" stroke="' + ALERTA + '" stroke-width="3"/>';
+        s += '<polygon points="108,' + y0 + ' 120,' + (y0 - 6) + ' 120,' + (y0 + 6) + '" fill="' + ALERTA + '"/>';
+        s += '<line x1="228" y1="' + y0 + '" x2="262" y2="' + y0 + '" stroke="' + ALERTA + '" stroke-width="3"/>';
+        s += '<polygon points="266,' + y0 + ' 254,' + (y0 - 6) + ' 254,' + (y0 + 6) + '" fill="' + ALERTA + '"/>';
+        s += '<text x="187" y="' + (y0 + 5) + '" text-anchor="middle" fill="' + ALERTA +
+          '" font-size="13" font-weight="600">repulsão</text>';
+      } else {
+        s += '<line x1="112" y1="' + y0 + '" x2="146" y2="' + y0 + '" stroke="' + ALERTA + '" stroke-width="3"/>';
+        s += '<polygon points="150,' + y0 + ' 138,' + (y0 - 6) + ' 138,' + (y0 + 6) + '" fill="' + ALERTA + '"/>';
+        s += '<line x1="262" y1="' + y0 + '" x2="228" y2="' + y0 + '" stroke="' + ALERTA + '" stroke-width="3"/>';
+        s += '<polygon points="224,' + y0 + ' 236,' + (y0 - 6) + ' 236,' + (y0 + 6) + '" fill="' + ALERTA + '"/>';
+        s += '<text x="187" y="' + (y0 + 5) + '" text-anchor="middle" fill="' + ALERTA +
+          '" font-size="13" font-weight="600">atração</text>';
+      }
+    }
+
+    document.getElementById('desenho').innerHTML = s;
+
+    var vd = document.getElementById('veredito');
+    if (parado) {
+      vd.innerHTML = '<strong>Nada acontece.</strong> O fluxo não varia, então não ' +
+        'há corrente — e sem corrente não há força entre o ímã e a espira. ' +
+        'É o seu Ponto K: campo não é pergunta, variação é.';
+      vd.className = 'veredito nulo';
+    } else {
+      var frase = chega
+        ? 'O ímã está <strong>chegando</strong>, então a espira empurra: a face ' +
+          'voltada para ele vira <strong>' + face + '</strong>, igual ao polo que ' +
+          'se aproxima, e os dois se repelem.'
+        : 'O ímã está <strong>indo embora</strong>, então a espira segura: a face ' +
+          'voltada para ele vira <strong>' + face + '</strong>, oposta ao polo que ' +
+          'se afasta, e os dois se atraem.';
+      vd.innerHTML = frase + ' Para a face ser ' + face + ', a corrente tem de correr no ' +
+        'sentido <strong>' + giro + '</strong> vista daqui — mão direita, dedos na ' +
+        'corrente, polegar no norte.';
+      vd.className = 'veredito';
+    }
+  }
+
+  function grupo(id, campo) {
+    var cx = document.getElementById(id);
+    cx.addEventListener('click', function (ev) {
+      var bt = ev.target.closest('button.opc');
+      if (!bt) return;
+      Array.prototype.forEach.call(cx.querySelectorAll('button.opc'), function (o) {
+        o.setAttribute('aria-pressed', o === bt ? 'true' : 'false');
+      });
+      estado[campo] = bt.dataset.v;
+      desenhar();
+    });
+  }
+
+  grupo('g-polo', 'polo');
+  grupo('g-mov', 'mov');
+  desenhar();
+})();
+</script>
+<script src="../assets/quiz.js"></script>
+
+</body>
+</html>

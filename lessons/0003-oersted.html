@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aula 2 — Oersted: corrente cria campo</title>
+<link rel="stylesheet" href="../assets/estilo.css">
+</head>
+<body>
+
+<nav class="trilha">
+Aula 2 · <a href="../reference/00-mapa-das-dinamicas.html">mapa das 18 dinâmicas</a> · grupo 1, conceito puro
+</nav>
+
+<h1>Oersted: corrente cria campo</h1>
+<p class="subtitulo">Uma dinâmica, cerca de 8 questões do caderno, ainda nenhuma conta.</p>
+<p class="custo">10 minutos · pré-requisito: <a href="0001-ima-e-bussola.html">Aula 1</a></p>
+
+<p>Até 1820, eletricidade e magnetismo eram dois assuntos separados. Ímã era uma
+coisa, pilha era outra. Numa aula, o dinamarquês Hans Christian Oersted deixou
+uma bússola perto de um fio ligado a uma bateria e viu a agulha girar.</p>
+
+<p>Foi o fim da separação — e o começo do <em>eletro</em>magnetismo.</p>
+
+<figure>
+<svg viewBox="0 0 560 250" role="img" aria-labelledby="f1t f1d" style="display:block;width:100%;height:auto;font-family:sans-serif;font-size:12px;fill:#5f5e5a">
+<title id="f1t">O experimento de Oersted</title>
+<desc id="f1d">Com o circuito aberto, a agulha da bússola sob o fio aponta para o norte, paralela ao fio. Com o circuito fechado e corrente passando, a agulha gira até ficar perpendicular ao fio.</desc>
+<defs>
+<marker id="pontaCorrente" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+<path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+</marker>
+</defs>
+
+<text x="150" y="24" text-anchor="middle">circuito aberto</text>
+<line x1="150" y1="50" x2="150" y2="101" stroke="#8b8a84" stroke-width="2.5"/>
+<line x1="150" y1="149" x2="150" y2="200" stroke="#8b8a84" stroke-width="2.5"/>
+<circle cx="150" cy="125" r="24" fill="#fdfcf9" stroke="#8b8a84" stroke-width="1"/>
+<polygon points="150,104 146,128 154,128" fill="#D85A30"/>
+<polygon points="150,146 146,122 154,122" fill="#8b8a84"/>
+<text x="150" y="228" text-anchor="middle">agulha paralela ao fio</text>
+
+<text x="410" y="24" text-anchor="middle">circuito fechado</text>
+<line x1="410" y1="50" x2="410" y2="101" stroke="#8b8a84" stroke-width="2.5"/>
+<line x1="410" y1="149" x2="410" y2="200" stroke="#8b8a84" stroke-width="2.5"/>
+<line x1="447" y1="190" x2="447" y2="62" stroke="#D85A30" stroke-width="1.5" marker-end="url(#pontaCorrente)"/>
+<text x="459" y="128">i</text>
+<circle cx="410" cy="125" r="24" fill="#fdfcf9" stroke="#8b8a84" stroke-width="1"/>
+<polygon points="389,125 413,121 413,129" fill="#D85A30"/>
+<polygon points="431,125 407,121 407,129" fill="#8b8a84"/>
+<text x="410" y="228" text-anchor="middle">agulha perpendicular ao fio</text>
+</svg>
+<figcaption>A bússola não sabia que existia um fio ali. Ela só obedeceu, como
+sempre, ao campo magnético do ponto onde estava — e esse campo apareceu quando a
+corrente começou a passar. Logo, foi a corrente que o criou.</figcaption>
+</figure>
+
+<div class="regra">
+Toda corrente elétrica cria campo magnético<br>
+em círculos ao redor do fio.
+</div>
+
+<h2>1 · O campo de um fio tem a forma errada de propósito</h2>
+
+<p>Aqui está a parte que contraria a intuição de todo mundo. Você esperaria que o
+campo acompanhasse o fio, apontando para onde a corrente vai. Não é isso. O campo
+<strong>dá voltas em torno do fio</strong>, em circunferências, como anéis
+enfiados num bastão.</p>
+
+<figure>
+<svg viewBox="0 0 560 270" role="img" aria-labelledby="f2t f2d" style="display:block;width:100%;height:auto;font-family:sans-serif;font-size:12px;fill:#5f5e5a">
+<title id="f2t">O campo de um fio retilíneo, visto de lado e de frente</title>
+<desc id="f2d">De lado, as linhas de campo são anéis em torno do fio. De frente, com a corrente vindo na direção do observador, as linhas são circunferências concêntricas percorridas no sentido anti-horário.</desc>
+<defs>
+<marker id="pontaCampo2" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+<path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+</marker>
+</defs>
+
+<text x="150" y="24" text-anchor="middle">de lado</text>
+<ellipse cx="150" cy="85" rx="58" ry="15" fill="none" stroke="#8b8a84" stroke-width="1"/>
+<ellipse cx="150" cy="140" rx="58" ry="15" fill="none" stroke="#8b8a84" stroke-width="1"/>
+<ellipse cx="150" cy="195" rx="58" ry="15" fill="none" stroke="#8b8a84" stroke-width="1"/>
+<line x1="150" y1="45" x2="150" y2="235" stroke="#D85A30" stroke-width="2"/>
+<text x="150" y="258" text-anchor="middle">o fio, e os anéis em volta dele</text>
+
+<text x="410" y="24" text-anchor="middle">de frente</text>
+<circle cx="410" cy="140" r="30" fill="none" stroke="#8b8a84" stroke-width="1"/>
+<circle cx="410" cy="140" r="56" fill="none" stroke="#8b8a84" stroke-width="1"/>
+<circle cx="410" cy="140" r="82" fill="none" stroke="#8b8a84" stroke-width="1"/>
+<line x1="422" y1="84" x2="396" y2="84" stroke="#8b8a84" stroke-width="1" marker-end="url(#pontaCampo2)"/>
+<line x1="398" y1="170" x2="424" y2="170" stroke="#8b8a84" stroke-width="1" marker-end="url(#pontaCampo2)"/>
+<circle cx="410" cy="140" r="11" fill="#fdfcf9" stroke="#D85A30" stroke-width="1.5"/>
+<circle cx="410" cy="140" r="3.5" fill="#D85A30"/>
+<text x="410" y="258" text-anchor="middle">a corrente vem na sua direção</text>
+</svg>
+<figcaption>À direita está o desenho que o caderno usa o tempo todo: o fio visto
+de ponta, com o campo em circunferências concêntricas. Quanto mais longe do fio,
+mais fraco o campo — por isso as circunferências de fora valem menos.</figcaption>
+</figure>
+
+<p>Três consequências saem direto dessa forma, e são elas que as questões cobram:</p>
+
+<ul>
+<li>O vetor campo é <strong>tangente</strong> à circunferência, e portanto
+<strong>sempre perpendicular ao fio</strong>. Não existe caso em que ele fique
+paralelo à corrente.</li>
+<li>Isso vale <strong>qualquer que seja o sentido</strong> da corrente. Inverter
+a corrente inverte o <em>sentido</em> de giro dos círculos, não a direção.</li>
+<li>Uma bússola colocada ao lado de um fio com corrente se alinha
+<strong>perpendicular ao fio</strong>, não paralela a ele.</li>
+</ul>
+
+<h2>2 · Os dois símbolos que você vai ver em toda figura</h2>
+
+<p>Como o campo é perpendicular ao papel na maior parte dos desenhos, as bancas
+precisam representar setas que entram e saem da folha. A convenção é universal, e
+a lógica é uma flecha de arco e flecha:</p>
+
+<figure>
+<svg viewBox="0 0 560 160" role="img" aria-labelledby="f3t f3d" style="display:block;width:100%;height:auto;font-family:sans-serif;font-size:12px;fill:#5f5e5a">
+<title id="f3t">Os símbolos de vetor saindo e entrando no papel</title>
+<desc id="f3d">Um círculo com um ponto no centro representa um vetor saindo do papel na direção do observador. Um círculo com um xis representa um vetor entrando no papel.</desc>
+<circle cx="170" cy="62" r="26" fill="none" stroke="#8b8a84" stroke-width="1.5"/>
+<circle cx="170" cy="62" r="4.5" fill="#8b8a84"/>
+<text x="170" y="112" text-anchor="middle" font-size="14" fill="#5f5e5a">sai do papel</text>
+<text x="170" y="132" text-anchor="middle">a ponta da flecha, vindo até você</text>
+
+<circle cx="390" cy="62" r="26" fill="none" stroke="#8b8a84" stroke-width="1.5"/>
+<line x1="378" y1="50" x2="402" y2="74" stroke="#8b8a84" stroke-width="1.5"/>
+<line x1="402" y1="50" x2="378" y2="74" stroke="#8b8a84" stroke-width="1.5"/>
+<text x="390" y="112" text-anchor="middle" font-size="14" fill="#5f5e5a">entra no papel</text>
+<text x="390" y="132" text-anchor="middle">as penas do rabo, se afastando</text>
+</svg>
+<figcaption>Decore pela imagem, não pelo símbolo: ponto é a ponta de metal vindo
+na sua cara; xis são as penas da outra extremidade indo embora. Esses dois
+símbolos aparecem em quase toda figura de eletromagnetismo daqui para frente.</figcaption>
+</figure>
+
+<h2>3 · A regra da mão direita</h2>
+
+<p>Para achar o <em>sentido</em> de giro: aponte o <strong>polegar</strong> da mão
+direita no sentido da corrente e feche os outros dedos. Eles envolvem o fio no
+sentido do campo. É literalmente a mão fechando em volta do fio.</p>
+
+<p>Faça com a mão de verdade agora, apontando o polegar para o teto. Olhando de
+cima, seus dedos giram no sentido anti-horário — exatamente o desenho da figura
+anterior, onde a corrente vinha na sua direção.</p>
+
+<div class="caixa armadilha">
+<span class="rotulo">Aviso para daqui a duas aulas</span>
+<p>Existe <strong>outra</strong> regra da mão direita, para achar a força sobre
+uma carga em movimento. É outra coisa, serve para outra pergunta e se usa de
+outro jeito. Esta aqui responde <em>"para que lado gira o campo criado por uma
+corrente"</em>. Quando a outra aparecer, eu aviso — não misture as duas.</p>
+</div>
+
+<h2>4 · O caso do fio sobre a mesa</h2>
+
+<p>Um fio é esticado em linha reta sobre uma mesa. Depois, o mesmo fio é dobrado
+numa circunferência, também deitada sobre a mesa. Em qual dos dois o campo, nos
+pontos da mesa, é vertical?</p>
+
+<p>Nos dois. E a razão é a mesma figura de antes: como o campo dá voltas em torno
+do fio, nos pontos que estão <em>no mesmo plano do circuito</em> ele só pode
+apontar para fora desse plano. Fio deitado na mesa, campo furando a mesa.
+Vale para qualquer formato de circuito plano.</p>
+
+<div class="caixa gatilho">
+<span class="rotulo">Gatilho de reconhecimento</span>
+<p>Tem <strong>fio com corrente e bússola</strong> na mesma figura, ou a questão
+pergunta a <em>direção</em> do campo criado por uma corrente, ou cita Oersted —
+é esta dinâmica. Se ela pedir o <em>valor</em> do campo em tesla, aí é outra
+(Aula 9, com fórmula). Aqui a resposta é sempre direção e sentido.</p>
+</div>
+
+<div class="caixa armadilha">
+<span class="rotulo">As quatro armadilhas que a banca usa</span>
+<ol>
+<li>"O campo tem a mesma direção da corrente." <strong>Falso</strong> — é perpendicular, sempre.</li>
+<li>"O campo é perpendicular ao fio só num dos sentidos da corrente." <strong>Falso</strong> — em ambos; o sentido muda, a direção não.</li>
+<li>"A bússola perto do fio se alinha paralela a ele." <strong>Falso</strong> — perpendicular.</li>
+<li>"Oersted descobriu que campo magnético gera corrente." <strong>Falso, e invertido</strong> — isso é Faraday, dez anos depois, e é a Aula 3. Oersted foi corrente criando campo.</li>
+</ol>
+</div>
+
+<h2>Agora prove que pegou</h2>
+
+<div class="quiz" id="quiz">
+
+<div class="questao" data-certa="3">
+<p class="enunciado">1. Ao fechar o circuito, Oersted viu a agulha da bússola girar. Ele concluiu que</p>
+<ul class="opcoes">
+<li><button type="button">corrente elétrica gera campo elétrico</button></li>
+<li><button type="button">campo magnético gera corrente elétrica</button></li>
+<li><button type="button">a bússola perde o próprio magnetismo</button></li>
+<li><button type="button">corrente elétrica gera campo magnético</button></li>
+<li><button type="button">um ímã atrai qualquer fio de cobre</button></li>
+</ul>
+<p class="resposta" hidden>Corrente criando campo magnético. Cuidado com a segunda opção: ela é verdadeira na física, mas é a descoberta de Faraday, dez anos depois, e no sentido inverso. A banca adora trocar os dois.</p>
+</div>
+
+<div class="questao" data-certa="1">
+<p class="enunciado">2. Julgue o item: o campo magnético criado por um fio retilíneo tem a mesma direção do fio, apontando no sentido contrário ao da corrente.</p>
+<ul class="opcoes">
+<li><button type="button">Certo</button></li>
+<li><button type="button">Errado</button></li>
+</ul>
+<p class="resposta" hidden>Errado. O campo não tem a direção do fio — ele é perpendicular ao fio, dando voltas em torno dele. O item inventa um "sentido contrário" para parecer técnico, mas o erro está antes disso, na direção.</p>
+</div>
+
+<div class="questao" data-certa="2">
+<p class="enunciado">3. Num ponto próximo a um fio retilíneo percorrido por corrente, o vetor campo magnético é</p>
+<ul class="opcoes">
+<li><button type="button">paralelo ao fio, no sentido da corrente</button></li>
+<li><button type="button">paralelo ao fio, no sentido oposto a ela</button></li>
+<li><button type="button">perpendicular ao fio, em qualquer sentido dela</button></li>
+<li><button type="button">perpendicular ao fio, só num sentido dela</button></li>
+</ul>
+<p class="resposta" hidden>Perpendicular sempre, porque o vetor é tangente à circunferência que envolve o fio. Inverter a corrente inverte o sentido de giro dos círculos; a direção perpendicular continua.</p>
+</div>
+
+<div class="questao" data-certa="0">
+<p class="enunciado">4. Um fio retilíneo conduzindo corrente é aproximado por cima de uma bússola. A agulha</p>
+<ul class="opcoes">
+<li><button type="button">alinha-se perpendicular ao fio</button></li>
+<li><button type="button">continua apontando para o norte</button></li>
+<li><button type="button">alinha-se paralela ao fio</button></li>
+<li><button type="button">gira sem parar enquanto passa corrente</button></li>
+</ul>
+<p class="resposta" hidden>Perpendicular. A agulha faz o que sempre fez: deita-se sobre a linha de campo do ponto onde está — e ali as linhas são os círculos em volta do fio, que cruzam o fio perpendicularmente. "Gira sem parar" supõe um campo que muda, e a corrente aqui é constante.</p>
+</div>
+
+<div class="questao" data-certa="1">
+<p class="enunciado">5. Um fio é esticado reto sobre uma mesa horizontal. Depois, o mesmo fio é dobrado em circunferência, também sobre a mesa. Nos pontos do plano da mesa, os campos magnéticos produzidos nos dois casos são</p>
+<ul class="opcoes">
+<li><button type="button">horizontais nos dois casos</button></li>
+<li><button type="button">verticais nos dois casos</button></li>
+<li><button type="button">vertical e depois horizontal</button></li>
+<li><button type="button">horizontal e depois vertical</button></li>
+</ul>
+<p class="resposta" hidden>Verticais nos dois. Se o campo circula em torno do fio, então nos pontos que estão no mesmo plano do circuito ele só pode apontar para fora do plano. O formato do circuito não muda isso — vale para o fio reto, para a circunferência e para qualquer circuito plano.</p>
+</div>
+
+</div>
+
+<p class="placar" id="placar">Nenhuma respondida ainda.</p>
+
+<div class="rodape">
+<h2>Manipule antes de fechar</h2>
+<p>Dois minutos em
+<a href="https://phet.colorado.edu/pt_BR/simulations/legacy/magnets-and-electromagnets">PhET — Ímãs e Eletroímãs</a>:
+monte o eletroímã com pilha e fio e veja o campo aparecer e sumir com a corrente.
+É o experimento de Oersted com os controles na sua mão.</p>
+
+<h2>Qualquer coisa, pergunte</h2>
+<p>Se a forma circular do campo ainda parecer arbitrária, me diga — tem uma
+maneira de mostrar por que ela <em>tem</em> de ser circular, e não é decoreba.</p>
+
+<h2>Onde isso te deixa</h2>
+<p>Três das dezoito dinâmicas. Com as duas da Aula 1, são cerca de 27 questões do
+caderno ao alcance, e você ainda não fez uma única conta. Próxima parada:
+<strong>indução</strong> — o caminho inverso, campo que varia criando corrente.
+É a maior dinâmica conceitual do caderno, com 14 questões, mais as 7 de Maxwell
+que o seu erro no gate já começou a pagar.</p>
+<p><a href="../reference/00-mapa-das-dinamicas.html">Mapa</a> · <a href="../reference/01-imas-bussola-campo-terrestre.html">Ficha 01</a> · <a href="0001-ima-e-bussola.html">Aula 1</a></p>
+</div>
+
+<script>
+(function () {
+  var total = 0, certas = 0;
+  var questoes = document.querySelectorAll('#quiz .questao');
+  var placar = document.getElementById('placar');
+
+  questoes.forEach(function (questao) {
+    var certa = parseInt(questao.dataset.certa, 10);
+    var botoes = questao.querySelectorAll('.opcoes button');
+    var resposta = questao.querySelector('.resposta');
+
+    botoes.forEach(function (botao, indice) {
+      botao.addEventListener('click', function () {
+        if (questao.dataset.respondida) return;
+        questao.dataset.respondida = 'sim';
+
+        botoes[certa].classList.add('certa');
+        if (indice !== certa) botao.classList.add('errada');
+        botoes.forEach(function (b) { b.disabled = true; });
+        resposta.hidden = false;
+
+        total++;
+        if (indice === certa) certas++;
+        atualizarPlacar();
+      });
+    });
+  });
+
+  function atualizarPlacar() {
+    var falta = questoes.length - total;
+    var texto = certas + ' de ' + total + ' até agora.';
+    if (falta > 0) {
+      placar.textContent = texto + ' Faltam ' + falta + '.';
+      return;
+    }
+    if (certas === questoes.length) {
+      placar.textContent = 'Cinco de cinco — mas isso ainda é fluência, com a aula quente. Peça o gate desta dinâmica para valer.';
+    } else if (certas >= 3) {
+      placar.textContent = texto + ' Me diga qual confundiu antes de pedir o gate.';
+    } else {
+      placar.textContent = texto + ' Vale reler a seção 1 e refazer: a forma circular do campo é o ponto que precisa assentar.';
+    }
+  }
+})();
+</script>
+
+</body>
+</html>

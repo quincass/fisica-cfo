@@ -1,0 +1,315 @@
+/* Folha de estilo compartilhada do workspace de Eletromagnetismo.
+   Toda aula e toda ficha de referência linka este arquivo, para que o
+   conjunto pareça um curso e não uma pilha de arquivos soltos.
+   Pensada para ler na tela e imprimir bem. */
+
+:root {
+  --tinta: #1a1a18;
+  --tinta-fraca: #5f5e5a;
+  --tinta-tenue: #8b8a84;
+  --papel: #fdfcf9;
+  --papel-caixa: #f5f3ec;
+  --linha: #ddd9cd;
+  --destaque: #0f6e56;
+  --alerta: #993c1d;
+  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --sans: "Inter", "Segoe UI", system-ui, sans-serif;
+  --mono: "SF Mono", "Cascadia Mono", Consolas, monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --tinta: #e8e6df;
+    --tinta-fraca: #a9a7a0;
+    --tinta-tenue: #7d7c76;
+    --papel: #16160f;
+    --papel-caixa: #1f1f18;
+    --linha: #35342c;
+    --destaque: #5dcaa5;
+    --alerta: #f0997b;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0 auto;
+  padding: 4rem 1.5rem 6rem;
+  max-width: 40rem;
+  background: var(--papel);
+  color: var(--tinta);
+  font-family: var(--serif);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  text-rendering: optimizeLegibility;
+}
+
+/* ---------- cabeçalho e navegação ---------- */
+
+.trilha {
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--tinta-tenue);
+  margin-bottom: 1.5rem;
+}
+
+.trilha a { color: inherit; text-decoration: none; border-bottom: 1px solid var(--linha); }
+.trilha a:hover { color: var(--destaque); border-color: var(--destaque); }
+
+h1 {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 0 0 0.4rem;
+  letter-spacing: -0.015em;
+}
+
+.subtitulo {
+  font-family: var(--sans);
+  font-size: 0.9375rem;
+  color: var(--tinta-fraca);
+  margin: 0 0 0.75rem;
+}
+
+.custo {
+  font-family: var(--sans);
+  font-size: 0.8125rem;
+  color: var(--tinta-tenue);
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--linha);
+  margin-bottom: 2.5rem;
+}
+
+h2 {
+  font-family: var(--sans);
+  font-size: 1.0625rem;
+  font-weight: 600;
+  margin: 3rem 0 1rem;
+  letter-spacing: -0.005em;
+}
+
+h3 {
+  font-family: var(--sans);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  margin: 2rem 0 0.5rem;
+}
+
+p { margin: 0 0 1.1rem; }
+
+strong { font-weight: 600; }
+
+em { font-style: italic; }
+
+a { color: var(--destaque); text-decoration: none; border-bottom: 1px solid currentColor; }
+
+/* ---------- figuras ---------- */
+
+figure { margin: 2.5rem 0; }
+
+figure svg { display: block; width: 100%; height: auto; }
+
+figure svg text {
+  font-family: var(--sans);
+  font-size: 12px;
+  fill: var(--tinta-fraca);
+}
+
+figure svg text.polo {
+  font-size: 15px;
+  font-weight: 600;
+  fill: #fff;
+}
+
+figure svg .linha-campo {
+  fill: none;
+  stroke: var(--tinta-tenue);
+  stroke-width: 1;
+}
+
+figure svg .eixo {
+  fill: none;
+  stroke: var(--linha);
+  stroke-width: 1;
+  stroke-dasharray: 4 4;
+}
+
+figure svg .caixa-bussola {
+  fill: var(--papel);
+  stroke: var(--tinta-tenue);
+  stroke-width: 1;
+}
+
+figcaption {
+  font-family: var(--sans);
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: var(--tinta-fraca);
+  margin-top: 0.75rem;
+  padding-left: 0.875rem;
+  border-left: 2px solid var(--linha);
+}
+
+/* ---------- caixas ---------- */
+
+.caixa {
+  background: var(--papel-caixa);
+  border: 1px solid var(--linha);
+  border-radius: 3px;
+  padding: 1.25rem 1.375rem;
+  margin: 2rem 0;
+}
+
+.caixa > :last-child { margin-bottom: 0; }
+
+.rotulo {
+  display: block;
+  font-family: var(--sans);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--tinta-tenue);
+  margin-bottom: 0.625rem;
+}
+
+.armadilha { border-left: 3px solid var(--alerta); border-radius: 0; }
+.armadilha .rotulo { color: var(--alerta); }
+
+.gatilho { border-left: 3px solid var(--destaque); border-radius: 0; }
+.gatilho .rotulo { color: var(--destaque); }
+
+/* ---------- regra de ouro, a frase que fica ---------- */
+
+.regra {
+  font-size: 1.25rem;
+  line-height: 1.4;
+  text-align: center;
+  margin: 2.5rem 0;
+  padding: 1.75rem 1.25rem;
+  border-top: 1px solid var(--linha);
+  border-bottom: 1px solid var(--linha);
+}
+
+/* ---------- listas ---------- */
+
+ul, ol { margin: 0 0 1.1rem; padding-left: 1.25rem; }
+li { margin-bottom: 0.45rem; }
+
+.limpa { list-style: none; padding-left: 0; }
+
+/* ---------- quiz ---------- */
+
+.quiz { margin: 1.5rem 0 0; }
+
+.questao {
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--linha);
+}
+
+.enunciado { font-weight: 600; margin-bottom: 0.875rem; }
+
+.opcoes { list-style: none; padding: 0; margin: 0; }
+
+.opcoes li { margin: 0 0 0.5rem; }
+
+.opcoes button {
+  width: 100%;
+  text-align: left;
+  font-family: var(--serif);
+  font-size: 1rem;
+  line-height: 1.45;
+  color: var(--tinta);
+  background: transparent;
+  border: 1px solid var(--linha);
+  border-radius: 3px;
+  padding: 0.625rem 0.875rem;
+  cursor: pointer;
+  transition: border-color 0.12s, background 0.12s;
+}
+
+.opcoes button:hover:not(:disabled) { border-color: var(--tinta-fraca); background: var(--papel-caixa); }
+.opcoes button:disabled { cursor: default; }
+
+.opcoes button.certa {
+  border-color: var(--destaque);
+  background: color-mix(in srgb, var(--destaque) 10%, transparent);
+  font-weight: 600;
+}
+
+.opcoes button.errada {
+  border-color: var(--alerta);
+  background: color-mix(in srgb, var(--alerta) 10%, transparent);
+  text-decoration: line-through;
+  text-decoration-color: var(--alerta);
+}
+
+.resposta {
+  font-family: var(--sans);
+  font-size: 0.875rem;
+  line-height: 1.55;
+  margin-top: 0.75rem;
+  padding-left: 0.875rem;
+  border-left: 2px solid var(--destaque);
+  color: var(--tinta-fraca);
+}
+
+.resposta[hidden] { display: none; }
+
+.placar {
+  font-family: var(--sans);
+  font-size: 0.875rem;
+  color: var(--tinta-fraca);
+  margin-top: 2rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--linha);
+}
+
+/* ---------- tabela ---------- */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--sans);
+  font-size: 0.875rem;
+  margin: 2rem 0;
+}
+
+th, td { text-align: left; padding: 0.5rem 0.625rem 0.5rem 0; border-bottom: 1px solid var(--linha); vertical-align: top; }
+
+th { font-weight: 600; color: var(--tinta-fraca); font-size: 0.75rem; letter-spacing: 0.06em; text-transform: uppercase; }
+
+td.num { text-align: right; color: var(--tinta-fraca); font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+/* ---------- rodapé ---------- */
+
+.rodape {
+  margin-top: 4rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--linha);
+  font-family: var(--sans);
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--tinta-fraca);
+}
+
+.rodape h2 { font-size: 0.9375rem; margin: 0 0 0.5rem; }
+
+/* ---------- impressão ---------- */
+
+@media print {
+  :root {
+    --tinta: #000; --tinta-fraca: #333; --tinta-tenue: #555;
+    --papel: #fff; --papel-caixa: #f4f4f4; --linha: #bbb;
+    --destaque: #000; --alerta: #000;
+  }
+  body { padding: 0; max-width: none; font-size: 11pt; }
+  .opcoes button { border-color: #bbb; }
+  .questao, figure, .caixa, .regra { page-break-inside: avoid; }
+  .trilha, .placar { display: none; }
+  .resposta[hidden] { display: block; }
+  a { border: none; }
+  a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 8pt; color: #555; }
+}

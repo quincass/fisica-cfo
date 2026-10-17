@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aula 1 — O ímã e a bússola</title>
+<link rel="stylesheet" href="../assets/estilo.css">
+</head>
+<body>
+
+<nav class="trilha">
+Aula 1 · <a href="../reference/00-mapa-das-dinamicas.html">mapa das 18 dinâmicas</a> · grupo 1, conceito puro
+</nav>
+
+<h1>O ímã e a bússola</h1>
+<p class="subtitulo">Duas dinâmicas, cerca de 19 questões do caderno, nenhuma conta.</p>
+<p class="custo">10 minutos · pré-requisito: nenhum</p>
+
+<p>Esta aula fecha duas das dezoito dinâmicas: <strong>ímãs</strong> (polos, quebra,
+materiais) e <strong>bússola e campo terrestre</strong>. Juntas são cerca de 19
+questões no caderno, de CESPE, VUNESP, UNESP, Marinha, CBM MG, CBM BA, CBM RO,
+PM AP. Nenhuma delas pede um número. Todas são a mesma pergunta disfarçada:
+<em>você entendeu para onde o campo aponta?</em></p>
+
+<p>A aula tem uma ideia só, e ela cabe numa frase:</p>
+
+<div class="regra">
+Um ímã tem sempre dois polos,<br>
+o campo sai do norte e entra no sul,<br>
+e a agulha da bússola obedece ao campo que está nela.
+</div>
+
+<h2>1 · O campo de um ímã, e o que a bússola faz nele</h2>
+
+<p>Em volta de um ímã existe uma região onde ele age: o <strong>campo magnético</strong>.
+Desenhamos o campo como linhas. Por fora do ímã, essas linhas <strong>saem do
+polo norte e entram no polo sul</strong> — sempre, sem exceção. Elas são curvas
+fechadas, e <strong>nunca se cruzam</strong>.</p>
+
+<figure>
+<svg viewBox="0 0 560 300" role="img" aria-labelledby="f1t f1d" style="display:block;width:100%;height:auto;font-family:sans-serif;font-size:12px;fill:#5f5e5a">
+<title id="f1t">Ímã de barra com linhas de campo e três bússolas</title>
+<desc id="f1d">As linhas saem do polo norte à direita, dão a volta por fora do ímã e entram no polo sul à esquerda. Cada bússola colocada sobre uma linha alinha a agulha com ela, com a ponta vermelha no sentido da linha.</desc>
+<defs>
+<marker id="pontaCampo" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+<path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+</marker>
+</defs>
+
+<path class="linha-campo" fill="none" stroke="#8b8a84" stroke-width="1" d="M 362 138 C 450 110, 470 45, 280 45 C 90 45, 110 110, 198 138"/>
+<path class="linha-campo" fill="none" stroke="#8b8a84" stroke-width="1" d="M 362 142 C 415 125, 425 85, 280 85 C 135 85, 145 125, 198 142"/>
+<path class="linha-campo" fill="none" stroke="#8b8a84" stroke-width="1" d="M 362 162 C 450 190, 470 255, 280 255 C 90 255, 110 190, 198 162"/>
+<path class="linha-campo" fill="none" stroke="#8b8a84" stroke-width="1" d="M 362 158 C 415 175, 425 215, 280 215 C 135 215, 145 175, 198 158"/>
+
+<line class="linha-campo" fill="none" stroke="#8b8a84" stroke-width="1" x1="305" y1="85" x2="262" y2="85" marker-end="url(#pontaCampo)"/>
+<line class="linha-campo" fill="none" stroke="#8b8a84" stroke-width="1" x1="305" y1="215" x2="262" y2="215" marker-end="url(#pontaCampo)"/>
+
+<rect x="200" y="134" width="80" height="32" fill="#378ADD"/>
+<rect x="280" y="134" width="80" height="32" fill="#D85A30"/>
+<text class="polo" fill="#ffffff" font-size="15" font-weight="600"x="240" y="150" text-anchor="middle" dominant-baseline="central">S</text>
+<text class="polo" fill="#ffffff" font-size="15" font-weight="600"x="320" y="150" text-anchor="middle" dominant-baseline="central">N</text>
+
+<circle class="caixa-bussola" fill="#fdfcf9" stroke="#8b8a84" stroke-width="1"cx="280" cy="45" r="19"/>
+<polygon points="264,45 284,41 284,49" fill="#D85A30"/>
+<polygon points="296,45 276,41 276,49" fill="#8b8a84"/>
+
+<circle class="caixa-bussola" fill="#fdfcf9" stroke="#8b8a84" stroke-width="1"cx="280" cy="255" r="19"/>
+<polygon points="264,255 284,251 284,259" fill="#D85A30"/>
+<polygon points="296,255 276,251 276,259" fill="#8b8a84"/>
+
+<circle class="caixa-bussola" fill="#fdfcf9" stroke="#8b8a84" stroke-width="1"cx="452" cy="150" r="19"/>
+<polygon points="468,150 448,146 448,154" fill="#D85A30"/>
+<polygon points="436,150 456,146 456,154" fill="#8b8a84"/>
+
+</svg>
+<figcaption>A ponta vermelha da agulha é o <em>norte dela</em>. Nas três posições
+a agulha simplesmente se deita em cima da linha de campo que passa ali: deitada
+para a esquerda em cima e embaixo, apontando para fora à direita, onde a linha
+está saindo do polo norte. Ela não sabe onde fica o ímã — ela só sente o campo
+no ponto exato em que está.</figcaption>
+</figure>
+
+<p>Isso é tudo que a bússola faz: <strong>a ponta norte da agulha aponta no
+sentido do campo magnético naquele ponto</strong>. Quando uma questão coloca
+quatro bússolas em volta de um ímã e pergunta qual figura está certa, ela está
+pedindo exatamente isso e nada mais.</p>
+
+<h2>2 · Quebre um ímã e você tem dois ímãs</h2>
+
+<p>Polo norte e polo sul não existem separados. Não há "pedaço de norte".
+Se você parte um ímã ao meio, cada metade nasce imediatamente com os dois
+polos — e se partir de novo, de novo.</p>
+
+<figure>
+<svg viewBox="0 0 560 210" role="img" aria-labelledby="f2t f2d" style="display:block;width:100%;height:auto;font-family:sans-serif;font-size:12px;fill:#5f5e5a">
+<title id="f2t">Um ímã partido ao meio gera dois ímãs completos</title>
+<desc id="f2d">Um ímã com sul à esquerda e norte à direita é cortado no meio. Cada metade passa a ter o seu próprio sul e o seu próprio norte.</desc>
+<defs>
+<marker id="pontaCorte" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+<path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+</marker>
+</defs>
+
+<rect x="180" y="26" width="100" height="36" fill="#378ADD"/>
+<rect x="280" y="26" width="100" height="36" fill="#D85A30"/>
+<text class="polo" fill="#ffffff" font-size="15" font-weight="600"x="230" y="44" text-anchor="middle" dominant-baseline="central">S</text>
+<text class="polo" fill="#ffffff" font-size="15" font-weight="600"x="330" y="44" text-anchor="middle" dominant-baseline="central">N</text>
+<line class="eixo" fill="none" stroke="#ddd9cd" stroke-width="1" stroke-dasharray="4 4"x1="280" y1="14" x2="280" y2="74"/>
+<text x="292" y="12">corte aqui</text>
+
+<line class="linha-campo" fill="none" stroke="#8b8a84" stroke-width="1" x1="280" y1="86" x2="280" y2="116" marker-end="url(#pontaCorte)"/>
+
+<rect x="110" y="140" width="70" height="36" fill="#378ADD"/>
+<rect x="180" y="140" width="70" height="36" fill="#D85A30"/>
+<text class="polo" fill="#ffffff" font-size="15" font-weight="600"x="145" y="158" text-anchor="middle" dominant-baseline="central">S</text>
+<text class="polo" fill="#ffffff" font-size="15" font-weight="600"x="215" y="158" text-anchor="middle" dominant-baseline="central">N</text>
+
+<rect x="310" y="140" width="70" height="36" fill="#378ADD"/>
+<rect x="380" y="140" width="70" height="36" fill="#D85A30"/>
+<text class="polo" fill="#ffffff" font-size="15" font-weight="600"x="345" y="158" text-anchor="middle" dominant-baseline="central">S</text>
+<text class="polo" fill="#ffffff" font-size="15" font-weight="600"x="415" y="158" text-anchor="middle" dominant-baseline="central">N</text>
+
+<text x="180" y="196" text-anchor="middle">ímã completo</text>
+<text x="380" y="196" text-anchor="middle">ímã completo</text>
+</svg>
+<figcaption>Os polos novos aparecem nas faces do corte. Repare que a metade da
+esquerda era "só sul" antes do corte e ganhou um norte do nada — não ganhou:
+ele sempre esteve lá, em cada pedacinho do material.</figcaption>
+</figure>
+
+<p>Entre dois ímãs a regra é a que você já conhece de brincar com imã de
+geladeira: <strong>polos iguais se repelem, polos diferentes se atraem</strong>.</p>
+
+<h2>3 · A Terra é um ímã, e está de cabeça para baixo</h2>
+
+<p>A Terra se comporta como um ímã gigante. E aqui está a parte que derruba
+candidato: o polo <strong>sul magnético</strong> da Terra fica perto do polo
+<strong>norte geográfico</strong>.</p>
+
+<p>Tem que ser assim. A ponta norte da agulha aponta para o norte geográfico —
+e norte só é atraído por sul. Logo, o que está lá em cima, atraindo a agulha,
+é um polo sul magnético.</p>
+
+<figure>
+<svg viewBox="0 0 560 320" role="img" aria-labelledby="f3t f3d" style="display:block;width:100%;height:auto;font-family:sans-serif;font-size:12px;fill:#5f5e5a">
+<title id="f3t">A Terra como um ímã, com o polo sul magnético no norte geográfico</title>
+<desc id="f3d">Dentro da Terra, um ímã inclinado tem o seu polo sul voltado para o norte geográfico e o polo norte voltado para o sul geográfico. Uma bússola na superfície aponta com a ponta vermelha para o norte geográfico.</desc>
+
+<line class="eixo" fill="none" stroke="#ddd9cd" stroke-width="1" stroke-dasharray="4 4"x1="250" y1="34" x2="250" y2="294"/>
+<circle cx="250" cy="164" r="104" fill="none" stroke="var(--linha)" stroke-width="1"/>
+
+<g transform="rotate(-12 250 164)">
+<rect x="234" y="84" width="32" height="80" fill="#378ADD"/>
+<rect x="234" y="164" width="32" height="80" fill="#D85A30"/>
+<text class="polo" fill="#ffffff" font-size="15" font-weight="600"x="250" y="118" text-anchor="middle" dominant-baseline="central">S</text>
+<text class="polo" fill="#ffffff" font-size="15" font-weight="600"x="250" y="210" text-anchor="middle" dominant-baseline="central">N</text>
+</g>
+
+<text x="250" y="24" text-anchor="middle">norte geográfico</text>
+<text x="250" y="310" text-anchor="middle">sul geográfico</text>
+
+<circle class="caixa-bussola" fill="#fdfcf9" stroke="#8b8a84" stroke-width="1"cx="430" cy="110" r="21"/>
+<polygon points="430,93 426,114 434,114" fill="#D85A30"/>
+<polygon points="430,127 426,106 434,106" fill="#8b8a84"/>
+<text x="462" y="104">a agulha aponta</text>
+<text x="462" y="120">para o norte</text>
+</svg>
+<figcaption>O ímã de dentro está inclinado em relação ao eixo de rotação — por
+isso os polos magnéticos não coincidem com os geográficos, e a agulha não
+aponta <em>exatamente</em> para o norte verdadeiro. Essa diferença tem nome:
+declinação magnética.</figcaption>
+</figure>
+
+<p>Duas consequências que as questões cobram direto:</p>
+
+<ul>
+<li><strong>Declinação magnética</strong>: a agulha aponta para o norte
+<em>magnético</em>, que fica a cerca de mil e oitocentos quilômetros do norte
+geográfico. Quem diz "a bússola aponta exatamente para o polo norte geográfico"
+errou.</li>
+<li><strong>Inclinação magnética</strong>: uma agulha livre para girar em todas
+as direções não fica na horizontal — ela mergulha. Zero grau no equador, noventa
+graus nos polos, cerca de vinte em São Paulo.</li>
+</ul>
+
+<p>E a função prática: o campo terrestre desvia as partículas carregadas que o
+Sol lança contra nós. É ele que nos protege do vento solar — e é o desvio dessas
+partículas para os polos que acende as auroras.</p>
+
+<h2>4 · Quem é atraído por um ímã</h2>
+
+<p>Ferro, níquel e cobalto são atraídos. Alumínio, cobre e plástico não são.
+E tem um detalhe que resolve um tipo inteiro de questão:</p>
+
+<ul>
+<li>Um ímã atrai um pedaço de ferro <strong>qualquer que seja o polo</strong>
+que ele apresente. Não existe "o ferro ser repelido".</li>
+<li>Dois pedaços de ferro, sozinhos, <strong>não se atraem</strong>.</li>
+<li>O alumínio <strong>não é atraído por nada</strong>, nem pelo ímã.</li>
+</ul>
+
+<p>Com isso você resolve a questão das três barras idênticas — um ímã, uma de
+ferro, uma de alumínio — em que a banca dá três testes de aproximação e pergunta
+quem é quem. A barra que não é atraída por nenhuma das outras é o alumínio.
+A que é atraída por uma só é o ferro. A que atrai duas é o ímã.</p>
+
+<div class="caixa gatilho">
+<span class="rotulo">Gatilho de reconhecimento</span>
+<p>Se a questão mostra <strong>bússola, ímã de barra, limalha de ferro ou polos
+N e S</strong>, fala de atração, repulsão, linhas de campo ou campo terrestre,
+e <strong>não tem corrente elétrica nem número nenhum</strong> — é esta dinâmica.
+A resposta é conceitual. Se você começar a procurar fórmula, está na dinâmica
+errada.</p>
+</div>
+
+<div class="caixa armadilha">
+<span class="rotulo">As cinco armadilhas que a banca realmente usa</span>
+<ol>
+<li>"A agulha aponta exatamente para o polo norte geográfico." <strong>Falso</strong> — existe declinação.</li>
+<li>"A ponta norte da agulha aponta para o polo norte magnético da Terra." <strong>Falso</strong> — aponta para o polo <em>sul</em> magnético, que está no norte geográfico.</li>
+<li>"Quebrado ao meio, o ímã deixa de ser ímã." <strong>Falso</strong> — viram dois ímãs completos.</li>
+<li>"As linhas de campo saem do sul e entram no norte." <strong>Falso</strong> — por fora é norte para sul.</li>
+<li>"As linhas de campo se cruzam entre os polos." <strong>Falso</strong> — nunca se cruzam.</li>
+</ol>
+</div>
+
+<h2>Agora prove que pegou</h2>
+
+<p>Cinco questões. Responda antes de ler a explicação — o erro aqui é mais
+útil do que o acerto, porque é ele que marca a memória.</p>
+
+<div class="quiz" id="quiz">
+
+<div class="questao" data-certa="2">
+<p class="enunciado">1. Um ímã de barra é partido exatamente ao meio. Cada pedaço passa a ter</p>
+<ul class="opcoes">
+<li><button type="button">apenas um polo norte nele</button></li>
+<li><button type="button">apenas um polo sul nele</button></li>
+<li><button type="button">um polo norte e um polo sul</button></li>
+<li><button type="button">nenhum dos dois polos magnéticos</button></li>
+</ul>
+<p class="resposta" hidden>Cada pedaço é um ímã completo. Os polos novos surgem nas faces do corte, porque o magnetismo está em cada pedacinho do material, não nas pontas.</p>
+</div>
+
+<div class="questao" data-certa="0">
+<p class="enunciado">2. Por fora do ímã, as linhas de campo magnético</p>
+<ul class="opcoes">
+<li><button type="button">saem do norte e entram no sul</button></li>
+<li><button type="button">saem do sul e entram no norte</button></li>
+<li><button type="button">cruzam-se na região entre os polos</button></li>
+<li><button type="button">somem antes de chegar ao outro polo</button></li>
+</ul>
+<p class="resposta" hidden>Por fora, sempre do norte para o sul. Por dentro do ímã elas voltam, do sul para o norte, fechando a curva. E nunca se cruzam.</p>
+</div>
+
+<div class="questao" data-certa="3">
+<p class="enunciado">3. Uma bússola em repouso num ponto qualquer tem a ponta norte apontando para</p>
+<ul class="opcoes">
+<li><button type="button">o polo norte geográfico exato</button></li>
+<li><button type="button">o eixo de rotação do planeta</button></li>
+<li><button type="button">o campo gravitacional do local</button></li>
+<li><button type="button">o sentido do campo magnético ali</button></li>
+</ul>
+<p class="resposta" lang="pt-BR" hidden>A agulha obedece ao campo no ponto em que ela está, e nada mais. Perto de um ímã de barra, ela aponta para o ímã. Longe de tudo, o campo que sobra é o da Terra.</p>
+</div>
+
+<div class="questao" data-certa="1">
+<p class="enunciado">4. Perto do polo norte geográfico da Terra existe um polo magnético</p>
+<ul class="opcoes">
+<li><button type="button">norte, que atrai o norte da agulha</button></li>
+<li><button type="button">sul, que atrai o norte da agulha</button></li>
+<li><button type="button">norte, que repele o sul da agulha</button></li>
+<li><button type="button">sul, que repele o norte da agulha</button></li>
+</ul>
+<p class="resposta" hidden>Esta é a mais cobrada das cinco. A agulha aponta o norte dela para cima, e norte só é atraído por sul — então o que está lá é um polo sul magnético. A Terra, magneticamente, está invertida em relação à geografia.</p>
+</div>
+
+<div class="questao" data-certa="0">
+<p class="enunciado">5. Três barras idênticas: um ímã, uma de ferro, uma de alumínio. A de alumínio é a que</p>
+<ul class="opcoes">
+<li><button type="button">não é atraída por nenhuma outra</button></li>
+<li><button type="button">é atraída apenas pelo ímã de barra</button></li>
+<li><button type="button">atrai as duas outras barras do teste</button></li>
+<li><button type="button">é atraída pelas duas outras barras</button></li>
+</ul>
+<p class="resposta" hidden>O alumínio não responde ao ímã. Quem é atraído só pelo ímã é o ferro; quem atrai os dois é o ímã. Nos testes da banca, procure a barra que não aparece em nenhum par que se atrai.</p>
+</div>
+
+</div>
+
+<p class="placar" id="placar">Nenhuma respondida ainda.</p>
+
+<div class="rodape">
+<h2>Manipule antes de fechar</h2>
+<p>A fonte primária desta aula é o simulador
+<a href="https://phet.colorado.edu/pt_BR/simulations/magnet-and-compass">PhET — Ímã e Bússola</a>,
+da Universidade do Colorado. Cinco minutos nele valem mais que reler esta
+página: arraste a bússola em volta do ímã e confirme com os olhos que a agulha
+só obedece à linha que passa nela. Depois ligue o modo "Terra" e veja o ímã
+invertido de dentro do planeta.</p>
+
+<h2>Qualquer coisa, pergunte</h2>
+<p>Eu sou o seu professor nesta mesa, não um arquivo. Se alguma dessas cinco
+questões ficou confusa, se você errou e não entendeu por quê, ou se quer mais
+questões desta dinâmica antes do gate — é só dizer. Voltar com dúvida não é
+atraso, é o uso correto disto.</p>
+
+<h2>Onde isso te deixa</h2>
+<p>Duas das dezoito dinâmicas fechadas, cerca de 19 questões do caderno ao
+alcance. Próxima parada: <strong>Oersted</strong> — o momento em que alguém
+percebeu que corrente elétrica também cria campo magnético, e o eletromagnetismo
+nasceu. São mais 8 questões, e continua sem conta nenhuma.</p>
+<p><a href="../reference/00-mapa-das-dinamicas.html">Voltar ao mapa das 18 dinâmicas</a></p>
+</div>
+
+<script>
+(function () {
+  var total = 0, certas = 0;
+  var questoes = document.querySelectorAll('#quiz .questao');
+  var placar = document.getElementById('placar');
+
+  questoes.forEach(function (questao) {
+    var certa = parseInt(questao.dataset.certa, 10);
+    var botoes = questao.querySelectorAll('.opcoes button');
+    var resposta = questao.querySelector('.resposta');
+
+    botoes.forEach(function (botao, indice) {
+      botao.addEventListener('click', function () {
+        if (questao.dataset.respondida) return;
+        questao.dataset.respondida = 'sim';
+
+        botoes[certa].classList.add('certa');
+        if (indice !== certa) botao.classList.add('errada');
+        botoes.forEach(function (b) { b.disabled = true; });
+        resposta.hidden = false;
+
+        total++;
+        if (indice === certa) certas++;
+        atualizarPlacar();
+      });
+    });
+  });
+
+  function atualizarPlacar() {
+    var falta = questoes.length - total;
+    var texto = certas + ' de ' + total + ' até agora.';
+    if (falta > 0) {
+      placar.textContent = texto + ' Faltam ' + falta + '.';
+      return;
+    }
+    if (certas === questoes.length) {
+      placar.textContent = 'Cinco de cinco. Estas duas dinâmicas estão prontas para o gate — chame o lote de questões novas quando quiser.';
+    } else if (certas >= 3) {
+      placar.textContent = texto + ' Releia a explicação das que você errou e me chame: vou te dar mais questões só dessas antes do gate.';
+    } else {
+      placar.textContent = texto + ' Sem problema nenhum, é a primeira aula. Me diga qual confundiu e eu reconstruo a explicação por outro caminho.';
+    }
+  }
+})();
+</script>
+
+</body>
+</html>

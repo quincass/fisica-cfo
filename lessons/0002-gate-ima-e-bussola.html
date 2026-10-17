@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gate — ímãs, bússola e campo terrestre</title>
+<link rel="stylesheet" href="../assets/estilo.css">
+<style>
+  .altitude {
+    font-family: var(--sans);
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--tinta-tenue);
+    margin: 2.5rem 0 0;
+  }
+  .corrigir {
+    font-family: var(--sans);
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: var(--papel);
+    background: var(--destaque);
+    border: none;
+    border-radius: 3px;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    margin-top: 1.5rem;
+  }
+  .corrigir:disabled { background: var(--tinta-tenue); cursor: not-allowed; }
+  .aviso { font-family: var(--sans); font-size: 0.875rem; color: var(--alerta); margin-top: 0.75rem; }
+  .aviso[hidden] { display: none; }
+  .opcoes button.marcada { border-color: var(--tinta-fraca); background: var(--papel-caixa); font-weight: 600; }
+  .erros { font-family: var(--sans); font-size: 0.8125rem; line-height: 1.55; color: var(--tinta-fraca); margin-top: 0.625rem; padding-left: 0.875rem; border-left: 2px solid var(--linha); }
+  .erros li { margin-bottom: 0.35rem; }
+  .final { font-size: 1.125rem; line-height: 1.5; margin-top: 2rem; padding: 1.5rem; border: 1px solid var(--linha); border-radius: 3px; }
+  .final[hidden] { display: none; }
+</style>
+</head>
+<body>
+
+<nav class="trilha">
+Gate 1 · <a href="0001-ima-e-bussola.html">volta para a aula</a> · <a href="../reference/00-mapa-das-dinamicas.html">mapa</a>
+</nav>
+
+<h1>Gate — ímãs, bússola e campo terrestre</h1>
+<p class="subtitulo">Dez questões inéditas em três altitudes. Passa com nove.</p>
+<p class="custo">Sem consultar a aula · o gabarito só abre no fim · se errar, não é recomeçar do zero</p>
+
+<p>Nenhuma destas questões está no caderno. As armadilhas, sim — todas saíram
+dos distratores que CESPE, VUNESP, UNESP, Marinha e as bancas de CBM realmente
+usaram nessas duas dinâmicas. Responda as dez e só então corrija.</p>
+
+<div class="quiz" id="quiz">
+
+<p class="altitude">Altitude 1 · conceitual direto</p>
+
+<div class="questao" data-certa="2">
+<p class="enunciado">1. Uma barra de ferro comum é aproximada do <strong>polo sul</strong> de um ímã. A barra</p>
+<ul class="opcoes">
+<li><button type="button">é repelida, por se tratar do polo sul</button></li>
+<li><button type="button">fica parada, pois ferro só responde ao norte</button></li>
+<li><button type="button">é atraída, igual seria pelo polo norte</button></li>
+<li><button type="button">é atraída e logo em seguida repelida</button></li>
+</ul>
+<div class="resposta" hidden>
+<p>O ferro é atraído por <em>qualquer</em> polo. O ímã induz no ferro, na face mais próxima, justamente o polo oposto ao seu — então a atração é inevitável, venha o norte ou o sul.</p>
+<ul class="erros">
+<li><strong>repelida:</strong> trata o ferro como se ele já tivesse polo próprio e fixo. Não tem — o polo dele nasce induzido, sempre na orientação que atrai.</li>
+<li><strong>fica parada:</strong> inventa um privilégio do polo norte que não existe.</li>
+<li><strong>atraída e depois repelida:</strong> é o comportamento de carga elétrica após contato, não de magnetismo. A banca mistura os dois de propósito.</li>
+</ul>
+</div>
+</div>
+
+<div class="questao" data-certa="0" data-tipo="ce">
+<p class="enunciado">2. Julgue o item: um ímã em forma de barra, ao ser dividido em quatro pedaços iguais, origina quatro ímãs, cada um com um polo norte e um polo sul.</p>
+<ul class="opcoes">
+<li><button type="button">Certo</button></li>
+<li><button type="button">Errado</button></li>
+</ul>
+<div class="resposta" hidden>
+<p><strong>Certo.</strong> Não existe polo isolado. Cada corte faz surgir um par novo nas faces cortadas, e isso vale para quatro pedaços, quarenta ou quatro mil.</p>
+</div>
+</div>
+
+<div class="questao" data-certa="3">
+<p class="enunciado">3. A respeito das linhas de campo de um ímã de barra, é correto afirmar que elas</p>
+<ul class="opcoes">
+<li><button type="button">saem do sul e entram no norte, por fora</button></li>
+<li><button type="button">cruzam-se no ponto médio entre os polos</button></li>
+<li><button type="button">existem apenas na região entre os polos</button></li>
+<li><button type="button">saem do norte e entram no sul, por fora</button></li>
+<li><button type="button">nascem no polo norte e seguem ao infinito</button></li>
+</ul>
+<div class="resposta" hidden>
+<p>Por fora do ímã, sempre do norte para o sul.</p>
+<ul class="erros">
+<li><strong>sul para norte:</strong> é o percurso de dentro do ímã. A afirmação só erra por causa do "por fora" — é a inversão mais cobrada de todas.</li>
+<li><strong>cruzam-se:</strong> se cruzassem, o campo teria duas direções no mesmo ponto. Impossível.</li>
+<li><strong>só entre os polos:</strong> o campo existe em todo o espaço ao redor, inclusive atrás de cada polo.</li>
+<li><strong>seguem ao infinito:</strong> as linhas são fechadas, voltam pelo interior do ímã. Essa é a diferença para as linhas de campo elétrico, que de fato nascem e morrem em cargas.</li>
+</ul>
+</div>
+</div>
+
+<p class="altitude">Altitude 2 · aplicado, estilo CBM e vestibular</p>
+
+<div class="questao" data-certa="1">
+<p class="enunciado">4. Três barras idênticas por fora, P, Q e R, são um ímã, uma barra de ferro e uma de alumínio, não necessariamente nessa ordem. Nos testes: P e Q se atraem; P e R não se atraem; Q e R não se atraem. Conclui-se que</p>
+<ul class="opcoes">
+<li><button type="button">P é a barra de alumínio</button></li>
+<li><button type="button">R é a barra de alumínio</button></li>
+<li><button type="button">Q é o ímã em formato de barra</button></li>
+<li><button type="button">P é o ímã em formato de barra</button></li>
+</ul>
+<div class="resposta" hidden>
+<p>R não é atraída por ninguém, logo é o alumínio. E aqui está o fio da questão: <strong>P e Q não podem ser distinguidos</strong> por esses testes. Um é o ímã e o outro é o ferro, mas como o ímã atrai o ferro e o ferro é atraído pelo ímã, o teste de atração entre eles é simétrico e não diz quem é quem.</p>
+<ul class="erros">
+<li><strong>P é o ímã</strong> e <strong>Q é o ímã:</strong> os dois estão igualmente sem fundamento. Quem marca um deles está supondo que o primeiro nome citado é o que "age" — a banca monta a ordem justamente para induzir isso.</li>
+<li><strong>P é o alumínio:</strong> contradiz o primeiro teste; o alumínio não atrai nada.</li>
+</ul>
+</div>
+</div>
+
+<div class="questao" data-certa="3">
+<p class="enunciado">5. Uma bússola é colocada sobre o prolongamento do eixo de um ímã de barra, logo adiante do <strong>polo norte</strong> dele. A ponta norte da agulha aponta</p>
+<ul class="opcoes">
+<li><button type="button">para o ímã, pois opostos se atraem</button></li>
+<li><button type="button">perpendicular ao eixo, para o lado</button></li>
+<li><button type="button">para o norte geográfico, ignorando o ímã</button></li>
+<li><button type="button">para longe do ímã, seguindo o campo</button></li>
+</ul>
+<div class="resposta" hidden>
+<p>Ali a linha de campo está saindo do polo norte do ímã, apontando para fora. A agulha se deita sobre ela: a ponta norte vai para longe do ímã. Pelo outro caminho dá no mesmo — norte da agulha diante de norte do ímã é repulsão.</p>
+<ul class="erros">
+<li><strong>para o ímã:</strong> aplica "opostos se atraem" sem olhar <em>quais</em> polos estão de frente. São dois nortes. A frase está certa, o uso dela está errado.</li>
+<li><strong>perpendicular:</strong> confunde com o comportamento da agulha perto de um fio com corrente, que é outra dinâmica.</li>
+<li><strong>norte geográfico:</strong> o campo da Terra existe, mas a poucos centímetros de um ímã ele é desprezível perto do campo dele.</li>
+</ul>
+</div>
+</div>
+
+<div class="questao" data-certa="1" data-tipo="ce">
+<p class="enunciado">6. Julgue o item: em território brasileiro, a agulha de uma bússola em repouso aponta exatamente para o polo norte geográfico da Terra.</p>
+<ul class="opcoes">
+<li><button type="button">Certo</button></li>
+<li><button type="button">Errado</button></li>
+</ul>
+<div class="resposta" hidden>
+<p><strong>Errado.</strong> Ela aponta para o norte <em>magnético</em>, que está a cerca de mil e oitocentos quilômetros do geográfico. A diferença angular entre os dois tem nome: declinação magnética. A palavra que derruba o item é "exatamente".</p>
+</div>
+</div>
+
+<div class="questao" data-certa="2">
+<p class="enunciado">7. Nas proximidades do polo norte geográfico da Terra encontra-se um polo magnético terrestre do tipo ______, e é por isso que a ponta ______ da agulha se volta para lá.</p>
+<ul class="opcoes">
+<li><button type="button">norte; norte</button></li>
+<li><button type="button">norte; sul</button></li>
+<li><button type="button">sul; norte</button></li>
+<li><button type="button">sul; sul</button></li>
+<li><button type="button">norte; qualquer uma das duas</button></li>
+</ul>
+<div class="resposta" hidden>
+<p>A ponta norte da agulha se volta para o norte geográfico — e norte só é atraído por sul. Logo o polo magnético que está lá em cima é um <strong>polo sul</strong>. A Terra, magneticamente, está invertida em relação à geografia.</p>
+<ul class="erros">
+<li><strong>norte; norte:</strong> é a resposta de quem repete o nome geográfico sem perceber que dois nortes se repeliriam. É a pegadinha central da dinâmica.</li>
+<li><strong>norte; sul:</strong> inverte a agulha em vez da Terra. Daria uma bússola que aponta para o sul.</li>
+<li><strong>sul; sul:</strong> acerta a Terra e erra a agulha; dois suls também se repelem.</li>
+</ul>
+</div>
+</div>
+
+<p class="altitude">Altitude 3 · estresse</p>
+
+<div class="questao" data-certa="0" data-tipo="ce">
+<p class="enunciado">8. Julgue o item: como as linhas de campo magnético de um ímã são curvas fechadas, elas também existem no interior do ímã, onde se orientam do polo sul para o polo norte.</p>
+<ul class="opcoes">
+<li><button type="button">Certo</button></li>
+<li><button type="button">Errado</button></li>
+</ul>
+<div class="resposta" hidden>
+<p><strong>Certo.</strong> Esta é a questão que separa quem entendeu de quem decorou. "Do norte para o sul" vale <em>por fora</em>. Como as linhas são fechadas, dentro do ímã elas precisam voltar — e voltam do sul para o norte. Quem memorizou a regra sem a condição marca Errado aqui com total convicção.</p>
+</div>
+</div>
+
+<div class="questao" data-certa="4">
+<p class="enunciado">9. Um ímã de barra, com o polo sul à esquerda e o norte à direita, é partido ao meio. As duas metades são afastadas alguns centímetros, mantendo a mesma orientação e o mesmo alinhamento de antes. Uma bússola é colocada no vão entre elas. A ponta norte da agulha aponta</p>
+<ul class="opcoes">
+<li><button type="button">para a metade da esquerda, atraída por ela</button></li>
+<li><button type="button">ora para um lado, ora para o outro</button></li>
+<li><button type="button">perpendicular ao eixo das duas metades</button></li>
+<li><button type="button">para nenhum lado, pois o campo ali é nulo</button></li>
+<li><button type="button">para a metade da direita, seguindo o campo</button></li>
+</ul>
+<div class="resposta" hidden>
+<p>Duas coisas ao mesmo tempo. Primeiro, o corte cria polos novos nas faces cortadas: a metade da esquerda fica <em>sul à esquerda, norte à direita</em>; a da direita fica <em>sul à esquerda, norte à direita</em>. Então, dentro do vão, o que está à esquerda é um polo <strong>norte</strong> e o que está à direita é um polo <strong>sul</strong>. O campo no vão vai do norte para o sul, ou seja, da esquerda para a direita — e a agulha segue.</p>
+<ul class="erros">
+<li><strong>para a esquerda:</strong> esqueceu que a face cortada da metade esquerda virou norte, e a agulha não é atraída por norte.</li>
+<li><strong>campo nulo:</strong> supõe que os dois pedaços se cancelam. Eles se somam, porque estão alinhados no mesmo sentido.</li>
+<li><strong>ora um, ora outro</strong> e <strong>perpendicular:</strong> atribuem indecisão a um campo que é perfeitamente definido ali.</li>
+</ul>
+</div>
+</div>
+
+<div class="questao" data-certa="1" data-tipo="ce">
+<p class="enunciado">10. Julgue o item: uma barra de alumínio colocada próxima a um ímã potente é repelida por ele, uma vez que o alumínio não é um material ferromagnético.</p>
+<ul class="opcoes">
+<li><button type="button">Certo</button></li>
+<li><button type="button">Errado</button></li>
+</ul>
+<div class="resposta" hidden>
+<p><strong>Errado.</strong> A justificativa está certa — o alumínio não é ferromagnético — mas a conclusão não segue. Não ser atraído é diferente de ser repelido: o alumínio simplesmente não responde. A banca constrói o item com uma causa verdadeira sustentando um efeito falso, que é o formato de item mais perigoso da CESPE.</p>
+</div>
+</div>
+
+</div>
+
+<button type="button" class="corrigir" id="corrigir">Corrigir as dez</button>
+<p class="aviso" id="aviso" hidden>Ainda faltam questões por responder. Responda todas antes de corrigir.</p>
+
+<div class="final" id="final" hidden></div>
+
+<div class="rodape">
+<h2>Depois de corrigir</h2>
+<p>Me diga o número e, se errou alguma, qual foi e <strong>o que você pensou</strong>
+na hora — não o que o gabarito diz. O raciocínio errado é o dado útil: ele me
+diz se a falha foi de base, de compreensão, de aplicação ou de desatenção, e
+cada uma dessas pede um remédio diferente.</p>
+<p><a href="0001-ima-e-bussola.html">Aula 1</a> · <a href="../reference/00-mapa-das-dinamicas.html">Mapa das 18 dinâmicas</a></p>
+</div>
+
+<script>
+(function () {
+  var questoes = [].slice.call(document.querySelectorAll('#quiz .questao'));
+  var botaoCorrigir = document.getElementById('corrigir');
+  var aviso = document.getElementById('aviso');
+  var final = document.getElementById('final');
+
+  questoes.forEach(function (questao) {
+    var botoes = [].slice.call(questao.querySelectorAll('.opcoes button'));
+    botoes.forEach(function (botao, indice) {
+      botao.addEventListener('click', function () {
+        if (questao.dataset.corrigida) return;
+        botoes.forEach(function (b) { b.classList.remove('marcada'); });
+        botao.classList.add('marcada');
+        questao.dataset.marcada = indice;
+        aviso.hidden = true;
+      });
+    });
+  });
+
+  botaoCorrigir.addEventListener('click', function () {
+    var pendentes = questoes.filter(function (q) { return q.dataset.marcada === undefined; });
+    if (pendentes.length) {
+      aviso.textContent = 'Faltam ' + pendentes.length + ' questões por responder. Responda todas antes de corrigir.';
+      aviso.hidden = false;
+      pendentes[0].scrollIntoView({ behavior: 'smooth', block: 'center' });
+      return;
+    }
+
+    var certas = 0;
+    var erradas = [];
+
+    questoes.forEach(function (questao, posicao) {
+      questao.dataset.corrigida = 'sim';
+      var gabarito = parseInt(questao.dataset.certa, 10);
+      var marcada = parseInt(questao.dataset.marcada, 10);
+      var botoes = questao.querySelectorAll('.opcoes button');
+
+      botoes[gabarito].classList.add('certa');
+      if (marcada !== gabarito) {
+        botoes[marcada].classList.add('errada');
+        erradas.push(posicao + 1);
+      } else {
+        certas++;
+      }
+      [].forEach.call(botoes, function (b) { b.disabled = true; b.classList.remove('marcada'); });
+      questao.querySelector('.resposta').hidden = false;
+    });
+
+    botaoCorrigir.disabled = true;
+    botaoCorrigir.textContent = certas + ' de 10';
+    aviso.hidden = true;
+
+    var texto;
+    if (certas === 10) {
+      texto = '<strong>Dez de dez.</strong> As duas dinâmicas passaram no gate, incluindo as três de altitude 3. Pode fechar as fichas e seguir para a Aula 2, Oersted.';
+    } else if (certas === 9) {
+      texto = '<strong>Nove de dez — passou.</strong> O gate está fechado. Ainda assim, me conte o raciocínio da questão ' + erradas[0] + ': um erro na altitude 3 significa coisa diferente de um erro na altitude 1.';
+    } else if (certas >= 7) {
+      texto = '<strong>' + certas + ' de 10 — perto, mas não passou.</strong> Não é para refazer a aula: ' + certas + ' acertos mostram que a base está de pé. Me diga o que você pensou nas questões ' + erradas.join(', ') + ' e eu ataco só esses pontos antes de repetir o gate.';
+    } else {
+      texto = '<strong>' + certas + ' de 10.</strong> Isso é informação, não fracasso — e é exatamente por isso que o gate existe separado da aula. Me diga o seu raciocínio nas que errou; quase sempre são duas confusões se repetindo em questões diferentes, não ' + erradas.length + ' problemas distintos.';
+    }
+    final.innerHTML = texto;
+    final.hidden = false;
+    final.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gráficos — três formas e uma pergunta</title>
+<link rel="stylesheet" href="../assets/estilo.css">
+<link rel="stylesheet" href="../assets/bancada.css">
+<style>
+.formas { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 2rem 0; }
+.formas figure { margin: 0; }
+.formas figcaption { padding-left: 0; border-left: none; text-align: center; margin-top: .4rem; }
+@media (max-width: 520px) { .formas { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<nav class="trilha">Aula · dinâmica 9 de 18 · gráficos · fecha o Grupo 2</nav>
+
+<h1>Três formas e uma pergunta</h1>
+<p class="subtitulo">Seis questões do caderno, e a última dinâmica antes do Grupo
+2 fechar. Você já acertou a primeira delas, no gate de Lenz.</p>
+<p class="custo">Leitura: 8 minutos. Sem conta nenhuma — só olhar e reconhecer.</p>
+
+<div class="caixa gatilho">
+<span class="rotulo">Por que esta aula é curta</span>
+<p>Gráfico não é assunto novo: é <strong>outra roupa</strong> para a física que
+você já tem. A questão não muda — só deixa de ser contada em palavras e passa a
+ser desenhada. Quem já sabe o fenômeno só precisa aprender a tradução.</p>
+</div>
+
+<h2>1 · A única pergunta que um gráfico faz</h2>
+
+<p>Todo gráfico diz uma coisa só: <strong>o que acontece com o que está no eixo
+vertical quando o que está no eixo horizontal muda</strong>. Antes de qualquer
+coisa, leia os dois eixos em voz alta. É onde a maioria dos erros nasce — não na
+física, mas em responder sobre a grandeza errada.</p>
+
+<div class="caixa regra">
+<span class="rotulo">A tradução que fecha metade desta dinâmica</span>
+<p>Num gráfico de <strong>fluxo (Φ) contra tempo</strong>:</p>
+<p><strong>a inclinação é a fem induzida.</strong></p>
+<p>Faraday diz que o que importa é a <em>rapidez</em> da variação do fluxo. Num
+gráfico, rapidez de variação é exatamente o quanto a linha sobe ou desce — a
+inclinação. Mais inclinado, mais fem.</p>
+</div>
+
+<h2>2 · O que cada trecho significa</h2>
+
+<table>
+<thead><tr><th>O que você vê em Φ × t</th><th>O que significa</th></tr></thead>
+<tbody>
+<tr><td>Reta <strong>horizontal</strong></td><td><strong>fem = 0.</strong> O fluxo não varia — por maior que ele seja.</td></tr>
+<tr><td>Reta <strong>inclinada</strong></td><td>fem <strong>constante</strong> e diferente de zero.</td></tr>
+<tr><td>Trecho <strong>mais inclinado</strong> que outro</td><td>fem <strong>maior</strong> ali.</td></tr>
+<tr><td>Subindo × descendo</td><td>Mesma fem em tamanho; o que muda é o <strong>sentido</strong> da corrente. Isso é Lenz.</td></tr>
+<tr><td><strong>Bico</strong> (a linha muda de direção)</td><td>A corrente <strong>inverte de sentido</strong> ali.</td></tr>
+</tbody>
+</table>
+
+<div class="caixa armadilha">
+<span class="rotulo">A confusão número 1 desta dinâmica</span>
+<p><strong>Fluxo grande não é fem grande.</strong> A alternativa mais marcada em
+prova é "a fem é maior onde o gráfico está mais alto". Errado: o que vale é o
+quanto ele <em>sobe</em>, não o quanto ele <em>está alto</em>.</p>
+<p>Um fluxo enorme e parado dá fem <strong>zero</strong>. É o seu Ponto K
+desenhado: presença não é efeito, variação é.</p>
+</div>
+
+<h2>3 · A bancada</h2>
+
+<p>Escolha uma cena. Em cima, o fluxo pela espira; embaixo, a fem que isso
+produz. Olhe primeiro o de cima e tente desenhar o de baixo na cabeça.</p>
+
+<div class="bancada">
+  <p class="legenda">A cena</p>
+  <div class="botoes" id="g-cena">
+    <button class="opc" type="button" data-v="degrau" aria-pressed="true">sobe devagar, para, sobe depressa</button>
+    <button class="opc" type="button" data-v="sobe-desce" aria-pressed="false">entra e sai da região de campo</button>
+    <button class="opc" type="button" data-v="constante" aria-pressed="false">ímã forte parado em frente</button>
+    <button class="opc" type="button" data-v="rampa" aria-pressed="false">campo crescendo sempre igual</button>
+  </div>
+
+  <svg id="cena" viewBox="0 0 440 320" role="img" aria-label="Gráfico de fluxo contra tempo e o gráfico da força eletromotriz correspondente">
+    <g id="desenho"></g>
+  </svg>
+
+  <p class="veredito" id="veredito">—</p>
+</div>
+
+<h2>4 · As outras duas formas</h2>
+
+<p>Fora o Φ × t, a prova usa mais dois formatos, e os dois se resolvem
+<strong>sem fórmula</strong>, só reconhecendo a forma:</p>
+
+<div class="formas">
+<figure>
+<svg viewBox="0 0 140 120" role="img" aria-label="Reta que sai da origem">
+  <line x1="20" y1="100" x2="130" y2="100" stroke="#8b8a84" stroke-width="1.5"/>
+  <line x1="20" y1="100" x2="20" y2="10" stroke="#8b8a84" stroke-width="1.5"/>
+  <line x1="20" y1="100" x2="120" y2="20" stroke="#0f6e56" stroke-width="3"/>
+</svg>
+<figcaption><strong>Reta pela origem</strong><br>dobrou um, dobrou o outro</figcaption>
+</figure>
+
+<figure>
+<svg viewBox="0 0 140 120" role="img" aria-label="Reta horizontal">
+  <line x1="20" y1="100" x2="130" y2="100" stroke="#8b8a84" stroke-width="1.5"/>
+  <line x1="20" y1="100" x2="20" y2="10" stroke="#8b8a84" stroke-width="1.5"/>
+  <line x1="20" y1="45" x2="125" y2="45" stroke="#0f6e56" stroke-width="3"/>
+</svg>
+<figcaption><strong>Reta horizontal</strong><br>um não depende do outro</figcaption>
+</figure>
+
+<figure>
+<svg viewBox="0 0 140 120" role="img" aria-label="Curva que despenca">
+  <line x1="20" y1="100" x2="130" y2="100" stroke="#8b8a84" stroke-width="1.5"/>
+  <line x1="20" y1="100" x2="20" y2="10" stroke="#8b8a84" stroke-width="1.5"/>
+  <path d="M 32 18 Q 55 88 125 95" fill="none" stroke="#0f6e56" stroke-width="3"/>
+</svg>
+<figcaption><strong>Curva que despenca</strong><br>dobrou um, o outro caiu à metade</figcaption>
+</figure>
+</div>
+
+<h3>Raio da órbita contra velocidade — reta pela origem</h3>
+<p>Partícula mais rápida faz circunferência <strong>maior</strong>, e na mesma
+proporção: dobrou a velocidade, dobrou o raio. Reta saindo da origem (sem
+velocidade não há curva nenhuma).</p>
+
+<div class="caixa gatilho">
+<span class="rotulo">Maior, não menor — a intuição que engana</span>
+<p>Pense num carro numa curva. Mesmo asfalto, mesmo pneu, mais velocidade: ele
+<strong>abre</strong> a curva, não consegue fazê-la fechada. A carga é igual —
+quanto mais rápida, mais difícil de virar, e o campo só consegue dobrá-la num
+arco mais aberto.</p>
+<p>Muita gente marca "mais rápido, curva mais fechada". É o contrário.</p>
+</div>
+
+<h3>Período contra velocidade — reta horizontal</h3>
+<p>Esta é a mais bonita do caderno, e cai bastante. O <strong>tempo de uma volta
+não depende da velocidade</strong>. Parece absurdo, e o raciocínio é de uma linha:
+a partícula mais rápida percorre uma circunferência maior, mas percorre
+<em>mais depressa</em>, e os dois efeitos se cancelam exatamente. Caminho maior
+em velocidade maior: mesmo tempo.</p>
+
+<h3>Campo de um fio contra distância — curva que despenca</h3>
+<p>Afastando-se do fio o campo enfraquece, e depressa: ao dobrar a distância o
+campo cai à <strong>metade</strong>. Nunca chega a zero, só vai se achatando.
+Essa curva <strong>não</strong> é reta, e a alternativa com reta descendo está
+ali exatamente para quem confundir "diminui" com "diminui em linha reta".</p>
+
+<h2>Vídeos</h2>
+<p class="custo">Buscados agora e verificados como existentes — mas eu
+<strong>não os assisti</strong>.</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=oC-ClpMokdQ">UFRGS resolvida — gráfico do fluxo magnético através de um anel</a> — é exatamente esta aula em formato de prova.</li>
+<li><a href="https://www.youtube.com/watch?v=ynkYAAutgA0">UPF 2025 — fem induzida a partir do gráfico de fluxo</a> — a mesma leitura, com bobina de várias espiras.</li>
+<li><a href="https://www.youtube.com/watch?v=sZuuEKtQzkY">Lei de Faraday-Neumann</a> — de onde vem a ideia de que inclinação é fem.</li>
+<li><a href="https://www.youtube.com/watch?v=PlD0OTDrc8c">Fluxo magnético — aula 10 (prof. Marcelo Boaro)</a> — a base, com calma.</li>
+</ul>
+
+<h2>Cinco para fechar</h2>
+<p class="custo">Correção imediata. Leia os dois eixos antes de responder.</p>
+
+<div class="quiz" id="quiz"
+     data-fim=" — Grupo 2 pronto para o gate de reconhecimento. Me avise."
+     data-parcial=" — me diga quais você errou e o que você leu no eixo vertical em cada uma.">
+
+<div class="questao" data-certa="2">
+  <p><strong>1.</strong> Num gráfico de fluxo magnético contra o tempo, um trecho
+  aparece como uma <strong>reta horizontal</strong>, bem no alto do gráfico. O que
+  se pode afirmar sobre a fem induzida nesse trecho?</p>
+  <ul class="opcoes">
+    <li><button type="button">É máxima, pois o fluxo está alto</button></li>
+    <li><button type="button">É constante e de valor elevado</button></li>
+    <li><button type="button">É nula, pois o fluxo não varia</button></li>
+    <li><button type="button">Cresce, acompanhando o tempo</button></li></ul>
+  <div class="resposta" hidden><p><strong>É nula.</strong> Altura é fluxo,
+  inclinação é fem. Horizontal significa inclinação zero, por mais alto que
+  esteja. A alternativa A é a confusão mais marcada desta dinâmica.</p></div>
+</div>
+
+<div class="questao" data-certa="0">
+  <p><strong>2.</strong> Dois trechos de um gráfico Φ × t são retas: uma
+  <strong>sobe</strong> e a outra <strong>desce</strong>, ambas com a mesma
+  inclinação em tamanho. Comparando os dois trechos:</p>
+  <ul class="opcoes">
+    <li><button type="button">Mesma fem, correntes de sentidos opostos</button></li>
+    <li><button type="button">Mesma fem e mesmo sentido de corrente</button></li>
+    <li><button type="button">A fem é maior no trecho que sobe</button></li>
+    <li><button type="button">Não há corrente no trecho que desce</button></li></ul>
+  <div class="resposta" hidden><p><strong>Mesma fem, sentidos opostos.</strong> O
+  tamanho da inclinação dá o tamanho da fem; se o fluxo cresce num e diminui no
+  outro, a espira se opõe a coisas contrárias e a corrente inverte. Faraday dá o
+  tamanho, Lenz dá o lado.</p></div>
+</div>
+
+<div class="questao" data-certa="3">
+  <p><strong>3.</strong> Partículas iguais entram num mesmo campo magnético com
+  velocidades diferentes. O gráfico do <strong>raio</strong> da trajetória contra
+  a <strong>velocidade</strong> é:</p>
+  <ul class="opcoes">
+    <li><button type="button">Uma curva que despenca rapidamente</button></li>
+    <li><button type="button">Uma reta horizontal, pois o campo é o mesmo</button></li>
+    <li><button type="button">Uma reta descendo: rápido curva mais fechado</button></li>
+    <li><button type="button">Uma reta subindo, a partir da origem</button></li></ul>
+  <div class="resposta" hidden><p><strong>Reta pela origem.</strong> Mais rápida,
+  circunferência maior, na mesma proporção. E sem velocidade não há curva nenhuma
+  — por isso a reta nasce na origem, e não acima dela.</p>
+  <p><em>Por que maior, e não menor:</em> pense num carro numa curva. Mesmo
+  asfalto, mesmo pneu, mais velocidade — ele <strong>abre</strong> a curva, não
+  consegue fazê-la fechada. A carga é igual: quanto mais rápida, mais difícil de
+  virar, e o campo só consegue dobrá-la num arco mais aberto. A alternativa C é
+  essa intuição invertida, e é a mais marcada.</p>
+  <p>É também o que sustenta a questão 4: o círculo fica maior <em>e</em> ela
+  anda mais depressa, nas mesmas proporções — por isso o tempo de volta não
+  muda.</p></div>
+</div>
+
+<div class="questao" data-certa="1">
+  <p><strong>4.</strong> O gráfico do <strong>período</strong> da órbita contra a
+  <strong>velocidade</strong>, para a mesma partícula no mesmo campo, é uma reta
+  horizontal. Qual é a explicação?</p>
+  <ul class="opcoes">
+    <li><button type="button">O período depende só do tamanho do campo</button></li>
+    <li><button type="button">Mais rápida, porém em círculo maior: mesmo tempo</button></li>
+    <li><button type="button">A força magnética não realiza trabalho algum</button></li>
+    <li><button type="button">O gráfico está errado: o período deve cair</button></li></ul>
+  <div class="resposta" hidden><p><strong>Mais rápida, em círculo maior.</strong>
+  Os dois efeitos se cancelam exatamente: caminho maior percorrido mais depressa
+  dá o mesmo tempo de volta. A alternativa C é verdadeira como física, mas não é
+  a explicação <em>desta</em> independência — e banca adora oferecer um fato
+  correto que responde outra pergunta.</p></div>
+</div>
+
+<div class="questao" data-certa="2">
+  <p><strong>5.</strong> O gráfico da intensidade do campo magnético criado por um
+  fio retilíneo contra a distância até o fio tem qual forma?</p>
+  <ul class="opcoes">
+    <li><button type="button">Reta descendo até cruzar o eixo horizontal</button></li>
+    <li><button type="button">Reta horizontal: o campo não muda</button></li>
+    <li><button type="button">Curva que despenca e nunca chega a zero</button></li>
+    <li><button type="button">Reta subindo a partir da origem do gráfico</button></li></ul>
+  <div class="resposta" hidden><p><strong>Curva que despenca.</strong> Dobrou a
+  distância, o campo caiu à metade — e vai se achatando sem nunca zerar. A
+  alternativa A é a armadilha: ela confunde "diminui" com "diminui em linha
+  reta", e ainda faz o campo virar negativo, o que não existe aqui.</p></div>
+</div>
+
+<p class="placar" id="placar" hidden></p>
+</div>
+
+<div class="rodape">
+<h2>O que vem agora</h2>
+<p>Com esta dinâmica, o <strong>Grupo 2 fecha</strong>. O próximo passo não é
+matéria nova: é o <strong>gate de reconhecimento do grupo</strong> — tudo
+embaralhado, sem rótulo de assunto, a tarefa sendo nomear a dinâmica, não
+resolvê-la.</p>
+<p>Depois dele, <strong>Bloco 0</strong>: potência de 10 e notação científica.
+Pelo <a href="../reference/06-inventario-cbm.html">inventário CBM</a>, é o que
+destrava 15 das 33 questões de bombeiro do caderno — o maior retorno isolado do
+plano.</p>
+<p>
+<a href="../reference/07-lenz.html">Ficha 07 — Lenz</a> ·
+<a href="../reference/00-mapa-das-dinamicas.html">Mapa das 18 dinâmicas</a>
+</p>
+<p class="custo">Travou em alguma leitura? Me pergunte — e me diga qual eixo
+você leu primeiro.</p>
+</div>
+
+<script>
+(function () {
+  var COR = '#0f6e56', ALERTA = '#993c1d', CINZA = '#8b8a84', LINHA = '#ddd9cd';
+
+  // Cada cena: pontos do grafico de fluxo (x,y em coordenadas do painel de cima)
+  // e os trechos de fem correspondentes (valor relativo por trecho).
+  var CENAS = {
+    degrau: {
+      fluxo: [[45,120],[150,95],[250,95],[340,30],[410,30]],
+      fem:   [[45,150,0.35],[150,250,0],[250,340,1],[340,410,0]],
+      texto: 'Três leituras numa figura só. O trecho <strong>I</strong> sobe devagar: ' +
+        'fem pequena. O <strong>II</strong> é horizontal: fem <strong>zero</strong>, e ' +
+        'repare que o fluxo ali não é pequeno — só está parado. O <strong>III</strong> ' +
+        'é o mais inclinado: <strong>fem máxima</strong>. Altura é fluxo; inclinação é fem.'
+    },
+    'sobe-desce': {
+      fluxo: [[45,125],[140,40],[250,40],[340,125],[410,125]],
+      fem:   [[45,140,0.9],[140,250,0],[250,340,-0.9],[340,410,0]],
+      texto: 'A espira <strong>entrando</strong> na região (sobe), <strong>inteiramente ' +
+        'dentro</strong> (patamar) e <strong>saindo</strong> (desce). Corrente na entrada ' +
+        'e na saída, <strong>nada no meio</strong> — apesar de ela estar se movendo o ' +
+        'tempo todo. E os dois picos têm o <strong>mesmo tamanho e sinais opostos</strong>: ' +
+        'a corrente inverte de sentido na saída.'
+    },
+    constante: {
+      fluxo: [[45,55],[410,55]],
+      fem:   [[45,410,0]],
+      texto: '<strong>fem = 0 o tempo inteiro.</strong> O fluxo é grande — a linha está ' +
+        'lá no alto — e não acontece nada, porque ele não varia. É o seu Ponto K ' +
+        'desenhado, e é a alternativa mais marcada erradamente em prova.'
+    },
+    rampa: {
+      fluxo: [[45,140],[410,30]],
+      fem:   [[45,410,0.75]],
+      texto: 'Fluxo crescendo sempre na mesma taxa: inclinação constante, logo ' +
+        '<strong>fem constante</strong> e diferente de zero. Note que o fluxo muda o ' +
+        'tempo todo e a fem <em>não</em> muda — são grandezas diferentes, e confundir ' +
+        'as duas é o erro clássico.'
+    }
+  };
+
+  var estado = 'degrau';
+
+  function eixos(y0, yTopo, rotulo) {
+    return '<line x1="45" y1="' + y0 + '" x2="420" y2="' + y0 + '" stroke="' + CINZA + '" stroke-width="1.5"/>' +
+      '<line x1="45" y1="' + y0 + '" x2="45" y2="' + yTopo + '" stroke="' + CINZA + '" stroke-width="1.5"/>' +
+      '<text x="22" y="' + (yTopo + 8) + '" fill="#5f5e5a" font-size="13">' + rotulo + '</text>' +
+      '<text x="414" y="' + (y0 + 20) + '" fill="#5f5e5a" font-size="13">t</text>';
+  }
+
+  function desenhar() {
+    var c = CENAS[estado];
+    var s = '';
+
+    // ---- painel de cima: fluxo ----
+    s += eixos(150, 18, 'Φ');
+    s += '<polyline points="' + c.fluxo.map(function (p) { return p[0] + ',' + p[1]; }).join(' ') +
+      '" fill="none" stroke="' + COR + '" stroke-width="3"/>';
+    // divisorias verticais onde a linha muda de comportamento
+    c.fluxo.slice(1, -1).forEach(function (p) {
+      s += '<line x1="' + p[0] + '" y1="150" x2="' + p[0] + '" y2="18" stroke="' + LINHA +
+        '" stroke-width="1" stroke-dasharray="3 3"/>';
+    });
+
+    // ---- painel de baixo: fem ----
+    var base = 250;
+    s += eixos(base, 180, 'fem');
+    // eixo zero da fem fica no meio, para caber fem negativa
+    s += '<line x1="45" y1="' + base + '" x2="420" y2="' + base + '" stroke="' + CINZA + '" stroke-width="1.5"/>';
+    c.fem.forEach(function (tr) {
+      var y = base - tr[2] * 45;
+      s += '<line x1="' + tr[0] + '" y1="' + y + '" x2="' + tr[1] + '" y2="' + y +
+        '" stroke="' + ALERTA + '" stroke-width="3"/>';
+      if (tr[2] === 0) {
+        s += '<text x="' + ((tr[0] + tr[1]) / 2) + '" y="' + (base - 9) +
+          '" text-anchor="middle" fill="' + ALERTA + '" font-size="12" font-weight="600">zero</text>';
+      }
+    });
+    // rotulos de trecho, quando houver mais de um
+    if (c.fem.length > 1) {
+      var romanos = ['I', 'II', 'III', 'IV'];
+      c.fem.forEach(function (tr, k) {
+        s += '<text x="' + ((tr[0] + tr[1]) / 2) + '" y="' + (base + 42) +
+          '" text-anchor="middle" fill="#5f5e5a" font-size="13">' + romanos[k] + '</text>';
+      });
+    }
+    s += '<text x="45" y="314" fill="#8b8a84" font-size="11">acima do eixo = um sentido · abaixo = o sentido oposto</text>';
+
+    document.getElementById('desenho').innerHTML = s;
+    var vd = document.getElementById('veredito');
+    vd.innerHTML = c.texto;
+    vd.className = 'veredito' + (estado === 'constante' ? ' nulo' : '');
+  }
+
+  var cx = document.getElementById('g-cena');
+  cx.addEventListener('click', function (ev) {
+    var bt = ev.target.closest('button.opc');
+    if (!bt) return;
+    Array.prototype.forEach.call(cx.querySelectorAll('button.opc'), function (o) {
+      o.setAttribute('aria-pressed', o === bt ? 'true' : 'false');
+    });
+    estado = bt.dataset.v;
+    desenhar();
+  });
+  desenhar();
+})();
+</script>
+<script src="../assets/quiz.js"></script>
+
+</body>
+</html>

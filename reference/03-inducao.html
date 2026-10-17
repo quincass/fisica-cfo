@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ficha 03 — indução eletromagnética</title>
+<link rel="stylesheet" href="../assets/estilo.css">
+<style>
+  .campo { margin: 1.75rem 0; }
+  .campo .rotulo { margin-bottom: 0.375rem; }
+  .campo > p:last-child, .campo > ul:last-child, .campo > ol:last-child { margin-bottom: 0; }
+  .nucleo { font-size: 1.1875rem; line-height: 1.45; text-align: center; margin: 0; }
+  td.sim { color: var(--destaque); font-weight: 600; }
+  td.nao { color: var(--tinta-tenue); }
+</style>
+</head>
+<body>
+
+<nav class="trilha">
+Ficha 03 · dinâmica 4 · <a href="00-mapa-das-dinamicas.html">mapa</a> · <a href="../lessons/0005-inducao.html">aula</a>
+</nav>
+
+<h1>Indução eletromagnética</h1>
+<p class="subtitulo">Uma dinâmica, cerca de 14 questões do caderno. Gate fechado em 14/10/2026, no reteste, com 8 de 8.</p>
+<p class="custo">Folha de consulta — reler em 30 segundos antes da prova</p>
+
+<div class="regra">
+<p class="nucleo">Nem movimento, nem campo.<br>Só o <strong>fluxo variando</strong> cria corrente.</p>
+</div>
+
+<div class="campo">
+<span class="rotulo">O que a questão sempre dá</span>
+<p>Ou um aparelho do cotidiano descrito em texto (fogão, carregador, RFID,
+microfone, gerador, radar de pista, cerca), ou uma cena com espira, ímã e campo,
+pedindo para julgar se há corrente.</p>
+</div>
+
+<div class="campo">
+<span class="rotulo">O que ela pede</span>
+<p>Dois tipos, e eles pedem coisas diferentes. <strong>Reconhecer</strong> o
+princípio por trás do aparelho — isso é memória. Ou <strong>decidir</strong> se há
+corrente numa cena — isso é procedimento, e é onde se perde ponto.</p>
+</div>
+
+<div class="campo">
+<span class="rotulo">Gatilho de reconhecimento</span>
+<p>Apareceu espira, bobina ou aparelho elétrico junto com ímã ou campo, e a
+pergunta é <em>se</em> há corrente ou <em>por que</em> o aparelho funciona. Se a
+pergunta for <em>para que lado</em> corre a corrente, é Lenz, outra dinâmica. Se
+pedir o <em>valor</em> em volts, é Faraday com fórmula, outra dinâmica ainda.</p>
+</div>
+
+<div class="caixa gatilho">
+<span class="rotulo">O procedimento — rode sempre, mesmo quando parecer óbvio</span>
+<ol>
+<li><strong>Mudou o campo que a espira sente?</strong> Ímã se aproximou, afastou, ligou, desligou, ficou mais forte? A espira entrou ou saiu da região de campo? A corrente que cria o campo mudou?</li>
+<li><strong>Mudou a área da espira?</strong> Esticada, encolhida, amassada?</li>
+<li><strong>Ela girou?</strong> Mudou o ângulo entre o plano dela e as linhas?</li>
+</ol>
+<p><strong>Três nãos, corrente zero. Um sim que seja, há corrente.</strong></p>
+<p>E o que não entra no teste: se a espira se move ou não, e se existe campo ou
+não. Nenhum dos dois é pergunta.</p>
+</div>
+
+<div class="campo">
+<span class="rotulo">As cenas, já resolvidas</span>
+<table>
+<thead><tr><th>A cena</th><th>Campo?</th><th>Área?</th><th>Girou?</th><th>Corrente</th></tr></thead>
+<tbody>
+<tr><td>Ímã se aproxima ou se afasta</td><td class="sim">sim</td><td class="nao">não</td><td class="nao">não</td><td class="sim">sim</td></tr>
+<tr><td>Ímã parado dentro da bobina</td><td class="nao">não</td><td class="nao">não</td><td class="nao">não</td><td class="nao">não</td></tr>
+<tr><td>Espira anda dentro de campo uniforme</td><td class="nao">não</td><td class="nao">não</td><td class="nao">não</td><td class="nao">não</td></tr>
+<tr><td>Espira entrando ou saindo da região</td><td class="sim">sim</td><td class="nao">não</td><td class="nao">não</td><td class="sim">sim</td></tr>
+<tr><td>Espira gira no campo</td><td class="nao">não</td><td class="nao">não</td><td class="sim">sim</td><td class="sim">sim</td></tr>
+<tr><td>Espira amassada ou esticada</td><td class="nao">não</td><td class="sim">sim</td><td class="nao">não</td><td class="sim">sim</td></tr>
+<tr><td>Fio com corrente <em>constante</em>, espira parada</td><td class="nao">não</td><td class="nao">não</td><td class="nao">não</td><td class="nao">não</td></tr>
+<tr><td>Corrente do fio <em>aumentando</em>, espira parada</td><td class="sim">sim</td><td class="nao">não</td><td class="nao">não</td><td class="sim">sim</td></tr>
+<tr><td>Espira e ímã se movendo <em>juntos</em></td><td class="nao">não</td><td class="nao">não</td><td class="nao">não</td><td class="nao">não</td></tr>
+<tr><td>Campo da região enfraquecendo, espira parada</td><td class="sim">sim</td><td class="nao">não</td><td class="nao">não</td><td class="sim">sim</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="campo">
+<span class="rotulo">Os aparelhos, já resolvidos</span>
+<table>
+<thead><tr><th>Aparelho</th><th>O que varia</th><th>Onde aparece a corrente</th></tr></thead>
+<tbody>
+<tr><td>Fogão de indução</td><td>campo da bobina sob o vidro</td><td>no fundo da panela, que esquenta por Joule</td></tr>
+<tr><td>Carregador sem fio</td><td>campo da bobina do carregador</td><td>na bobina dentro do celular</td></tr>
+<tr><td>Etiqueta RFID</td><td>campo do leitor</td><td>na bobina da etiqueta — por isso não tem pilha</td></tr>
+<tr><td>Microfone</td><td>posição da bobina, que vibra</td><td>na própria bobina</td></tr>
+<tr><td>Gerador de usina</td><td>bobina girando no campo</td><td>nos terminais da bobina</td></tr>
+<tr><td>Radar sob o asfalto</td><td>campo perturbado pelo carro</td><td>nas bobinas sob a pista</td></tr>
+<tr><td>Cerca perto de alta tensão</td><td>campo da linha de transmissão</td><td>no arame — por isso se aterra</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="campo">
+<span class="rotulo">Como aumentar a corrente induzida</span>
+<p>Girar mais rápido · mais espiras · campo mais intenso · área maior. Todas são
+versões de <em>variar mais, ou variar mais depressa</em>.</p>
+</div>
+
+<div class="caixa armadilha">
+<span class="rotulo">As seis armadilhas da banca</span>
+<ol>
+<li>"Há movimento, logo há corrente." <strong>Não segue</strong> — espira andando em campo uniforme não gera nada.</li>
+<li>"Há campo, logo há corrente." <strong>Não segue</strong> — campo constante não gera nada, por mais intenso que seja.</li>
+<li>"A espira está parada, logo não há corrente." <strong>Não segue</strong> — se o campo enfraquece, há corrente com a espira imóvel.</li>
+<li>"Basta existir fluxo." <strong>Falso</strong> — tem de variar. A palavra traiçoeira é "basta".</li>
+<li>"Campo uniforme" não é "campo constante". Uniforme é igual em todo ponto do <em>espaço</em>; constante é não mudar no <em>tempo</em>.</li>
+<li>Bobina na figura não significa indução. Campainha, guindaste e chave magnética são <strong>eletroímã</strong> — ali a corrente é causa, não efeito.</li>
+</ol>
+</div>
+
+<div class="rodape">
+<h2>Status</h2>
+<p>Dinâmica 4 de 18 — <strong>dominada</strong>. Gate em 14/10/2026: 6 de 8 na
+primeira tentativa, 8 de 8 no reteste após o
+<a href="../lessons/0007-reforco-o-teste-do-fluxo.html">reforço</a>. O
+procedimento das três perguntas está em revisão curta em
+<a href="../revisao.md">revisao.md</a>, Ponto K.</p>
+<p><a href="00-mapa-das-dinamicas.html">Mapa</a> · <a href="../lessons/0005-inducao.html">Aula</a> · <a href="../lessons/0008-reteste-inducao.html">Reteste</a></p>
+</div>
+
+</body>
+</html>
