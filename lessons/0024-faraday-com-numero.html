@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>O número da indução</title>
+<link rel="stylesheet" href="../assets/estilo.css">
+<link rel="stylesheet" href="../assets/bancada.css">
+<style>
+.ferramentas { font-family: var(--sans); font-size: .8rem; color: var(--tinta-tenue); }
+.exemplo { border: 1px solid var(--linha); border-radius: 4px; padding: .8rem 1rem; margin: 1.2rem 0; }
+.exemplo h3 { margin-top: 0; }
+.passo { margin: .3rem 0; }
+.passo b { font-family: var(--sans); font-size: .8rem; color: var(--destaque); margin-right: .4rem; }
+.formula { text-align: center; font-size: 1.15rem; }
+</style>
+</head>
+<body>
+
+<nav class="trilha">Aula · Família III do Grupo 3 · dinâmicas 16, 17 e 18 de 18 · fluxo magnético, Faraday com número, transformador</nav>
+
+<h1>O número da indução</h1>
+<p class="subtitulo">A última família. Você já sabe <em>que</em> a corrente aparece
+(dinâmica 3) e <em>para que lado</em> ela corre (Lenz, dinâmica 7). Falta dizer
+<strong>quanto</strong>. Aqui moram <strong>três questões de CBM</strong>: duas do
+CBM DF 2017 e uma do CBM PA 2016 — e todas as três são conta de um passo.</p>
+<p class="custo">Leitura: 10 minutos. Quatro exemplos resolvidos antes de você responder qualquer coisa.</p>
+<p class="ferramentas">Montada com: <strong>tutor-concurso /reverso</strong> (moldes de
+8 questões reais, gabarito conferido em <code>moldes/familia-3-reverso.md</code>) ·
+<strong>/mecanica</strong> nível 1 nos quatro exemplos · <strong>teach</strong> (aula e
+bancada da sombra).</p>
+
+<div class="caixa gatilho">
+<span class="rotulo">Três dinâmicas, uma fórmula e meia</span>
+<p>Esta família é a mais barata das três. <strong>Fluxo</strong> é uma multiplicação,
+<strong>Faraday</strong> é uma divisão e <strong>transformador</strong> é uma questão em
+160 do caderno. O que mata aqui não é a física: é <strong>cm² virando m²</strong> e
+<strong>ms virando s</strong>. As duas questões de CBM DF dependem exatamente disso.</p>
+</div>
+
+<h2>1 · O fluxo é a sombra da espira</h2>
+
+<p>Fluxo magnético é a resposta a uma pergunta só: <strong>quantas linhas de campo
+atravessam esta espira?</strong> Não é o campo, não é a área — é o quanto de campo
+passa <em>por dentro</em> do aro.</p>
+
+<p>Gire a espira na bancada abaixo. Ela é vista <strong>de cima</strong>, então aparece
+como um risco; o campo é horizontal, da esquerda para a direita. Repare no que acontece
+com a <strong>sombra</strong> que ela projeta: o fluxo é essa sombra.</p>
+
+<div class="bancada fluxo" data-t="0"></div>
+
+<div class="caixa regra">
+<span class="rotulo">A fórmula</span>
+<p class="formula"><strong>Φ = B · A · cos θ</strong></p>
+<p>θ é o ângulo entre o campo e a <strong>normal</strong> da espira — a flecha vermelha
+pontilhada, que sai perpendicular ao plano do aro. Unidade: <strong>weber</strong>
+(1 Wb = 1 T · m²).</p>
+</div>
+
+<div class="caixa armadilha">
+<span class="rotulo">A troca que a banca adora</span>
+<p>"Espira <strong>perpendicular ao campo</strong>" é fluxo <strong>máximo</strong>, não
+zero. Soa errado, e é por isso que cai: perpendicular descreve o <em>plano</em>, que
+corta o campo de frente — a normal fica alinhada, cos 0° = 1. O fluxo zero é quando o
+campo <strong>deita no plano</strong> da espira e passa raspando. Quando o enunciado
+disser "perpendicular", pergunte sempre: <em>perpendicular o plano ou a normal?</em></p>
+</div>
+
+<h2>2 · Faraday: o que gera tensão é a pressa</h2>
+
+<p>Fluxo parado não induz nada, por grande que seja. O que gera tensão é o fluxo
+<strong>mudando</strong>, e quanto mais rápido muda, maior a tensão.</p>
+
+<div class="caixa regra">
+<span class="rotulo">A fórmula</span>
+<p class="formula"><strong>ε = N · ΔΦ / Δt</strong></p>
+<p>ε é a força eletromotriz induzida, em volts. <strong>N é o número de voltas</strong> —
+cada volta contribui com a sua. ΔΦ é o quanto o fluxo mudou; Δt, em quanto tempo.</p>
+</div>
+
+<p>Olhando a fórmula do fluxo, só existem <strong>três maneiras</strong> de fazer Φ mudar,
+e a questão sempre mexe em uma delas por vez:</p>
+
+<figure>
+<svg viewBox="0 0 440 150" role="img" aria-label="As três maneiras de variar o fluxo: mudar o campo, mudar a área, girar a espira">
+  <rect x="20" y="25" width="120" height="80" fill="none" stroke="#8b8a84" stroke-dasharray="3 3"/>
+  <text x="80" y="18" font-size="12" text-anchor="middle" fill="#1a1a18">muda o B</text>
+  <circle cx="80" cy="65" r="22" fill="none" stroke="#1a1a18" stroke-width="2.5"/>
+  <text x="80" y="70" font-size="13" text-anchor="middle" fill="#0f6e56">B↑</text>
+  <text x="80" y="125" font-size="11" text-anchor="middle" fill="#8b8a84">ímã se aproxima,</text>
+  <text x="80" y="138" font-size="11" text-anchor="middle" fill="#8b8a84">corrente do fio cresce</text>
+
+  <rect x="160" y="25" width="120" height="80" fill="none" stroke="#8b8a84" stroke-dasharray="3 3"/>
+  <text x="220" y="18" font-size="12" text-anchor="middle" fill="#1a1a18">muda a A</text>
+  <circle cx="220" cy="65" r="14" fill="none" stroke="#1a1a18" stroke-width="2.5"/>
+  <circle cx="220" cy="65" r="26" fill="none" stroke="#993c1d" stroke-width="2" stroke-dasharray="4 3"/>
+  <text x="220" y="125" font-size="11" text-anchor="middle" fill="#8b8a84">espira esticada,</text>
+  <text x="220" y="138" font-size="11" text-anchor="middle" fill="#8b8a84">barra deslizando</text>
+
+  <rect x="300" y="25" width="120" height="80" fill="none" stroke="#8b8a84" stroke-dasharray="3 3"/>
+  <text x="360" y="18" font-size="12" text-anchor="middle" fill="#1a1a18">muda o θ</text>
+  <ellipse cx="360" cy="65" rx="9" ry="22" fill="none" stroke="#1a1a18" stroke-width="2.5"/>
+  <path d="M 338 65 A 26 26 0 0 1 382 50" fill="none" stroke="#993c1d" stroke-width="1.5"/>
+  <path d="M 384 46 l -8 3 l 2 8 z" fill="#993c1d"/>
+  <text x="360" y="125" font-size="11" text-anchor="middle" fill="#8b8a84">espira girando:</text>
+  <text x="360" y="138" font-size="11" text-anchor="middle" fill="#8b8a84">é o gerador</text>
+</svg>
+</figure>
+
+<div class="caixa armadilha">
+<span class="rotulo">Atalho que a banca dá de graça</span>
+<p>Quando o enunciado diz "<strong>o campo diminui 4 T/s</strong>", ele já entregou
+ΔB/Δt. Não procure Δt: é só <strong>ε = N · A · 4</strong>. É assim que vem a questão do
+CBM DF 2017, e quem procura o tempo que não existe trava.</p>
+</div>
+
+<h2>3 · A espira é um circuito</h2>
+
+<p>Achou ε e a questão continua? É porque a espira é um fio fechado com resistência.
+A partir daqui é a Lei de Ohm, que você já conhece de eletricidade:</p>
+
+<div class="caixa regra">
+<span class="rotulo">A cadeia inteira</span>
+<p class="formula">Φ = B·A·cos θ &nbsp;→&nbsp; ε = N·ΔΦ/Δt &nbsp;→&nbsp; <strong>i = ε / R</strong></p>
+<p>A banca dá dois dos três (ε, i, R) e pede o terceiro. O CBM DF pede o
+<strong>R</strong> — é a mesma cadeia andada de trás para frente.</p>
+</div>
+
+<h2>4 · A barra deslizante</h2>
+
+<p>O caso mais pedido de "muda a área": uma barra condutora escorrega sobre dois trilhos
+em U, dentro de um campo. A área do circuito cresce, o fluxo cresce, aparece tensão.</p>
+
+<figure>
+<svg viewBox="0 0 440 170" role="img" aria-label="Barra deslizando sobre trilhos em U dentro de um campo que entra no papel; a área varrida é L vezes delta x">
+  <g fill="#8b8a84">
+    <text x="60" y="45" font-size="13">⊗</text><text x="130" y="45" font-size="13">⊗</text>
+    <text x="200" y="45" font-size="13">⊗</text><text x="270" y="45" font-size="13">⊗</text>
+    <text x="340" y="45" font-size="13">⊗</text>
+    <text x="60" y="100" font-size="13">⊗</text><text x="130" y="100" font-size="13">⊗</text>
+    <text x="200" y="100" font-size="13">⊗</text><text x="270" y="100" font-size="13">⊗</text>
+    <text x="340" y="100" font-size="13">⊗</text>
+  </g>
+  <path d="M 40 30 H 300 M 40 125 H 300 M 40 30 V 125" fill="none" stroke="#1a1a18" stroke-width="2.5"/>
+  <rect x="190" y="26" width="140" height="103" fill="#0f6e56" opacity=".10"/>
+  <line x1="190" y1="20" x2="190" y2="135" stroke="#8b8a84" stroke-dasharray="3 3"/>
+  <line x1="330" y1="20" x2="330" y2="135" stroke="#993c1d" stroke-width="4"/>
+  <text x="338" y="80" font-size="12" fill="#993c1d">barra</text>
+  <line x1="340" y1="150" x2="390" y2="150" stroke="#1a1a18" stroke-width="2"/>
+  <path d="M 396 150 l -10 -5 v 10 z" fill="#1a1a18"/>
+  <text x="366" y="166" font-size="12" text-anchor="middle" fill="#1a1a18">v</text>
+  <line x1="20" y1="30" x2="20" y2="125" stroke="#1a1a18" stroke-width="1.5"/>
+  <path d="M 20 30 l -4 8 h 8 z M 20 125 l -4 -8 h 8 z" fill="#1a1a18"/>
+  <text x="14" y="82" font-size="12" text-anchor="end" fill="#1a1a18">L</text>
+  <text x="260" y="82" font-size="12" text-anchor="middle" fill="#0f6e56">área varrida</text>
+  <text x="260" y="98" font-size="12" text-anchor="middle" fill="#0f6e56">= L · Δx</text>
+  <text x="20" y="14" font-size="11" fill="#8b8a84">⊗ campo entrando no papel</text>
+</svg>
+</figure>
+
+<p>A área varrida é <strong>L · Δx</strong>, então ΔΦ = B·L·Δx, e dividindo por Δt com
+Δx/Δt = v sai a fórmula pronta:</p>
+
+<div class="caixa regra">
+<span class="rotulo">A fórmula</span>
+<p class="formula"><strong>ε = B · L · v</strong></p>
+<p>L é o <strong>comprimento da barra</strong> — a largura dos trilhos, perpendicular ao
+movimento. Não é a distância percorrida.</p>
+</div>
+
+<h2>5 · Transformador: a potência não muda</h2>
+
+<p>Uma questão em 160, e ainda assim dá nome ao assunto no caderno. Duas bobinas no mesmo
+núcleo de ferro: a primeira cria campo variável, a segunda recebe o fluxo e induz tensão.
+Num transformador <strong>ideal</strong> nada se perde pelo caminho:</p>
+
+<figure>
+<svg viewBox="0 0 440 140" role="img" aria-label="Transformador: bobina primária com poucas espiras e secundária com muitas, no mesmo núcleo">
+  <rect x="150" y="20" width="140" height="100" fill="none" stroke="#8b8a84" stroke-width="10"/>
+  <text x="220" y="75" font-size="12" text-anchor="middle" fill="#8b8a84">núcleo</text>
+  <g stroke="#993c1d" stroke-width="2.5" fill="none">
+    <path d="M 150 35 a 9 9 0 1 0 0 18 M 150 53 a 9 9 0 1 0 0 18 M 150 71 a 9 9 0 1 0 0 18 M 150 89 a 9 9 0 1 0 0 18"/>
+  </g>
+  <text x="105" y="18" font-size="12" fill="#993c1d">primário</text>
+  <text x="105" y="128" font-size="12" fill="#993c1d">U₁ · i₁ · N₁</text>
+  <g stroke="#0f6e56" stroke-width="2.5" fill="none">
+    <path d="M 290 28 a 9 9 0 1 1 0 12 M 290 40 a 9 9 0 1 1 0 12 M 290 52 a 9 9 0 1 1 0 12 M 290 64 a 9 9 0 1 1 0 12 M 290 76 a 9 9 0 1 1 0 12 M 290 88 a 9 9 0 1 1 0 12 M 290 100 a 9 9 0 1 1 0 12"/>
+  </g>
+  <text x="335" y="18" font-size="12" fill="#0f6e56">secundário</text>
+  <text x="335" y="128" font-size="12" fill="#0f6e56">U₂ · i₂ · N₂</text>
+  <line x1="60" y1="70" x2="130" y2="70" stroke="#1a1a18" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <path d="M 136 70 l -9 -4 v 8 z" fill="#1a1a18"/>
+  <line x1="310" y1="70" x2="380" y2="70" stroke="#1a1a18" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <path d="M 386 70 l -9 -4 v 8 z" fill="#1a1a18"/>
+  <text x="220" y="136" font-size="11" text-anchor="middle" fill="#8b8a84">entra 100 W → sai 100 W</text>
+</svg>
+</figure>
+
+<div class="caixa regra">
+<span class="rotulo">As duas relações</span>
+<p class="formula"><strong>P₁ = P₂</strong> &nbsp;(ou seja, U₁·i₁ = U₂·i₂)</p>
+<p class="formula"><strong>U₁ / U₂ = N₁ / N₂</strong></p>
+<p>Mais espiras no secundário, mais tensão — e <strong>menos corrente</strong>, na mesma
+proporção. Transformador troca tensão por corrente; não fabrica energia.</p>
+</div>
+
+<h2>6 · O protocolo</h2>
+
+<p>Cinco passos, iguais para as três dinâmicas. Rode na ordem, sempre.</p>
+
+<div class="caixa">
+<p class="passo"><b>1</b> Pergunte <strong>o que está variando</strong>: B, A ou θ? Se nada
+varia, a resposta é zero e não há conta.</p>
+<p class="passo"><b>2</b> Converta <strong>tudo</strong> para SI antes de multiplicar:
+cm → m (e cm² → m², fator 10⁻⁴), ms → s, mm → m.</p>
+<p class="passo"><b>3</b> Monte Φ = B·A·cos θ. Se o enunciado já der a taxa (T/s), pule
+direto para o passo 4.</p>
+<p class="passo"><b>4</b> ε = N·ΔΦ/Δt. <strong>Confira se contou o N.</strong></p>
+<p class="passo"><b>5</b> A questão pede corrente ou resistência? i = ε/R. Pede número de
+aparelhos ou de espiras? É transformador: P₁ = P₂.</p>
+</div>
+
+<h2>7 · Quatro exemplos resolvidos</h2>
+
+<p>Os três primeiros são questões reais de CBM, com o gabarito conferido. Leia a conta
+inteira antes de tentar a sua.</p>
+
+<div class="exemplo">
+<h3>Exemplo 1 — CBM DF 2017 (IDECAN)</h3>
+<p class="enunciado">O fluxo magnético de uma espira quadrada de <strong>2 cm de lado</strong>,
+colocada perpendicularmente às linhas de um campo magnético uniforme de intensidade
+<strong>2 T</strong>, é: &nbsp; a) 0,0008 Wb &nbsp; b) 0,0028 Wb &nbsp; c) 0,0048 Wb &nbsp;
+d) 2,0008 Wb</p>
+<p class="passo"><b>1</b> Nada varia — é fluxo direto, não é Faraday.</p>
+<p class="passo"><b>2</b> 2 cm = 2 × 10⁻² m. Área = (2 × 10⁻²)² = <strong>4 × 10⁻⁴ m²</strong>.
+Aqui mora a questão: o lado ganha 10⁻², a área ganha 10⁻⁴.</p>
+<p class="passo"><b>3</b> "Perpendicularmente às linhas" descreve o plano → normal
+alinhada → cos 0° = 1. Φ = 2 × 4 × 10⁻⁴ = <strong>8 × 10⁻⁴ Wb = 0,0008 Wb</strong>.</p>
+<p><strong>Gabarito A.</strong> A alternativa d) 2,0008 é a isca de quem soma B com A em
+vez de multiplicar.</p>
+</div>
+
+<div class="exemplo">
+<h3>Exemplo 2 — CBM DF 2017 (IDECAN), outro cargo</h3>
+<p class="enunciado">Em um campo magnético é colocada uma espira circular, perpendicular ao
+plano do campo, com <strong>1 m² de área</strong>. Sabendo que a intensidade do campo
+<strong>diminui 4 T/s</strong> e que a corrente que circula na espira é <strong>1/3 A</strong>,
+a resistência elétrica da espira é: &nbsp; a) 6 Ω &nbsp; b) 8 Ω &nbsp; c) 10 Ω &nbsp; d) 12 Ω</p>
+<p class="passo"><b>1</b> Varia o <strong>B</strong>. Área e ângulo ficam parados.</p>
+<p class="passo"><b>3</b> A taxa já veio pronta: ΔB/Δt = 4 T/s. Não procure Δt.</p>
+<p class="passo"><b>4</b> ε = N · A · ΔB/Δt = 1 × 1 × 4 = <strong>4 V</strong>. (Uma espira:
+N = 1.)</p>
+<p class="passo"><b>5</b> Pede R, e tem i: R = ε/i = 4 ÷ (1/3) = <strong>12 Ω</strong>.</p>
+<p><strong>Gabarito D.</strong> Dividir por 3 em vez de por 1/3 dá 1,33 — nem está nas
+alternativas, o que é um bom sinal de que você inverteu a fração.</p>
+</div>
+
+<div class="exemplo">
+<h3>Exemplo 3 — CBM PA 2016 (CONSULPLAN, oficial)</h3>
+<p class="enunciado">Um condutor retilíneo apoiado sobre um condutor dobrado em U é
+deslocado <strong>20 cm</strong> numa região de campo uniforme de <strong>2 T</strong>. Se a
+fem induzida é <strong>0,5 V</strong> e o tempo é <strong>0,8 s</strong>, o comprimento L
+desse condutor é: &nbsp; a) 0,4 m &nbsp; b) 0,6 m &nbsp; c) 0,8 m &nbsp; d) 1,0 m &nbsp; e) 1,2 m</p>
+<p class="passo"><b>1</b> Varia a <strong>área</strong>: é a barra deslizante.</p>
+<p class="passo"><b>2</b> 20 cm = 0,20 m.</p>
+<p class="passo"><b>4</b> Primeiro a velocidade: v = Δx/Δt = 0,20 ÷ 0,8 = <strong>0,25 m/s</strong>.</p>
+<p class="passo"><b>5</b> ε = B·L·v, isolando L: L = ε ÷ (B·v) = 0,5 ÷ (2 × 0,25) = 0,5 ÷ 0,5 =
+<strong>1,0 m</strong>.</p>
+<p><strong>Gabarito D.</strong> A isca é usar 0,20 m como L (é o deslocamento, não a barra)
+ou esquecer de dividir o deslocamento pelo tempo.</p>
+</div>
+
+<div class="exemplo">
+<h3>Exemplo 4 — UERJ 2015 (transformador)</h3>
+<p class="enunciado">A potência média máxima absorvida pelo primário de um transformador
+<strong>ideal</strong> é <strong>100 W</strong>. O secundário, de tensão eficaz
+<strong>5,0 V</strong>, alimenta aparelhos <strong>em paralelo</strong>, e cada aparelho puxa
+<strong>0,1 A</strong>. O número máximo de aparelhos é: &nbsp; a) 50 &nbsp; b) 100 &nbsp;
+c) 200 &nbsp; d) 400</p>
+<p class="passo"><b>1</b> Ideal → P₁ = P₂ = <strong>100 W</strong>. A potência atravessa
+inteira.</p>
+<p class="passo"><b>4</b> No secundário: i = P ÷ U = 100 ÷ 5,0 = <strong>20 A</strong> no total.</p>
+<p class="passo"><b>5</b> Em paralelo, as correntes somam: 20 ÷ 0,1 = <strong>200
+aparelhos</strong>.</p>
+<p><strong>Gabarito C.</strong> Note que o número de espiras nunca foi usado — a questão
+inteira é P = U·i duas vezes.</p>
+</div>
+
+<h2>8 · Agora você</h2>
+
+<p>Cinco questões, correção na hora. Isto mede fluência, não retenção — o gate vem depois.</p>
+
+<div class="quiz" id="quiz"
+     data-fim=" — Família III em pé. Me avise e eu abro o gate, que é o último dos 18."
+     data-parcial=" — me diga quais errou e o que pensou em cada uma. Eu faço o diagnóstico antes do gate.">
+
+<div class="questao" data-certa="2">
+  <p><strong>1.</strong> Uma espira está dentro de um campo uniforme, parada, com o plano
+  cortando o campo de frente. A corrente induzida nela é:</p>
+  <ul class="opcoes">
+    <li><button type="button">máxima, porque o fluxo é máximo</button></li>
+    <li><button type="button">metade da máxima, porque o cosseno vale 1</button></li>
+    <li><button type="button">zero, porque o fluxo não está variando</button></li>
+    <li><button type="button">zero, porque o fluxo é zero nessa posição</button></li></ul>
+  <div class="resposta" hidden><p><strong>Zero, porque o fluxo não varia.</strong> Fluxo
+  máximo e fem máxima são coisas diferentes: o que induz é a <em>variação</em>. Nessa
+  posição o fluxo é máximo — e justamente por estar parado no máximo, não induz nada. A
+  última alternativa confunde fluxo máximo com fluxo zero.</p></div>
+</div>
+
+<div class="questao" data-certa="1">
+  <p><strong>2.</strong> Uma espira quadrada de <strong>10 cm de lado</strong> está num campo
+  de 0,4 T, com o plano perpendicular ao campo. O fluxo através dela é:</p>
+  <ul class="opcoes">
+    <li><button type="button">4,0 Wb</button></li>
+    <li><button type="button">4,0 × 10⁻³ Wb</button></li>
+    <li><button type="button">4,0 × 10⁻² Wb</button></li>
+    <li><button type="button">0,4 Wb</button></li></ul>
+  <div class="resposta" hidden><p><strong>4,0 × 10⁻³ Wb.</strong> 10 cm = 0,1 m →
+  A = 0,01 m² = 10⁻² m². Φ = 0,4 × 10⁻² = 4 × 10⁻³ Wb. A alternativa 4,0 × 10⁻² é o erro
+  de usar 0,1 m² como área (lado em metros, área esquecida); 4,0 Wb usou 100 cm² como se
+  fosse 100 m².</p></div>
+</div>
+
+<div class="questao" data-certa="3">
+  <p><strong>3.</strong> Uma bobina de <strong>50 voltas</strong> e área 2 × 10⁻³ m² está num
+  campo de 0,6 T perpendicular ao seu plano. O campo cai a zero em <strong>0,2 s</strong>. A
+  fem média induzida é:</p>
+  <ul class="opcoes">
+    <li><button type="button">6,0 × 10⁻³ V</button></li>
+    <li><button type="button">0,006 V</button></li>
+    <li><button type="button">6,0 V</button></li>
+    <li><button type="button">0,3 V</button></li></ul>
+  <div class="resposta" hidden><p><strong>0,3 V.</strong> ΔΦ = B·A = 0,6 × 2 × 10⁻³ =
+  1,2 × 10⁻³ Wb. ε = N·ΔΦ/Δt = 50 × 1,2 × 10⁻³ ÷ 0,2 = 6 × 10⁻² ÷ 0,2 = 0,3 V. As duas
+  primeiras alternativas (que são o mesmo número escrito de dois jeitos) esqueceram o
+  N = 50; 6,0 V esqueceu de dividir pelo tempo.</p></div>
+</div>
+
+<div class="questao" data-certa="0">
+  <p><strong>4.</strong> Uma barra de <strong>0,5 m</strong> desliza a <strong>4 m/s</strong>
+  sobre trilhos, num campo de <strong>0,2 T</strong> perpendicular ao plano. O circuito tem
+  resistência de 2 Ω. A corrente induzida é:</p>
+  <ul class="opcoes">
+    <li><button type="button">0,2 A</button></li>
+    <li><button type="button">0,4 A</button></li>
+    <li><button type="button">0,8 A</button></li>
+    <li><button type="button">2,0 A</button></li></ul>
+  <div class="resposta" hidden><p><strong>0,2 A.</strong> ε = B·L·v = 0,2 × 0,5 × 4 = 0,4 V.
+  i = ε/R = 0,4 ÷ 2 = 0,2 A. A alternativa 0,4 A paga de corrente o que era a fem em volts
+  — o erro de parar no passo 4 e não fazer o 5.</p></div>
+</div>
+
+<div class="questao" data-certa="2">
+  <p><strong>5.</strong> Um transformador ideal tem <strong>2000 espiras</strong> no primário
+  e <strong>100</strong> no secundário. Ligado em 220 V, a tensão no secundário e o que
+  acontece com a corrente são:</p>
+  <ul class="opcoes">
+    <li><button type="button">4400 V, e a corrente também sobe</button></li>
+    <li><button type="button">11 V, e a corrente cai na mesma proporção</button></li>
+    <li><button type="button">11 V, e a corrente sobe na mesma proporção</button></li>
+    <li><button type="button">220 V, porque o trafo ideal não muda a tensão</button></li></ul>
+  <div class="resposta" hidden><p><strong>11 V, e a corrente sobe.</strong>
+  U₂ = U₁ · N₂/N₁ = 220 × 100/2000 = 11 V. Menos espiras, menos tensão — é um
+  transformador <em>abaixador</em>. E como P₁ = P₂, tensão caindo 20 vezes significa
+  corrente <strong>subindo</strong> 20 vezes. Quem marca "a corrente também sobe" junto com
+  4400 V está fabricando energia.</p></div>
+</div>
+
+<p class="placar" id="placar" hidden></p>
+</div>
+
+<div class="rodape">
+<h2>O que vem agora</h2>
+<p>O <strong>gate 0025</strong>, em 3 fases, com o deeptutor — e ele é o último: fecha as
+18 dinâmicas. Depois dele muda a natureza do treino: entra a fase de
+<strong>reconhecimento</strong> (nomear a dinâmica em 15 segundos, sem calcular) e o
+<strong>simulado cego de 40 questões</strong> lacradas do caderno.</p>
+<p><a href="0015-lenz.html">Aula 0015 — Lenz (o sentido)</a> ·
+<a href="0017-graficos.html">Aula 0017 — gráficos (fem é inclinação)</a> ·
+<a href="../reference/03-inducao.html">Ficha 03</a> ·
+<a href="../reference/07-lenz.html">Ficha 07</a> ·
+<a href="../reference/00-mapa-das-dinamicas.html">Mapa das 18 dinâmicas</a></p>
+<p class="custo">Travou? Me pergunte, e diga em que passo do protocolo.</p>
+</div>
+
+<script src="../assets/fluxo.js"></script>
+<script src="../assets/quiz.js"></script>
+</body>
+</html>

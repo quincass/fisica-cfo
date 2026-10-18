@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gate — Família III (o último dos 18)</title>
+<link rel="stylesheet" href="../assets/estilo.css">
+<style>
+.ferramentas { font-family: var(--sans); font-size: .8rem; color: var(--tinta-tenue); }
+.ponte { border-left: 3px solid var(--tinta-tenue); padding-left: .8rem; }
+.fase { font-family: var(--sans); font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; color: var(--tinta-tenue); margin: 2rem 0 .5rem; }
+</style>
+</head>
+<body>
+
+<nav class="trilha">Gate · Família III · dinâmicas 16, 17 e 18 de 18 · <strong>o último gate</strong></nav>
+
+<h1>Gate — Família III</h1>
+<p class="subtitulo">Conceito, número e estresse, mais uma de retenção da Família I
+(solenoide — o único ponto que você errou no gate 0020). <strong>Onze que contam.</strong>
+Passar é <strong>10 de 11</strong>. No fim, duas questões-ponte que não contam e que
+estreiam a fase seguinte: <em>só nomear a dinâmica, sem calcular nada</em>.</p>
+<p class="custo">Sem consultar a aula. Se precisar olhar, olhe — e me diga que olhou.</p>
+<p class="ferramentas">Montado com: <strong>deeptutor</strong> (Quiz em 3 fases) sobre os
+moldes do <strong>tutor-concurso /reverso</strong> em
+<code>moldes/familia-3-reverso.md</code>. Contas verificadas em Python.</p>
+
+<div class="quiz" id="quiz"
+     data-fim=" — Família III dominada. AS 18 DINÂMICAS ESTÃO FECHADAS. Me avise: o próximo passo não é mais aula, é a fase de reconhecimento e o simulado cego de 40 questões."
+     data-parcial=" — me diga quais errou e o que pensou em cada uma. Diagnóstico antes de declarar a dinâmica dominada.">
+
+<p class="fase">Fase 1 · conceito</p>
+
+<div class="questao" data-certa="3">
+  <p><strong>1.</strong> Uma espira é posicionada de modo que as linhas de campo
+  <strong>deitem no plano dela</strong>, passando raspando pelo aro. O fluxo magnético
+  através dessa espira é:</p>
+  <ul class="opcoes">
+    <li><button type="button">máximo, porque o campo está no plano da espira</button></li>
+    <li><button type="button">igual a B·A, porque a área não mudou</button></li>
+    <li><button type="button">metade de B·A</button></li>
+    <li><button type="button">zero</button></li></ul>
+  <div class="resposta" hidden><p><strong>Zero.</strong> Campo deitado no plano significa
+  normal perpendicular ao campo: θ = 90°, cos 90° = 0. Nenhuma linha atravessa o aro — a
+  sombra virou um risco. A área continua a mesma, e não é disso que o fluxo depende
+  sozinho.</p></div>
+</div>
+
+<div class="questao" data-certa="1">
+  <p><strong>2.</strong> Uma variação de fluxo induz certa fem numa bobina. Repete-se a
+  experiência com o <strong>dobro de espiras</strong> e deixando a variação acontecer no
+  <strong>dobro do tempo</strong>. A nova fem é:</p>
+  <ul class="opcoes">
+    <li><button type="button">o dobro da primeira</button></li>
+    <li><button type="button">igual à primeira</button></li>
+    <li><button type="button">o quádruplo da primeira</button></li>
+    <li><button type="button">a metade da primeira</button></li></ul>
+  <div class="resposta" hidden><p><strong>Igual.</strong> ε = N·ΔΦ/Δt: o N dobrou (×2) e o
+  Δt dobrou (÷2). Os dois efeitos se cancelam. A pergunta mede se você lê a fórmula como
+  fração, e não como lista de ingredientes.</p></div>
+</div>
+
+<div class="questao" data-certa="2">
+  <p><strong>3.</strong> Um transformador <strong>ideal</strong> é usado para elevar a tensão
+  de 110 V para 220 V. Sobre a corrente e a potência:</p>
+  <ul class="opcoes">
+    <li><button type="button">a corrente dobra e a potência dobra</button></li>
+    <li><button type="button">a corrente fica igual e a potência dobra</button></li>
+    <li><button type="button">a corrente cai à metade e a potência fica igual</button></li>
+    <li><button type="button">a corrente cai à metade e a potência cai à metade</button></li></ul>
+  <div class="resposta" hidden><p><strong>Corrente à metade, potência igual.</strong> Ideal
+  = sem perda: P₁ = P₂. Se a tensão dobra e o produto U·i tem de ficar igual, a corrente
+  cai pela metade. Qualquer alternativa em que a potência muda está fabricando ou jogando
+  energia fora.</p></div>
+</div>
+
+<p class="fase">Fase 2 · número</p>
+
+<div class="questao" data-certa="0">
+  <p><strong>4.</strong> Uma espira quadrada de <strong>20 cm de lado</strong> está num campo
+  uniforme de <strong>0,5 T</strong>. A normal da espira faz <strong>60°</strong> com o campo.
+  O fluxo através dela é:</p>
+  <ul class="opcoes">
+    <li><button type="button">1,0 × 10⁻² Wb</button></li>
+    <li><button type="button">2,0 × 10⁻² Wb</button></li>
+    <li><button type="button">1,7 × 10⁻² Wb</button></li>
+    <li><button type="button">10 Wb</button></li></ul>
+  <div class="resposta" hidden><p><strong>1,0 × 10⁻² Wb.</strong> 20 cm = 0,2 m →
+  A = 0,04 m². Φ = 0,5 × 0,04 × cos 60° = 0,5 × 0,04 × 0,5 = 0,01 Wb. A alternativa
+  2,0 × 10⁻² esqueceu o cosseno; 1,7 × 10⁻² usou o cosseno de 30° (ou o seno de 60°);
+  10 Wb deixou a área em cm².</p></div>
+</div>
+
+<div class="questao" data-certa="2">
+  <p><strong>5.</strong> Uma bobina de <strong>100 voltas</strong> e área
+  <strong>5 × 10⁻³ m²</strong> tem o plano perpendicular a um campo que cresce de 0 a
+  <strong>0,8 T</strong> em <strong>20 ms</strong>. A fem média induzida é:</p>
+  <ul class="opcoes">
+    <li><button type="button">0,2 V</button></li>
+    <li><button type="button">4,0 V</button></li>
+    <li><button type="button">20 V</button></li>
+    <li><button type="button">2,0 × 10⁴ V</button></li></ul>
+  <div class="resposta" hidden><p><strong>20 V.</strong> ΔΦ = 0,8 × 5 × 10⁻³ = 4 × 10⁻³ Wb.
+  ε = 100 × 4 × 10⁻³ ÷ 0,020 = 0,4 ÷ 0,020 = 20 V. A alternativa 0,2 V esqueceu o N = 100;
+  4,0 V esqueceu de dividir pelo tempo; 2,0 × 10⁴ dividiu por 20 em vez de por 0,020 — o
+  erro de mil, o mais caro desta família.</p></div>
+</div>
+
+<div class="questao" data-certa="1">
+  <p><strong>6.</strong> Uma única espira de área <strong>0,25 m²</strong>, perpendicular às
+  linhas, está numa região onde o campo <strong>cresce 8 T/s</strong>. A espira tem
+  resistência de <strong>5 Ω</strong>. A corrente induzida nela é:</p>
+  <ul class="opcoes">
+    <li><button type="button">2,0 A</button></li>
+    <li><button type="button">0,4 A</button></li>
+    <li><button type="button">10 A</button></li>
+    <li><button type="button">40 A</button></li></ul>
+  <div class="resposta" hidden><p><strong>0,4 A.</strong> A taxa já veio pronta:
+  ε = A · ΔB/Δt = 0,25 × 8 = 2 V. Depois Ohm: i = 2 ÷ 5 = 0,4 A. A alternativa 2,0 A
+  parou na fem e a chamou de corrente — o erro de não fazer o passo 5.</p></div>
+</div>
+
+<div class="questao" data-certa="3">
+  <p><strong>7.</strong> Uma barra de <strong>0,6 m</strong> desliza sobre trilhos num campo
+  de <strong>0,4 T</strong> perpendicular ao plano do circuito, e a fem induzida é
+  <strong>1,2 V</strong>. A velocidade da barra é:</p>
+  <ul class="opcoes">
+    <li><button type="button">0,2 m/s</button></li>
+    <li><button type="button">0,29 m/s</button></li>
+    <li><button type="button">2,0 m/s</button></li>
+    <li><button type="button">5,0 m/s</button></li></ul>
+  <div class="resposta" hidden><p><strong>5,0 m/s.</strong> ε = B·L·v → v = ε ÷ (B·L) =
+  1,2 ÷ (0,4 × 0,6) = 1,2 ÷ 0,24 = 5 m/s. 0,2 m/s é o resultado de multiplicar os três em
+  vez de dividir — vale conferir sempre se o número que saiu é plausível para uma barra
+  sendo empurrada à mão.</p></div>
+</div>
+
+<div class="questao" data-certa="1">
+  <p><strong>8.</strong> Um transformador ideal recebe <strong>60 W</strong> no primário. O
+  secundário, de <strong>12 V</strong>, alimenta lâmpadas <strong>em paralelo</strong> que
+  puxam <strong>0,5 A</strong> cada. O número máximo de lâmpadas é:</p>
+  <ul class="opcoes">
+    <li><button type="button">5</button></li>
+    <li><button type="button">10</button></li>
+    <li><button type="button">24</button></li>
+    <li><button type="button">120</button></li></ul>
+  <div class="resposta" hidden><p><strong>10.</strong> Ideal: P₂ = 60 W. A corrente total do
+  secundário é i = P ÷ U = 60 ÷ 12 = 5 A. Em paralelo as correntes somam:
+  5 ÷ 0,5 = 10 lâmpadas. A alternativa 5 parou na corrente total; 120 multiplicou
+  60 × 2 em vez de dividir.</p></div>
+</div>
+
+<div class="questao" data-certa="0">
+  <p><strong>9.</strong> Uma espira quadrada de <strong>5 cm de lado</strong> é colocada
+  <strong>perpendicularmente</strong> às linhas de um campo uniforme de
+  <strong>1,2 T</strong>. O fluxo através dela é:</p>
+  <ul class="opcoes">
+    <li><button type="button">3,0 × 10⁻³ Wb</button></li>
+    <li><button type="button">zero, porque está perpendicular ao campo</button></li>
+    <li><button type="button">6,0 × 10⁻² Wb</button></li>
+    <li><button type="button">3,0 × 10⁻¹ Wb</button></li></ul>
+  <div class="resposta" hidden><p><strong>3,0 × 10⁻³ Wb.</strong> 5 cm = 5 × 10⁻² m →
+  A = 25 × 10⁻⁴ = 2,5 × 10⁻³ m². Φ = 1,2 × 2,5 × 10⁻³ = 3 × 10⁻³ Wb. A segunda
+  alternativa é a armadilha da aula: "espira perpendicular ao campo" descreve o plano, logo
+  a normal está alinhada e o fluxo é <strong>máximo</strong>. 6,0 × 10⁻² usou 0,05 m como
+  área.</p></div>
+</div>
+
+<p class="fase">Fase 3 · estresse</p>
+
+<div class="questao" data-certa="3">
+  <p><strong>10.</strong> <em>(ITA 2020)</em> Uma bobina circular de <strong>200 voltas</strong>
+  e <strong>5,0 cm de raio</strong> está num campo uniforme de <strong>1,25 T</strong>. Ela
+  está inicialmente <strong>paralela</strong> ao campo e é girada <strong>um quarto de
+  volta em 15 ms</strong>. A fem média induzida durante o giro é, aproximadamente:</p>
+  <ul class="opcoes">
+    <li><button type="button">5,0 V</button></li>
+    <li><button type="button">15 V</button></li>
+    <li><button type="button">30 V</button></li>
+    <li><button type="button">130 V</button></li></ul>
+  <div class="resposta" hidden><p><strong>130 V.</strong> Três peças. (1) Área:
+  A = πr² = π × (0,05)² = 7,85 × 10⁻³ m². (2) O giro de ¼ de volta leva o fluxo de
+  <strong>zero</strong> (paralela: campo deitado no plano) a <strong>B·A</strong>
+  (perpendicular), então ΔΦ = 1,25 × 7,85 × 10⁻³ = 9,8 × 10⁻³ Wb. (3)
+  ε = 200 × 9,8 × 10⁻³ ÷ 0,015 = 1,96 ÷ 0,015 ≈ 131 V. Note que é a mesma conta da
+  questão 5 — só vestida de ITA, com o π e o "¼ de volta" no caminho.</p></div>
+</div>
+
+<div class="questao" data-certa="0">
+  <p><strong>11.</strong> <em>(ENEM 2017)</em> Um gerador caseiro tem <strong>N</strong> espiras
+  de área <strong>A</strong> girando com frequência <strong>f</strong> num campo
+  <strong>B</strong>, feitas de fio de diâmetro D; ele fornece tensão máxima
+  <strong>V</strong> e corrente de curto-circuito <strong>i</strong>. Para <strong>dobrar V
+  mantendo i constante</strong>, deve-se dobrar:</p>
+  <ul class="opcoes">
+    <li><button type="button">o número de espiras</button></li>
+    <li><button type="button">a frequência de giro</button></li>
+    <li><button type="button">a intensidade do campo magnético</button></li>
+    <li><button type="button">a área das espiras</button></li></ul>
+  <div class="resposta" hidden><p><strong>O número de espiras.</strong> A tensão máxima é
+  proporcional a N·B·A·f: dobrar qualquer um dos quatro dobra V. O que separa as
+  alternativas é a <strong>corrente de curto</strong>, i = V/R. Dobrar B, A ou f dobra V sem
+  mexer no fio, então i também dobra. Dobrar N dobra V <em>e</em> dobra o comprimento de
+  fio, logo dobra R — e i = V/R fica igual. É a única opção que mexe nos dois lados da
+  fração ao mesmo tempo.</p></div>
+</div>
+
+<p class="fase">Retenção · Família I, o ponto que falhou no gate 0020</p>
+
+<div class="questao" data-certa="2">
+  <p><strong>12.</strong> Um solenoide longo tem <strong>1000 voltas por metro</strong> e
+  conduz <strong>2 A</strong>. Sobre o campo no interior dele (μ₀ = 4π × 10⁻⁷ T·m/A):</p>
+  <ul class="opcoes">
+    <li><button type="button">vale 8π × 10⁻⁴ T no eixo e cai para zero perto das paredes</button></li>
+    <li><button type="button">vale 2π × 10⁻⁴ T, uniforme, e é mais forte fora que dentro</button></li>
+    <li><button type="button">vale 8π × 10⁻⁴ T e é praticamente uniforme em todo o interior</button></li>
+    <li><button type="button">depende da distância ao eixo, como no fio reto</button></li></ul>
+  <div class="resposta" hidden><p><strong>8π × 10⁻⁴ T (≈ 2,5 × 10⁻³ T), uniforme.</strong>
+  B = μ₀·n·i = 4π × 10⁻⁷ × 1000 × 2 = 8π × 10⁻⁴ T. E o ponto que falhou no gate 0020: o
+  interior do solenoide é <strong>uniforme</strong> — mesmo módulo e mesma direção em todo
+  lugar, não só no eixo —, e fora dele o campo é quase nulo. Um ímã de barra feito de
+  corrente. Quem decai para "depende da distância" está aplicando a fórmula do fio
+  reto.</p></div>
+</div>
+
+<p class="fase">Ponte · não conta · estreia da fase de reconhecimento</p>
+
+<div class="ponte">
+<p>As duas de baixo <strong>não entram no placar</strong>. Não resolva: só
+<strong>nomeie</strong> a dinâmica. É o que a próxima fase vai cobrar em lotes de 20, com
+15 segundos por questão — porque com 18 moldes na mão, a prova deixa de ser cálculo e
+passa a ser classificação.</p>
+
+<div class="questao" data-certa="1" data-ponte="1">
+  <p><strong>P1.</strong> "Um próton entra perpendicularmente num campo de 0,5 T a
+  3 × 10⁶ m/s. Qual a distância percorrida em 4 voltas completas?" Sem calcular: esta
+  questão é da dinâmica…</p>
+  <ul class="opcoes">
+    <li><button type="button">Faraday com número (fem)</button></li>
+    <li><button type="button">carga em círculo: raio e período</button></li>
+    <li><button type="button">campo criado por fio e espira</button></li>
+    <li><button type="button">seletor de velocidades</button></li></ul>
+  <div class="resposta" hidden><p><strong>Carga em círculo</strong> (Família II). As
+  palavras-chave que decidem em 3 segundos: "entra perpendicularmente", "voltas",
+  "distância". R = mv/qB e depois n · 2πR. Nenhum fluxo, nenhuma espira, nenhum
+  campo elétrico cruzado.</p></div>
+</div>
+
+<div class="questao" data-certa="2" data-ponte="1">
+  <p><strong>P2.</strong> "Dois fios paralelos conduzem 4 A e 6 A no mesmo sentido, separados
+  por 20 cm. Em que ponto da reta que os une o campo é nulo?" Sem calcular: dinâmica…</p>
+  <ul class="opcoes">
+    <li><button type="button">fios paralelos: atraem ou repelem</button></li>
+    <li><button type="button">força sobre fio e espira</button></li>
+    <li><button type="button">superposição: campo resultante e campo nulo</button></li>
+    <li><button type="button">Oersted: corrente cria campo</button></li></ul>
+  <div class="resposta" hidden><p><strong>Superposição / campo nulo</strong> (Família I,
+  dinâmica 11). A pegadinha de classificação é a primeira alternativa: "dois fios
+  paralelos" aparece nas duas dinâmicas, mas aqui ninguém perguntou por
+  <em>força</em> — perguntou onde o <em>campo</em> zera. O verbo da pergunta decide a
+  dinâmica, não o cenário.</p></div>
+</div>
+</div>
+
+<p class="placar" id="placar" hidden></p>
+</div>
+
+<div class="rodape">
+<h2>O que vem agora</h2>
+<p>Se passar: <strong>as 18 dinâmicas estão fechadas</strong> e acaba a fase de aulas. O
+que vem é outro tipo de treino — lotes de <strong>reconhecimento</strong> (15 segundos por
+questão, só nomear) e o <strong>simulado cego de 40 questões</strong> lacradas do caderno,
+que é o critério de sucesso da missão.</p>
+<p>Se não passar: reforço só da dinâmica que falhou, no molde do 0021 — exemplo resolvido
+antes de cobrar, e reteste curto.</p>
+<p><a href="0024-faraday-com-numero.html">Aula 0024</a> ·
+<a href="../reference/00-mapa-das-dinamicas.html">Mapa das 18 dinâmicas</a> ·
+<a href="../revisao.md">Banco de revisão</a></p>
+</div>
+
+<script src="../assets/quiz.js"></script>
+</body>
+</html>

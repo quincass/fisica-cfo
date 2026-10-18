@@ -37,8 +37,13 @@ próximo intervalo; nota 2 repete o intervalo atual; nota 0 ou 1 volta ao começ
 | 2026-10-29 | Dinâmicas 7, 8 e 9 — 3ª |
 | 2026-11-08 | Pontos F e K — 4ª |
 | 2026-11-12 | Dinâmicas 1 e 2 — 4ª |
+| 2026-10-21 | **Família II (dinâmicas 13, 14 e 15) — 1ª** · Pontos AE e AF — 1ª |
+| 2026-10-24 | Família I (dinâmicas 10, 11 e 12) — Pontos AB, AC, AD — 2ª |
+| 2026-10-25 | Família II — 2ª |
+| 2026-11-01 | Família II — 3ª |
 | 2026-11-13 | Dinâmicas 3, 4, 5 e 6 — 4ª |
 | 2026-11-14 | Dinâmicas 7, 8 e 9 — 4ª |
+| 2026-11-17 | Família II — 4ª |
 
 ---
 
@@ -817,4 +822,62 @@ nenhum. O ponto fica sempre perto do fio de corrente menor.
 <details><summary>Resposta</summary>
 
 Uniforme e paralelo ao eixo; quase nulo fora. Um ímã de barra feito de corrente.
+</details>
+
+---
+
+## Família II — força com ângulo, carga em círculo, seletor (dinâmicas 13, 14 e 15)
+Dominadas em **2026-10-18** (gate 0023: **11/11**, incluindo a retenção da Família I
+e a de estresse). Aula: `lessons/0022-forca-sobre-carga-com-numero.html`
+
+| Revisão | Data | Feito? |
+|---|---|---|
+| 1ª (3 dias) | 2026-10-21 | ☐ |
+| 2ª (7 dias) | 2026-10-25 | ☐ |
+| 3ª (14 dias) | 2026-11-01 | ☐ |
+| 4ª (30 dias) | 2026-11-17 | ☐ |
+
+Gate limpo, sem erro nenhum para corrigir. Os dois pontos abaixo não são erros: são
+as duas peças da família que **decaem rápido** por serem contraintuitivas, e as duas
+questões de CBM PE da missão dependem delas.
+
+### Ponto AE — o período não depende da velocidade `conceito`
+
+**Pergunta.** Uma carga faz meia volta num campo e sai em 40 ns. Lançada de novo com o
+triplo da velocidade — ou com o dobro da energia —, quanto tempo ela fica na região? Por
+que, se ela está mais rápida?
+
+<details><summary>Resposta</summary>
+
+**O mesmo tempo.** T = 2πm ÷ (qB): só massa, carga e campo. Nem v nem energia aparecem.
+
+O motivo em uma frase: velocidade maior faz o **raio** crescer na mesma proporção
+(R = mv ÷ qB), então o círculo fica maior exatamente o quanto é percorrido mais depressa.
+As duas mudanças se cancelam.
+
+*Variantes de prova:* IAUPE CBM PE 2018 (meia volta, energia dobrada → mesmo tempo) e
+qualquer questão que ofereça "o triplo" e "um terço" como iscas — uma para cada intuição
+errada.
+
+*Não confundir:* o que **muda** com v é o raio e a distância percorrida (AOCP 2024
+Aspirante: distância em n voltas = n · 2πR). O tempo é que não muda.
+</details>
+
+### Ponto AF — o que o seletor ignora `procedimento`
+
+**Pergunta.** Num seletor de velocidades, qual é a velocidade que passa sem desviar, e de
+que grandezas ela **não** depende? E o que acontece com uma partícula mais rápida que essa?
+
+<details><summary>Resposta</summary>
+
+Equilíbrio: qE = qvB → **v = E ÷ B**. O q corta dos dois lados, e a massa nunca entrou:
+a velocidade selecionada **não depende da carga nem da massa**. Seleciona velocidade, não
+partícula.
+
+Mais rápida que E/B: a força elétrica qE não depende de v, mas a magnética qvB cresce com
+v — então a **magnética ganha** e a partícula desvia para o lado dela. Mais devagar,
+desvia para o lado da elétrica.
+
+*Erro a vigiar:* escrever B ÷ E (a fórmula de cabeça para baixo). Confira a ordem de
+grandeza: v = E/B costuma dar 10⁵–10⁶ m/s, não 10⁻⁶.
 </details>
